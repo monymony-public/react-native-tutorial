@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import CoinView from './components/CoinView';
+import TopBar from './components/TopBar';
 
 export default class App extends React.Component {
   render() {
@@ -11,6 +12,7 @@ export default class App extends React.Component {
           backgroundColor="blue"
           barStyle="light-content"
         />
+        <TopBar></TopBar>
 
         <CoinView></CoinView>
       </View>
