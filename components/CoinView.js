@@ -13,8 +13,8 @@ class CoinView extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    // width: '50%',
-    // flex: 1,
+    width: '100%',
+    flex: 1,
     flexDirection: 'column', // row
     backgroundColor: 'skyblue',
     alignItems: 'center',

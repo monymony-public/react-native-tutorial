@@ -1,14 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import CoinView from './components/CoinView';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box, {backgroundColor: 'red'}]}></View>
-        <View style={[styles.box, {backgroundColor: 'green'}]}></View>
-        <View style={[styles.box, {backgroundColor: 'blue'}]}></View>
+        <StatusBar
+          hidden={true}
+          backgroundColor="blue"
+          barStyle="light-content"
+        />
+
         <CoinView></CoinView>
       </View>
     );
@@ -18,7 +21,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row', // column
+    // flexDirection: 'row', // column
     backgroundColor: 'yellow',
     alignItems: 'center',
     justifyContent: 'space-between', // center, space-around
