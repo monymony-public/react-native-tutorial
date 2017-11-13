@@ -6,7 +6,7 @@ class TopBar extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Left</Text>
-        <Text>TopBar</Text>
+        <Text style={{fontSize: 20}}>{this.props.title}</Text>
         <Text>Right</Text>
       </View>
     )

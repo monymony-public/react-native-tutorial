@@ -12,9 +12,8 @@ export default class App extends React.Component {
           backgroundColor="blue"
           barStyle="light-content"
         />
-        <TopBar></TopBar>
-
-        <CoinView></CoinView>
+        <TopBar title="코인 시세"/>
+        <CoinView style={styles.coinView} />
       </View>
     );
   }
@@ -28,9 +27,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between', // center, space-around
   },
-  box: {
-    backgroundColor: 'blue',
-    width: 50,
-    height: 50,
+  coinView: {
+    width: '100%',
+    flex: 1,
+    flexDirection: 'column', // row
+    backgroundColor: 'skyblue',
+    alignItems: 'center',
+    justifyContent: 'space-around', // center, space-around
   }
 });
