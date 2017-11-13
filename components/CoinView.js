@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import CoinDetail from './CoinDetail';
 
 /**
@@ -74,7 +74,7 @@ class CoinView extends React.Component {
       let date = new Date();
       let now = date.toLocaleString()
 
-      if (this.props.refreshDate != null) {        
+      if (this.props.refreshDate != null) {
         this.props.refreshDate(now);
       }
 
@@ -100,9 +100,9 @@ class CoinView extends React.Component {
     });
 
     return (
-      <View style={this.props.style}>
+      <ScrollView style={this.props.style}>
         {detailCells}
-      </View>
+      </ScrollView>
     )
   }
 }

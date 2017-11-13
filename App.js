@@ -12,7 +12,7 @@ export default class App extends React.Component {
   }
 
   _setRefreshDate(date) {
-    console.log('Updated: '+ date);    
+    console.log('Updated: '+ date);
     this.setState({
       refreshDate: date,
     });
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column', // row
     backgroundColor: 'skyblue',
-    alignItems: 'center',
+    // alignItems: 'center',
     // justifyContent: 'space-around', // center, space-around
   }
 });
