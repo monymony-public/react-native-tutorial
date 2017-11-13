@@ -5,7 +5,10 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <View style={[styles.box, {backgroundColor: 'red'}]}></View>
+        <View style={[styles.box, {backgroundColor: 'green'}]}></View>
+        <View style={[styles.box, {backgroundColor: 'blue'}]}></View>
+        <Text>Open up App.js to start working on your app!!!</Text>
       </View>
     );
   }
@@ -14,8 +17,14 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // flexDirection: 'row',
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around', // center, space-around
   },
+  box: {
+    backgroundColor: 'blue',
+    width: 50,
+    height: 50,
+  }
 });
