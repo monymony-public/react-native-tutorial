@@ -3,9 +3,6 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 class CoinDetail extends React.Component {
   render () {
-    let date = new Date();
-    let now = date.toLocaleString()
-
     return (
       <View style={styles.container}>
         <Image
@@ -16,7 +13,6 @@ class CoinDetail extends React.Component {
         <Text style={[styles.text, {flex: 1}]}>{this.props.name || 'Name'}</Text>
         <Text style={[styles.text, {flex: 1}]}>{'Price: ' + (this.props.price || 0)}</Text>
         <Text style={[styles.text, {flex: 1}]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
-        <Text style={[styles.text, {flex: 1}]}>{'Updated: ' + (Date(this.props.time) || now)}</Text>
       </View>
     )
   }

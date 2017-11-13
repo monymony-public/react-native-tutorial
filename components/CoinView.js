@@ -50,14 +50,11 @@ class CoinView extends React.Component {
       coinDatas: [],
       isLoaded: false,
     };
-
     // Toggle the state every second
-
   }
 
   componentDidMount() { // After component loaded
     this._getCoinDatas(10);
-
     setInterval(() => {
       this._getCoinDatas(10);
       console.log('toggled!');
@@ -74,6 +71,13 @@ class CoinView extends React.Component {
     )
     .then(response => response.json())
     .then(data => {
+      let date = new Date();
+      let now = date.toLocaleString()
+
+      if (this.props.refreshDate != null) {        
+        this.props.refreshDate(now);
+      }
+
       this.setState({
         coinDatas: data,
         isLoaded: true,
