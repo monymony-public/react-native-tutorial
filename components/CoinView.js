@@ -44,15 +44,46 @@ const sampleData = [
 ];
 
 class CoinView extends React.Component {
-  state = {
-    coinDatas: null,
-    isLoaded: false,
+  constructor(props) {
+    super(props);
+    this.state = {
+      coinDatas: [],
+      isLoaded: false,
+    };
+
+    // Toggle the state every second
+
   }
 
+  componentDidMount() { // After component loaded
+    this._getCoinDatas(10);
+
+    setInterval(() => {
+      this._getCoinDatas(10);
+      console.log('toggled!');
+    }, 10000);
+  }
+
+  _getCoinDatas(limit) {
+    this.setState({
+      isLoaded: false,
+    });
+
+    fetch(
+      `https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`
+    )
+    .then(response => response.json())
+    .then(data => {
+      this.setState({
+        coinDatas: data,
+        isLoaded: true,
+      });
+    });
+  }
 
   render () {
-    let detailCells = sampleData.map( (data, index) => {
-      const {rank, name, price_usd, market_cap_usd, time} = data; // Destructuring
+    let detailCells = this.state.coinDatas.map( (data, index) => {
+      const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
       return (
         <CoinDetail
           key={index}
