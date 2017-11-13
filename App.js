@@ -33,6 +33,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column', // row
     backgroundColor: 'skyblue',
     alignItems: 'center',
-    justifyContent: 'space-around', // center, space-around
+    // justifyContent: 'space-around', // center, space-around
   }
 });
