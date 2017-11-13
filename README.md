@@ -1,6 +1,11 @@
+
+# FlexBox
+
+App.js
+
+```
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import CoinView from './components/CoinView';
 
 export default class App extends React.Component {
   render() {
@@ -9,7 +14,7 @@ export default class App extends React.Component {
         <View style={[styles.box, {backgroundColor: 'red'}]}></View>
         <View style={[styles.box, {backgroundColor: 'green'}]}></View>
         <View style={[styles.box, {backgroundColor: 'blue'}]}></View>
-        <CoinView></CoinView>
+        <Text>Open up App.js to start working on your app!!!</Text>
       </View>
     );
   }
@@ -18,10 +23,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row', // column
-    backgroundColor: 'yellow',
+    // flexDirection: 'row',
+    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'space-between', // center, space-around
+    justifyContent: 'space-around', // center, space-around
   },
   box: {
     backgroundColor: 'blue',
@@ -29,3 +34,4 @@ const styles = StyleSheet.create({
     height: 50,
   }
 });
+```
