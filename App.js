@@ -26,7 +26,7 @@ export default class App extends React.Component {
           backgroundColor="blue"
           barStyle="light-content"
         />
-      <TopBar title="코인 시세" refreshDate={this.state.refreshDate} />
+      <TopBar title="Show Me The Coin" refreshDate={this.state.refreshDate} />
         <CoinView
           refreshDate={(date) => this._setRefreshDate(date)}
           style={styles.coinView} />
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     flexDirection: 'column', // row
-    backgroundColor: 'skyblue',
+    backgroundColor: 'white',
     // alignItems: 'center',
     // justifyContent: 'space-around', // center, space-around
   }
