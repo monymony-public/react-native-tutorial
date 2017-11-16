@@ -1,4 +1,5 @@
-# React Native Tutorial: Show Me The Coin (Build real native application with javascript. )
+# React Native Tutorial: Show Me The Coin
+(Build real native application with javascript, and Run on Expo)
 
 ![final][final]
 
