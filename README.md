@@ -14,8 +14,12 @@
 - [Expo](https://expo.io):
 > Our tools enable developers to build and share truly native apps that work across both iOS and Android. Everything is open source, free and uses React Native.
 Download our tools
-- XCode(with Mac) or Android Studio: for simulator. Strongly recommend it for fast build. You can to skip it if you build your project on you device only.
 
+- iOS Simulator: XCode(with Mac). Strongly recommend it for fast build. You can to skip it if you build your project on you device only.(not recommend for Kosscon 2017)
+
+- Android Simulator: [Genymotion](https://docs.genymotion.com/Content/01_Get_Started/Installation.htm)
+> On Android we recommend the Genymotion emulator over the standard emulator — we have found it to be more feature complete, faster and easier to use.
+Download Genymotion (free version) and follow the Genymotion installation guide. Once you’ve installed Genymotion, create a virtual device - we recommend a Nexus 5, the Android version is up to you. Start up the virtual device when it’s ready. If you run into any issues follow our Genymotion guide.
 
 ## 1. Create a New Project in Expo XDE
 
@@ -23,7 +27,7 @@ Download our tools
 
 - Create your project and open on Expo.
 - Run your project on the simulator(Device Button on top-right ) or `Expo App` on your device
-- Open development menus(Android: cmd+m, iOS: ctrl+cmd+z) and toggle `Hot/Live reloading` on Expo App
+- Open development menus(Android: `cmd+m`, iOS: `ctrl+cmd+z` or `cmd+d`) and toggle `Hot/Live reloading` on Expo App
 - Edit your text and feel the magic
 
 * commnets may do not work on JSX area.
@@ -58,6 +62,15 @@ const styles = StyleSheet.create({
 - Turn on Hot reloading and edit the `Text` component in App.js
 
 ![Hello](./screenshots/hello.png "Hello React Native")
+
+- Change your host in XDE to `LAN` or `localhost` for faster
+> If you are using LAN, make sure your device is on the same wifi network as your development machine. This may not work on some public networks. localhost will not work for iOS unless you are in the simulator, and it only work on Android if your device is connected to your machine via usb.
+
+- Development menus
+  - Android Simulator: `cmd+m`
+  - iOS Simulator: `ctrl+cmd+z` or `cmd+d`
+  - Genymotion(Android): `Menu` or `cmd+m`
+
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/68e9991f3c461359041ea71badc182a4129a566c)
 
