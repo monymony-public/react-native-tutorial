@@ -312,7 +312,7 @@ export default class App extends React.Component {
 
 ## 7. Brand New CoinDetail Component
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/2ae181865e6a2a1445a723944317394730517d9b)
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/df24f2d9ef4db4569ffeb8e6f95a1139a58ad53f)
 
 ## 8. Push Dummies Into The CoinDetail Component
 
