@@ -90,9 +90,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box, {backgroundColor: 'red', flex:1}]}></View>
-        <View style={[styles.box, {backgroundColor: 'green', flex:2}]}></View>
-        <View style={[styles.box, {backgroundColor: 'blue', flex:3}]}></View>
+        <View style={[styles.box, {backgroundColor: 'red', flex:1}]}></View> // Delete flex
+        <View style={[styles.box, {backgroundColor: 'violet', flex:2}]}></View> // Delete flex
+        <View style={[styles.box, {backgroundColor: 'pink', flex:3}]}></View> // Delete flex
         <Text>Open up App.js to start working on your app!!!</Text>
       </View>
     );
@@ -238,7 +238,7 @@ And `hidden`, `backgroundColor` and `barStyle` are `StatusBar` component's props
 ## 5. Top Bar
 
 - Make another component called `TopBar`
-- You will know how to make components and use after here
+- You will know how to make components and use
 
 #### /components/TopBar.js
 
@@ -306,15 +306,243 @@ export default class App extends React.Component {
 
 ## 6. Props with TopBar Components
 
+#### components/CoinView.js
 
+```js
+class CoinView extends React.Component {
+    render () {
+      return (
+ -      <View style={styles.container}>
+ -        <Text>New View </Text>
+ +      <View style={this.props.style}> // Ready to get style from a parent component
+ +        <Text>코인뷰가 나올것입니다.</Text>
+        </View>
+      )
+    }
+```
+
+#### components/TopBar.js
+
+```js
+return (
+        <View style={styles.container}>
+          <Text>Left</Text>
+ -        <Text>TopBar</Text>
+ +        <Text style={{fontSize: 20}}>{this.props.title}</Text> // Ready to apply title from a parent component
+          <Text>Right</Text>
+        </View>
+      )
+```
+
+#### App.js
+
+```js
+backgroundColor="blue"
+  barStyle="light-content"
+/>
+-        <TopBar></TopBar>
+-        <CoinView></CoinView>
++        <TopBar title="코인 시세"/>
++        <CoinView style={styles.coinView} />
+</View>
+);
+}
+
+...
+
+const styles = StyleSheet.create({
+alignItems: 'center',
+justifyContent: 'space-between', // center, space-around
+},
+-  box: {
+-    backgroundColor: 'blue',
+-    width: 50,
+-    height: 50,
++  coinView: {
++    width: '100%',
++    flex: 1,
++    flexDirection: 'column', // row
++    backgroundColor: 'skyblue',
++    alignItems: 'center',
++    justifyContent: 'space-around', // center, space-around
+}
+});
+```
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/2ae181865e6a2a1445a723944317394730517d9b)
 
 ## 7. Brand New CoinDetail Component
 
+- Add compoenents/CoinDetail.js file
+
+#### compoenents/CoinDetail.js
+
+```js
+import React from 'react'
+ import { StyleSheet, Text, View, Image } from 'react-native';
+
+ class CoinDetail extends React.Component {
+   render () {
+     let date = new Date();
+     let now = date.toLocaleString()
+
+     return (
+       <View style={styles.container}>
+         <Image
+         style={{width: 50, height: 50}}
+         source={{uri: 'https://bitcoin.org/img/icons/opengraph.png'}}
+         />
+         <Text style={[styles.text, {flex: 1}]}>{'#' + (this.props.rank || 'Rank')}</Text>
+         <Text style={[styles.text, {flex: 1}]}>{this.props.name || 'Name'}</Text>
+         <Text style={[styles.text, {flex: 1}]}>{'Price: ' + (this.props.price || 0)}</Text>
+         <Text style={[styles.text, {flex: 1}]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
+         <Text style={[styles.text, {flex: 1}]}>{'Updated: ' + (this.props.time || now)}</Text>
+       </View>
+     )
+   }
+ }
+
+ const styles = StyleSheet.create({
+   container: {
+     width: '100%',
+     height: 80,
+     flexDirection: 'row', // row
+     backgroundColor: 'blue',
+     alignItems: 'center',
+     justifyContent: 'space-around', // center, space-around
+     marginTop: 5,
+     marginBottom: 5,
+   },
+   text: {
+     color: 'white',
+   }
+ });
+
+ export default CoinDetail;
+```
+
+#### compoenents/CoinView.js
+
+```js
+import React from 'react'
+  import { StyleSheet, Text, View } from 'react-native';
+ +import CoinDetail from './CoinDetail';
+
+  class CoinView extends React.Component {
+    render () {
+      return (
+        <View style={this.props.style}>
+ -        <Text>코인뷰가 나올것입니다.</Text>
+ +        <CoinDetail></CoinDetail>
+ +        <CoinDetail></CoinDetail>
+ +        <CoinDetail></CoinDetail>
+ +        <CoinDetail></CoinDetail>
+        </View>
+      )
+    }
+  }
+ -
+ -const styles = StyleSheet.create({
+ -  container: {
+ -    width: '100%',
+ -    flex: 1,
+ -    flexDirection: 'column', // row
+ -    backgroundColor: 'skyblue',
+ -    alignItems: 'center',
+ -    justifyContent: 'space-around', // center, space-around
+ -  },
+ -});
+ -
+ ```
+
+ ### Run
+
+ ![CoinDetail](/screenshots/coinDetail.png)
+
+
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/df24f2d9ef4db4569ffeb8e6f95a1139a58ad53f)
 
 ## 8. Push Dummies Into The CoinDetail Component
+
+#### components/CoinView.js
+
+Example Data
+```js
++const sampleData = [
+ +  {
+ +        "id": "bitcoin",
+ +        "name": "Bitcoin",
+ +        "symbol": "BTC",
+ +        "rank": "1",
+ +        "price_usd": "6195.6",
+ +        "price_btc": "1.0",
+ +        "24h_volume_usd": "8119580000.0",
+ +        "market_cap_usd": "103323711420",
+ +        "available_supply": "16676950.0",
+ +        "total_supply": "16676950.0",
+ +        "max_supply": "21000000.0",
+ +        "percent_change_1h": "-1.8",
+ +        "percent_change_24h": "4.19",
+ +        "percent_change_7d": "-15.65",
+ +        "last_updated": "1510556652"
+ +    },
+ +    {
+ +        "id": "ethereum",
+ +        "name": "Ethereum",
+ +        "symbol": "ETH",
+ +        "rank": "2",
+ +        "price_usd": "310.13",
+ +        "price_btc": "0.0493027",
+ +        "24h_volume_usd": "1636680000.0",
+ +        "market_cap_usd": "29678006174.0",
+ +        "available_supply": "95695373.0",
+ +        "total_supply": "95695373.0",
+ +        "max_supply": null,
+ +        "percent_change_1h": "-0.89",
+ +        "percent_change_24h": "1.81",
+ +        "percent_change_7d": "4.39",
+ +        "last_updated": "1510556649"
+ +    },
+ +];
+```
+
+Apply data
+
+```js
+render () {
+-    let coinDetailCells = (
+-      <View>
+-        <CoinDetail></CoinDetail>
+-        <CoinDetail></CoinDetail>
+-        <CoinDetail></CoinDetail>
+-        <CoinDetail></CoinDetail>
+-      </View>
+-    );
++    let detailCells = sampleData.map( (data, index) => {
++      const {rank, name, price_usd, market_cap_usd, time} = data; // Destructuring
++      return (
++        <CoinDetail
++          key={index}
++          rank={rank}
++          name={name}
++          price={price_usd}
++          volumn={market_cap_usd}
++        />
++      );
++    });
+
+   return (
+     <View style={this.props.style}>
+-        {coinDetailCells}
++        {detailCells}
+     </View>
+   )
+ }
+```
+
+#### Run
+
+![DummyDatas](/screenshots/sampleData.png)
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/8aa6189d00222f5d7deca2e319b204bf720d075a)
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/bad44c30d1352346cf42ddeeba5aeb97ea95528d)
@@ -323,26 +551,223 @@ export default class App extends React.Component {
 
 - [Coinmarketcap Api](https://coinmarketcap.com/api/)
 
+#### components/CoinView.js
+
+```js
+...
+
+class CoinView extends React.Component {
+ -  state = {
+ -    coinDatas: null,
+ -    isLoaded: false,
+ +  constructor(props) {
+ +    super(props);
+ +    this.state = {
+ +      coinDatas: [],
+ +      isLoaded: false,
+ +    };
+ +
+ +    // Toggle the state every second
+ +
+ +  }
+ +
+ +  componentDidMount() { // After component loaded
+ +    this._getCoinDatas(10);
+ +
+ +    setInterval(() => {
+ +      this._getCoinDatas(10);
+ +      console.log('toggled!');
+ +    }, 10000);
+    }
+
+ +  _getCoinDatas(limit) {
+ +    this.setState({
+ +      isLoaded: false,
+ +    });
+ +
+ +    fetch(
+ +      `https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`
+ +    )
+ +    .then(response => response.json())
+ +    .then(data => {
+ +      this.setState({
+ +        coinDatas: data,
+ +        isLoaded: true,
+ +      });
+ +    });
+ +  }
+
+    render () {
+ -    let detailCells = sampleData.map( (data, index) => {
+ -      const {rank, name, price_usd, market_cap_usd, time} = data; // Destructuring
+ +    let detailCells = this.state.coinDatas.map( (data, index) => {
+ +      const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
+        return (
+
+...
+```
+
+
+#### components/CoinDetail.js
+
+Change raw time to date format
+
+```js
+<Text style={[styles.text, {flex: 1}]}>{this.props.name || 'Name'}</Text>
+         <Text style={[styles.text, {flex: 1}]}>{'Price: ' + (this.props.price || 0)}</Text>
+         <Text style={[styles.text, {flex: 1}]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
+-        <Text style={[styles.text, {flex: 1}]}>{'Updated: ' + (this.props.time || now)}</Text>
++        <Text style={[styles.text, {flex: 1}]}>{'Updated: ' + (Date(this.props.time) || now)}</Text> //Date
+       </View>
+     )
+   }
+```
+
+#### Run
+
+![RealData](/screenshots/realData.png)
+
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/4b77fc74772cb6d55c73c9555e4308dcb4c15f8b)
 
 
-## 10. Hello, States?
+## 10. Upgrade TopBar
 
-- States. A friend of props
+Communication between parent and child components
+
+- Add refresh date information on `TopBar`
+- Sequence of `refreshDate`'s data flow:
+`CoinView.js` -> `App.js` -> `TopBar.js`
+
+#### components/CoinView.js
+
+```js
+_getCoinDatas(limit) {
+    this.setState({
+      isLoaded: false,
+    });
+
+    fetch(
+      `https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`
+    )
+    .then(response => response.json())
+    .then(data => {
+      let date = new Date();
+      let now = date.toLocaleString()
+
+      if (this.props.refreshDate != null) {        
+        this.props.refreshDate(now); // Run func type props
+      }
+
+      this.setState({
+        coinDatas: data,
+        isLoaded: true,
+      });
+    });
+  }
+```
+
+#### App.js
+
+```js
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      refreshDate: '-',
+    };
+  }
+
+  _setRefreshDate(date) { // Called from CoinView's prop
+    console.log('Updated: '+ date);    
+    this.setState({
+      refreshDate: date,
+    });
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <StatusBar
+          hidden={true}
+          backgroundColor="blue"
+          barStyle="light-content"
+        />
+      <TopBar title="코인 시세" refreshDate={this.state.refreshDate} />
+        <CoinView
+          refreshDate={(date) => this._setRefreshDate(date)} // function type prop
+          style={styles.coinView} />
+      </View>
+    );
+  }
+}
+```
+
+#### components/TopBar.js
+
+```js
+return (
+       <View style={styles.container}>
+         <Text>Left</Text>
+        <View>
+          <Text style={{fontSize: 20}}>{this.props.title}</Text>
+          <Text style={{fontSize: 10}}>{this.props.refreshDate || ','}</Text>
+        </View>
+         <Text>Right</Text>
+       </View>
+     )
+```
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/cc74b2147b8dd70ea5e6b72e307c8208c6523146)
 
+#### Result
+
+![TopBar](/screenshots/statesToTopbar.png)
+
 ## 11. ScrollView. Another Component.
+
+Super easy!
 
 - Replace `View` with `ScrollView`
 
+#### components/CoinView.js
+
+```js
+...
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
+
+...
+
+return (
+  <ScrollView style={this.props.style}>
+    {detailCells}
+  </ScrollView>
+)
+
+...
+```
+
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/6fbe6a694493f04bdb054dcaf44535d4508332f5)
 
-## 12. Oh. Beauty.  
+## 12. Oh, Beauty.  
+
+It is your turn.
 
 - Change the style better
 
+![Prettier](/screenshots/prettier.png)
+
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/082f3bf3d1d81e1366126f918188a47daa4d0a31)
 
+# Can I use React Native?
 
-## Continue...
+쓰세요!!
+- 사람은 모자르고 만들건 많다.
+- iOS, Android, js에 대한 지식이 있다.
+- 디바이스의 센서들을 많이 사용하지 않는다.
+- 디버깅이 즐겁다. 리엑트 네이티브 버그를 해결하고픈 욕구가 솟구친다.
+- 시대를 앞서나가고 싶다.
+
+고려를...
+- 인력이 많다. iOS, Android 개발자가 각각 있다.
+- 디바이스 하드웨어를 많이 사용한다. 지도, 블루투스 등...
+- 안정화된 플랫폼이 좋다.
