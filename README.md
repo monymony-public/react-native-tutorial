@@ -233,7 +233,7 @@ render() {
 Most components can be customized with various parameters called `props`(properties).
 And `hidden`, `backgroundColor` and `barStyle` are `StatusBar` component's props.
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/d53ea6be5c92efcadb38e9770e377056feeba678)
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/d53ea6be5c92efcadb38e9770e377056feeba678)
 
 ## 5. Top Bar
 
@@ -302,47 +302,47 @@ export default class App extends React.Component {
 
 - Why did `TopBar` use only `height` and `CoinView` use `flexbox` in the style prop?
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/d53ea6be5c92efcadb38e9770e377056feeba678)
-
-# 튜토리얼 세션용입니다.
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/d53ea6be5c92efcadb38e9770e377056feeba678)
 
 ## 6. Props with TopBar Components
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/2ae181865e6a2a1445a723944317394730517d9b)
+
+
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/2ae181865e6a2a1445a723944317394730517d9b)
 
 ## 7. Brand New CoinDetail Component
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/df24f2d9ef4db4569ffeb8e6f95a1139a58ad53f)
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/df24f2d9ef4db4569ffeb8e6f95a1139a58ad53f)
 
 ## 8. Push Dummies Into The CoinDetail Component
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/8aa6189d00222f5d7deca2e319b204bf720d075a)
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/bad44c30d1352346cf42ddeeba5aeb97ea95528d)
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/8aa6189d00222f5d7deca2e319b204bf720d075a)
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/bad44c30d1352346cf42ddeeba5aeb97ea95528d)
 
 ## 9. It's Real Data.
 
 - [Coinmarketcap Api](https://coinmarketcap.com/api/)
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/4b77fc74772cb6d55c73c9555e4308dcb4c15f8b)
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/4b77fc74772cb6d55c73c9555e4308dcb4c15f8b)
 
 
 ## 10. Hello, States?
 
 - States. A friend of props
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/cc74b2147b8dd70ea5e6b72e307c8208c6523146)
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/cc74b2147b8dd70ea5e6b72e307c8208c6523146)
 
 ## 11. ScrollView. Another Component.
 
 - Replace `View` with `ScrollView`
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/6fbe6a694493f04bdb054dcaf44535d4508332f5)
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/6fbe6a694493f04bdb054dcaf44535d4508332f5)
 
 ## 12. Oh. Beauty.  
 
 - Change the style better
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/082f3bf3d1d81e1366126f918188a47daa4d0a31)
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/082f3bf3d1d81e1366126f918188a47daa4d0a31)
 
 
 ## Continue...
