@@ -758,16 +758,8 @@ It is your turn.
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/082f3bf3d1d81e1366126f918188a47daa4d0a31)
 
-# Can I use React Native?
-
-쓰세요!!
-- 사람은 모자르고 만들건 많다.
-- iOS, Android, js에 대한 지식이 있다.
-- 디바이스의 센서들을 많이 사용하지 않는다.
-- 디버깅이 즐겁다. 리엑트 네이티브 버그를 해결하고픈 욕구가 솟구친다.
-- 시대를 앞서나가고 싶다.
-
-고려를...
-- 인력이 많다. iOS, Android 개발자가 각각 있다.
-- 디바이스 하드웨어를 많이 사용한다. 지도, 블루투스 등...
-- 안정화된 플랫폼이 좋다.
+# More...
+- Change each icon of coins
+- Apply Refresh Button on `TopBar`
+- Show more `Detail` when clicked each rows  
+- Use [`ListView`](https://facebook.github.io/react-native/docs/listview.html) instead of a `CoinDetail` component
