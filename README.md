@@ -1,9 +1,7 @@
 # React Native Tutorial: Show Me The Coin
 (Build real native application with javascript, and Run on Expo)
 
-![final][final]
-
-[final]: ./screenshots/final.png "Show Me The Coin"
+![ShowMeTheCoin](/screenshots/prettier.png)
 
 ## Getting Started
 (11.21.2017 세션 전에 시뮬레이터로 2챕터까지 미리 실행해보세요)
@@ -758,7 +756,7 @@ It is your turn.
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/082f3bf3d1d81e1366126f918188a47daa4d0a31)
 
-# What’s next
+# What’s Next
 
 - Change each icon of coins
 - Apply Refresh Button on `TopBar`
