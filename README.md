@@ -758,7 +758,8 @@ It is your turn.
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/082f3bf3d1d81e1366126f918188a47daa4d0a31)
 
-# More...
+# What’s next
+
 - Change each icon of coins
 - Apply Refresh Button on `TopBar`
 - Show more `Detail` when clicked each rows  
