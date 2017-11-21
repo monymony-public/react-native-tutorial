@@ -88,9 +88,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box, {backgroundColor: 'red', flex:1}]}></View> // Delete flex
-        <View style={[styles.box, {backgroundColor: 'violet', flex:2}]}></View> // Delete flex
-        <View style={[styles.box, {backgroundColor: 'pink', flex:3}]}></View> // Delete flex
+        <View style={[styles.box, {backgroundColor: 'red', flex:1}]}></View> { /* Delete flex */ }
+        <View style={[styles.box, {backgroundColor: 'violet', flex:2}]}></View> { /* Delete flex */ }
+        <View style={[styles.box, {backgroundColor: 'pink', flex:3}]}></View> { /* Delete flex */ }
         <Text>Open up App.js to start working on your app!!!</Text>
       </View>
     );
@@ -247,7 +247,7 @@ import { StyleSheet, Text, View } from 'react-native';
 class TopBar extends React.Component {
   render () {
     return (
-      <View style={styles.container}> // You know what to do genius!
+      <View style={styles.container}>
         <Text>Left</Text>
         <Text>TopBar</Text>
         <Text>Right</Text>
@@ -312,7 +312,7 @@ class CoinView extends React.Component {
       return (
  -      <View style={styles.container}>
  -        <Text>New View </Text>
- +      <View style={this.props.style}> // Ready to get style from a parent component
+ +      <View style={this.props.style}> { /* Ready to get style from a parent component */ }
  +        <Text>코인뷰가 나올것입니다.</Text>
         </View>
       )
@@ -692,7 +692,7 @@ export default class App extends React.Component {
         />
       <TopBar title="코인 시세" refreshDate={this.state.refreshDate} />
         <CoinView
-          refreshDate={(date) => this._setRefreshDate(date)} // function type prop
+          refreshDate={(date) => this._setRefreshDate(date)} {/* // function type prop */}
           style={styles.coinView} />
       </View>
     );
