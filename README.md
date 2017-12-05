@@ -520,14 +520,6 @@ Apply data
 
 ```js
 render () {
--    let coinDetailCells = (
--      <View>
--        <CoinDetail></CoinDetail>
--        <CoinDetail></CoinDetail>
--        <CoinDetail></CoinDetail>
--        <CoinDetail></CoinDetail>
--      </View>
--    );
 +    let detailCells = sampleData.map( (data, index) => {
 +      const {rank, name, price_usd, market_cap_usd, time} = data; // Destructuring
 +      return (
@@ -543,7 +535,6 @@ render () {
 
    return (
      <View style={this.props.style}>
--        {coinDetailCells}
 +        {detailCells}
      </View>
    )
