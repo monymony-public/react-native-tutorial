@@ -3,9 +3,21 @@
 
 ![ShowMeTheCoin](/screenshots/prettier.png)
 
-## Getting Started
-(11.21.2017 세션 전에 시뮬레이터로 2챕터까지 미리 실행해보세요)
+## Contents
+1. [Create a New Project in Expo XDE](https://github.com/JeffGuKang/ReactNative-Tutorial#1-create-a-new-project-in-expo-xde)
+2. [FlexBox Practice](https://github.com/JeffGuKang/ReactNative-Tutorial#2-flexbox-practice)
+3. [Say Hello to a New Component: `CoinView`](https://github.com/JeffGuKang/ReactNative-Tutorial#3-say-hello-to-a-new-component-coinview)
+4. [Good Bye StatusBar (Props)](https://github.com/JeffGuKang/ReactNative-Tutorial#4-good-bye-statusbar-props)
+5. [Top Bar](https://github.com/JeffGuKang/ReactNative-Tutorial#5-top-bar)
+6. [Props with TopBar Components](https://github.com/JeffGuKang/ReactNative-Tutorial#6-props-with-topbar-components)
+7. [Brand New CoinDetail Component](https://github.com/JeffGuKang/ReactNative-Tutorial#7-brand-new-coindetail-component)
+8. [Push Dummies Into The CoinDetail Component](https://github.com/JeffGuKang/ReactNative-Tutorial#8-push-dummies-into-the-coindetail-component)
+9. [It's Real Data](https://github.com/JeffGuKang/ReactNative-Tutorial#9-its-real-data)
+10. [Upgrade TopBar](https://github.com/JeffGuKang/ReactNative-Tutorial#10-upgrade-topbar)
+11. [ScrollView. Another Component](https://github.com/JeffGuKang/ReactNative-Tutorial#11-scrollview-another-component)
+12. [Oh, Beauty](https://github.com/JeffGuKang/ReactNative-Tutorial#12-oh-beauty)
 
+## Getting Started
 - [React Native Basics](https://facebook.github.io/react-native/docs/tutorial.html): Component, Props, State, [JSX](https://reactjs.org/docs/jsx-in-depth.html)...
 - ES2015(ES6): `import`, `from`, `extends`, `=>`
 - [Node.js](https://nodejs.org/en/): React Native uses `Node.js` to build code
@@ -730,7 +742,7 @@ return (
 
 ![TopBar](/screenshots/statesToTopbar.png)
 
-## 11. ScrollView. Another Component.
+## 11. ScrollView. Another Component
 
 Super easy!
 
@@ -755,7 +767,7 @@ return (
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/6fbe6a694493f04bdb054dcaf44535d4508332f5)
 
-## 12. Oh, Beauty.  
+## 12. Oh, Beauty  
 
 It is your turn.
 
