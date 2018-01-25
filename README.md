@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
 
 ## 3. Say Hello to a New Component: `CoinView`
 
-- Make a new file: 'component/CoinView.js'
+- Make a new file: 'components/CoinView.js'
 - Write a new component as below
 
 #### CoinView.js
