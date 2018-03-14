@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import CoinDetail from './CoinDetail';
 
+import { getCoinIconUri } from '../libs/Constants';
 /**
 Coin Data: https://api.coinmarketcap.com/v1/ticker/
 */
@@ -95,6 +96,7 @@ class CoinView extends React.Component {
           name={name}
           price={price_usd}
           volumn={market_cap_usd}
+          iconUri={getCoinIconUri(name)}
         />
       );
     });

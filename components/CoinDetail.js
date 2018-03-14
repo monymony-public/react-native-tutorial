@@ -7,7 +7,7 @@ class CoinDetail extends React.Component {
       <View style={styles.container}>
         <Image
         style={{width: 50, height: 50, marginRight: 5, marginLeft: 5}}
-        source={{uri: 'https://bitcoin.org/img/icons/opengraph.png'}}
+        source={{uri: this.props.iconUri}}
         />
         <Text style={[styles.rank]}>{'#' + (this.props.rank || 'Rank')}</Text>
         <View style={{flexDirection: 'column'}}>
