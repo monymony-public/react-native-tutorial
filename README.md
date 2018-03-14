@@ -806,6 +806,8 @@ It is your turn.
 
 ## 13. Change each icon of coins
 
+Let's make look and feel for your application using icon of coins.
+
 #### libs/Constants.js
 
 Make function to get icon uri from name of coin.
@@ -854,8 +856,6 @@ source={{uri: this.props.iconUri}}
 
 #### components/CoinView.js
 
-![ChangeIcon](/screenshots/changeIcons.png)
-
 Add `iconUri={getCoinIconUri(name)}` for the `CoinDetail` child component.
 
 ```js
@@ -888,8 +888,13 @@ render () {
 }
 
 ```
+Refresh and check your icons!
 
+#### Result
 
+![ChangeIcon](/screenshots/changeIcons.png)
+
+[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/fc4bc840d32d691f07c2312f9738d3688b1bc42a)
 
 # What’s Next
 
