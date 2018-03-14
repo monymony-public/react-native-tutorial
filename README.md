@@ -804,9 +804,97 @@ It is your turn.
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/082f3bf3d1d81e1366126f918188a47daa4d0a31)
 
+## 13. Change each icon of coins
+
+#### libs/Constants.js
+
+Make function to get icon uri from name of coin.
+
+```js
+/**
+  Icons from: https://github.com/cjdowner/cryptocurrency-icons/tree/master/32%402x/icon
+*/
+export function getCoinIconUri(coinName) {
+  switch (coinName) {
+    case 'Bitcoin':
+      return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/btc@2x.png?raw=true';
+
+    case 'Ethereum':
+      return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/eth@2x.png?raw=true';
+
+    case 'Ripple':
+      return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/xrp@2x.png?raw=true';
+
+    case 'Bitcoin Cash':
+      return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/bcc@2x.png?raw=true';
+
+    case 'Litecoin':
+      return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/ltc@2x.png?raw=true';
+
+    default:
+      return 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
+  }
+}
+```
+
+#### components/CoinDetail.js
+
+Ready to get iconUri from props.
+
+```js
+...
+
+<Image
+style={{width: 50, height: 50, marginRight: 5, marginLeft: 5}}
+source={{uri: this.props.iconUri}}
+/>
+
+...
+```
+
+#### components/CoinView.js
+
+![ChangeIcon](/screenshots/changeIcons.png)
+
+Add `iconUri={getCoinIconUri(name)}` for the `CoinDetail` child component.
+
+```js
+...
+
+import { getCoinIconUri } from '../libs/Constants';
+
+...
+
+render () {
+  let detailCells = this.state.coinDatas.map( (data, index) => {
+    const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
+    return (
+      <CoinDetail
+        key={index}
+        rank={rank}
+        name={name}
+        price={price_usd}
+        volumn={market_cap_usd}
+        iconUri={getCoinIconUri(name)}
+      />
+    );
+  });
+
+  return (
+    <ScrollView style={this.props.style}>
+      {detailCells}
+    </ScrollView>
+  )
+}
+
+```
+
+
+
 # What’s Next
 
 - Change each icon of coins
 - Apply Refresh Button on `TopBar`
 - Show more `Detail` when clicked each rows  
 - Use [`ListView`](https://facebook.github.io/react-native/docs/listview.html) instead of a `CoinDetail` component
+- Make release version for application store from `Expo` or export from `Expo`
