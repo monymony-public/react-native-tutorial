@@ -774,6 +774,7 @@ return (
 Super easy!
 
 - Replace `View` with `ScrollView`
+- Remove `justifyContent` and `alignItems` from CoinView.js's style. (ScrollView dose not have fixed size). 
 
 #### components/CoinView.js
 
