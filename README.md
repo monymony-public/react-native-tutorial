@@ -162,8 +162,8 @@ const styles = StyleSheet.create({
     // flex: 1,
     flexDirection: 'column', // row
     backgroundColor: 'skyblue',
-    alignItems: 'center',
-    justifyContent: 'space-around', // center, space-around
+    // alignItems: 'center',
+    // justifyContent: 'space-around', // center, space-around
   },
 });
 
@@ -194,10 +194,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row', // column
+    // flexDirection: 'row', // column
     backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'space-between', // center, space-around
+    // alignItems: 'center',
+    // justifyContent: 'space-between', // center, space-around
   },
   box: {
     backgroundColor: 'blue',
