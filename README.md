@@ -1,6 +1,8 @@
 # React Native Tutorial: Show Me The Coin
 (Build real native application with javascript, and Run on Expo)
 
+I am updating this tutorial for latest react native (0.58).
+
 ![ShowMeTheCoin](/screenshots/prettier.png)
 
 ## Contents
@@ -25,7 +27,7 @@
 > Our tools enable developers to build and share truly native apps that work across both iOS and Android. Everything is open source, free and uses React Native.
 Download our tools
 
-- iOS Simulator: XCode(with Mac). Strongly recommend it for fast build. You can to skip it if you build your project on you device only.(not recommend for Kosscon 2017)
+- iOS Simulator: XCode(with Mac). Strongly recommend it for fast build. You can to skip if you build your project on your device only.
 
 - Android Simulator: [Genymotion](https://docs.genymotion.com/Content/01_Get_Started/Installation.htm)
 > On Android we recommend the Genymotion emulator over the standard emulator — we have found it to be more feature complete, faster and easier to use.
@@ -700,7 +702,7 @@ _getCoinDatas(limit) {
       let date = new Date();
       let now = date.toLocaleString()
 
-      if (this.props.refreshDate != null) {        
+      if (this.props.refreshDate != null) {
         this.props.refreshDate(now); // Run func type props
       }
 
@@ -724,7 +726,7 @@ export default class App extends React.Component {
   }
 
   _setRefreshDate(date) { // Called from CoinView's prop
-    console.log('Updated: '+ date);    
+    console.log('Updated: '+ date);
     this.setState({
       refreshDate: date,
     });
@@ -774,7 +776,7 @@ return (
 Super easy!
 
 - Replace `View` with `ScrollView`
-- Remove `justifyContent` and `alignItems` from CoinView.js's style. (ScrollView dose not have fixed size). 
+- Remove `justifyContent` and `alignItems` from CoinView.js's style. (ScrollView dose not have fixed size).
 
 #### components/CoinView.js
 
@@ -795,7 +797,7 @@ return (
 
 [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/6fbe6a694493f04bdb054dcaf44535d4508332f5)
 
-## 12. Oh, Beauty  
+## 12. Oh, Beauty
 
 It is your turn.
 
@@ -901,6 +903,6 @@ Refresh and check your icons!
 
 - Change each icon of coins
 - Apply Refresh Button on `TopBar`
-- Show more `Detail` when clicked each rows  
+- Show more `Detail` when clicked each rows
 - Use [`ListView`](https://facebook.github.io/react-native/docs/listview.html) instead of a `CoinDetail` component
 - Make release version for application store from `Expo` or export from `Expo`
