@@ -634,14 +634,14 @@ class CoinView extends React.Component {
     super(props);
     this.state = {
       coinDatas: [],
-      isLoaded: false,
+      isLoading: false,
     };
 
-    // Toggle the state every second
+    // TODO: Toggle the state every second
 
   }
 
-  componentDidMount() { // After component loaded
+  componentDidMount() { // After component mounted
     this._getCoinDatas(10);
 
     setInterval(() => {
@@ -650,25 +650,25 @@ class CoinView extends React.Component {
     }, 10000);
   }
 
-  _getCoinDatas(limit) {
+  _getCoinDatas = async (limit) => {
     this.setState({
-      isLoaded: false,
+      isLoading: true,
     });
 
-    fetch(
-      `https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`
-    )
-    .then(response => response.json())
-    .then(data => {
-      this.setState({
-        coinDatas: data,
-        isLoaded: true,
+    try {
+      const response = await fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`);
+      const responseJson = await response.json();
+      await this.setState({
+        coinDatas: responseJson,
+        isLoading: false,
       });
-    });
+    } catch(error) {
+      console.error('_getCoinDatas', error);
+    }
   }
 
   render () {
-    let detailCells = this.state.coinDatas.map( (data, index) => {
+    let coinItems = this.state.coinDatas.map( (data, index) => {
       const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
       return (
         <CoinItem
@@ -683,36 +683,18 @@ class CoinView extends React.Component {
 
     return (
       <View style={this.props.style}>
-        {detailCells}
+        {coinItems}
       </View>
     )
   }
 }
+
 export default CoinView;
-```
-
-
-#### components/CoinItem.js
-
-Change raw time to date format
-
-```js
-<Text style={[styles.text, {flex: 1}]}>{this.props.name || 'Name'}</Text>
-         <Text style={[styles.text, {flex: 1}]}>{'Price: ' + (this.props.price || 0)}</Text>
-         <Text style={[styles.text, {flex: 1}]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
--        <Text style={[styles.text, {flex: 1}]}>{'Updated: ' + (this.props.time || now)}</Text>
-+        <Text style={[styles.text, {flex: 1}]}>{'Updated: ' + (Date(this.props.time) || now)}</Text> //Date
-       </View>
-     )
-   }
 ```
 
 #### Run
 
 ![RealData](/screenshots/realData.png)
-
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/4b77fc74772cb6d55c73c9555e4308dcb4c15f8b)
-
 
 ## 10. Upgrade TopBar
 
