@@ -855,66 +855,6 @@ coinView: {
 }
 ```
 
-## 12. Oh, Beauty
-
-It is your turn.
-
-- Change the style better
-
-#### components/CoinItem.js
-
-```js
-import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-
-class CoinItem extends React.Component {
-  render() {
-    let date = new Date();
-    let now = date.toLocaleString();
-
-    return (
-      <View style={styles.container}>
-        <Image
-          style={{ width: 50, height: 50, margin: 10 }}
-          source={{ uri: this.props.iconUri }}
-        />
-        <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'stretch', alignItems: 'center', justifyContent: 'space-between' }}>
-          <View>
-            <Text style={[styles.text, { flex: 1, fontSize: 20, marginTop: 5 }]}>{this.props.name || 'Name'}</Text>
-            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
-            <Text style={[styles.text, { flex: 1 }]}>{'$: ' + (this.props.price || 0)}</Text>
-          </View>
-          <Text style={[styles.text, { fontSize: 25, marginRight: 10 }]}>{'#' + (this.props.rank || 'Rank')}</Text>
-        </View>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    height: 80,
-    flexDirection: 'row', // row
-    backgroundColor: 'white',
-    alignItems: 'center',
-    // justifyContent: 'space-around', // center, space-around
-    marginTop: 5,
-    marginBottom: 5,
-    borderBottomWidth: 1,
-    borderBottomColor: 'lightgrey',
-  },
-  text: {
-    color: 'black',
-  },
-});
-
-export default CoinItem;
-```
-
-It will be better to move each styles into the `StyleSheet`.
-
-![Prettier](/screenshots/prettier.png)
 
 ## 13. Change each icon of coins
 
@@ -1005,11 +945,67 @@ render () {
 ```
 Refresh and check your icons!
 
-#### Result
+## 12. Oh, Beauty
 
-![ChangeIcon](/screenshots/changeIcons.png)
+It is your turn.
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/fc4bc840d32d691f07c2312f9738d3688b1bc42a)
+- Change the style better
+
+#### components/CoinItem.js
+
+```js
+import React from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
+
+class CoinItem extends React.Component {
+  render() {
+    let date = new Date();
+    let now = date.toLocaleString();
+
+    return (
+      <View style={styles.container}>
+        <Image
+          style={{ width: 50, height: 50, margin: 10 }}
+          source={{ uri: this.props.iconUri }}
+        />
+        <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'stretch', alignItems: 'center', justifyContent: 'space-between' }}>
+          <View>
+            <Text style={[styles.text, { flex: 1, fontSize: 20, marginTop: 5 }]}>{this.props.name || 'Name'}</Text>
+            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
+            <Text style={[styles.text, { flex: 1 }]}>{'$: ' + (this.props.price || 0)}</Text>
+          </View>
+          <Text style={[styles.text, { fontSize: 25, marginRight: 10 }]}>{'#' + (this.props.rank || 'Rank')}</Text>
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: 80,
+    flexDirection: 'row', // row
+    backgroundColor: 'white',
+    alignItems: 'center',
+    // justifyContent: 'space-around', // center, space-around
+    marginTop: 5,
+    marginBottom: 5,
+    borderBottomWidth: 1,
+    borderBottomColor: 'lightgrey',
+  },
+  text: {
+    color: 'black',
+  },
+});
+
+export default CoinItem;
+```
+
+It will be better to move each styles into the `StyleSheet`.
+
+![Prettier](/screenshots/prettier.png)
+
 
 # What’s Next
 
@@ -1019,11 +1015,3 @@ Refresh and check your icons!
 - Show more `Detail Page` when clicked each rows
 - Use [`ListView`](https://facebook.github.io/react-native/docs/listview.html) instead of a `CoinItem` component list
 - Make release version for application store from `Expo` or export from `Expo`
-
-## React Navigation
-
-For routing
-
-```
-npm install react-navigation --save
-```
