@@ -9,13 +9,17 @@ class CoinItem extends React.Component {
     return (
       <View style={styles.container}>
         <Image
-          style={{ width: 50, height: 50 }}
-          source={{ uri: 'https://bitcoin.org/img/icons/opengraph.png' }}
+          style={{ width: 50, height: 50, margin: 10 }}
+          source={{ uri: this.props.iconUri }}
         />
-        <Text style={[styles.text, { flex: 1 }]}>{this.props.name || 'Name'}</Text>
-        <Text style={[styles.text, { flex: 1 }]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
-        <Text style={[styles.text, { flex: 1 }]}>{'Price: ' + (this.props.price || 0)}</Text>
-        <Text style={[styles.text, { flex: 1 }]}>{'#' + (this.props.rank || 'Rank')}</Text>
+        <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'stretch', alignItems: 'center', justifyContent: 'space-between' }}>
+          <View>
+            <Text style={[styles.text, { flex: 1, fontSize: 20, marginTop: 5 }]}>{this.props.name || 'Name'}</Text>
+            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
+            <Text style={[styles.text, { flex: 1 }]}>{'$: ' + (this.props.price || 0)}</Text>
+          </View>
+          <Text style={[styles.text, { fontSize: 25, marginRight: 10 }]}>{'#' + (this.props.rank || 'Rank')}</Text>
+        </View>
       </View>
     );
   }
@@ -26,15 +30,17 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 80,
     flexDirection: 'row', // row
-    backgroundColor: 'skyblue',
+    backgroundColor: 'white',
     alignItems: 'center',
-    justifyContent: 'space-around', // center, space-around
+    // justifyContent: 'space-around', // center, space-around
     marginTop: 5,
-    marginBottom: 5
+    marginBottom: 5,
+    borderBottomWidth: 1,
+    borderBottomColor: 'lightgrey',
   },
   text: {
-    color: 'white'
-  }
+    color: 'black',
+  },
 });
 
 export default CoinItem;

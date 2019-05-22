@@ -6,7 +6,10 @@ class TopBar extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Left</Text>
-        <Text style={{fontSize: 20}}>{this.props.title || 'TITLE'}</Text>
+        <View>
+          <Text style={{ fontSize: 20 }}>{this.props.title}</Text>
+          <Text style={{ fontSize: 10, textAlign: 'center' }}>{this.props.refreshDate || '-'}</Text>
+        </View>
         <Text>Right</Text>
       </View>
     );

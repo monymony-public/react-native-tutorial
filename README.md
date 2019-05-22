@@ -707,43 +707,53 @@ Communication between parent and child components
 #### screens/CoinView.js
 
 ```js
-_getCoinDatas(limit) {
+  _getCoinDatas = async (limit) => {
     this.setState({
-      isLoaded: false,
+      isLoading: true,
     });
 
-    fetch(
-      `https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`
-    )
-    .then(response => response.json())
-    .then(data => {
-      let date = new Date();
-      let now = date.toLocaleString()
+    try {
+      const response = await fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`);
+      const responseJson = await response.json();
+
+      const date = new Date();
+      const now = date.toLocaleString()
 
       if (this.props.refreshDate != null) {
         this.props.refreshDate(now); // Run func type props
       }
 
-      this.setState({
-        coinDatas: data,
-        isLoaded: true,
+      await this.setState({
+        coinDatas: responseJson,
+        isLoading: false,
       });
-    });
+
+    } catch(error) {
+      console.error('_getCoinDatas', error);
+    }
   }
 ```
+
+Add state, `_setRefreshDate` ....
 
 #### App.js
 
 ```js
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { Constants } from 'expo';
+import CoinView from './screens/CoinView';
+import TopBar from './components/TopBar';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       refreshDate: '-',
-    };
+    }
   }
 
-  _setRefreshDate(date) { // Called from CoinView's prop
+  _setRefreshDate = (date) => { // Called from CoinView's prop
     console.log('Updated: '+ date);
     this.setState({
       refreshDate: date,
@@ -753,37 +763,54 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar
-          hidden={true}
-          backgroundColor="blue"
-          barStyle="light-content"
-        />
-      <TopBar title="코인 시세" refreshDate={this.state.refreshDate} />
+        <View style={styles.statusBar} />
+        <TopBar title="Show Me The Coin" refreshDate={this.state.refreshDate} />
         <CoinView
-          refreshDate={(date) => this._setRefreshDate(date)} {/* // function type prop */}
-          style={styles.coinView} />
+          refreshDate={this._setRefreshDate}
+          style={styles.coinView}
+        />
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  statusBar: {
+    backgroundColor: '#C2185B',
+    height: Constants.statusBarHeight
+  },
+  container: {
+    flex: 1
+  },
+  coinView: {
+    width: '100%',
+    flex: 1,
+    flexDirection: 'column', // row
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'flex-start' // center, space-around
+  }
+});
 ```
 
 #### components/TopBar.js
 
-```js
-return (
-       <View style={styles.container}>
-         <Text>Left</Text>
-        <View>
-          <Text style={{fontSize: 20}}>{this.props.title}</Text>
-          <Text style={{fontSize: 10}}>{this.props.refreshDate || ','}</Text>
-        </View>
-         <Text>Right</Text>
-       </View>
-     )
-```
+Add refreshDate property.
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/cc74b2147b8dd70ea5e6b72e307c8208c6523146)
+```js
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Left</Text>
+        <View>
+          <Text style={{ fontSize: 20 }}>{this.props.title}</Text>
+          <Text style={{ fontSize: 10, textAlign: 'center' }}>{this.props.refreshDate || '-'}</Text>
+        </View>
+        <Text>Right</Text>
+      </View>
+    );
+  }
+```
 
 #### Result
 
@@ -813,7 +840,20 @@ return (
 ...
 ```
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/6fbe6a694493f04bdb054dcaf44535d4508332f5)
+#### App.js
+
+in Style
+
+```js
+coinView: {
+  width: '100%',
+  flex: 1,
+  flexDirection: 'column', // row
+  backgroundColor: 'white',
+  // alignItems: 'center',
+  // justifyContent: 'flex-start' // center, space-around
+}
+```
 
 ## 12. Oh, Beauty
 
@@ -821,9 +861,60 @@ It is your turn.
 
 - Change the style better
 
-![Prettier](/screenshots/prettier.png)
+#### components/CoinItem.js
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/082f3bf3d1d81e1366126f918188a47daa4d0a31)
+```js
+import React from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
+
+class CoinItem extends React.Component {
+  render() {
+    let date = new Date();
+    let now = date.toLocaleString();
+
+    return (
+      <View style={styles.container}>
+        <Image
+          style={{ width: 50, height: 50, margin: 10 }}
+          source={{ uri: this.props.iconUri }}
+        />
+        <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'stretch', alignItems: 'center', justifyContent: 'space-between' }}>
+          <View>
+            <Text style={[styles.text, { flex: 1, fontSize: 20, marginTop: 5 }]}>{this.props.name || 'Name'}</Text>
+            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
+            <Text style={[styles.text, { flex: 1 }]}>{'$: ' + (this.props.price || 0)}</Text>
+          </View>
+          <Text style={[styles.text, { fontSize: 25, marginRight: 10 }]}>{'#' + (this.props.rank || 'Rank')}</Text>
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: 80,
+    flexDirection: 'row', // row
+    backgroundColor: 'white',
+    alignItems: 'center',
+    // justifyContent: 'space-around', // center, space-around
+    marginTop: 5,
+    marginBottom: 5,
+    borderBottomWidth: 1,
+    borderBottomColor: 'lightgrey',
+  },
+  text: {
+    color: 'black',
+  },
+});
+
+export default CoinItem;
+```
+
+It will be better to move each styles into the `StyleSheet`.
+
+![Prettier](/screenshots/prettier.png)
 
 ## 13. Change each icon of coins
 
@@ -845,8 +936,11 @@ export function getCoinIconUri(coinName) {
     case 'Ethereum':
       return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/eth@2x.png?raw=true';
 
-    case 'Ripple':
+    case 'XRP':
       return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/xrp@2x.png?raw=true';
+
+    case 'EOS':
+        return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/eos@2x.png?raw=true';
 
     case 'Bitcoin Cash':
       return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/bcc@2x.png?raw=true';
@@ -855,7 +949,7 @@ export function getCoinIconUri(coinName) {
       return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/ltc@2x.png?raw=true';
 
     default:
-      return 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
+      return 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
   }
 }
 ```
@@ -877,7 +971,7 @@ source={{uri: this.props.iconUri}}
 
 #### screens/CoinView.js
 
-Add `iconUri={getCoinIconUri(name)}` for the `CoinItem` child component.
+Add `iconUri={getCoinIconUri(name)}` to the `CoinItem` child component.
 
 ```js
 ...
@@ -920,12 +1014,11 @@ Refresh and check your icons!
 # What’s Next
 
 - Change each icon of coins
-- Apply Refresh Button on `TopBar`
-- Show more `Detail` when clicked each rows
-- Use [`ListView`](https://facebook.github.io/react-native/docs/listview.html) instead of a `CoinItem` component
+- Add Refresh Button on `TopBar`
+- Apply router (React Navigatoin)
+- Show more `Detail Page` when clicked each rows
+- Use [`ListView`](https://facebook.github.io/react-native/docs/listview.html) instead of a `CoinItem` component list
 - Make release version for application store from `Expo` or export from `Expo`
-
-
 
 ## React Navigation
 

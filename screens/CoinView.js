@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import CoinItem from '../components/CoinItem';
+import { getCoinIconUri } from '../libs/Constants';
 
 class CoinView extends React.Component {
   constructor(props) {
@@ -31,10 +32,19 @@ class CoinView extends React.Component {
     try {
       const response = await fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`);
       const responseJson = await response.json();
+
+      const date = new Date();
+      const now = date.toLocaleString()
+
+      if (this.props.refreshDate != null) {
+        this.props.refreshDate(now); // Run func type props
+      }
+
       await this.setState({
         coinDatas: responseJson,
         isLoading: false,
       });
+
     } catch(error) {
       console.error('_getCoinDatas', error);
     }
@@ -50,14 +60,15 @@ class CoinView extends React.Component {
           name={name}
           price={price_usd}
           volumn={market_cap_usd}
+          iconUri={getCoinIconUri(name)}
         />
       );
     });
 
     return (
-      <View style={this.props.style}>
+      <ScrollView style={this.props.style}>
         {coinItems}
-      </View>
+      </ScrollView>
     )
   }
 }
