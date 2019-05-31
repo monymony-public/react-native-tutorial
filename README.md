@@ -367,8 +367,7 @@ class CoinView extends React.Component {
 }
 ```
 
-외부로부터 스타일을 받아 적용 가능
-
+You can apply styles from other parent components.
 
 #### components/TopBar.js
 
