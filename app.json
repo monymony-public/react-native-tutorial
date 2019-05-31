@@ -1,22 +1,27 @@
 {
   "expo": {
-    "name": "coin-tutorial",
-    "description": "An empty new project",
-    "slug": "coin-tutorial",
+    "name": "ShowMeTheCoin",
+    "slug": "react-native-coin-tutorial-2019",
     "privacy": "public",
-    "sdkVersion": "22.0.0",
+    "sdkVersion": "32.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "primaryColor": "#cccccc",
-    "icon": "./assets/icon.jpg",
+    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "packagerOpts": {
-      "assetExts": ["ttf", "mp4"]
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     }

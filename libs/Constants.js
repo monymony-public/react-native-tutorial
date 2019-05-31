@@ -1,7 +1,3 @@
-
-/**
-  Icons from: https://github.com/cjdowner/cryptocurrency-icons/tree/master/32%402x/icon
-*/
 export function getCoinIconUri(coinName) {
   switch (coinName) {
     case 'Bitcoin':
@@ -10,8 +6,11 @@ export function getCoinIconUri(coinName) {
     case 'Ethereum':
       return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/eth@2x.png?raw=true';
 
-    case 'Ripple':
+    case 'XRP':
       return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/xrp@2x.png?raw=true';
+
+    case 'EOS':
+        return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/eos@2x.png?raw=true';
 
     case 'Bitcoin Cash':
       return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/bcc@2x.png?raw=true';
@@ -20,6 +19,6 @@ export function getCoinIconUri(coinName) {
       return 'https://github.com/cjdowner/cryptocurrency-icons/blob/master/32@2x/icon/ltc@2x.png?raw=true';
 
     default:
-      return 'https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png';
+      return 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
   }
 }

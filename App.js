@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
-import CoinView from './components/CoinView';
+import { StyleSheet, Text, View } from 'react-native';
+import { Constants } from 'expo';
+import CoinView from './screens/CoinView';
 import TopBar from './components/TopBar';
 
 export default class App extends React.Component {
@@ -8,10 +9,10 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       refreshDate: '-',
-    };
+    }
   }
 
-  _setRefreshDate(date) {
+  _setRefreshDate = (date) => { // Called from CoinView's prop
     console.log('Updated: '+ date);
     this.setState({
       refreshDate: date,
@@ -21,27 +22,24 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar
-          hidden={true}
-          backgroundColor="blue"
-          barStyle="light-content"
-        />
-      <TopBar title="Show Me The Coin" refreshDate={this.state.refreshDate} />
+        <View style={styles.statusBar} />
+        <TopBar title="Show Me The Coin" refreshDate={this.state.refreshDate} />
         <CoinView
-          refreshDate={(date) => this._setRefreshDate(date)}
-          style={styles.coinView} />
+          refreshDate={this._setRefreshDate}
+          style={styles.coinView}
+        />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  statusBar: {
+    backgroundColor: '#C2185B',
+    height: Constants.statusBarHeight
+  },
   container: {
-    flex: 1,
-    // flexDirection: 'row', // column
-    backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'space-between', // center, space-around
+    flex: 1
   },
   coinView: {
     width: '100%',
@@ -49,6 +47,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column', // row
     backgroundColor: 'white',
     // alignItems: 'center',
-    // justifyContent: 'space-around', // center, space-around
+    // justifyContent: 'flex-start' // center, space-around
   }
 });
