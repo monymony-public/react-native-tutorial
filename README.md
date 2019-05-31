@@ -1,7 +1,5 @@
-# React Native Tutorial: Show Me The Coin
+# React Native Tutorial: Show Me The Coin - 2019
 (Build real native application with javascript, and Run on Expo)
-
-I am updating this tutorial for latest react native (0.58).
 
 ![ShowMeTheCoin](/screenshots/prettier.png)
 
