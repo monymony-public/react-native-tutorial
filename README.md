@@ -1,7 +1,9 @@
 # React Native Tutorial: Show Me The Coin - 2019
 (Build real native application with javascript, and Run on Expo)
 
-![ShowMeTheCoin](/screenshots/prettier.png =250x)
+<p align="center">
+  <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="200"/>
+</p>
 
 ## Contents
 1. [Create a New Project in Expo XDE](https://github.com/JeffGuKang/ReactNative-Tutorial#1-create-a-new-project-in-expo-xde)
@@ -1001,8 +1003,9 @@ export default CoinItem;
 
 It will be better to move each styles into the `StyleSheet`.
 
-![Prettier](/screenshots/prettier.png =250x)
-
+<p align="center">
+  <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="200"/>
+</p>
 
 # What’s Next
 
