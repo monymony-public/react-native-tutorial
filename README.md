@@ -6,7 +6,7 @@
 </p>
 
 ## Contents
-1. [Create a New Project in Expo XDE](https://github.com/JeffGuKang/ReactNative-Tutorial#1-create-a-new-project-in-expo-xde)
+1. [Create a New Project in Expo XDE](#1-create-a-new-project-in-expo-xde)
 2. [FlexBox Practice](https://github.com/JeffGuKang/ReactNative-Tutorial#2-flexbox-practice)
 3. [Say Hello to a New Component: `CoinView`](https://github.com/JeffGuKang/ReactNative-Tutorial#3-say-hello-to-a-new-component-coinview)
 4. [StatusBar (Props)](https://github.com/JeffGuKang/ReactNative-Tutorial#4-good-bye-statusbar-props)
@@ -225,14 +225,21 @@ OMG!! Sometimes your contents are placed under status bar or notch.
 So you need to custom `StatusBar`.
 
 - You can control status bar through `StatusBar` component from `react-native` module.
-- I recommend use `Constants` from `expo` module for status bar's height.
+- I recommend use `Constants` from `expo-constants` module for status bar's height.
+
+Install expo-constants
+
+```
+npm install expo-constants
+```
+
 
 #### App.js
 
 ```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import CoinView from './screens/CoinView';
 
 export default class App extends React.Component {
