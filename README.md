@@ -2,7 +2,7 @@
 (Build real native application with javascript, and Run on Expo)
 
 <p align="center">
-  <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="200"/>
+  <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="360"/>
 </p>
 
 ## Contents
@@ -1004,7 +1004,7 @@ export default CoinItem;
 It will be better to move each styles into the `StyleSheet`.
 
 <p align="center">
-  <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="200"/>
+  <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="360"/>
 </p>
 
 # What’s Next
