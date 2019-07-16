@@ -839,7 +839,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 
 return (
   <ScrollView style={this.props.style}>
-    {detailCells}
+    {coinItems}
   </ScrollView>
 )
 
