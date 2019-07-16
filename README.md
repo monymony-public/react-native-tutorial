@@ -1,7 +1,5 @@
-# React Native Tutorial: Show Me The Coin
+# React Native Tutorial: Show Me The Coin - 2019
 (Build real native application with javascript, and Run on Expo)
-
-I am updating this tutorial for latest react native (0.58).
 
 ![ShowMeTheCoin](/screenshots/prettier.png)
 
@@ -369,8 +367,7 @@ class CoinView extends React.Component {
 }
 ```
 
-외부로부터 스타일을 받아 적용 가능
-
+You can apply styles from other parent components.
 
 #### components/TopBar.js
 
