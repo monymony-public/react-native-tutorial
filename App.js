@@ -35,7 +35,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   statusBar: {
-    backgroundColor: '#C2185B',
+    backgroundColor: 'pink',
     height: Constants.statusBarHeight
   },
   container: {

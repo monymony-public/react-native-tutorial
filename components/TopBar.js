@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     height: 52,
     flexDirection: 'row', // row
-    backgroundColor: 'yellow',
+    backgroundColor: 'pink',
     alignItems: 'center',
     justifyContent: 'space-between', // center, space-around
     paddingLeft: 10,
