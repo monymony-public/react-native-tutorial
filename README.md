@@ -7,17 +7,17 @@
 
 ## Contents
 1. [Create a New Project in Expo XDE](#1-create-a-new-project-in-expo-xde)
-2. [FlexBox Practice](https://github.com/JeffGuKang/ReactNative-Tutorial#2-flexbox-practice)
-3. [Say Hello to a New Component: `CoinView`](https://github.com/JeffGuKang/ReactNative-Tutorial#3-say-hello-to-a-new-component-coinview)
-4. [StatusBar (Props)](https://github.com/JeffGuKang/ReactNative-Tutorial#4-good-bye-statusbar-props)
-5. [Top Bar](https://github.com/JeffGuKang/ReactNative-Tutorial#5-top-bar)
-6. [Props with TopBar Components](https://github.com/JeffGuKang/ReactNative-Tutorial#6-props-with-topbar-components)
-7. [Brand New CoinItem Component](https://github.com/JeffGuKang/ReactNative-Tutorial#7-brand-new-CoinItem-component)
-8. [Push Dummies Into The CoinItem Component](https://github.com/JeffGuKang/ReactNative-Tutorial#8-push-dummies-into-the-CoinItem-component)
-9. [It's Real Data](https://github.com/JeffGuKang/ReactNative-Tutorial#9-its-real-data)
-10. [Upgrade TopBar](https://github.com/JeffGuKang/ReactNative-Tutorial#10-upgrade-topbar)
-11. [ScrollView. Another Component](https://github.com/JeffGuKang/ReactNative-Tutorial#11-scrollview-another-component)
-12. [Oh, Beauty](https://github.com/JeffGuKang/ReactNative-Tutorial#12-oh-beauty)
+2. [FlexBox Practice](#2-flexbox-practice)
+3. [Say Hello to a New Component: `CoinView`](#3-say-hello-to-a-new-component-coinview)
+4. [StatusBar (Props)](#4-good-bye-statusbar-props)
+5. [Top Bar](#5-top-bar)
+6. [Props with TopBar Components](#6-props-with-topbar-components)
+7. [Brand New CoinItem Component](#7-brand-new-CoinItem-component)
+8. [Push Dummies Into The CoinItem Component](#8-push-dummies-into-the-CoinItem-component)
+9. [It's Real Data](#9-its-real-data)
+10. [Upgrade TopBar](#10-upgrade-topbar)
+11. [ScrollView. Another Component](#11-scrollview-another-component)
+12. [Oh, Beauty](#12-oh-beauty)
 
 ## Getting Started
 
