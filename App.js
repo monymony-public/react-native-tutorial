@@ -3,6 +3,7 @@ import { View, Text } from 'react-native'
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import Home from './screens/Home'
+import Youtube from './screens/Youtube';
 
 const Header = (props) => {
   return (
@@ -29,7 +30,22 @@ const MainStack = createStackNavigator({
         },
       }
     },
+  },
+  Youtube: {
+    screen: Youtube,
+    navigationOptions: ({navigation}) => {
+      return {
+        title: navigation.getParam('title', 'YOUTUBE'),
+      }
+    }
   }
+}, {
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: 'pink',
+    }
+  }
+  // initialRouteName: 'Youtube',
 })
 
 const AppContainer = createAppContainer(MainStack)

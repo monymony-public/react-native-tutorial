@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView, FlatList } from 'react-native';
 import CoinItem from '../components/CoinItem';
 import { getCoinIconUri } from '../libs/Constants';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 class CoinView extends React.Component {
   constructor(props) {
@@ -53,13 +54,18 @@ class CoinView extends React.Component {
   _renderItem = ({item}) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = item; // Destructuring
     return (
-      <CoinItem
-        rank={rank}
-        name={name}
-        price={price_usd}
-        volumn={market_cap_usd}
-        iconUri={getCoinIconUri(name)}
-      />
+      <TouchableOpacity 
+       onPress={() => this.props.navigation && 
+        this.props.navigation.push('Youtube', {title: name})}
+      >
+        <CoinItem
+          rank={rank}
+          name={name}
+          price={price_usd}
+          volumn={market_cap_usd}
+          iconUri={getCoinIconUri(name)}
+        />
+      </TouchableOpacity>      
     );
   }
 
@@ -70,7 +76,7 @@ class CoinView extends React.Component {
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
         refreshing={this.state.isLoading}
-        onRefresh={this._getCoinDatas}      
+        onRefresh={this._getCoinDatas}   
       />
     )
   }
