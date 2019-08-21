@@ -1,8 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, FlatList } from 'react-native';
 import CoinItem from '../components/CoinItem';
 import { getCoinIconUri } from '../libs/Constants';
-import { FlatList } from 'react-native-gesture-handler';
 
 class CoinView extends React.Component {
   constructor(props) {
@@ -19,10 +18,10 @@ class CoinView extends React.Component {
   componentDidMount() { // After component mounted
     this._getCoinDatas(10);
 
-    setInterval(() => {
-      this._getCoinDatas(10);
-      console.log('toggled!');
-    }, 10000);
+    // setInterval(() => {
+    //   this._getCoinDatas(10);
+    //   console.log('toggled!');
+    // }, 10000);
   }
 
   _getCoinDatas = async (limit) => {
@@ -70,6 +69,8 @@ class CoinView extends React.Component {
         data={this.state.coinDatas}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
+        refreshing={this.state.isLoading}
+        onRefresh={this._getCoinDatas}      
       />
     )
   }
