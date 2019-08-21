@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import CoinItem from '../components/CoinItem';
 import { getCoinIconUri } from '../libs/Constants';
+import { FlatList } from 'react-native-gesture-handler';
 
 class CoinView extends React.Component {
   constructor(props) {
@@ -50,25 +51,26 @@ class CoinView extends React.Component {
     }
   }
 
-  render () {
-    let coinItems = this.state.coinDatas.map( (data, index) => {
-      const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
-      return (
-        <CoinItem
-          key={index}
-          rank={rank}
-          name={name}
-          price={price_usd}
-          volumn={market_cap_usd}
-          iconUri={getCoinIconUri(name)}
-        />
-      );
-    });
-
+  _renderItem = ({item}) => {
+    const {rank, name, price_usd, market_cap_usd, last_updated} = item; // Destructuring
     return (
-      <ScrollView style={this.props.style}>
-        {coinItems}
-      </ScrollView>
+      <CoinItem
+        rank={rank}
+        name={name}
+        price={price_usd}
+        volumn={market_cap_usd}
+        iconUri={getCoinIconUri(name)}
+      />
+    );
+  }
+
+  render () {    
+    return (      
+      <FlatList 
+        data={this.state.coinDatas}
+        keyExtractor={(item) => item.name}
+        renderItem={this._renderItem}
+      />
     )
   }
 }
