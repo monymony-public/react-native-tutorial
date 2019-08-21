@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "expo": "^34.0.0",
-    "expo-constants": "~5.0.1",
+    "expo-constants": "~6.0.0",
     "react": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz"
   },
