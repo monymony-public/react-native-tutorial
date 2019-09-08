@@ -6,6 +6,8 @@ Build real native simple application with javascript
   <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="360"/>
 </p>
 
+Project sources: [Examples/show-me-the-coin]("Examples/show-me-the-coin")
+
 ## Contents
 1. [Create a New Project in Expo XDE](#1-create-a-new-project-in-expo-xde)
 2. [FlexBox Practice](#2-flexbox-practice)
