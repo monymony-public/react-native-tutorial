@@ -1,9 +1,20 @@
 # React Native Tutorial: Show Me The Coin - 2019
-(Build real native application with javascript, and Run on Expo)
+
+Build real native simple application with javascript
 
 <p align="center">
   <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="360"/>
 </p>
+
+## How to run 
+
+Project sources: [Examples/show-me-the-coin]("Examples/show-me-the-coin")
+
+```
+cd Examples/show-me-the-coin
+yarn # Install dependencies
+yarn start # Start expo
+```
 
 ## Contents
 1. [Create a New Project in Expo XDE](#1-create-a-new-project-in-expo-xde)
