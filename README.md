@@ -1395,6 +1395,5 @@ onst MainStack = createStackNavigator({
 - [x] Pull to refresh 
 - [x] Apply Router(react-navigation) with detail screen 
   - [x] Show more `Detail Page` when clicked each rows 
-
 - [ ] Use state management as `Context`
 - [ ] Make release version for application store from `Expo` or export from `Expo`

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contribution
-# nav_order: 2
+nav_order: 2
 has_children: false
 permalink: /docs/Contribution.md
 ---
