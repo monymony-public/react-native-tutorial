@@ -128,9 +128,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box, {backgroundColor: 'red', flex:1}]}></View> { /* Delete flex */ }
-        <View style={[styles.box, {backgroundColor: 'violet', flex:2}]}></View> { /* Delete flex */ }
-        <View style={[styles.box, {backgroundColor: 'pink', flex:3}]}></View> { /* Delete flex */ }
+        <View style={[styles.box, {backgroundColor: 'red', flex:1}]}></View>{ /* Delete flex */ }
+        <View style={[styles.box, {backgroundColor: 'violet', flex:2}]}></View>{ /* Delete flex */ }
+        <View style={[styles.box, {backgroundColor: 'pink', flex:3}]}></View>{ /* Delete flex */ }
         <Text>Open up App.js to start working on your app!!!</Text>
       </View>
     );
