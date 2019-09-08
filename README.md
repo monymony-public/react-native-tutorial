@@ -226,6 +226,7 @@ const styles = StyleSheet.create({
 
 ### Run and Test!
 
+![sayHello](./screenshots/sayHello.png "sayHello")
 
 
 ## 4. StatusBar
