@@ -1,5 +1,6 @@
 # React Native Tutorial: Show Me The Coin - 2019
-(Build real native application with javascript, and Run on Expo)
+
+Build real native simple application with javascript
 
 <p align="center">
   <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="360"/>
