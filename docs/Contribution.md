@@ -62,4 +62,4 @@ This repo contains react native projects and documentation powering the [React N
 
 ## License
 
-React Native Tutorial is [Creative Commons licensed](./LICENSE).
+React Native Tutorial is [Creative Commons licensed](https://jeffgukang.github.io/react-native-tutorial/LICENSE).
