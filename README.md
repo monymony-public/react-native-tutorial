@@ -2,9 +2,7 @@
 
 Build real native simple application with javascript
 
-<p align="center">
-  <img src="/screenshots/prettier.png" alt="ShowMeTheCoin" width="360"/>
-</p>
+![Hello](./screenshots/prettier.png "Hello React Native")
 
 ## How to run 
 
