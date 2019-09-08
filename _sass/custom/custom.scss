@@ -1,10 +1,14 @@
 img {
-    max-width: 900px !important;
-    max-height: 700px;
+  max-width: 900px !important;
+  max-height: 700px;
 }
 
-navigation, .site-header, .site-footer {
-    width: 300px;
+@media (min-width: 66.5rem) {
+  .navigation,
+  .site-header,
+  .site-footer {
+    width:300px;
+  }
 }
 
 ////
