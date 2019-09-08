@@ -22,3 +22,28 @@ export function getCoinIconUri(coinName) {
       return 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
   }
 }
+
+export function getCoinYoutubeUrl(coinName) {
+  switch (coinName) {
+    case 'Bitcoin':
+      return 'https://youtu.be/ar9PuUCvvCw';
+
+    case 'Ethereum':
+      return 'https://youtu.be/ar9PuUCvvCw';
+
+    case 'XRP':
+      return 'https://youtu.be/ar9PuUCvvCw';
+
+    case 'EOS':
+        return 'https://youtu.be/ar9PuUCvvCw';
+
+    case 'Bitcoin Cash':
+      return 'https://youtu.be/ar9PuUCvvCw';
+
+    case 'Litecoin':
+      return 'https://youtu.be/ar9PuUCvvCw';
+
+    default:
+      return 'https://youtu.be/ar9PuUCvvCw';
+  }
+}

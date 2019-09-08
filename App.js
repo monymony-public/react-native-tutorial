@@ -1,52 +1,59 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Constants from 'expo-constants';
-import CoinView from './screens/CoinView';
-import TopBar from './components/TopBar';
+import React from 'react'
+import { View, Text } from 'react-native'
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      refreshDate: '-',
-    }
-  }
+import Home from './screens/Home'
+import Youtube from './screens/Youtube';
 
-  _setRefreshDate = (date) => { // Called from CoinView's prop
-    console.log('Updated: '+ date);
-    this.setState({
-      refreshDate: date,
-    });
-  }
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.statusBar} />
-        <TopBar title="Show Me The Coin" refreshDate={this.state.refreshDate} />
-        <CoinView
-          refreshDate={this._setRefreshDate}
-          style={styles.coinView}
-        />
-      </View>
-    );
-  }
+const Header = (props) => {
+  return (
+    <View style={{ alignItems: 'center' }}>
+      <Text style={{ fontSize: 18 }}>{props.title}</Text>
+      <Text style={{ fontSize: 13, color: 'gray' }}>{props.subtitle}</Text>
+    </View>
+  )
 }
 
-const styles = StyleSheet.create({
-  statusBar: {
-    backgroundColor: 'pink',
-    height: Constants.statusBarHeight
+const MainStack = createStackNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: ({navigation}) => {
+      return {
+        headerTitle: (
+          <Header 
+            title={'Show Me The Coin'} 
+            subtitle={navigation.getParam('refreshDate', '-')} 
+          />
+        ),
+        headerStyle: {
+          backgroundColor: 'pink',
+        },
+      }
+    },
   },
-  container: {
-    flex: 1
-  },
-  coinView: {
-    width: '100%',
-    flex: 1,
-    flexDirection: 'column', // row
-    backgroundColor: 'white',
-    // alignItems: 'center',
-    // justifyContent: 'flex-start' // center, space-around
+  Youtube: {
+    screen: Youtube,
+    navigationOptions: ({navigation}) => {
+      return {
+        title: navigation.getParam('title', 'YOUTUBE'),
+      }
+    }
   }
-});
+}, {
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: 'pink',
+    }
+  }
+  // initialRouteName: 'Youtube',
+})
+
+const AppContainer = createAppContainer(MainStack)
+
+const App = () => {
+  return (
+    <AppContainer />
+  )
+}
+
+export default App
