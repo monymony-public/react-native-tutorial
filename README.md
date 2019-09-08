@@ -6,7 +6,7 @@ Build real native simple application with javascript
 
 ## How to run 
 
-Project sources: [Examples/show-me-the-coin]("Examples/show-me-the-coin")
+Project sources: [Examples/show-me-the-coin](Examples/show-me-the-coin)
 
 ```
 cd Examples/show-me-the-coin
