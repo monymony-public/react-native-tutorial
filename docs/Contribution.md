@@ -58,6 +58,10 @@ This repo contains react native projects and documentation powering the [React N
 1.  Follow GitHub's instructions.
 1.  If possible, include screenshots of visual changes.
 
+### Examples
+
+Example projects are following [react-native-eslint-prettier-starter](https://github.com/JeffGuKang/react-native-eslint-prettier-starter) setup for linting.
+
 ---
 
 ## License
