@@ -469,7 +469,7 @@ class CoinItem extends React.Component {
           {this.props.name || 'Name'}
         </Text>
         <Text style={[styles.text, { flex: 1 }]}>
-          {'Volume: ' + (this.props.volumn || 0)}
+          {'Volume: ' + (this.props.volume || 0)}
         </Text>
         <Text style={[styles.text, { flex: 1 }]}>
           {'Price: ' + (this.props.price || 0)}
@@ -596,7 +596,7 @@ class CoinView extends React.Component {
           rank={rank}
           name={name}
           price={price_usd}
-          volumn={market_cap_usd}
+          volume={market_cap_usd}
         />
       );
     });
@@ -612,7 +612,7 @@ class CoinView extends React.Component {
     //       rank={data.rank}
     //       name={data.name}
     //       price={data.price_usd}
-    //       volumn={data.market_cap_usd}
+    //       volume={data.market_cap_usd}
     //     />
     //   )
     //   coinItems.push(CoinItem);
@@ -691,7 +691,7 @@ class CoinView extends React.Component {
           rank={rank}
           name={name}
           price={price_usd}
-          volumn={market_cap_usd}
+          volume={market_cap_usd}
         />
       );
     });
@@ -944,7 +944,7 @@ render () {
         rank={rank}
         name={name}
         price={price_usd}
-        volumn={market_cap_usd}
+        volume={market_cap_usd}
         iconUri={getCoinIconUri(name)}
       />
     );
@@ -986,7 +986,7 @@ class CoinItem extends React.Component {
         <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'stretch', alignItems: 'center', justifyContent: 'space-between' }}>
           <View>
             <Text style={[styles.text, { flex: 1, fontSize: 20, marginTop: 5 }]}>{this.props.name || 'Name'}</Text>
-            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
+            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volume || 0)}</Text>
             <Text style={[styles.text, { flex: 1 }]}>{'$: ' + (this.props.price || 0)}</Text>
           </View>
           <Text style={[styles.text, { fontSize: 25, marginRight: 10 }]}>{'#' + (this.props.rank || 'Rank')}</Text>
@@ -1036,7 +1036,7 @@ _renderItem = ({item}) => {
         rank={rank}
         name={name}
         price={price_usd}
-        volumn={market_cap_usd}
+        volume={market_cap_usd}
         iconUri={getCoinIconUri(name)}
       />
     );
@@ -1271,7 +1271,7 @@ import { TouchableOpacity } from ‘react-native';
           rank={rank}
           name={name}
           price={price_usd}
-          volumn={market_cap_usd}
+          volume={market_cap_usd}
           iconUri={getCoinIconUri(name)}
         />
       </TouchableOpacity>      
