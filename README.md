@@ -128,9 +128,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box, {backgroundColor: 'red', flex:1}]}></View> { /* Delete flex */ }
-        <View style={[styles.box, {backgroundColor: 'violet', flex:2}]}></View> { /* Delete flex */ }
-        <View style={[styles.box, {backgroundColor: 'pink', flex:3}]}></View> { /* Delete flex */ }
+        <View style={[styles.box, {backgroundColor: 'red', flex:1}]}></View>{ /* Delete flex */ }
+        <View style={[styles.box, {backgroundColor: 'violet', flex:2}]}></View>{ /* Delete flex */ }
+        <View style={[styles.box, {backgroundColor: 'pink', flex:3}]}></View>{ /* Delete flex */ }
         <Text>Open up App.js to start working on your app!!!</Text>
       </View>
     );
@@ -226,6 +226,7 @@ const styles = StyleSheet.create({
 
 ### Run and Test!
 
+![sayHello](./screenshots/sayHello.png "sayHello")
 
 
 ## 4. StatusBar
@@ -330,7 +331,7 @@ Add TopBar in App.js
 ```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import CoinView from './screens/CoinView';
 import TopBar from './components/TopBar';
 
