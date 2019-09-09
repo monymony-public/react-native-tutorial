@@ -1205,7 +1205,7 @@ export default class Home extends React.Component {
 Install `react-native-webview`
 
 ```
-yarn add react-native-webview
+expo install react-native-webview
 ```
 
 screens/Youtube.js
