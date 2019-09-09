@@ -470,7 +470,7 @@ class CoinItem extends React.Component {
           {this.props.name || 'Name'}
         </Text>
         <Text style={[styles.text, { flex: 1 }]}>
-          {'Volume: ' + (this.props.volumn || 0)}
+          {'Volume: ' + (this.props.volume || 0)}
         </Text>
         <Text style={[styles.text, { flex: 1 }]}>
           {'Price: ' + (this.props.price || 0)}
@@ -597,7 +597,7 @@ class CoinView extends React.Component {
           rank={rank}
           name={name}
           price={price_usd}
-          volumn={market_cap_usd}
+          volume={market_cap_usd}
         />
       );
     });
@@ -613,7 +613,7 @@ class CoinView extends React.Component {
     //       rank={data.rank}
     //       name={data.name}
     //       price={data.price_usd}
-    //       volumn={data.market_cap_usd}
+    //       volume={data.market_cap_usd}
     //     />
     //   )
     //   coinItems.push(CoinItem);
@@ -632,7 +632,7 @@ class CoinView extends React.Component {
 
 #### Run
 
-![DummyDatas](/screenshots/sampleData.png)
+![DummyData](/screenshots/sampleData.png)
 
 ## 9. It's Real Data.
 
@@ -649,7 +649,7 @@ class CoinView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      coinDatas: [],
+      coinData: [],
       isLoading: false,
     };
 
@@ -658,15 +658,15 @@ class CoinView extends React.Component {
   }
 
   componentDidMount() { // After component mounted
-    this._getCoinDatas(10);
+    this._getCoinData(10);
 
     setInterval(() => {
-      this._getCoinDatas(10);
+      this._getCoinData(10);
       console.log('toggled!');
     }, 10000);
   }
 
-  _getCoinDatas = async (limit) => {
+  _getCoinData = async (limit) => {
     this.setState({
       isLoading: true,
     });
@@ -679,12 +679,12 @@ class CoinView extends React.Component {
         isLoading: false,
       });
     } catch(error) {
-      console.error('_getCoinDatas', error);
+      console.error('_getCoinData', error);
     }
   }
 
   render () {
-    let coinItems = this.state.coinDatas.map( (data, index) => {
+    let coinItems = this.state.coinData.map( (data, index) => {
       const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
       return (
         <CoinItem
@@ -692,7 +692,7 @@ class CoinView extends React.Component {
           rank={rank}
           name={name}
           price={price_usd}
-          volumn={market_cap_usd}
+          volume={market_cap_usd}
         />
       );
     });
@@ -723,7 +723,7 @@ Communication between parent and child components
 #### screens/CoinView.js
 
 ```js
-  _getCoinDatas = async (limit) => {
+  _getCoinData = async (limit) => {
     this.setState({
       isLoading: true,
     });
@@ -740,12 +740,12 @@ Communication between parent and child components
       }
 
       await this.setState({
-        coinDatas: responseJson,
+        coinData: responseJson,
         isLoading: false,
       });
 
     } catch(error) {
-      console.error('_getCoinDatas', error);
+      console.error('_getCoinData', error);
     }
   }
 ```
@@ -937,7 +937,7 @@ import { getCoinIconUri } from '../libs/Constants';
 ...
 
 render () {
-  let detailCells = this.state.coinDatas.map( (data, index) => {
+  let detailCells = this.state.coinData.map( (data, index) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
     return (
       <CoinItem
@@ -945,7 +945,7 @@ render () {
         rank={rank}
         name={name}
         price={price_usd}
-        volumn={market_cap_usd}
+        volume={market_cap_usd}
         iconUri={getCoinIconUri(name)}
       />
     );
@@ -987,7 +987,7 @@ class CoinItem extends React.Component {
         <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'stretch', alignItems: 'center', justifyContent: 'space-between' }}>
           <View>
             <Text style={[styles.text, { flex: 1, fontSize: 20, marginTop: 5 }]}>{this.props.name || 'Name'}</Text>
-            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
+            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volume || 0)}</Text>
             <Text style={[styles.text, { flex: 1 }]}>{'$: ' + (this.props.price || 0)}</Text>
           </View>
           <Text style={[styles.text, { fontSize: 25, marginRight: 10 }]}>{'#' + (this.props.rank || 'Rank')}</Text>
@@ -1037,7 +1037,7 @@ _renderItem = ({item}) => {
         rank={rank}
         name={name}
         price={price_usd}
-        volumn={market_cap_usd}
+        volume={market_cap_usd}
         iconUri={getCoinIconUri(name)}
       />
     );
@@ -1046,7 +1046,7 @@ _renderItem = ({item}) => {
   render () { // Do not forget import FlatList   
     return (
       <FlatList 
-        data={this.state.coinDatas}
+        data={this.state.coinData}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
       />
@@ -1061,10 +1061,10 @@ screens/CoinView.js
 
 ```js
   componentDidMount() { // After component mounted
-    this._getCoinDatas(10);
+    this._getCoinData(10);
 
     // setInterval(() => {
-    //   this._getCoinDatas(10);
+    //   this._getCoinData(10);
     //   console.log('toggled!');
     // }, 10000);
   }
@@ -1074,11 +1074,11 @@ screens/CoinView.js
   render () {    
     return (      
       <FlatList 
-        data={this.state.coinDatas}
+        data={this.state.coinData}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
         refreshing={this.state.isLoading}
-        onRefresh={this._getCoinDatas}      
+        onRefresh={this._getCoinData}      
       />
     )
   }
@@ -1206,7 +1206,7 @@ export default class Home extends React.Component {
 Install `react-native-webview`
 
 ```
-yarn add react-native-webview
+expo install react-native-webview
 ```
 
 screens/Youtube.js
@@ -1272,7 +1272,7 @@ import { TouchableOpacity } from ‘react-native';
           rank={rank}
           name={name}
           price={price_usd}
-          volumn={market_cap_usd}
+          volume={market_cap_usd}
           iconUri={getCoinIconUri(name)}
         />
       </TouchableOpacity>      
