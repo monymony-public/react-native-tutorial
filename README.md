@@ -631,7 +631,7 @@ class CoinView extends React.Component {
 
 #### Run
 
-![DummyDatas](/screenshots/sampleData.png)
+![DummyData](/screenshots/sampleData.png)
 
 ## 9. It's Real Data.
 
@@ -648,7 +648,7 @@ class CoinView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      coinDatas: [],
+      coinData: [],
       isLoading: false,
     };
 
@@ -657,15 +657,15 @@ class CoinView extends React.Component {
   }
 
   componentDidMount() { // After component mounted
-    this._getCoinDatas(10);
+    this._getCoinData(10);
 
     setInterval(() => {
-      this._getCoinDatas(10);
+      this._getCoinData(10);
       console.log('toggled!');
     }, 10000);
   }
 
-  _getCoinDatas = async (limit) => {
+  _getCoinData = async (limit) => {
     this.setState({
       isLoading: true,
     });
@@ -678,12 +678,12 @@ class CoinView extends React.Component {
         isLoading: false,
       });
     } catch(error) {
-      console.error('_getCoinDatas', error);
+      console.error('_getCoinData', error);
     }
   }
 
   render () {
-    let coinItems = this.state.coinDatas.map( (data, index) => {
+    let coinItems = this.state.coinData.map( (data, index) => {
       const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
       return (
         <CoinItem
@@ -722,7 +722,7 @@ Communication between parent and child components
 #### screens/CoinView.js
 
 ```js
-  _getCoinDatas = async (limit) => {
+  _getCoinData = async (limit) => {
     this.setState({
       isLoading: true,
     });
@@ -739,12 +739,12 @@ Communication between parent and child components
       }
 
       await this.setState({
-        coinDatas: responseJson,
+        coinData: responseJson,
         isLoading: false,
       });
 
     } catch(error) {
-      console.error('_getCoinDatas', error);
+      console.error('_getCoinData', error);
     }
   }
 ```
@@ -936,7 +936,7 @@ import { getCoinIconUri } from '../libs/Constants';
 ...
 
 render () {
-  let detailCells = this.state.coinDatas.map( (data, index) => {
+  let detailCells = this.state.coinData.map( (data, index) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
     return (
       <CoinItem
@@ -1045,7 +1045,7 @@ _renderItem = ({item}) => {
   render () { // Do not forget import FlatList   
     return (
       <FlatList 
-        data={this.state.coinDatas}
+        data={this.state.coinData}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
       />
@@ -1060,10 +1060,10 @@ screens/CoinView.js
 
 ```js
   componentDidMount() { // After component mounted
-    this._getCoinDatas(10);
+    this._getCoinData(10);
 
     // setInterval(() => {
-    //   this._getCoinDatas(10);
+    //   this._getCoinData(10);
     //   console.log('toggled!');
     // }, 10000);
   }
@@ -1073,11 +1073,11 @@ screens/CoinView.js
   render () {    
     return (      
       <FlatList 
-        data={this.state.coinDatas}
+        data={this.state.coinData}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
         refreshing={this.state.isLoading}
-        onRefresh={this._getCoinDatas}      
+        onRefresh={this._getCoinData}      
       />
     )
   }
