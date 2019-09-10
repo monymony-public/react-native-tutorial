@@ -649,7 +649,7 @@ class CoinView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      coinData: [],
+      coinDatas: [],
       isLoading: false,
     };
 
