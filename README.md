@@ -675,7 +675,7 @@ class CoinView extends React.Component {
       const response = await fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`);
       const responseJson = await response.json();
       await this.setState({
-        coinDatas: responseJson,
+        coinData: responseJson,
         isLoading: false,
       });
     } catch(error) {
@@ -757,7 +757,7 @@ Add state, `_setRefreshDate` ....
 ```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import CoinView from './screens/CoinView';
 import TopBar from './components/TopBar';
 
