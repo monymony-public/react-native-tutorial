@@ -937,7 +937,7 @@ import { getCoinIconUri } from '../libs/Constants';
 ...
 
 render () {
-  let detailCells = this.state.coinData.map( (data, index) => {
+  let detailCells = this.state.coinDatas.map( (data, index) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
     return (
       <CoinItem
