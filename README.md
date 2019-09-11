@@ -723,7 +723,7 @@ Communication between parent and child components
 #### screens/CoinView.js
 
 ```js
-  _getCoinData = async (limit) => {
+  _getCoinDatas = async (limit) => {
     this.setState({
       isLoading: true,
     });
