@@ -649,7 +649,7 @@ class CoinView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      coinDatas: [],
+      coinData: [],
       isLoading: false,
     };
 
@@ -675,7 +675,7 @@ class CoinView extends React.Component {
       const response = await fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`);
       const responseJson = await response.json();
       await this.setState({
-        coinDatas: responseJson,
+        coinData: responseJson,
         isLoading: false,
       });
     } catch(error) {
