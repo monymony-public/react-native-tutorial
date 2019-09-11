@@ -1029,6 +1029,9 @@ It will be better to move each styles into the `StyleSheet`.
 screens/CoinView.js
 
 ```js
+
+...
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 ...
 _renderItem = ({item}) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = item; // Destructuring
@@ -1046,7 +1049,7 @@ _renderItem = ({item}) => {
   render () { // Do not forget import FlatList   
     return (
       <FlatList 
-        data={this.state.coinData}
+        data={this.state.coinDatas}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
       />
