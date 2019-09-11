@@ -1093,8 +1093,7 @@ We will use one of the most popular router libraries. [react-navigation](https:/
 
 ```js
 yarn add react-navigation@3.11.1
-expo install react-native-gesture-handler
-expo install react-native-reanimated
+yarn add react-native-reanimated react-native-gesture-handler react-native-screens
 ```
 
 Copy source code from App.js to screens/Home.js. And arrange `import` as below 
