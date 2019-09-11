@@ -1064,10 +1064,10 @@ screens/CoinView.js
 
 ```js
   componentDidMount() { // After component mounted
-    this._getCoinData(10);
+    this._getCoinDatas(10);
 
     // setInterval(() => {
-    //   this._getCoinData(10);
+    //   this._getCoinDatas(10);
     //   console.log('toggled!');
     // }, 10000);
   }
@@ -1077,11 +1077,11 @@ screens/CoinView.js
   render () {    
     return (      
       <FlatList 
-        data={this.state.coinData}
+        data={this.state.coinDatas}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
         refreshing={this.state.isLoading}
-        onRefresh={this._getCoinData}      
+        onRefresh={this._getCoinDatas}      
       />
     )
   }
