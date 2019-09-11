@@ -1356,7 +1356,7 @@ screens/App.js
 ```js
 ...
 
-onst MainStack = createStackNavigator({
+const MainStack = createStackNavigator({
   Home: {
     screen: Home,
     navigationOptions: ({navigation}) => {
