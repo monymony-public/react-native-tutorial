@@ -723,7 +723,7 @@ Communication between parent and child components
 #### screens/CoinView.js
 
 ```js
-  _getCoinDatas = async (limit) => {
+  _getCoinData = async (limit) => {
     this.setState({
       isLoading: true,
     });
@@ -937,7 +937,7 @@ import { getCoinIconUri } from '../libs/Constants';
 ...
 
 render () {
-  let detailCells = this.state.coinDatas.map( (data, index) => {
+  let detailCells = this.state.coinData.map( (data, index) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
     return (
       <CoinItem
@@ -1049,7 +1049,7 @@ _renderItem = ({item}) => {
   render () { // Do not forget import FlatList   
     return (
       <FlatList 
-        data={this.state.coinDatas}
+        data={this.state.coinData}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
       />
@@ -1064,10 +1064,10 @@ screens/CoinView.js
 
 ```js
   componentDidMount() { // After component mounted
-    this._getCoinDatas(10);
+    this._getCoinData(10);
 
     // setInterval(() => {
-    //   this._getCoinDatas(10);
+    //   this._getCoinData(10);
     //   console.log('toggled!');
     // }, 10000);
   }
@@ -1077,11 +1077,11 @@ screens/CoinView.js
   render () {    
     return (      
       <FlatList 
-        data={this.state.coinDatas}
+        data={this.state.coinData}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
         refreshing={this.state.isLoading}
-        onRefresh={this._getCoinDatas}      
+        onRefresh={this._getCoinData}      
       />
     )
   }
