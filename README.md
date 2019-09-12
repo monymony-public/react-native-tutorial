@@ -1029,6 +1029,9 @@ It will be better to move each styles into the `StyleSheet`.
 screens/CoinView.js
 
 ```js
+
+...
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 ...
 _renderItem = ({item}) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = item; // Destructuring
@@ -1353,7 +1356,7 @@ screens/App.js
 ```js
 ...
 
-onst MainStack = createStackNavigator({
+const MainStack = createStackNavigator({
   Home: {
     screen: Home,
     navigationOptions: ({navigation}) => {
