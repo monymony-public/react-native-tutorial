@@ -15,29 +15,63 @@ class Counter extends React.Component {
   }
 
   render() {
-    const value = this.props.value;
+    const {value} = this.props;
     return (
-      <View>
-        <Text>Count: {this.state.count}</Text>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={this.onclick.bind(this, 'add')}>
-          <Text>inc</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={this.onclick.bind(this, 'sub')}>
-          <Text>dec</Text>
-        </TouchableOpacity>
-      </View>
+        <View style={styles.counterContainer}>
+          <Text style={styles.counterInfo}>Count: {this.state.count}</Text>
+          <View style={styles.counterBtnContainer}>
+            <TouchableOpacity
+                style={styles.counterButton}
+                onPress={this.onclick.bind(this, 'add')}>
+              <Text style={{color: '#4C4C4C'}}>INCREMENT</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.counterButton}
+                onPress={this.onclick.bind(this, 'sub')}>
+              <Text style={{color: '#4C4C4C'}}>DECREMENT</Text>
+            </TouchableOpacity>
+          </View>
+
+        </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  button: {
-    backgroundColor: 'beige',
-    color: 'white',
+  counterContainer : {
+    width : "100%",
+    height : 100,
+    padding : 20,
+    backgroundColor : 'white',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 4,
+      height: 3,
+    },
+    shadowOpacity: 0.32,
+    shadowRadius: 5.46,
+
+    elevation: 9,
+    marginBottom : 10,
+  },
+  counterInfo : {
+    flex : 1,
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign : 'center',
+    fontSize : 18,
+  },
+  counterBtnContainer : {
+    flex : 1,
+    flexDirection : "row",
+    width : "100%",
+  },
+  counterButton: {
+    backgroundColor : '#D1B2FF',
+    marginLeft : 5,
+    flex : 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

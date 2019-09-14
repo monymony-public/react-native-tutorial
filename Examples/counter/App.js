@@ -1,24 +1,21 @@
 import React from 'react';
 import CounterCollection from './components/CounterCollection';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, ScrollView} from 'react-native';
 
 function App() {
-
-
   return (
-    <View style={styles.container}>
-      <CounterCollection />
-    </View>
-
+      <ScrollView style={styles.container}>
+        <CounterCollection />
+      </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex : 1,
+    width : "100%",
+    backgroundColor: '#F6F6F6',
+    paddingTop : '15%',
   },
 });
 
