@@ -1,37 +1,34 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-class Counter extends React.Component {
-  constructor(props) {
-    super(props);
+class Counter extends React.Component{
 
-    this.state = {count: 0};
+  handleIncrement = (index) => {
+    this.props.handleIncrement(index);
   }
 
-  onclick(type) {
-    this.setState(prevState => {
-      return {count: type == 'add' ? prevState.count + 1 : prevState.count - 1};
-    });
+  handleDecrement = (index) => {
+    this.props.handleDecrement(index);
   }
 
-  render() {
-    const {value} = this.props;
+
+  render(){
+    const {index ,value} = this.props;
     return (
-        <View style={styles.counterContainer}>
-          <Text style={styles.counterInfo}>Count: {this.state.count}</Text>
+        <View index={value.toString()} style={styles.counterContainer}>
+          <Text style={styles.counterInfo}>Count: {value.counterNum.toString()}</Text>
           <View style={styles.counterBtnContainer}>
             <TouchableOpacity
                 style={styles.counterButton}
-                onPress={this.onclick.bind(this, 'add')}>
+                onPress={() => this.handleIncrement({index})}>
               <Text style={{color: '#4C4C4C'}}>INCREMENT</Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.counterButton}
-                onPress={this.onclick.bind(this, 'sub')}>
+                onPress={() => this.handleDecrement({index})}>
               <Text style={{color: '#4C4C4C'}}>DECREMENT</Text>
             </TouchableOpacity>
           </View>
-
         </View>
     );
   }
@@ -50,7 +47,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.32,
     shadowRadius: 5.46,
-
     elevation: 9,
     marginBottom : 10,
   },
