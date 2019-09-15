@@ -1092,7 +1092,7 @@ screens/CoinView.js
 We will use one of the most popular router libraries. [react-navigation](https://github.com/react-navigation/react-navigation)
 
 ```js
-yarn add react-navigation@3.11.1
+yarn add react-navigation@4.0.5
 expo install react-native-gesture-handler
 expo install react-native-reanimated
 ```
@@ -1118,7 +1118,8 @@ App.js
 ```js
 import React from 'react'
 import { View, Text } from 'react-native'
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import Home from './screens/Home'
 
