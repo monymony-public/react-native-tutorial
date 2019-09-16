@@ -240,7 +240,7 @@ So you need to custom `StatusBar`.
 Install expo-constants
 
 ```
-npm install expo-constants
+expo install expo-constants
 ```
 
 
@@ -408,7 +408,7 @@ return (
 ```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import CoinView from './screens/CoinView';
 import TopBar from './components/TopBar';
 
@@ -675,7 +675,7 @@ class CoinView extends React.Component {
       const response = await fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`);
       const responseJson = await response.json();
       await this.setState({
-        coinDatas: responseJson,
+        coinData: responseJson,
         isLoading: false,
       });
     } catch(error) {
@@ -757,7 +757,7 @@ Add state, `_setRefreshDate` ....
 ```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import CoinView from './screens/CoinView';
 import TopBar from './components/TopBar';
 
@@ -1029,6 +1029,9 @@ It will be better to move each styles into the `StyleSheet`.
 screens/CoinView.js
 
 ```js
+
+...
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 ...
 _renderItem = ({item}) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = item; // Destructuring
@@ -1353,7 +1356,7 @@ screens/App.js
 ```js
 ...
 
-onst MainStack = createStackNavigator({
+const MainStack = createStackNavigator({
   Home: {
     screen: Home,
     navigationOptions: ({navigation}) => {
