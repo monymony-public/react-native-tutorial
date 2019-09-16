@@ -240,7 +240,7 @@ So you need to custom `StatusBar`.
 Install expo-constants
 
 ```
-npm install expo-constants
+expo install expo-constants
 ```
 
 
@@ -408,7 +408,7 @@ return (
 ```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import CoinView from './screens/CoinView';
 import TopBar from './components/TopBar';
 
@@ -470,7 +470,7 @@ class CoinItem extends React.Component {
           {this.props.name || 'Name'}
         </Text>
         <Text style={[styles.text, { flex: 1 }]}>
-          {'Volume: ' + (this.props.volumn || 0)}
+          {'Volume: ' + (this.props.volume || 0)}
         </Text>
         <Text style={[styles.text, { flex: 1 }]}>
           {'Price: ' + (this.props.price || 0)}
@@ -597,7 +597,7 @@ class CoinView extends React.Component {
           rank={rank}
           name={name}
           price={price_usd}
-          volumn={market_cap_usd}
+          volume={market_cap_usd}
         />
       );
     });
@@ -613,7 +613,7 @@ class CoinView extends React.Component {
     //       rank={data.rank}
     //       name={data.name}
     //       price={data.price_usd}
-    //       volumn={data.market_cap_usd}
+    //       volume={data.market_cap_usd}
     //     />
     //   )
     //   coinItems.push(CoinItem);
@@ -632,7 +632,7 @@ class CoinView extends React.Component {
 
 #### Run
 
-![DummyDatas](/screenshots/sampleData.png)
+![DummyData](/screenshots/sampleData.png)
 
 ## 9. It's Real Data.
 
@@ -649,7 +649,7 @@ class CoinView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      coinDatas: [],
+      coinData: [],
       isLoading: false,
     };
 
@@ -658,15 +658,15 @@ class CoinView extends React.Component {
   }
 
   componentDidMount() { // After component mounted
-    this._getCoinDatas(10);
+    this._getCoinData(10);
 
     setInterval(() => {
-      this._getCoinDatas(10);
+      this._getCoinData(10);
       console.log('toggled!');
     }, 10000);
   }
 
-  _getCoinDatas = async (limit) => {
+  _getCoinData = async (limit) => {
     this.setState({
       isLoading: true,
     });
@@ -675,16 +675,16 @@ class CoinView extends React.Component {
       const response = await fetch(`https://api.coinmarketcap.com/v1/ticker/?limit=${limit}`);
       const responseJson = await response.json();
       await this.setState({
-        coinDatas: responseJson,
+        coinData: responseJson,
         isLoading: false,
       });
     } catch(error) {
-      console.error('_getCoinDatas', error);
+      console.error('_getCoinData', error);
     }
   }
 
   render () {
-    let coinItems = this.state.coinDatas.map( (data, index) => {
+    let coinItems = this.state.coinData.map( (data, index) => {
       const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
       return (
         <CoinItem
@@ -692,7 +692,7 @@ class CoinView extends React.Component {
           rank={rank}
           name={name}
           price={price_usd}
-          volumn={market_cap_usd}
+          volume={market_cap_usd}
         />
       );
     });
@@ -723,7 +723,7 @@ Communication between parent and child components
 #### screens/CoinView.js
 
 ```js
-  _getCoinDatas = async (limit) => {
+  _getCoinData = async (limit) => {
     this.setState({
       isLoading: true,
     });
@@ -740,12 +740,12 @@ Communication between parent and child components
       }
 
       await this.setState({
-        coinDatas: responseJson,
+        coinData: responseJson,
         isLoading: false,
       });
 
     } catch(error) {
-      console.error('_getCoinDatas', error);
+      console.error('_getCoinData', error);
     }
   }
 ```
@@ -757,7 +757,7 @@ Add state, `_setRefreshDate` ....
 ```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Constants } from 'expo';
+import Constants from 'expo-constants';
 import CoinView from './screens/CoinView';
 import TopBar from './components/TopBar';
 
@@ -937,7 +937,7 @@ import { getCoinIconUri } from '../libs/Constants';
 ...
 
 render () {
-  let detailCells = this.state.coinDatas.map( (data, index) => {
+  let detailCells = this.state.coinData.map( (data, index) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = data; // Destructuring
     return (
       <CoinItem
@@ -945,7 +945,7 @@ render () {
         rank={rank}
         name={name}
         price={price_usd}
-        volumn={market_cap_usd}
+        volume={market_cap_usd}
         iconUri={getCoinIconUri(name)}
       />
     );
@@ -987,7 +987,7 @@ class CoinItem extends React.Component {
         <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'stretch', alignItems: 'center', justifyContent: 'space-between' }}>
           <View>
             <Text style={[styles.text, { flex: 1, fontSize: 20, marginTop: 5 }]}>{this.props.name || 'Name'}</Text>
-            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volumn || 0)}</Text>
+            <Text style={[styles.text, { flex: 1, color: 'darkgrey' }]}>{'Volume: ' + (this.props.volume || 0)}</Text>
             <Text style={[styles.text, { flex: 1 }]}>{'$: ' + (this.props.price || 0)}</Text>
           </View>
           <Text style={[styles.text, { fontSize: 25, marginRight: 10 }]}>{'#' + (this.props.rank || 'Rank')}</Text>
@@ -1029,6 +1029,9 @@ It will be better to move each styles into the `StyleSheet`.
 screens/CoinView.js
 
 ```js
+
+...
+import { StyleSheet, Text, View, FlatList } from 'react-native';
 ...
 _renderItem = ({item}) => {
     const {rank, name, price_usd, market_cap_usd, last_updated} = item; // Destructuring
@@ -1037,7 +1040,7 @@ _renderItem = ({item}) => {
         rank={rank}
         name={name}
         price={price_usd}
-        volumn={market_cap_usd}
+        volume={market_cap_usd}
         iconUri={getCoinIconUri(name)}
       />
     );
@@ -1046,7 +1049,7 @@ _renderItem = ({item}) => {
   render () { // Do not forget import FlatList   
     return (
       <FlatList 
-        data={this.state.coinDatas}
+        data={this.state.coinData}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
       />
@@ -1061,10 +1064,10 @@ screens/CoinView.js
 
 ```js
   componentDidMount() { // After component mounted
-    this._getCoinDatas(10);
+    this._getCoinData(10);
 
     // setInterval(() => {
-    //   this._getCoinDatas(10);
+    //   this._getCoinData(10);
     //   console.log('toggled!');
     // }, 10000);
   }
@@ -1074,11 +1077,11 @@ screens/CoinView.js
   render () {    
     return (      
       <FlatList 
-        data={this.state.coinDatas}
+        data={this.state.coinData}
         keyExtractor={(item) => item.name}
         renderItem={this._renderItem}
         refreshing={this.state.isLoading}
-        onRefresh={this._getCoinDatas}      
+        onRefresh={this._getCoinData}      
       />
     )
   }
@@ -1206,7 +1209,7 @@ export default class Home extends React.Component {
 Install `react-native-webview`
 
 ```
-yarn add react-native-webview
+expo install react-native-webview
 ```
 
 screens/Youtube.js
@@ -1272,7 +1275,7 @@ import { TouchableOpacity } from ‘react-native';
           rank={rank}
           name={name}
           price={price_usd}
-          volumn={market_cap_usd}
+          volume={market_cap_usd}
           iconUri={getCoinIconUri(name)}
         />
       </TouchableOpacity>      
@@ -1353,7 +1356,7 @@ screens/App.js
 ```js
 ...
 
-onst MainStack = createStackNavigator({
+const MainStack = createStackNavigator({
   Home: {
     screen: Home,
     navigationOptions: ({navigation}) => {
