@@ -22,13 +22,13 @@ The Instruments app uses individual data collection modules, known as *instrumen
 
 Intruments app은 앱의 실행 과정 전체의 데이터를 모으는 데이터 수집 모듈들을 사용할 수 있다. Instruments앱은 템플릿들을 포함하고 있다. 각 템플릿은 연관된 정보의 얻는데 사용되는 Instrument들을 포함한다. 다음 사진은 Instruments 앱을 시작할 때 보여지는 템플릿 모음을 보여준다.
 
-![](~/docs/Debugging/Images/instrument_templates_2x-2110a353-c58a-47c5-8234-d144dcf0e069.png)
+![](./Images/instrument_templates_2x-2110a353-c58a-47c5-8234-d144dcf0e069.png)
 
 After running a session, the Instruments window shows all the data for each instrument and provides many ways to explore the data.
 
 앱을 실행하고 난 후에, Instruments 창은 각 Instrument에 대한 모든 데이터를 보여주고, 이 데이터들을 둘러보는 많은 방법들을 제공한다.
 
-![](~/docs/Debugging/Images/instruments_window_2x-99f5e667-de70-44c2-96f1-800b8543bc42.png)
+![](./Images/instruments_window_2x-99f5e667-de70-44c2-96f1-800b8543bc42.png)
 
 For more detailed information, see Performance Overview and Instruments User Guide.
 
@@ -58,7 +58,7 @@ Simulator helps you find major problems in your app during design and early test
 - 화면에 렌더링되는 콘텐츠를 보여준다.
 - 다른 위치에서 가상으로 앱을 실행한다.
 
-![](~/docs/Debugging/Images/SimulatorDebug_2x-11871055-cf5b-45d8-9333-bcb3c230c87c.png)
+![](./Images/SimulatorDebug_2x-11871055-cf5b-45d8-9333-bcb3c230c87c.png)
 
 In every simulated environment in Simulator, the Home screen provides access to apps—such as Settings, Contacts, Maps, and Passbook—that are included with an iOS or watchOS device. You can perform preliminary testing of your app’s interaction with these apps in Simulator. For example, if you are testing a game, use Simulator to test that the game uses Game Center correctly.
 
@@ -120,13 +120,13 @@ In the screenshot below, behaviors are customized for whenever the code pauses. 
 - Debug 탭에서 variables, console 화면을 모두 보여준다.
 - Debug tab에서 uitilities 영역을 숨긴다.
 
-![](~/docs/Debugging/Images/BehaviorPreferences_2x-d581a72c-5b97-4633-82fc-73580dfaa526.png)
+![](./Images/BehaviorPreferences_2x-d581a72c-5b97-4633-82fc-73580dfaa526.png)
 
 As a result, when the code in the project hits a breakpoint, Xcode creates a Debug tab in the workspace window with the specified content.
 
 결과적으로 프로젝트 안의 코드가 breakpoint에서 멈출 때, Xcode는 명시된 컨텐츠와 함께 workspace 창 안에 debug tab을 만든다.
 
-![](~/docs/Debugging/Images/DebugTabPreferenceEffect_2x-36297b3f-2c5d-4e51-ba2d-8ad45777740a.png)
+![](./Images/DebugTabPreferenceEffect_2x-36297b3f-2c5d-4e51-ba2d-8ad45777740a.png)
 
 You can design custom behaviors that are triggered by menu items or their keyboard equivalents. Choose Xcode > Preferences, select the Behaviors preferences pane, and click the Add button (+) at the bottom of the pane. Type the name of the new behavior, and press Return. Select checkboxes to specify what should happen when you invoke this behavior. For example, create a Unit Testing behavior that saves a snapshot of your project and runs your unit tests. After you’ve created a behavior, it appears in the Xcode > Behaviors menu.
 
