@@ -46,12 +46,15 @@
 
    어플리케이션에 탭을 추가하기 위해서는 React-Navigation에서는 기본적으로 3가지 라이브러리를 제공합니다.
 
-   | **createBottomTabNavigator**         | **다른 라우트로 전환 할 수있는 간단한 탭이 화면 하단에 탭 네비게이션을 표시합니다.** |
-   | **createMaterialBottomTabNavigator** | **화면 하단에 위치한 탭으로, material 스타일은 createBottomTabNavigator 보다 많은 스타일 효과를 제공합니다.** |
-   | **createMaterialTopTabNavigator**    | **화면 상단에 위치한 탭으로, material 스타일은 createBottomTabNavigator 보다 많은 스타일 효과를 제공합니다.** |
+
+| **createBottomTabNavigator**         | **다른 라우트로 전환 할 수있는 간단한 탭이 화면 하단에 탭 네비게이션을 표시합니다.** |
+| ------------------------------------ | ------------------------------------------------------------ |
+| **createMaterialBottomTabNavigator** | **화면 하단에 위치한 탭으로, material 스타일은 createBottomTabNavigator 보다 많은 스타일 효과를 제공합니다.** |
+| **createMaterialTopTabNavigator**    | **화면 상단에 위치한 탭으로, material 스타일은 createBottomTabNavigator 보다 많은 스타일 효과를 제공합니다.** |
+
 
    
-
+   
 4. #### RN navigation tab 기본 동작 예시
 
    *//프로젝트 파일 구조 넣을 예정*
@@ -185,7 +188,7 @@
 
 5. #### RN navigation tab에 react-native-vector-icons을 이용한 아이콘 및 뱃지 추가
 
-   <img src="./images/05_1.png"style="zoom:25%;" />
+   <img src="./images/05_1.png" style="zoom:25%;" />
 
    
 
