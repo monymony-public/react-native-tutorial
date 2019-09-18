@@ -137,6 +137,7 @@ Click the Debug View Hierarchy button (![](~/docs/Debugging/Images/IB_Debug_View
 - Rotate the rendering by clicking and dragging in the canvas.
 - Increase or decrease the spacing between the view layers using the slider on the lower left.
 - Change range of visible views using the double ended slider on the lower right. Move the left handle to change the bottommost visible view. Move the right handle to change the topmost visible view.
+
 - Reveal any clipped content of the selected view by clicking the Show clipped content button (![](~/docs/Debugging/Images/IB_ViewDebug_ShowClipped_2x.png)).
 - Reveal any Auto Layout constraints of the selected view by clicking the Show constraints button (![](~/docs/Debugging/Images/IB_ViewDebug_ShowConstraints_2x.png)).
 - Increase and decrease the magnification using the Zoom In (+) and Zoom Out (-) buttons.
