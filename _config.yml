@@ -1,12 +1,13 @@
 title: "React Native Tutorial"
 remote_theme: pmarsceill/just-the-docs
+# theme: just-the-docs
 # Enable or disable the site search
 # Support true (default) or false
 search_enabled: true
 # Aux links for the upper right navigation
 aux_links:
-    "React Native Tutorial":
-      - "//github.com/JeffGuKang/react-native-tutorial"    
+    "React Native Tutorial on Github":
+      - "//github.com/JeffGuKang/react-native-tutorial"
 # Heading anchor links appear on hover over h1-h6 tags
 # in page content allowing users to deep link to a particular
 # heading on a page.

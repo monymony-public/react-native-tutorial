@@ -1,10 +1,13 @@
 ---
 title: Contribution
+parent: Home
 nav_order: 2
 has_children: false
 ---
 
-This repo contains react native projects and documentation powering the [React Native Tutorial](https://jeffgukang.github.io/react-native-tutorial/).
+# How To Contribute
+
+This repo contains react native projects and documentation powering the [React Native Tutorial](https://github.com/jeffgukang/react-native-tutorial/).
 
 ## Getting started
 
@@ -22,10 +25,29 @@ This repo contains react native projects and documentation powering the [React N
 
 ## Running locally
 
-### Examples
+Clone or copy the repository from [React Native Tutorial](https://github.com/jeffgukang/react-native-tutorial/).
+
+### Jekyll Webpage
+
+We recommend using Bundler to install and run Jekyll. Bundler manages Ruby gem dependencies, reduces Jekyll build errors, and prevents environment-related bugs. To install Bundler, you must install Ruby.
+[Github Official](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
+
+1. Install bundler
+  - `gem install bundler`
+1. Install dependencies
+  - `bundle install`
+1. Change theme for local
+  - Change `remote_theme: pmarsceill/just-the-docs` to `theme: just-the-docs` in `_config.yml`.
+1. Run local Jekyll
+  - `bundle exec jekyll serve`
+1. Preview your local Jekyll site in your web browser 
+  - `http://localhost:4000`
+
+
+### Run Example Projects
 
 1. `cd Examples/example-name`
-1. `yarn`
+1. `yarn` # Install dependencies
 1. `yarn start`
 
 ## Contributing
