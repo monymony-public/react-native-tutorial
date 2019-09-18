@@ -1,13 +1,14 @@
 ---
 layout: default
-title: 2. Flexbox Practice
-parent: Show Me The Coin
-grand_parent: Make Sample Apps
+title: 2. Flexbox로 몸풀기
+parent: 실시간 코인 정보 앱
+grand_parent: Make Sample Apps(한글)
 nav_order: 2
 ---
-## 2. FlexBox Practice
 
-### Layout with flexbox
+## 2. Flexbox로 몸풀기
+
+### Flexbox로 레이아웃 잡기
 
 Change your applicaiton's layouts using Flexbox with `StyleSheet`
 

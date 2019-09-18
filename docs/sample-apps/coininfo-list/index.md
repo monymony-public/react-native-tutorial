@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Realtime Coin Info
-parent: Sample Apps
+title: Show Me The Coin 
+parent: Make Sample Apps
 nav_order: 1
 has_children: true
 ---
@@ -10,11 +10,11 @@ has_children: true
 
 Build real native simple application with javascript
 
-![Hello](./screenshots/prettier.png "Hello React Native")
+![Hello](images/prettier.png "Hello React Native")
 
 ## How to run 
 
-Project sources: [Examples/show-me-the-coin](../../../Examples/ShowMeTheCoin)
+Project sources: [Examples/show-me-the-coin](https://github.com/JeffGuKang/react-native-tutorial)
 
 ```
 cd Examples/ShowMeTheCoin

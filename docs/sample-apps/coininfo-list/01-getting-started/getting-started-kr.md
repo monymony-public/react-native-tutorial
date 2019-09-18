@@ -1,19 +1,30 @@
-## 1. Create a New Project in Expo XDE
+---
+layout: default
+title: 1. 시작하기
+parent: 실시간 코인 정보 앱
+grand_parent: Make Sample Apps(한글)
+nav_order: 1
+---
 
-expo-cli install (https://docs.expo.io/versions/latest/introduction/installation/)
+## 1. Expo 를 사용하여 새로운 프로젝트 생성 
+
+### expo-cli install 
+
+[installatoin](https://docs.expo.io/versions/latest/introduction/installation/)
+
 ```
 npm install -g expo-cli
 ```
 
 > Expo CLI is a tool for developing apps with Expo. In addition the command-line interface (CLI) it also has a graphical UI, Expo Developer Tools, that pops up in your web browser. With Expo Dev Tools you can quickly set up your test devices, view logs and more.
 
-Create new project
+### Create new project
 
 ```
 expo init ReactNative-Coin-Tutorial-2019
 ```
 
-Choose some options
+### Choose some options
 
 ```sh
 
@@ -33,9 +44,9 @@ Choose some options
 
 Done. You just made your first react native application.
 
-Look into the code.
+### Look into the code
 
-#### App.js
+App.js
 
 ```js
 import React from 'react';
@@ -66,7 +77,7 @@ const styles = StyleSheet.create({
 - Turn off Live reloading and edit the `Text` component in App.js
 - Turn on Hot reloading and edit the `Text` component in App.js
 
-![Hello](./screenshots/hello.png "Hello React Native")
+![Hello](../images/hello.png "Hello React Native")
 
 - Change your host in XDE to `LAN` or `localhost` for faster
 > If you are using LAN, make sure your device is on the same wifi network as your development machine. This may not work on some public networks. localhost will not work for iOS unless you are in the simulator, and it only work on Android if your device is connected to your machine via usb.
@@ -77,6 +88,4 @@ const styles = StyleSheet.create({
   - Genymotion(Android): `Menu` or `cmd+m`
 
 
-[Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/68e9991f3c461359041ea71badc182a4129a566c)
-
-[expo0]: ./screenshots/expo0.png "Expo Launch"
+<!-- [Source](https://github.com/JeffGuKang/ReactNative-Tutorial/commit/68e9991f3c461359041ea71badc182a4129a566c) -->
