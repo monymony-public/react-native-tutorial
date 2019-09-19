@@ -1,107 +1,106 @@
-## 1. Using the Debugger
+## 1. 디버거 사용하기
 
-After you click the Run button in the workspace toolbar and your app builds successfully, Xcode runs your app and starts a debugging session. You can debug your app directly within the source editor with graphical tools such as data tips and Quick Look for the value of variables.
+워크스페이스의 툴바에서 실행 버튼을 누르면 앱은 성공적으로 빌드될 것입니다. Xcode는 앱을 실행시키고 디버깅 세션을 시작합니다. `data tips` 같은 그래픽 툴이나 [Quick Look](<https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/quick_look_data_types.html>)을 제공하는 소스 에디터에서 앱을 직접 디버깅할 수 있습니다. 
 
-The debug area and the debug navigator let you inspect the current state of your running app and control its execution.
+디버그 영역과 탐색기는 당신이 실행하고 있는 앱의 현재 상태를 검사하도록 하고 그것의 실행을 통제하도록 합니다. 
 
 ![](./Images/XC_O_DebugFeatures_2x.png)
 
-Creating a quality app requires that you minimize your app’s impact on your users’ systems. Use the debug gauges in the debug navigator to gain insight into your app’s resource consumption, and when you spot a problem, use Instruments to measure and analyze your app’s performance. Use the energy guides to minimize your impact on battery life. For more information, see *Energy Efficiency Guide for iOS Apps* and *Energy Efficiency Guide for Mac Apps*.
+질적인 앱을 만드려면 유저 시스템에 앱이 끼치는 영향을 최소화해야 합니다. 디버그 탐색기 안에 있는 디버그 게이지를 사용하여 앱의 리소스 소비에 대해 인사이트를 얻어보세요. 그리고 문제를 발견했을 때 앱의 성능을 분석하고 측정하기 위해 도구를 사용하세요. 
 
-If you are developing an iOS or watchOS app, use Simulator to find major problems during design and early testing.
+만약 iOS나 watchOS 앱을 개발하고 있다면 조기 테스트나 디자인을 하는 동안 발생하는 주요 문제를 찾기 위해 시뮬레이터를 사용하세요. 
 
-You can configure Xcode to help you focus on your debugging tasks. For example, when your code hits a breakpoint, you can make Xcode automatically play an alert sound and create a window tab named Debug, where Xcode displays the debug area, the debug navigator, and your code at the breakpoint.
+Xcode가 디버깅 문제에 대해 포커싱하도록 도와준다는 것을 알게될 것입니다. 예를 들어서 당신의 코드가 브레이크 포인트에 도달했을 때 당신은 Xcode가 자동적으로 알람을 울리게 하고 디버그 영역, 탐색기, 코드의 브레이크 포인트를 표시하는 새로운 디버그 윈도우 창을 띄울 수 있습니다. 
 
-### Controlling Execution
+### 실행을 컨트롤하기
 
-Xcode lets you step through your code line by line to view your program’s state at a particular stage of execution. Use the debug area to control the execution of your code, view program variables and registers, view its console output, and interact with the debugger. You can also use the debug area to navigate the OpenGL calls that render a frame and to view the rendering-state information at a particular call.
+Xcode를 사용하면 특정 실행 단계에서 프로그램 상태를 보기 위해 코드 라인을 단계별로 살펴볼 수 있습니다. 디버거와의 상호작용, 콘솔 출력 및 프로그램 변수와 레지스터 보기, 코드의 실행제어를 위해서 디버그 영역을 사용하세요. 또한 당신은 디버그 영역을 사용하여 특정한 호출에서의 렌더링 상태 정보를 보거나 프레임을 렌더링하는 OpenGL 호출을 탐색할 수 있습니다. 
 
-Display the debug area by clicking the center button (![](./Images/XC_O_debug_button_2x.png)) in the view selector in the workspace window toolbar.
+워크스페이스 윈도우 툴바에서 뷰 셀렉터의 중앙 버튼 (![](./Images/XC_O_debug_button_2x.png))을 클릭하여 디버그 영역을 표시하세요. 
 
 ![](./Images/XC_O_DebugArea_2x.png)
 
-You can suspend the execution of your app by clicking the pause button (which toggles between ![](./Images/DebugPause_2x.png) to pause and ![](./Images/DebugRun_2x.png) to continue) in the debug area toolbar. To set a breakpoint, open a source code file and click the gutter next to the line where you want execution to pause. A blue arrow (![](./Images/breakpoint_icon_2x.png)) in the gutter indicates the breakpoint. For more information on breakpoints, including how to set breakpoint actions and the different kinds of breakpoints, see [Xcode Help](https://help.apple.com/xcode).
+디버그 영역 툴바에서 일시정지 버튼(일시정지 버튼 ![](./Images/DebugPause_2x.png) 과 실행 버튼 ![](./Images/DebugRun_2x.png)을 토글하는)을 클릭하여 앱의 실행을 중단시킬 수 있습니다. 브레이크 포인트를 설정하기 위해서는 소스코드 파일을 열고 당신이 실행을 멈추고 싶은 라인 옆의 홈통을 클릭하세요. 홈통의 파란색 화살표(![](./Images/breakpoint_icon_2x.png))는 브레이크 포인트를 가리킵니다. 브레이크 포인트 액션이나 다른 종류의 브레이크 포인트에 대해 더 알고 싶으면 [Xcode Help](https://help.apple.com/xcode)를 참고하세요. 
 
-When your app is paused, the currently executing line of code is highlighted in green. You can step through execution of your code using the Step Over (![](./Images/IB_Debug_StepOver_2x.png)), Step Into (![](./Images/IB_Debug_StepInto_2x.png)), and Step Out (![](./Images/IB_Debug_StepOut_2x.png)) buttons located in the bar at the top of the debug area. Step over will execute the current line of code, including any methods. If the current line of code calls a method, step into starts execution at the current line, and then stops when it reaches the first line of the called method. Step out executes the rest of the current method or function.
+일시정지했을 때에 현재 실행되고 있는 라인의 코드는 녹색으로 하이라이트됩니다. 스텝오버 (Step Over, ![](./Images/IB_Debug_StepOver_2x.png)), 스텝인투(Step Into, ![](./Images/IB_Debug_StepInto_2x.png)), 스텝아웃(Step Out![](./Images/IB_Debug_StepOut_2x.png)) 행동을 사용하여 코드를 단계적으로 실행할 수 있습니다. Step Over는 어떤 메서드가 포함되어 있든지 코드의 현재 라인을 실행할 것입니다. 만약 코드의 현재 라인이 메서드를 호출한다면 Step into는 현재 라인을 실행하고 호출된 메서드의 첫줄에 도달하면 정지합니다. Step out은 나머지 메서드나 함수를 실행합니다.
 
-### Viewing State Information
+### 상태 정보 보기
 
-When execution pauses, the debug navigator opens to display a stack trace. Select an item in the debug navigator to view information about the item in the editor area and in the debug area. As you debug, expand or collapse threads to show or hide stack frames.
+실행이 중지되면 디버그 탐색기가 열려 스택 추적을 표시합니다. 편집기 영역과 디버그 영역에서 항목에 대한 정보를 보려면 디버그 탐색기에서 항목을 선택하세요. 디버깅할 때 스택 프레임을 표시하거나 숨기려면 스레드를 확장하거나 축소하세요.
 
 ![](./Images/DebugNavigator_2x.png)
 
-Hover over any variable in the source code editor to see a data tip displaying the value for the variable. Click the Inspector icon (![](./Images/QuickLookInspectorIcon_2x.png)) next to the variable to print the Objective-C description of the object to the debug area console and to display that description in an additional popover.
+소스 코드 에디터의 변수 위에 마우스를 올려 놓으면 변수 값이 표시된 데이터 팁이 표시됩니다. 변수 옆의 점검 아이콘 (![](./Images/QuickLookInspectorIcon_2x.png))을 클릭하여 디버그 영역 콘솔에 객체의 Objective-C 설명을 출력하고 설명을 표시하기 위한 추가적인 팝업을 띄워보세요.
 
 ![](./Images/DataTipInspector_2x.png)
 
-Click the Quick Look icon (![](./Images/QuickLookVarIcon_2x.png)) to see a graphical display of the variable’s contents. You can implement a custom Quick Look display for your own objects. See *Quick Look for Custom Types in the Xcode Debugger*.
+Quick Look 아이콘(![](./Images/QuickLookVarIcon_2x.png))을 클릭하여 변수 내용의 그래픽 표시를 확인하세요. 당신만의 객체를 위한 커스텀 Quick Look 표시를 구현할 수 있습니다. Xcode 디버거의 커스텀 타입을 보려면 [Quick Look](<https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/quick_look_data_types.html>)을 참고하세요.
 
 ![](./Images/DataTipQuickLook_2x.png)
 
-### Finding Memory Corruption
+### 메모리 손상 찾기
 
-Memory corruption crashes can be hard to reproduce and even harder to find. Address sanitizer adds instrumentation to your app that enables Xcode to stop your app where the corruption happens. Address sanitizer finds problems such as accessing deallocated pointers, buffer overflow and underflow of the heap and stack, and other memory issues.
+메모리 손상은 재현하기 어려울 수 있고 찾기는 더 어려울 수 있습니다. 주소 sanitizer는 Xcode가 손상 발생 시 앱을 중지할 수 있도록 하는 도구를 앱에 추가합니다. 주소 sanitizer는 할당된 포인터 엑세스, 버퍼 오버플로우 및 스택과 힙의 언더플로우, 그리고 다른 메모리 이슈들을 찾아냅니다. 
 
 ![](./Images/Address_Sanitizer_2x.png)
 
-To use address sanitizer, enable it in the debug scheme for your target, then run and use the app. Xcode monitors memory use and stops your app on the line of code causing the problem and opens the debugger. Use the debugger to isolate the cause.
+주소 sanitizer을 사용하려면 대상을 위한 디버그 스키마에서 사용하도록 설정한 뒤 앱을 실행하고 사용하세요. Xcode는 메모리 사용을 모니터링하고 문제를 일으키는 코드 라인에서 앱을 중지하고 디버거를 엽니다. 원인을 분리하려면 디버거를 사용하세요.
 
 ![](./Images/Address_Sanitizer_enable_2x.png)
 
-For more information on using address sanitizer, see [Using the Address Sanitizer](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-SW23)
+주소 sanitizer를 사용하는 데 더 많은 정보가 필요하면 [Using the Address Sanitizer](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-SW23)를 참고하세요.
 
-### Debugging Metal
+### Metal 디버깅하기
 
-Metal takes full advantage of modern GPUs so your apps can give the best user experience. You can use Metal to accelerate both graphics and computation, all using a streamlined API. For information on debugging Metal, see [Metal Tips and Techniques](https://developer.apple.com/library/archive/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Dev-Technique/Dev-Technique.html#//apple_ref/doc/uid/TP40014221-CH8). For general information, see [Metal for Developers](https://developer.apple.com/metal/) on the developer website and *Metal Programming Guide*.
+Metal 최신 GPU를 최대한 활용하여 앱이 최상의 사용자 경험을 제공할 수 있도록 합니다. 당신은 Metal을 사용함으로써 향상된 API를 사용하여 그래픽과 게산을 더 빠르게 할 수 있습니다. Metal 디버깅에 대해 더 많은 정보가 필요하면  [Metal Tips and Techniques](https://developer.apple.com/library/archive/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Dev-Technique/Dev-Technique.html#//apple_ref/doc/uid/TP40014221-CH8)을 참고하세요. 더 일반적인 정보를 원하면 Metal 프로그래밍 가이드와 [Metal for Developers](https://developer.apple.com/metal/) 웹사이트를 참고하세요.
 
-### Debugging OpenGL
+### OpenGL 디버깅하기
 
-When you build and run an OpenGL ES app on a connected device, the debug area toolbar includes a Frame Capture button (![](./Images/CaptureFramebutton.png)). Click that button to capture a frame. You can use OpenGL ES frame capture to:
+연결된 장치에서 OpenGL ES앱을 빌드하고 실행할 때에는 디버그 영역 툴바는 프레임 캡처 버튼(![](./Images/CaptureFramebutton.png))이 생깁니다. 프레임을 캡처하려면 버튼을 클릭하세요. OpenGL ES 프레임을 아래와 같은 사항을 캡처하고 싶을 때 사용할 수 있습니다. 
 
-- Inspect OpenGL ES state information
-- Introspect OpenGL ES objects such as view textures and shaders
-- Step through the state calls that precede each draw call and watch the changes with each call
-- Step through draw calls to see exactly how the image is constructed
-- See in the assistant editor which objects are used by each draw call
-- Edit shaders to see the effect upon your app
+- OpenGL ES 상태 정보를 점검
+- 뷰 텍스쳐 및 쉐이더와 같은 OpenGL ES 객체를 검사
+- 각 호출의 변화를 확인하고 각 draw call을 진행하는 상태 호출을 단계별로 진행
+- 어떻게 이미지가 구성되는지 정확히 알기 위해 draw call을 단계적으로 진행
+- 보조 에디터에서 각 draw call에 의해 사용되는 각 객체들을 확인
+- 앱에 끼치는 영향을 확인하기 위해 쉐이더들을 편집
 
-The screenshot shows the use of the debugger to view components of a rendered frame. The debug navigator on the left shows parts of the rendering tree, and the main debug view shows the color and depth sources for the rendered frame as well as other image sources.
+스크린샷은 디버거를 사용하여 렌더링된 프레임의 구성 요소를 보는 방법을 보여 줍니다. 왼쪽의 디버그 탐색기는 렌더링 트리의 일부를 표시하며, 기본 디버그 보기는 다른 이미지 소스뿐만 아니라 렌더링된 프레임의 색상 및 깊이 소스를 보여줍니다. 
 
 ![](./Images/gputrace-after_2x.png)
 
-For more help debugging OpenGL ES, see related items in [Xcode Help](https://help.apple.com/xcode) and [Xcode Help](https://help.apple.com/xcode).
+OpenGL ES 디버깅에 대해 더 많은 정보를 얻고 싶으면 [Xcode Help](https://help.apple.com/xcode)에서 관련된 아이템을 찾아보세요. 
 
-## 2. Examining the View Hierarchy
+## 2. 뷰 계층 검사하기
 
-Click the Debug View Hierarchy button (![](./Images/IB_Debug_ViewDebug_2x.png)) in the bar at the top of the debug area to inspect a 3D rendering of the view hierarchy of your paused app. You can:
+디버그 영역 맨 위의 바에 있는 디버그 뷰 계층 버튼(![](./Images/IB_Debug_ViewDebug_2x.png))을 클릭하세요. 일시 중지된 앱의 뷰 계층에 대한 3D 렌더링을 검사할 수 있습니다. 아래와 같은 사항을 할 수 있습니다. 
 
-- Rotate the rendering by clicking and dragging in the canvas.
-- Increase or decrease the spacing between the view layers using the slider on the lower left.
-- Change range of visible views using the double ended slider on the lower right. Move the left handle to change the bottommost visible view. Move the right handle to change the topmost visible view.
-
-- Reveal any clipped content of the selected view by clicking the Show clipped content button (![](./Images/IB_ViewDebug_ShowClipped_2x.png)).
-- Reveal any Auto Layout constraints of the selected view by clicking the Show constraints button (![](./Images/IB_ViewDebug_ShowConstraints_2x.png)).
-- Increase and decrease the magnification using the Zoom In (+) and Zoom Out (-) buttons.
+- 캔버스를 클릭, 드래그하여 렌더링을 회전
+- 왼쪽 하단의 슬라이더를 사용하는 뷰 레이어 사이의 공간을 늘리거나 줄임
+- 오른쪽 하단의 슬라이더를 사용하여 가시적 뷰 범위를 변경합니다. 맨 아래 보이는 보기를 변경하려면 왼쪽 핸들을 이동시킵니다. 오른쪽 핸들을 이동시켜 맨 위에 보이는 보기를 변경합니다.
+- 잘라낸 내용 표시 버튼 (![](./Images/IB_ViewDebug_ShowClipped_2x.png))을 클릭하여 선택한 보기의 잘린 내용을 표시합니다.
+- 보기 제약조건 버튼(![](./Images/IB_ViewDebug_ShowConstraints_2x.png))을 클릭하여 선택한 보기의 자동 레이아웃 제약조건을 표시합니다. 
+- 확대(+) 버튼, 축소(-) 버튼을 사용하여 배율을 늘리거나 줄입니다.
 
 ![](./Images/IB_ViewDebugging_2x.png)
 
-For more help debugging views, see [Debugging View Hierarchies](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-SW2).
+디버깅 뷰에 대한 더 많은 정보를 얻고 싶으면 [Debugging View Hierarchies](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/special_debugging_workflows.html#//apple_ref/doc/uid/TP40015022-CH9-SW2)를 참고하세요.
 
-## 3. Examining System Impact
+## 3. 시스템 임팩트 검사하기
 
-The debug navigator displays gauges that provide insight into how your app is performing. For example, the CPU gauge shows a readout of your app’s CPU usage, making it easy to spot unexpected spikes. Depending on the capabilities of your app and the characteristics of its destination, gauges can report your app’s impact on memory, iCloud, OpenGL ES, energy, and the CPU.
+디버그 탐색기는 앱의 작동 방식에 대해 인사이트를 제공하는 게이지를 표시합니다. 예를 들어 CPU 게이지에 앱의 CPU 사용량이 표시되므로 예상치 못한 스파이크를 쉽게 발견할 수 있습니다. 앱의 기능과 대상의 특성에 따라 앱이 메모리, iCloud, OpenGL ES, Energy 및 CPU에 미치는 영향을 게이지가 보고할 수 있습니다.
 
 ![](./Images/DebugGauges_2x.png)
 
-To see a full report, click a gauge in the debug area. To perform a deeper analysis of your app’s performance, click the Profile in Instruments button.
+완전한 리포트를 보기위해서는 디버그 영역의 게이지를 클릭하세요. 앱의 수행 성능에 대한 더 깊은 분석을 위해서는 도구 버튼의 Profile을 클릭하세요.
 
 ![](./Images/CPUReport_2x.png)
 
-For problem areas, the energy report offers a preliminary diagnosis of what may be plaguing your app.
+문제 영역의 에너지 리포트는 앱에 문제가 있을 수 있는 사항에 대한 예비 진단을 제공합니다. 
 
 ![](./Images/EnergyReport_2x.png)
 
-For more help, see Using Debug Gauges.
+더 많은 정보를 얻으려면 Using Debug Gauges를 참고하세요. 
 
 ## 4. Measuring Performance
 
