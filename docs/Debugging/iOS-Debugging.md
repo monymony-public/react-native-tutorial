@@ -16,7 +16,7 @@ You can configure Xcode to help you focus on your debugging tasks. For example, 
 
 Xcode lets you step through your code line by line to view your program’s state at a particular stage of execution. Use the debug area to control the execution of your code, view program variables and registers, view its console output, and interact with the debugger. You can also use the debug area to navigate the OpenGL calls that render a frame and to view the rendering-state information at a particular call.
 
-Display the debug area by clicking the center button (![](./Images/XC_O_debug_button_2x)) in the view selector in the workspace window toolbar.
+Display the debug area by clicking the center button (![](./Images/XC_O_debug_button_2x.png)) in the view selector in the workspace window toolbar.
 
 ![](./Images/XC_O_DebugArea_2x.png)
 
