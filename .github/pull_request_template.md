@@ -19,3 +19,7 @@ Enter concise PR *title*, and update *reviewers*, *labels*, *milestone*, *descri
 ### Notes
 - What can been done to prevent this from happening again?
 - List issues or things to follow-up separately.
+
+### References
+- What did you refer to make this change?
+- It is best to refer mainly to official documents.
