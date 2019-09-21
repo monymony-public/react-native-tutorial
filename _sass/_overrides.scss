@@ -1,0 +1,13 @@
+img {
+    max-width: 900px;
+    max-height: 700px;
+}
+  
+@media (min-width: 66.5rem) {
+    .navigation,
+    .site-header,
+    .site-footer {
+        width:300px;
+    }
+}
+  

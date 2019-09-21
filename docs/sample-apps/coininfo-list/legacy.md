@@ -1,9 +1,9 @@
 ---
-title: Home
-nav_order: 1
-has_children: true
-permalink: /
+layout: default
+title: coininfo-list
+nav_exclude: true
 ---
+
 
 # React Native Tutorial: Show Me The Coin - 2019
 
