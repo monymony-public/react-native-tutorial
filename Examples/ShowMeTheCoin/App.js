@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import Home from './screens/Home'
 import Youtube from './screens/Youtube';
@@ -20,9 +21,9 @@ const MainStack = createStackNavigator({
     navigationOptions: ({navigation}) => {
       return {
         headerTitle: (
-          <Header 
-            title={'Show Me The Coin'} 
-            subtitle={navigation.getParam('refreshDate', '-')} 
+          <Header
+            title={'Show Me The Coin'}
+            subtitle={navigation.getParam('refreshDate', '-')}
           />
         ),
         headerStyle: {
