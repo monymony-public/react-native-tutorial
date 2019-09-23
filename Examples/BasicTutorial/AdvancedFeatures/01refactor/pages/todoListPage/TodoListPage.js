@@ -15,7 +15,9 @@ const styles = StyleSheet.create({
     container: {
         display: 'flex',
         flexDirection: 'column',
-        paddingHorizontal: 5
+        paddingHorizontal: 5,
+        flexGrow: 1,
+        backgroundColor: 'lightblue'
     },
     title: {
         color: 'black',

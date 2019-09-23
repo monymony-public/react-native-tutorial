@@ -12,8 +12,8 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'lightblue',
-    flex: 1
+    display: "flex",
+    flexGrow: 1
   }
 });
 

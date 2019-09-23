@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native run-android",
+    "start": "react-native run-android --port=8081 | react-devtools",
     "test": "jest",
     "lint": "eslint ."
   },
