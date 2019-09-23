@@ -52,7 +52,7 @@ const TodoList = props => {
 
   return (
     <View>
-      <TextField onAdd={addTodoHandler} value={text} onTextChange={onInputChangeHandler} />
+      <TextField onSubmitEnd={addTodoHandler} value={text} onTextChange={onInputChangeHandler} />
       <ScrollView contentContainerStyle={styles.todoListContainer}>
         {todos.map((todo, index) => (
           <Item

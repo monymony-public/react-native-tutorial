@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, Text } from 'react-native';
-import { TodoList } from "../../components/todoList";
+import { TodoList } from "./todoList";
 
 const TodoListPage = props => {
     return (

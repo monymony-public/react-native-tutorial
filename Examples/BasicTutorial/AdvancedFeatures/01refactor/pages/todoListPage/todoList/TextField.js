@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, StyleSheet, TextInput, View } from 'react-native';
 
-const TextField = ({ onTextChange, value, onAdd }) => {
+const TextField = ({ onTextChange, value, onSubmitEnd }) => {
   return (
     <View style={styles.container}>
       <TextInput
@@ -9,7 +9,7 @@ const TextField = ({ onTextChange, value, onAdd }) => {
         style={styles.input}
         value={value}
         onChangeText={onTextChange}
-        onSubmitEditing={onAdd}
+        onSubmitEditing={onSubmitEnd}
         placeholderTextColor={'#999'}
       />
     </View>
