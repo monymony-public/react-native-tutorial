@@ -67,7 +67,7 @@ You can skip this part if you are already familiar with android development envi
     9. Click `Apply` to download and install Android SDK and related build tools
 
 
-        ![installAndroidSDK](../Images/InstallAndroidSDK.png)
+        ![InstallAndroidSDK](../Images/InstallAndroidSDK.png)
 
 3. Configure the ANDROID_HOME environment variable
 
@@ -101,7 +101,7 @@ You can skip this part if you are already familiar with android development envi
 
     And then you can start with this project 
 
-    ![ReactNativeInit](../Images/ReactNativeInit.png)
+    ![InitProject](../Images/InitProject.png)
 
 6. Preparing the Android device
 
