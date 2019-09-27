@@ -8,7 +8,7 @@ __Target OS:__ Android
 
 ## Installing dependencies
 
-what you will need: __Node, Python2, JDK__
+What you will need: __Node, Python2, JDK__
 
 (Make sure node 8.3 or newer, JDK is verson 8 or newer)
 
@@ -28,7 +28,7 @@ what you will need: __Node, Python2, JDK__
 
 ## Android development environment
 
-you can skip this part if you are already familiar with android development environment.
+You can skip this part if you are already familiar with android development environment.
 
 1. Install Android Studio
     1. Choose a 'Custom' setup (installation type)
