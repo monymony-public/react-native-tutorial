@@ -8,10 +8,6 @@ const TodoList = props => {
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
 
-  useEffect(() => {
-    console.log(todos);
-  })
-
   const onInputChangeHandler = text => {
     setText(text);
   };

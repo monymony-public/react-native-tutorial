@@ -1,11 +1,27 @@
-import React from "react";
-import { StyleSheet, View, Text } from 'react-native';
+import React, { useEffect, useState } from "react";
+import { StyleSheet, View, Text, Image } from 'react-native';
 import { TodoList } from "./todoList";
+import axios from "../../config/axios";
 
 const TodoListPage = props => {
+    const [imageUrl, setImageUrl] = useState("https://facebook.github.io/react-native/img/tiny_logo.png");
+
+    useEffect(() => {
+        axios.get("pomeranian/images/random").then(res => {
+            setImageUrl(res.data.message);
+        }).catch(err => {
+            console.log(err);
+        })
+
+        return () => {}
+    }, [])
+
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Hello Todolist</Text>
+            <View style={styles.titleContainer}>
+                <Image style={styles.titleImage} source={{ uri: imageUrl }} />
+                <Text style={styles.title}>Hello Todolist</Text>
+            </View>
             <TodoList />
         </View>
     )
@@ -22,10 +38,16 @@ const styles = StyleSheet.create({
     title: {
         color: 'black',
         fontSize: 36,
-        marginTop: 30,
-        marginBottom: 30,
         fontWeight: '300',
-        textAlign: 'center'
+    },
+    titleContainer: {
+        display: 'flex',
+        flexDirection: "row",
+        justifyContent: "center",
+    },
+    titleImage: {
+        width: 100,
+        height: 100,
     }
 });
 
