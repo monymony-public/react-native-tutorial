@@ -16,7 +16,7 @@ What you will need: __Node, Python2, JDK__
 
 2. Open an Administrator Command Prompt (right click Command Prompt and select "Run as Administrator"), then run the following command:
 
-         choco install -y noddejs.install python2 jdk8
+         choco install -y nodejs.install python2 jdk8
 
     ![install choco](../Images/Choco_install.png)
 
