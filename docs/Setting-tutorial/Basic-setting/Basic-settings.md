@@ -31,7 +31,7 @@ What you will need: __Node, Python2, JDK__
 You can skip this part if you are already familiar with android development environment.
 
 1. Install Android Studio
-    1. Choose a 'Custom' setup (installation type)
+    1. Choose a 'Custom' setup (Installation type)
     2. Check all of the following boxes
         + Android SDK
         + Android SDK Platform
@@ -74,7 +74,7 @@ You can skip this part if you are already familiar with android development envi
     + Open system pane and `System and Security`
     + Click on New
     + Open `Advacned tab and click on `Environment Variables`
-    +Click on New 
+    + Click on New 
 
     Copy this code and paste it
 
@@ -111,7 +111,7 @@ You can skip this part if you are already familiar with android development envi
         plug it into your computer using a USB cable 
 
     2. Using a virtual device 
-       +Open `./my_first_project/android
+       + Open `./my_first_project/android
 
         ![OpenFirstFolder](../Images/OpenFirstFolder.png)
 
