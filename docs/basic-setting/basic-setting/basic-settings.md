@@ -177,5 +177,5 @@ Let's proceed next part!
 
 - Go to [Live Reload](../live-reload/live-reload.md)
 
-##Source
+## Source
 [React Native Official Page](https://facebook.github.io/react-native/docs/getting-started)
