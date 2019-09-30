@@ -18,7 +18,7 @@ What you will need: __Node, Python2, JDK__
 
          choco install -y nodejs.install python2 jdk8
 
-    ![install choco](../images/Choco_install.png)
+    ![install choco](../images/choco_install.png)
 
 3. The React Native Cli
 
@@ -113,11 +113,11 @@ You can skip this part if you are already familiar with android development envi
     2. Using a virtual device 
        +Open `./my_first_project/android
 
-        ![OpenFirstFolder](../images/OpenFirstFolder.png)
+        ![OpenFirstFolder](../images/openFirstFolder.png)
 
        +You can see the list of available Android Virtual Devices(AVDs) by opening the "AVD Manager"
 
-        ![CreateAVD](../images/CreateAVD.png)
+        ![CreateAVD](../images/createAVD.png)
 
      
 
@@ -126,15 +126,15 @@ You can skip this part if you are already familiar with android development envi
 
        + Select `Create Virtual Device`
 
-         ![CreateVirtualDevice](../images/CreateVirtualDevice.png)
+         ![CreateVirtualDevice](../images/createVirtualDevice.png)
 
        + Pick any phone from the list and click `Next`
 
-         ![SelectPhone](../images/SelectPhone.png)
+         ![SelectPhone](../images/selectPhone.png)
 
        + Select the `Pie API Level 28 image`
 
-            ![SelectPie](../images/SelectPie.png)
+            ![SelectPie](../images/selectPie.png)
 
        + Click `Next` then `Finish`
        + You should be able to click on the green tangle button to launch AVD 
