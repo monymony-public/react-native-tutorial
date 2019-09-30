@@ -5,6 +5,7 @@ import axios from "../../config/axios";
 
 const TodoListPage = props => {
     const [imageUrl, setImageUrl] = useState("https://facebook.github.io/react-native/img/tiny_logo.png");
+
     // componentDidMount
     // call api and get a dog image when componentDidMount
     useEffect(() => {
@@ -16,10 +17,6 @@ const TodoListPage = props => {
             axios.cancel();
         }
     }, [])
-
-    // useEffect(() => {
-    //     requestAdorablePomeranianImage();
-    // }, [])
 
     const requestAdorablePomeranianImage = () => {
         axios.get("pomeranian/images/random").then(res => {
