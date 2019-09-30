@@ -16,22 +16,22 @@ What you will need: __Node, Python2, JDK__
 
 2. Open an Administrator Command Prompt (right click Command Prompt and select "Run as Administrator"), then run the following command:
 
-         choco install -y noddejs.install python2 jdk8
+         choco install -y nodejs.install python2 jdk8
 
-    ![install choco](../Images/Choco_install.png)
+    ![install choco](../images/Choco_install.png)
 
 3. The React Native Cli
 
             npm install -g react-native-cli
 
-    ![install reactNativeCli](../Images/ReactNativeCliInstall.png)
+    ![install reactNativeCli](../images/reactNativeCliInstall.png)
 
 ## Android development environment
 
 You can skip this part if you are already familiar with android development environment.
 
 1. Install Android Studio
-    1. Choose a 'Custom' setup (installation type)
+    1. Choose a 'Custom' setup (Installation type)
     2. Check all of the following boxes
         + Android SDK
         + Android SDK Platform
@@ -67,16 +67,16 @@ You can skip this part if you are already familiar with android development envi
     9. Click `Apply` to download and install Android SDK and related build tools
 
 
-        ![InstallAndroidSDK](../Images/InstallAndroidSDK.png)
+        ![InstallAndroidSDK](../images/installAndroidSDK.png)
 
 3. Configure the ANDROID_HOME environment variable
 
     + Open system pane and `System and Security`
     + Click on New
-    + Open `Advacned tab and click on `Environment Variables`
+    + Open `Advanced tab and click on `Environment Variables`
     +Click on New 
 
-    Copy this code and paste it
+    Copy this path and paste it
 
     ```c:\Users\YOUR_USERNAME\AppData\Local\Android\Sdk```
 
@@ -101,7 +101,7 @@ You can skip this part if you are already familiar with android development envi
 
     And then you can start with this project 
 
-    ![InitProject](../Images/InitProject.png)
+    ![InitProject](../images/initProject.png)
 
 6. Preparing the Android device
 
@@ -113,11 +113,11 @@ You can skip this part if you are already familiar with android development envi
     2. Using a virtual device 
        +Open `./my_first_project/android
 
-        ![OpenFirstFolder](../Images/OpenFirstFolder.png)
+        ![OpenFirstFolder](../images/OpenFirstFolder.png)
 
        +You can see the list of available Android Virtual Devices(AVDs) by opening the "AVD Manager"
 
-        ![CreateAVD](../Images/CreateAVD.png)
+        ![CreateAVD](../images/CreateAVD.png)
 
      
 
@@ -126,23 +126,23 @@ You can skip this part if you are already familiar with android development envi
 
        + Select `Create Virtual Device`
 
-         ![CreateVirtualDevice](../Images/CreateVirtualDevice.png)
+         ![CreateVirtualDevice](../images/CreateVirtualDevice.png)
 
        + Pick any phone from the list and click `Next`
 
-         ![SelectPhone](../Images/SelectPhone.png)
+         ![SelectPhone](../images/SelectPhone.png)
 
        + Select the `Pie API Level 28 image`
 
-            ![SelectPie](../Images/SelectPie.png)
+            ![SelectPie](../images/SelectPie.png)
 
        + Click `Next` then `Finish`
        + You should be able to click on the green tangle button to launch AVD 
 
-            ![StartAVD](../Images/StartAVD.png)
+            ![StartAVD](../images/startAVD.png)
        
         
-        ![FirstScreen](../Images/FirstScreen.png)
+        ![FirstScreen](../images/firstScreen.png)
 
 
     7.Running your React Native application
@@ -152,7 +152,7 @@ You can skip this part if you are already familiar with android development envi
         react-native run-android
      ```
 
-    ![Welcome](../Images/WelcomeToReact.png)
+    ![Welcome](../images/welcomeToReact.png)
 
     8. Modifying your app
 
@@ -170,12 +170,12 @@ You can skip this part if you are already familiar with android development envi
             </View>
           </View>
         
-    ![ChangeLines](../Images/ChangeLines.png)
+    ![ChangeLines](../images/changeLines.png)
 
 
 Let's proceed next part!
 
-- Go to [Live Reload](LiveReload.md)
+- Go to [Live Reload](../live-reload/live-reload.md)
 
 ##Source
 [React Native Official Page](https://facebook.github.io/react-native/docs/getting-started)
