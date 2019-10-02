@@ -1,29 +1,23 @@
+# Debugging
 
-# Reloading JavaScript
+## Enabling keyboard shortcuts 
 
-You can reload your app's JavaScript code instantly without recompiling your app every time to make a change
++ ios (Requirement)
+    + Open Hardware menu, select Keyboard, and make sure that "Connect Hardware Keyboard" is checked
 
-+ Select "Reload" from the Developer Menu
-+ Press `⌘R` (iOS Simulator)
-+ Tab `⌘R twice` (Android emulator)
+## Accessing the In-App Developer Menu
 
-## Automatic reloading
++ ios
+    + You can acess the developmenu
+    1. Shake your device or sel ect "Shake Gesture" inside the Hardware menu (iOS Simulator)
 
-Automatic reloading can be enabled by selecting "Enable Live Reload" from Developer Menu
+    2. Keyboard shortcut 
+        + `⌘D` (iOS emulator)
+        + `⌘M` (Android emulator, Mac OS)
+        + `Ctrl+M` (Windows, Linux)
+        + Use command `adb shell input keyevent 82` to open the dev menu (82 being the Menu key code, Android)
 
-+ Further step [Hot Reloading](../hot-reload.md)
-
-    + you can keep your app running as new versions of your files are injected into the JavaScript bundle automatically by enabling `Hot Reloading from the Developer Menu
-
-    + This will allow you to persist the app's state through reloads
-
-            There are some instances where hot reloading cannot be implemented perfectly. If you run into any issues. use a full reload to reset your app
-        
-    + Situations when you will need to rebuild your app
-
-        1. You have added new resources to your native app's bndle such as an image in `Image.scassets` on iOS or the `res/drawable` folder on Android
-
-        2. You have modified native code (Objective-C/Swift on iOS or JAVA/C++ on Android)
+    ``` The Developer Menu is disabled in release (production) builds.```
 
 
 # In-app Errors and Warnings
@@ -74,14 +68,6 @@ You can use `console.warn()` to trigger a YellowBox
  + `Ctrl+Shift+I` (Windows)
 
 + Step further [Pause On Caught Exceptions](https://stackoverflow.com/questions/2233339/javascript-is-there-a-way-to-get-chrome-to-break-on-all-errors/17324511#17324511)
-
-
-
-
-
-
-
-
 
 
 
