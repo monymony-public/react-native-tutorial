@@ -1,31 +1,42 @@
 import React, {Component} from 'react';
 import {TouchableHighlight, View, Text, StyleSheet} from 'react-native';
-
-const info = [
-  `
-Title : Mona Lisa
-Artist : Leonardo da Vinci
-Location : Louvre museum, Paris
-`,
-  `
-Title : Liebespaar
-Artist : Gustav Klimt
-Location : osterreichische galerie belvedere, Austria
-`,
-  `
-Title : The Son of Man
-Artist : René Magritte
-Location : Private Collection
-`,
-];
+import API from '../lib/api';
 
 class PaintingInfo extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isPressed: false,
-      index: this.props.index,
+      id: this.props.id,
+      info: {},
     };
+  }
+
+  async componentDidMount() {
+    let info = await API.get(`/objects/${this.state.id}`, {
+      params: {
+        results: 1,
+        inc: 'primaryImage,title,artistDisplayName,objectEndDate,repository',
+      },
+    });
+    info = info.data;
+
+    const imageURL = `${info.primaryImage}`;
+    const title = `${info.title}`;
+    const artist = `${info.artistDisplayName}`;
+    const year = `${info.objectEndDate}`;
+    const location = `${info.repository}`;
+
+    this.setState({
+      ...this.state,
+      info: {
+        imageURL,
+        title,
+        artist,
+        year,
+        location,
+      },
+    });
   }
 
   _onPressIn = () => {
@@ -52,7 +63,11 @@ class PaintingInfo extends Component {
             <Text style={styles.welcome}>
               {!this.state.isPressed
                 ? 'Where is this painting on display?'
-                : info[this.state.index]}
+                : `Title: ${this.state.info.title}\nArtist: ${
+                    this.state.info.artist
+                  }\nYear: ${this.state.info.year}\nLocation: ${
+                    this.state.info.location
+                  }`}
             </Text>
           </View>
         </TouchableHighlight>
@@ -69,7 +84,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF00',
   },
   welcome: {
-    fontSize: 25,
+    fontSize: 20,
     textAlign: 'center',
     margin: 10,
     color: '#FFFFFF',
@@ -77,6 +92,7 @@ const styles = StyleSheet.create({
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10,
+    padding: 10,
   },
   touchable: {borderRadius: 100, backgroundColor: '#FFFFFF00'},
   button: {
