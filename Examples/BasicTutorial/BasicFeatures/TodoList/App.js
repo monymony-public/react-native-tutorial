@@ -12,7 +12,7 @@ import {SafeAreaView, View, Text, StyleSheet} from 'react-native';
 import TodoInsert from './components/TodoInsert';
 
 const App = () => {
-  // todos: {id: Number textValue: string, checked: boolean }
+  // todos: {id: Number, textValue: string, checked: boolean }
   const [todos, setTodos] = useState([]);
 
   const addTodo = text => {
