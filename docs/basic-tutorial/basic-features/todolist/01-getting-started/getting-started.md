@@ -61,6 +61,12 @@ Let's make the code in **app.js** looks like this:
     export default App;
 ```
 
+Run the following in terminal
+
+```
+react-native run-ios
+```
+
 You should see the app running as below
 
 ![](../images/hello.png "Hello.png")
