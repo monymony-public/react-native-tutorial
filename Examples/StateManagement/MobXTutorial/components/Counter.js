@@ -1,6 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {observer} from 'mobx-react'
+import CounterStore from '../store/counterStore'
 
+@observer
 class Counter extends React.Component {
   handleIncrement = index => {
     this.props.handleIncrement(index);
@@ -15,17 +18,17 @@ class Counter extends React.Component {
     return (
       <View index={value.toString()} style={styles.counterContainer}>
         <Text style={styles.counterInfo}>
-          Count: {value.counterNum.toString()}
+          Count: {CounterStore.counter}
         </Text>
         <View style={styles.counterBtnContainer}>
           <TouchableOpacity
             style={styles.counterButton}
-            onPress={() => this.handleIncrement({index})}>
+            onPress={() => CounterStore.increment()}>
             <Text style={{color: '#4C4C4C'}}>INCREMENT</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.counterButton}
-            onPress={() => this.handleDecrement({index})}>
+            onPress={() => CounterStore.decrement()}>
             <Text style={{color: '#4C4C4C'}}>DECREMENT</Text>
           </TouchableOpacity>
         </View>

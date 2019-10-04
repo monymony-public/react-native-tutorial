@@ -3,24 +3,32 @@ import Counter from '../components/Counter';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 class CounterContainer extends React.Component {
-  counterNum = 0;
+  constructor(props) {
+    super(props);
 
-  decorate(CounterContainer, {
-    counterNum: observable,
-    increase: action,
-    decrease: action
-  })
+    this.state = {
+      counter: [
+        {
+          counterNum: 0,
+        },
+      ],
+    };
+  }
 
   // Add counter
   handleAddCounter = () => {
     const {counter} = this.state;
-    this.increase
+    this.setState({
+      counter: counter.concat({counterNum: 0}),
+    });
   };
 
   // Remove counter
   handleRemoveCounter = () => {
     const {counter} = this.state;
-    this.decrease
+    this.setState({
+      counter: counter.slice(0, this.state.counter.length - 1),
+    });
   };
 
   // Increment counterNum
