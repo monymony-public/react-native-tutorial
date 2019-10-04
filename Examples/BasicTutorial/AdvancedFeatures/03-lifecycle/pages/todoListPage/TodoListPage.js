@@ -4,10 +4,12 @@ import { TodoList } from "./todoList";
 import axios from "../../config/axios";
 
 const TodoListPage = props => {
+    // todos: { id: number, text: string, checked: boolean }
+    const [todos, setTodos] = useState([]);
     const [imageUrl, setImageUrl] = useState("https://facebook.github.io/react-native/img/tiny_logo.png");
 
-    // componentDidMount
-    // call api and get a dog image when componentDidMount
+    // componentWillUpdate
+    // call api and get a dog image when todos updates
     useEffect(() => {
         requestAdorablePomeranianImage();
 
@@ -16,7 +18,7 @@ const TodoListPage = props => {
             // cancel axios when componentWillUnmount()
             axios.cancel();
         }
-    }, [])
+    }, [todos])
 
     const requestAdorablePomeranianImage = () => {
         axios.get("pomeranian/images/random").then(res => {
@@ -32,7 +34,7 @@ const TodoListPage = props => {
                 <Image style={styles.titleImage} source={{ uri: imageUrl }} />
                 <Text style={styles.title}>Hello Todolist</Text>
             </View>
-            <TodoList />
+            <TodoList todos={todos} setTodos={setTodos} />
         </View>
     )
 }

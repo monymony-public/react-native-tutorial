@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
 import Item from './Item';
 import TextField from "./TextField";
 
-const TodoList = props => {
-  // todos: { id: number, text: string, checked: boolean }
-  const [todos, setTodos] = useState([]);
+const TodoList = ({ todos, setTodos }) => {
   const [text, setText] = useState("");
 
   const onInputChangeHandler = text => {
@@ -19,7 +17,7 @@ const TodoList = props => {
 
   const addTodo = text => {
     if (!text) { return; }
-    
+
     setTodos([
       ...todos,
       { id: Math.floor(Math.random() * 10000 + 1), text: text, checked: false },
