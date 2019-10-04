@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 1. Getting Started
-parent: Show Me The Coin
-grand_parent: Make Sample Apps
+parent: Make TodoList Apps
+grand_parent: React Native Basic Features
 nav_order: 1
 ---
 
