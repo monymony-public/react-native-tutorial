@@ -18,6 +18,30 @@
 
     ``` The Developer Menu is disabled in release (production) builds.```
 
+
+
+
+# React Developer Tools
+
+We are going to use the [standalone version of React Developer Tools](https://github.com/facebook/react/tree/master/packages/react-devtools)
+
+
+            npm install -g react-devtools
+
+
+
+![reactdevtools](../images/react-devtools.png)
+
+Run `React-devtools`
+
+![use-react-devtools](../images/use-react-devtools.png)
+
+Upgrade **React-devtools** according to **your React Version**
+
+        
+![upgrade-devtools](../images/upgrade-devtools.png)
+
+
 # Chrome Developer Tools (To Debug)
 
 `Note: the React Developer Tools Chrome extension does not work with React Native, but you can use its` [standalone version](live-reload.md#React-developer-tools)
@@ -49,20 +73,7 @@
  2. Everytime the app is reloaded (Using live reload, or by manually reloading), a new JS Context is created.
  3. Choosing `Automatically Show Web Inspectors for JSContext` saves you from having to select the latest JSContext manually.
 
-# React Developer Tools
 
-We are going to use the [standalone version of React Developer Tools](https://github.com/facebook/react/tree/master/packages/react-devtools)
-
-
-            npm install -g react-devtools
-
-Install react-devtools from Android Studio Terminal
-
-![reactdevtools](../images/react-devtools.png)
-
-Run `React-devtools`
-
-![use-react-devtools](../images/use-react-devtools.png)
 
 # In-app Errors and Warnings
 
