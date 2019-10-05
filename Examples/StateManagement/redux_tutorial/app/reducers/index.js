@@ -10,7 +10,7 @@ const initialState = {
 
 // 리듀서 함수, (state, action) => return state
 
-function counter(state = initialState, action) {
+const counter = (state = initialState, action) => {
     const { counter } = state;
 
     switch(action.type){
