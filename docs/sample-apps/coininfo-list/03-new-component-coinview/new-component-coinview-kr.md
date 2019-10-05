@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
 
 ### Run and Test!
 
-![sayHello](./screenshots/sayHello.png "sayHello")
+![sayHello](../images/sayHello.png "sayHello")

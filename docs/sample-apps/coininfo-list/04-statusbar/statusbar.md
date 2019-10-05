@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-![Status Bar](screenshots/statusbar.png "StatusBar")
+![Status Bar](../images/statusbar.png "StatusBar")
 
 Use expo's constants to set statusbar's height matched devices. (https://docs.expo.io/versions/latest/guides/configuring-statusbar/#place-an-empty-view-on-top-of)
 
