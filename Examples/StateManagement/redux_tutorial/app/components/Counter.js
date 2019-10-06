@@ -24,19 +24,19 @@ const Counter = ({index, value, handleIncrement, handleDecrement}) => {
     );
 };
 
-// Counter.propTypes = {
-//   index : PropTypes.number,
-//   value : PropTypes.object,
-//   handleIncrement : PropTypes.func,
-//   handleDecrement : PropTypes.func,
-// };
-//
-// Counter.defaultProps = {
-//   index : 0,
-//   value : { counterNum : 0},
-//   handleIncrement : () => console.warn('handleIncrement not defined'),
-//   handleDecrement : () => console.warn('handleDecrement not defined'),
-// };
+Counter.propTypes = {
+  index : PropTypes.number,
+  value : PropTypes.object,
+  handleIncrement : PropTypes.func,
+  handleDecrement : PropTypes.func,
+};
+
+Counter.defaultProps = {
+  index : 0,
+  value : { counterNum : 0 },
+  handleIncrement : () => console.warn('handleIncrement not defined'),
+  handleDecrement : () => console.warn('handleDecrement not defined'),
+};
 
 
 

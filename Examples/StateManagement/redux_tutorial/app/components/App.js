@@ -32,28 +32,27 @@ const App = ({counter, handleAddCounter, handleRemoveCounter, handleIncrement, h
                     handleDecrement={handleDecrement}
                 />
             </View>
-
         </View>
     );
 };
 
-// App.propTypes = {
-//     counter: PropTypes.arrayOf(PropTypes.shape({
-//         counterNum : PropTypes.number,
-//     })),
-//     handleIncrement : PropTypes.func,
-//     handleDecrement : PropTypes.func,
-//     handleAddCounter : PropTypes.func,
-//     handleRemoveCounter : PropTypes.func,
-// };
-//
-// App.defaultProps = {
-//     counter : [],
-//     handleIncrement : () => console.warn('handleIncrement not defined'),
-//     handleDecrement : () => console.warn('handleDecrement not defined'),
-//     handleAddCounter : () => console.warn('handleAddCounter not defiend'),
-//     handleRemoveCounter : () => console.warn('handleRemoveCounter not defiend'),
-// }
+App.propTypes = {
+    counter: PropTypes.arrayOf(PropTypes.shape({
+        counterNum : PropTypes.number,
+    })),
+    handleIncrement : PropTypes.func,
+    handleDecrement : PropTypes.func,
+    handleAddCounter : PropTypes.func,
+    handleRemoveCounter : PropTypes.func,
+};
+
+App.defaultProps = {
+    counter : [],
+    handleIncrement : () => console.warn('handleIncrement not defined'),
+    handleDecrement : () => console.warn('handleDecrement not defined'),
+    handleAddCounter : () => console.warn('handleAddCounter not defiend'),
+    handleRemoveCounter : () => console.warn('handleRemoveCounter not defiend'),
+}
 
 
 const styles = StyleSheet.create({

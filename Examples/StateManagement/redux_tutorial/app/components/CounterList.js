@@ -21,21 +21,21 @@ const CounterList = ({counter, handleAddCounter, handleRemoveCounter, handleIncr
     );
 };
 
-// CounterList.propTypes = {
-//     counter: PropTypes.array,
-//     handleIncrement : PropTypes.func,
-//     handleDecrement : PropTypes.func,
-//     handleAddCounter : PropTypes.func,
-//     handleRemoveCounter : PropTypes.func,
-// };
-//
-// CounterList.defaultProps = {
-//     counter : [],
-//     handleIncrement : () => console.warn('handleIncrement not defined'),
-//     handleDecrement : () => console.warn('handleDecrement not defined'),
-//     handleAddCounter : () => console.warn('handleAddCounter not defiend'),
-//     handleRemoveCounter : () => console.warn('handleRemoveCounter not defiend'),
-// };
+CounterList.propTypes = {
+    counter: PropTypes.array,
+    handleIncrement : PropTypes.func,
+    handleDecrement : PropTypes.func,
+    handleAddCounter : PropTypes.func,
+    handleRemoveCounter : PropTypes.func,
+};
+
+CounterList.defaultProps = {
+    counter : [],
+    handleIncrement : () => console.warn('handleIncrement not defined'),
+    handleDecrement : () => console.warn('handleDecrement not defined'),
+    handleAddCounter : () => console.warn('handleAddCounter not defiend'),
+    handleRemoveCounter : () => console.warn('handleRemoveCounter not defiend'),
+};
 
 const styles = StyleSheet.create({
     counterFrame: {
