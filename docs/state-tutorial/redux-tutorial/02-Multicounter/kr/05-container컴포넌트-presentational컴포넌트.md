@@ -1,18 +1,17 @@
 ## Container 컴포넌트와 Presentational 컴포넌트
 Container 컴포넌트
 
-> redux 상태 구독, redux 액션을 보내기 등 데이터, 상태와 관련된 것을 나타내는 컴포넌트
-> redux와 연관되어있다.
+> redux 상태 구독, redux 액션을 보내기 등 데이터, 상태와 관련된 것을 나타내는 컴포넌트로
+> redux와 연관되어 있습니다.
 
 Presentational 컴포넌트
 
- > 어떻게 보여질 지 (마크업, 스타일)
- > props에 의해서만 데이터를 읽거나, 콜백을 호출한다.
+ > 어떻게 보여질 지(마크업, 스타일) 집중하는 컴포넌트로 props에 의해서만 데이터를 읽거나, 콜백을 호출한다.
 
 [더 자세한 설명은 이곳을 참고해주세요.](https://deminoth.github.io/redux/basics/UsageWithReact.html)
 
 ### 예제
-#### container 컴포넌트
+### container 컴포넌트
 - containers/CounterContainer.js
     ```
     import * as actions from '../actions';
@@ -38,17 +37,17 @@ Presentational 컴포넌트
     export default CounterContainer;
     
     ```
-    ##### 1. mapStateToProps 함수
+    ##### 1. `mapStateToProps` 함수
     > store 안의 state 값을 props 로 연결해주는 함수
     
-    여기서 state는 상태 객체 전부를 의미하므로, counter 값을 사용할 때 `state.counter`를 통해 표현합니다. 
+    여기서 state는 상태 객체 전부를 의미합니다. counter 값을 얻고자 할 때 `state.counter`를 통해 접근하면 됩니다. 
     ```
     const mapStateToProps = (state) => ({
         counter : state.counter,
     });
     ```
     
-    #### 2. mapDispatchToProps 함수
+    ##### 2. `mapDispatchToProps` 함수
     > 해당 액션을 dispatch 하는 함수를 만든 후, 이를 props 로 연결해주는 함수.
     
     ```
@@ -61,24 +60,27 @@ Presentational 컴포넌트
     
     인자값으로 index를 받으며 increment를 나타내는 action을 dispatch()안에 넣어 store에게 action 값에 따른 상태 변화를 요청합니다.
 
-    #### 3. connect 함수
-    > `react-redux` 패키지의 도움을 받아 데이터(state)와 콜백함수를 편리하게 전달하줄 수 있는 함수
+    ##### 3. `connect` 함수
+    
+    > React 컴포넌트를 Redux 스토어에 연결 `connect`시켜주는 함수
+    
+    > 데이터(state)를 props로 연결시켜주는 함수`mapStateToProps`와 콜백함수를 props로 연결시켜주는 함수`mapDispatchToProps`를 `presentational 컴포넌트`(App)와 연결시켜주는 함수
     
     ```
     const CounterContainer = connect(
-            mapStateToProps,
+        mapStateToProps,
             mapDispatchToProps
     )(App);
     ```
     
-    #### `react-redux`의 `connect`객체를 사용하지 않았다면?
+    만약 mapStateToProps가 없을 경우 null 값으로 표시해줄 수 있습니다.
     ```
-    store.dispatch(액션1)
-    store.dispatch(액션2)
-    store.dispatch(액션3)
+    const CounterContainer = connect(
+        null,
+        mapDispatchToProps
+    )(App);
     ```
-    
-    
+ 
     
 
 #### presentational 컴포넌트
