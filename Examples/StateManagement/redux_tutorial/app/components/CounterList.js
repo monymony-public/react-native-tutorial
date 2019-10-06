@@ -12,8 +12,7 @@ const CounterList = ({counter, handleAddCounter, handleRemoveCounter, handleIncr
                 handleIncrement={handleIncrement}
                 handleDecrement={handleDecrement}
             />
-
-        ));
+      ));
 
     return (
         <View style={styles.counterFrame}>

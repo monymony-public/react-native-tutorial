@@ -1,19 +1,14 @@
 import React from 'react';
-import CounterContainer from './containers/CounterContainer';
 import {StyleSheet, ScrollView} from 'react-native';
-import { createStore } from 'redux';
-import reducers from './reducers';
-import { Provider } from 'react-redux';
 
-const store = createStore(reducers);
+import CounterContainer from './containers/CounterContainer';
 
-function EntryPoint() {
+
+const EntryPoint = () => {
   return (
-      <Provider store={store}>
-          <ScrollView style={styles.container}>
-              <CounterContainer />
-          </ScrollView>
-      </Provider>
+      <ScrollView style={styles.container}>
+          <CounterContainer />
+      </ScrollView>
   );
 }
 

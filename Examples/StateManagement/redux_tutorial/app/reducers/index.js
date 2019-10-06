@@ -1,59 +1,18 @@
-// 액션에 매칭되는 state를 반환하는 순수함수 리듀서를 정의한다.
+import { combineReducers } from 'redux';
 
-const initialState = {
-    counter : [
-        {
-            counterNum : 0,
-        },
-    ],
-};
+import { AddRemoveCounter, CountingNumber } from './modules';
 
-// 리듀서 함수, (state, action) => return state
+/* 루트 리듀서가 모듈화된 각 리듀서를 합쳐서 하나의 트리 상태로 만들어 export 합니다 */
 
-const counter = (state = initialState, action) => {
-    const { counter } = state;
+/* combineReducers 객체는 redux에서 제공하는 편리한 기능이지만 필수는 아닙니다.
+* 상황에 따라서
+* 1. 모듈화 하여 combineReducers를 사용하거나
+* 2. 루트 리듀서에 다같이 정의할 수 있습니다.
+* */
 
-    switch(action.type){
-        case 'INCREMENT' :
-            return({
-                counter : [
-                    ...counter.slice(0, action.index),
-                    {
-                        counterNum : counter[action.index].counterNum + 1,
-                    },
-                    ...counter.slice(action.index+1, counter.length),
-                ],
-            });
-
-        case 'DECREMENT' :
-            return({
-                counter : [
-                    ...counter.slice(0, action.index),
-                    {
-                        counterNum : counter[action.index].counterNum - 1,
-                    },
-                    ...counter.slice(action.index+1, counter.length),
-                ],
-            });
-
-        case 'ADD' :
-            return({
-                counter : [
-                    ...counter,
-                    {
-                       counterNum : 0,
-                    },
-                ]
-            });
-
-        case 'REMOVE' :
-            return({
-                counter : counter.slice(0, counter.length - 1),
-            });
-
-        default :
-            return state;
-    }
-}
+const counter = combineReducers({
+        AddRemoveCounter,
+        CountingNumber
+});
 
 export default counter;
