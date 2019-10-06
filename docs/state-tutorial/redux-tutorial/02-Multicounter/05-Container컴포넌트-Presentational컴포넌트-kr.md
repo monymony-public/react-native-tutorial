@@ -1,4 +1,4 @@
-## Container 컴포넌트와 Presentational 컴포넌트
+## 05. Container 컴포넌트와 Presentational 컴포넌트
 Container 컴포넌트
 
 > redux 상태 구독, redux 액션을 보내기 등 데이터, 상태와 관련된 것을 나타내는 컴포넌트로

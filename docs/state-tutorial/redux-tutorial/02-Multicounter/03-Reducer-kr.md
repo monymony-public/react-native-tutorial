@@ -1,4 +1,4 @@
-## 2-2. 리듀서 `Reducer`
+## 03. 리듀서 `Reducer`
 
 > 이전 state와 action에 따라서, 불변성을 가진 새로운 state를 반환해주는 순수함수.
 
