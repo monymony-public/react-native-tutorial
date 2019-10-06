@@ -1,0 +1,3 @@
+export const FETCH_PAINTINGS = 'FETCH_PAINTINGS';
+export const SHOW_LOADING = 'SHOW_LOADING';
+export const HIDE_LOADING = 'HIDE_LOADING';
