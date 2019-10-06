@@ -6,7 +6,7 @@ Container 컴포넌트
 
 Presentational 컴포넌트
 
- > 어떻게 보여질 지(마크업, 스타일) 집중하는 컴포넌트로 props에 의해서만 데이터를 읽거나, 콜백을 호출한다.
+ > 어떻게 보여질 지(마크업, 스타일) 집중하는 컴포넌트로 props에 의해서만 데이터를 읽거나, 콜백을 호출합니다.
 
 [더 자세한 설명은 이곳을 참고해주세요.](https://deminoth.github.io/redux/basics/UsageWithReact.html)
 
@@ -40,7 +40,9 @@ Presentational 컴포넌트
     ##### 1. `mapStateToProps` 함수
     > store 안의 state 값을 props 로 연결해주는 함수
     
-    여기서 state는 상태 객체 전부를 의미합니다. counter 값을 얻고자 할 때 `state.counter`를 통해 접근하면 됩니다. 
+    여기서 state는 상태 객체 전부를 의미합니다. 
+    
+    만약 counter 값을 얻고자 한다면 `state.counter`를 통해 접근하면 됩니다. 
     ```
     const mapStateToProps = (state) => ({
         counter : state.counter,
@@ -58,7 +60,7 @@ Presentational 컴포넌트
           ...
     });
     ```
-    > 인자값으로 index를 받으며 increment를 나타내는 action을 dispatch() 안에 넣어 store에게 action 값에 따른 상태 변화를 요청합니다.
+    인자값으로 index를 받으며 increment를 나타내는 action을 dispatch() 안에 넣어 store에게 action 값에 따른 상태 변화를 요청합니다.
     ##### 3. `connect` 함수
     
     > React 컴포넌트를 Redux 스토어에 연결 `connect`시켜주는 함수
@@ -68,7 +70,7 @@ Presentational 컴포넌트
     ```
     const CounterContainer = connect(
         mapStateToProps,
-            mapDispatchToProps
+        mapDispatchToProps
     )(App);
     ```
     
@@ -78,11 +80,12 @@ Presentational 컴포넌트
 
 #### presentational 컴포넌트
 
-> presentational 컴포넌트의 데이터 및 콜백은 props로 전달받아 사용하고
+> presentational 컴포넌트의 데이터 및 콜백은 props로 전달받아 사용하며,
+
 > redux의 영향을 받지 않으며 오직 style만 집중할 수 있는 컴포넌트 입니다.
 
 - components/App.js
-    #####
+    
 	```
     import React from 'react';
     import CounterList from './CounterList';
