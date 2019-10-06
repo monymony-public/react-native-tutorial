@@ -50,21 +50,20 @@ Presentational 컴포넌트
     ##### 2. `mapDispatchToProps` 함수
     > 해당 액션을 dispatch 하는 함수를 만든 후, 이를 props 로 연결해주는 함수.
     
+     presentational 컴포넌트에 props로 전달되는 handleIncrement라는 함수로 예를 들어보겠습니다. 
+        
     ```
     const mapDispatchToProps = (dispatch) => ({
           handleIncrement : (index) => dispatch(actions.increment(index)),
           ...
     });
     ```
-    presentational 컴포넌트에 props로 전달되는 handleIncrement라는 함수로 예를 들어보겠습니다. 
-    
-    인자값으로 index를 받으며 increment를 나타내는 action을 dispatch()안에 넣어 store에게 action 값에 따른 상태 변화를 요청합니다.
-
+    > 인자값으로 index를 받으며 increment를 나타내는 action을 dispatch() 안에 넣어 store에게 action 값에 따른 상태 변화를 요청합니다.
     ##### 3. `connect` 함수
     
     > React 컴포넌트를 Redux 스토어에 연결 `connect`시켜주는 함수
     
-    > 데이터(state)를 props로 연결시켜주는 함수`mapStateToProps`와 콜백함수를 props로 연결시켜주는 함수`mapDispatchToProps`를 `presentational 컴포넌트`(App)와 연결시켜주는 함수
+    > 데이터(state)를 props로 연결시켜주는 `mapStateToProps`와 콜백함수를 props로 연결시켜주는 `mapDispatchToProps`를 `presentational 컴포넌트`(App)와 연결시켜주는 함수
     
     ```
     const CounterContainer = connect(
@@ -73,14 +72,8 @@ Presentational 컴포넌트
     )(App);
     ```
     
-    만약 mapStateToProps가 없을 경우 null 값으로 표시해줄 수 있습니다.
-    ```
-    const CounterContainer = connect(
-        null,
-        mapDispatchToProps
-    )(App);
-    ```
- 
+    [connect 객체에 대한 자세한 설명](https://react-redux.js.org/api/connect)
+
     
 
 #### presentational 컴포넌트

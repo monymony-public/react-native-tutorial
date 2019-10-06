@@ -1,6 +1,3 @@
-// About Action contructor
-// 액션 생성자
-
 import * as types from './ActionTypes';
 
 export const add = () => ({
