@@ -18,7 +18,7 @@
 
     ``` The Developer Menu is disabled in release (production) builds.```
 
-
+    ![inappdeveloper](../images/inappdeveloper.png)
 
 
 # React Developer Tools
@@ -30,11 +30,9 @@ We are going to use the [standalone version of React Developer Tools](https://gi
 
 
 
-![reactdevtools](../images/react-devtools.png)
-
 Run `React-devtools`
 
-![use-react-devtools](../images/use-react-devtools.png)
+        react-devtools
 
 Upgrade **React-devtools** according to **your React Version**
 
@@ -42,18 +40,24 @@ Upgrade **React-devtools** according to **your React Version**
 ![upgrade-devtools](../images/upgrade-devtools.png)
 
 
+
 # Chrome Developer Tools (To Debug)
 
-`Note: the React Developer Tools Chrome extension does not work with React Native, but you can use its` [standalone version](live-reload.md#React-developer-tools)
+`Note: the React Developer Tools Chrome extension does not work with React Native, but you can use its` [standalone version](debugging.md#React-developer-tools)
 
 
 + Select `Debug JS Remotely` from the Developer Menu [http://localhost:8081/debugger-ui.](http://localhost:8081/debugger-ui.)
+
+![debuggerui](../images/debuggerui.png)
+
 
 + Select `Tools → Developer Tools` from the Chrome Menu to open the `Developer Tools.`
 
 + Keyboard shortcuts
  + `⌘⌥I` (macOs)
  + `Ctrl+Shift+I` (Windows)
+
+ ![chromedebugger](../images/chromedebugger.png)
 
 + Step further [Pause On Caught Exceptions](https://stackoverflow.com/questions/2233339/javascript-is-there-a-way-to-get-chrome-to-break-on-all-errors/17324511#17324511)
 
