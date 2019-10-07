@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, StyleSheet, TextInput, View } from 'react-native';
+import { StyleSheet, TextInput, View, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-const TextField = ({ onTextChange, value, onSubmitEnd }) => {
+const TextField = ({ onTextChange, value, onSubmitEnd, onShuffleClick }) => {
   return (
     <View style={styles.container}>
       <TextInput
@@ -12,6 +13,10 @@ const TextField = ({ onTextChange, value, onSubmitEnd }) => {
         onSubmitEditing={onSubmitEnd}
         placeholderTextColor={'#999'}
       />
+
+      <TouchableOpacity style={styles.shuffle} onPress={onShuffleClick}>
+        <Icon name="random" size={30} color="#3143e8" />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -27,7 +32,11 @@ const styles = StyleSheet.create({
   input: {
     flexGrow: 1,
     fontSize: 24,
-  }
+  },
+  shuffle: {
+    marginVertical: 10,
+    marginHorizontal: 10,
+  },
 });
 
 export default TextField;

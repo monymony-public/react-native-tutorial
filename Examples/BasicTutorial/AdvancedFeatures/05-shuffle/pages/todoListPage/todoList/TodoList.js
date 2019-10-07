@@ -3,6 +3,7 @@ import { StyleSheet, ScrollView, View } from 'react-native';
 import Item from './Item';
 import TextField from "./TextField";
 import runToast from "../../../components/toast"
+import shuffle from "../../../util/shuffle";
 
 const TodoList = ({ todos, setTodos }) => {
   const [text, setText] = useState("");
@@ -46,13 +47,17 @@ const TodoList = ({ todos, setTodos }) => {
     toggleCheckedTodo(id);
   }
 
+  const onShuffleClickHandler = e => {
+    setTodos(shuffle(todos));
+  }
+
   return (
     <View>
-      <TextField onSubmitEnd={addTodoHandler} value={text} onTextChange={onInputChangeHandler} />
+      <TextField onSubmitEnd={addTodoHandler} value={text} onTextChange={onInputChangeHandler} onShuffleClick={onShuffleClickHandler} />
       <ScrollView contentContainerStyle={styles.todoListContainer}>
-        {todos.map((todo, index) => (
+        {todos.map(todo => (
           <Item
-            key={index}
+            key={todos.id}
             todo={todo}
             onRemove={onRemoveButtonClickHandler}
             onCheck={onCheckButtonClickHandler}
