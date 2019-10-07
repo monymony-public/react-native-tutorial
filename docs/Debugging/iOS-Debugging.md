@@ -1,3 +1,10 @@
+---
+title: iOS Debugging
+parent: Debugging
+nav_order: 3
+has_children: false
+---
+
 ## 1. Using the Debugger
 
 After you click the Run button in the workspace toolbar and your app builds successfully, Xcode runs your app and starts a debugging session. You can debug your app directly within the source editor with graphical tools such as data tips and Quick Look for the value of variables.

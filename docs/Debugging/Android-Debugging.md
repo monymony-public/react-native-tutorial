@@ -1,3 +1,10 @@
+---
+title: Android Debugging
+parent: Debugging
+nav_order: 1
+has_children: false
+---
+
 # Analyze a stack trace
 
 Debugging an app often requires working with stack traces. A stack trace is generated whenever your app crashes because of an error or an exception. You can also print a stack trace at any point in your app code using methods such as [`Thread.dumpStack()`](https://developer.android.com/reference/java/lang/Thread.html?hl=ko#dumpStack()).

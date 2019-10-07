@@ -1,3 +1,10 @@
+---
+title: Android 디버깅
+parent: Debugging
+nav_order: 2
+has_children: false
+---
+
 # 스택 추적 분석하기
 
 앱을 디버깅하려면 종종 스택 추적 작업이 필요합니다. 오류나 예외로 인해 앱이 중단 될 때마다 스택 추적이 이루어집니다. [Thread.dumpStack()](https://developer.android.com/reference/java/lang/Thread.html?hl=ko#dumpStack())과 같은 메소드를 사용하여 앱 코드의 어느 시점에서나 스택 추적을 나오게 할 수 있습니다.

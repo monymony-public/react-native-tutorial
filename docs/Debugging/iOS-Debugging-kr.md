@@ -1,3 +1,10 @@
+---
+title: iOS 디버깅
+parent: Debugging
+nav_order: 4
+has_children: false
+---
+
 ## 1. 디버거 사용하기
 
 워크스페이스의 툴바에서 실행 버튼을 누르면 앱은 성공적으로 빌드될 것입니다. Xcode는 앱을 실행시키고 디버깅 세션을 시작합니다. `data tips` 같은 그래픽 툴이나 [Quick Look](<https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/debugging_with_xcode/chapters/quick_look_data_types.html>)을 제공하는 소스 에디터에서 앱을 직접 디버깅할 수 있습니다. 
