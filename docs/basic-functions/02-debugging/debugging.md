@@ -18,7 +18,7 @@
 
     ``` The Developer Menu is disabled in release (production) builds.```
 
-    + Open In-App Debugger and Select **Toggle Selector** 
+    + Open In-App Developer menu and Select **Toggle Selector** 
 
     ![inappdeveloper](../images/inappdeveloper.png)
     
@@ -26,6 +26,15 @@
 
 
     ![showinspector](../images/showinspector.png)
+
+    + Open In-App Developer menu and select Debug 
+
+     ![inappdeveloper](../images/inappdeveloper.png)
+
+    
+    ![debuggerui](../images/debuggerui.png)
+
+
 
 
 # React Developer Tools
@@ -46,6 +55,59 @@ Upgrade **React-devtools** according to **your React Version**
         
 ![upgrade-devtools](../images/upgrade-devtools.png)
 
+Added *"devtools": react-devtools* to package.json file
+
+![addreactdevtoolstoscript](../images/addreactdevtoolstoscript.png)
+
+            npm run devtools
+
+
+![rundevtools](../images/rundevtools.png)
+
+# Integration with React Native Inspector
+
+1. Open the in-app developer menu and choose "Toggle Inspector" again
+
+It uses DevTools as primary UI this time 
+
+2. Click on something in the simulator, it brings up the relevant components in the DevTools
+
+When I choose Text contents, it shows: 
+
+![integration1](../images/integration1.png)
+
+When I choose *Welcome to React*, it shows: 
+![integration2](../images/integration2.png)
+
+
+# Inspecting Component Instances
+
+You can inspect the props and state of the React components in the browser console
+
+ + Make sure that there is debuggerworker.js in dropdown, Chrome console (Essential)
+
+    ![debuggerworker](../images/debuggerworker.png)
+
+ 1. Select a React component in React DevTools
+
+    ![selectcomponent](../images/selectcomponent.png)
+
+2. Select debuggerworker.js from Chrome console droplists
+
+     ![selectdebuggerworker](../images/selectdebuggerworker.png)
+
+ 3. When you select it, it will be available as `$r` in the Chrome console (lets you inspect its props, state, and instance properties) 
+
+    ![input$r](../images/input$r.png)
+
+
+![overallview](../images/overallview.png)
+ 
+   
+
+
+
+
 
 
 # Chrome Developer Tools (To Debug)
@@ -54,6 +116,8 @@ Upgrade **React-devtools** according to **your React Version**
 
 
 + Select `Debug JS Remotely` from the Developer Menu [http://localhost:8081/debugger-ui.](http://localhost:8081/debugger-ui.)
+
+
 
 ![debuggerui](../images/debuggerui.png)
 
