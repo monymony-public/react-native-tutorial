@@ -18,7 +18,14 @@
 
     ``` The Developer Menu is disabled in release (production) builds.```
 
+    + Open In-App Debugger and Select **Toggle Selector** 
+
     ![inappdeveloper](../images/inappdeveloper.png)
+    
+    + Inspector lets you tap on any UI element and see information about it
+
+
+    ![showinspector](../images/showinspector.png)
 
 
 # React Developer Tools
