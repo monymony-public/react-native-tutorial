@@ -6,27 +6,16 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  Animated,
-  Image,
-  Dimensions,
-} from 'react-native';
-
+import React from 'react';
+import {StyleSheet, View, Animated, Dimensions} from 'react-native';
 import {ParallaxSwiper, ParallaxSwiperPage} from 'react-native-parallax-swiper';
 import PaintingInfo from './components/PaintingInfo';
+import PaintingImage from './components/PaintingImage';
 
 const {width, height} = Dimensions.get('window');
 
 export default class App extends React.Component {
   myCustomAnimationValue = new Animated.Value(0);
-
   getPageTransformStyle = index => ({
     transform: [
       {
@@ -67,49 +56,31 @@ export default class App extends React.Component {
         progressBarValueBackgroundColor="white">
         <ParallaxSwiperPage
           BackgroundComponent={
-            <Image
-              style={styles.backgroundImage}
-              source={{
-                uri:
-                  'https://sep.yimg.com/ty/cdn/madisonartshop/most-famous-paintings-1.jpg?t=1544067607&',
-              }}
-            />
+            <PaintingImage id={436535} width={width} height={height} />
           }
           ForegroundComponent={
             <View style={styles.foregroundTextContainer}>
-              <PaintingInfo index={0} />
+              <PaintingInfo id={436535} />
             </View>
           }
         />
         <ParallaxSwiperPage
           BackgroundComponent={
-            <Image
-              style={styles.backgroundImage}
-              source={{
-                uri:
-                  'https://upload.wikimedia.org/wikipedia/commons/f/f2/El_beso%28Gustav_Klimt%29.jpg',
-              }}
-            />
+            <PaintingImage id={436528} width={width} height={height} />
           }
           ForegroundComponent={
             <View style={styles.foregroundTextContainer}>
-              <PaintingInfo index={1} />
+              <PaintingInfo id={436528} />
             </View>
           }
         />
         <ParallaxSwiperPage
           BackgroundComponent={
-            <Image
-              style={styles.backgroundImage}
-              source={{
-                uri:
-                  'https://sep.yimg.com/ty/cdn/madisonartshop/most-famous-paintings-17.jpg?t=1544067607&',
-              }}
-            />
+            <PaintingImage id={436532} width={width} height={height} />
           }
           ForegroundComponent={
             <View style={styles.foregroundTextContainer}>
-              <PaintingInfo index={2} />
+              <PaintingInfo id={436532} />
             </View>
           }
         />

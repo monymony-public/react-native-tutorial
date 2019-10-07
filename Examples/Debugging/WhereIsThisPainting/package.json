@@ -6,9 +6,12 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "clean": "watchman watch-del-all && rm -rf node_modules && yarn && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*"
+    "ios": "react-native run-ios",
+    "build": "yarn && cd ios && pod install && cd ..",
+    "clean": "watchman watch-del-all && rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && rm -rf node_modules/ && rm yarn.lock && rm -rf ios/build && rm -rf ios/Pods && rm ios/Podfile.lock"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "react": "16.8.6",
     "react-native": "0.60.5",
     "react-native-parallax-swiper": "^1.1.7"
@@ -27,4 +30,3 @@
     "preset": "react-native"
   }
 }
-
