@@ -8,3 +8,9 @@ npm-debug.*
 
 package-lock.json
 yarn.lock
+
+// Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
