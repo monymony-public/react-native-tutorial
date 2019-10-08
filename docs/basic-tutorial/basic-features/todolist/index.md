@@ -21,3 +21,4 @@ Project sources: [Examples/BasicTutorial/BasicFeatures/TodoList]()
 cd Examples/BasicTutorial/BasicFeatures/TodoList
 yarn # Install dependencies
 yarn start # run react-native ios app
+```
