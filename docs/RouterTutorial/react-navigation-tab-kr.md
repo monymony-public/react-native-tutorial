@@ -315,7 +315,7 @@ const styles = StyleSheet.create({
 
 ###### createBottomTabNavigator
 
-createBottomTabNavigator을 사용한 예제에서는 activetintcolor와 inactivetintcolor을 사용해 라벨과 아이콘의 활성화 여부에 따른 색깔을 설정해주었고 style에서 backgroundcolor을 사용해 tab bar의 배경색을 지정해주었습니다. 
+createBottomTabNavigator을 사용한 예제에서는 activeTintColor와 inactiveTintColor을 사용해 라벨과 아이콘의 활성화 여부에 따른 색깔을 설정해주었고 style에서 backGroundColor을 사용해 tab bar의 배경색을 지정해주었습니다. 
 
 <img src="./Tab_createBottomTabNavigator.gif" style="zoom:67%;" />
 
@@ -414,11 +414,11 @@ export default createAppContainer(TabNavigator);
 
 ###### createMaterialBottomTabNavigator
 
-createMaterialBottomTabNavigator을 사용한 예제에서는 아래에서 볼 수 있듯이 shifting을 이용해 해당하는 탭의 라벨만 표시되고 activetintcolor, inactivetintcolor, barstyle을 이용해 배경색 역시 각각 활성화 여부에 따라 다르게 지정해주었습니다.
+createMaterialBottomTabNavigator을 사용한 예제에서는 아래에서 볼 수 있듯이 shifting을 이용해 해당하는 탭의 라벨만 표시되고 activeTintColor, inactiveTintColor, barStyle을 이용해 배경색 역시 각각 활성화 여부에 따라 다르게 지정해주었습니다.
 
 <img src="./Tab_createMaterialBottomTabNavigator.gif" style="zoom:67%;" />
 
-createMateiralBottomTabNavigator.js*
+*createMateiralBottomTabNavigator.js*
 
 ```jsx
 import React from 'react';
@@ -506,11 +506,11 @@ export default createAppContainer(TabNavigator);
 
 ###### createMaterialTopTabNavigator
 
-createMaterialTopTabNavigator을 사용한 예제에서는 다른 예제들과는 다르게 탭에 icon만 위치해있는것을 볼 수 있습니다. 이는 showIcon, showLabel 의 boolean값을 설정함으로써 show 여부를 결정할 수 있습니다.  또한, indicator style을 통해 활성화된 탭을 가르키는 바의 스타일을 저장할 수 있고 탭을 누를 때 역시 presscolor을 통한 잠깐의 색깔 변경을 나타낼 수 있습니다.
+createMaterialTopTabNavigator을 사용한 예제에서는 다른 예제들과는 다르게 탭에 icon만 위치해있는것을 볼 수 있습니다. 이는 showIcon, showLabel 의 boolean값을 설정함으로써 show 여부를 결정할 수 있습니다.  또한, indicatorStyle을 통해 활성화된 탭을 가르키는 바의 스타일을 저장할 수 있고 탭을 누를 때 역시 pressColor을 통한 잠깐의 색깔 변경을 나타낼 수 있습니다.
 
 <img src="./Tab_createMaterialTopTabNavigator.gif" style="zoom:67%;" />
 
-createTabTobNavigator.js*
+*createTabTobNavigator.js*
 
 ```jsx
 import React from 'react';
