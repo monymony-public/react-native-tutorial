@@ -8,65 +8,32 @@ class PaintingInfo extends Component {
     this.state = {
       isPressed: false,
       id: this.props.id,
-      info: {},
+      title: this.props.title,
+      artist: this.props.artist,
+      year: this.props.year,
+      location: this.props.location,
     };
   }
 
-  async componentDidMount() {
-    let info = await API.get(`/objects/${this.state.id}`, {
-      params: {
-        results: 1,
-        inc: 'primaryImage,title,artistDisplayName,objectEndDate,repository',
-      },
-    });
-    info = info.data;
-
-    const imageURL = `${info.primaryImage}`;
-    const title = `${info.title}`;
-    const artist = `${info.artistDisplayName}`;
-    const year = `${info.objectEndDate}`;
-    const location = `${info.repository}`;
-
-    this.setState({
-      ...this.state,
-      info: {
-        imageURL,
-        title,
-        artist,
-        year,
-        location,
-      },
-    });
-  }
-
-  _onPressIn = () => {
-    this.state.isPressed
-      ? this.setState({isPressed: false})
-      : this.setState({isPressed: true});
-  };
-
-  _onPressOut = () => {
-    this.state.isPressed
-      ? this.setState({isPressed: true})
-      : this.setState({isPressed: false});
+  _onPressToggle = () => {
+    this.setState({isPressed: !this.state.isPressed});
   };
 
   render() {
     return (
       <View style={styles.container}>
         <TouchableHighlight
-          onPressIn={this._onPressIn}
-          onPressOut={this._onPressOut}
+          onPressIn={this._onPressToggle}
           style={styles.touchable}
           underlayColor="#FFFFFF00">
           <View style={styles.button}>
             <Text style={styles.welcome}>
               {!this.state.isPressed
                 ? 'Where is this painting on display?'
-                : `Title: ${this.state.info.title}\nArtist: ${
-                    this.state.info.artist
-                  }\nYear: ${this.state.info.year}\nLocation: ${
-                    this.state.info.location
+                : `Title: ${this.state.title}\nArtist: ${
+                    this.state.artist
+                  }\nYear: ${this.state.year}\nLocation: ${
+                    this.state.location
                   }`}
             </Text>
           </View>
@@ -75,7 +42,6 @@ class PaintingInfo extends Component {
     );
   }
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

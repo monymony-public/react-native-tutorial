@@ -11,10 +11,32 @@ import {StyleSheet, View, Animated, Dimensions} from 'react-native';
 import {ParallaxSwiper, ParallaxSwiperPage} from 'react-native-parallax-swiper';
 import PaintingInfo from './components/PaintingInfo';
 import PaintingImage from './components/PaintingImage';
+import API from './lib/api';
 
 const {width, height} = Dimensions.get('window');
+const paintingIds = [436535, 436528, 436532];
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      info: [],
+    };
+  }
+  componentDidMount() {
+    paintingIds.map(id => {
+      API.get(`/objects/${id}`, {
+        params: {
+          results: 1,
+          inc: 'primaryImage,title,artistDisplayName,objectEndDate,repository',
+        },
+      })
+        .then(result => result.data)
+        .then(result => {
+          this.setState({info: [...this.state.info, result]});
+        });
+    });
+  }
   myCustomAnimationValue = new Animated.Value(0);
   getPageTransformStyle = index => ({
     transform: [
@@ -51,39 +73,32 @@ export default class App extends React.Component {
         dividerColor="black"
         backgroundColor="black"
         onMomentumScrollEnd={activePageIndex => console.log(activePageIndex)}
-        showProgressBar={true}
         progressBarBackgroundColor="rgba(0,0,0,0.25)"
         progressBarValueBackgroundColor="white">
-        <ParallaxSwiperPage
-          BackgroundComponent={
-            <PaintingImage id={436535} width={width} height={height} />
-          }
-          ForegroundComponent={
-            <View style={styles.foregroundTextContainer}>
-              <PaintingInfo id={436535} />
-            </View>
-          }
-        />
-        <ParallaxSwiperPage
-          BackgroundComponent={
-            <PaintingImage id={436528} width={width} height={height} />
-          }
-          ForegroundComponent={
-            <View style={styles.foregroundTextContainer}>
-              <PaintingInfo id={436528} />
-            </View>
-          }
-        />
-        <ParallaxSwiperPage
-          BackgroundComponent={
-            <PaintingImage id={436532} width={width} height={height} />
-          }
-          ForegroundComponent={
-            <View style={styles.foregroundTextContainer}>
-              <PaintingInfo id={436532} />
-            </View>
-          }
-        />
+        {this.state.info.map((element, index) => (
+          <ParallaxSwiperPage
+            BackgroundComponent={
+              <PaintingImage
+                id={element.ojbectId}
+                width={width}
+                height={height}
+                imageURL={element.primaryImage}
+              />
+            }
+            ForegroundComponent={
+              <View style={styles.foregroundTextContainer}>
+                <PaintingInfo
+                  id={element.objectId}
+                  title={element.title}
+                  artist={element.artistDisplayName}
+                  year={element.objectEndDate}
+                  location={element.repository}
+                />
+              </View>
+            }
+            key={index}
+          />
+        ))}
       </ParallaxSwiper>
     );
   }

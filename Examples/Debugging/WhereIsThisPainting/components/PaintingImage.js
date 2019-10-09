@@ -8,29 +8,10 @@ class PaintingImage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isPressed: false,
-      id: this.props.id,
-      info: {},
+      imageURL: this.props.imageURL,
       width,
       height,
     };
-  }
-
-  async componentDidMount() {
-    let info = await API.get(`/objects/${this.state.id}`, {
-      params: {
-        results: 1,
-        inc: 'primaryImage',
-      },
-    });
-    info = info.data;
-    const imageURL = `${info.primaryImage}`;
-    this.setState({
-      ...this.state,
-      info: {
-        imageURL,
-      },
-    });
   }
 
   render() {
@@ -38,7 +19,7 @@ class PaintingImage extends Component {
       <Image
         style={styles.backgroundImage}
         source={{
-          uri: `${this.state.info.imageURL}`,
+          uri: `${this.state.imageURL}`,
         }}
       />
     );
