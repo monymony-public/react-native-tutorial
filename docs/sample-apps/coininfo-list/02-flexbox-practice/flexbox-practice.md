@@ -5,6 +5,7 @@ parent: Show Me The Coin
 grand_parent: Make Sample Apps
 nav_order: 2
 ---
+
 ## 2. FlexBox Practice
 
 ### Layout with flexbox
