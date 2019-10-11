@@ -1,7 +1,7 @@
 ---
 title: Contribution
 parent: Home
-nav_order: 2
+# nav_order: 2
 has_children: false
 ---
 
