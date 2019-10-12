@@ -1,6 +1,12 @@
+---
+layout: default
+title: 7. Adding Icons
+parent: Make TodoList Apps
+grand_parent: React Native Basic Features
+nav_order: 7
+---
 
-
-### Adding Icons
+## Adding Icons
 
 TodoListItem has a text value describing what to do and a circle to show it is completed or not. The circle in an item will be checked if it is completed. We also need to remove an item. So let's add icons of checked circle and remove button. We will use react native icons. 
 
@@ -75,3 +81,15 @@ const TodoListItem = () => {
 ```
 
 ![](../images/completed_icon.png "completed_icon.png")
+
+### Icon for remove button
+
+Let's add a remove button. Put the code just below </Text>
+
+```js
+<TouchableOpacity style={styles.buttonContainer}>
+    <Text style={styles.buttonText}>
+      <Icon name="delete" size={30} color="#e33057" />
+    </Text>
+</TouchableOpacity>
+```
