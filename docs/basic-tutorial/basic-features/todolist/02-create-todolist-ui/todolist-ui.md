@@ -1,3 +1,11 @@
+---
+layout: default
+title: 2. Creating TodoList UI
+parent: Make TodoList Apps
+grand_parent: React Native Basic Features
+nav_order: 2
+---
+
 ## Change Background and App Title
 
 Here is the full code for our **app.js**
