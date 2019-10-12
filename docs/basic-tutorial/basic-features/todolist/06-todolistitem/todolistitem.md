@@ -6,6 +6,8 @@ grand_parent: React Native Basic Features
 nav_order: 6
 ---
 
+## TodoListItem
+
 Add all of this code in TodoListItem component.
 
 ```js
