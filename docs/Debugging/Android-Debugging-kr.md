@@ -298,3 +298,10 @@ Firebase crash reporting은 앱의 오류에 대한 자세한 보고서를 생�
 
 Firebase 종속성을 build.gradle 파일에 추가하기만 하면 모든 사용자로 부터 충돌 보고서가 수신되기 시작합니다. 자세한 내용은 [Firebase crash reporting](https://firebase.google.com/docs/crash/?hl=ko)을 참조해야 합니다.
 
+## 출처
+
+- [스택 추적 분석하기](https://developer.android.com/studio/debug/stacktraces)
+- [완벽한 픽셀!](https://developer.android.com/studio/debug/pixel-perfect)
+- [스크린 샷 찍기](https://developer.android.com/studio/debug/am-screenshot)
+- [비디오 녹화하기](https://developer.android.com/studio/debug/am-video)
+- [버그 보고서 캡쳐 및 읽기](https://developer.android.com/studio/debug/bug-report)

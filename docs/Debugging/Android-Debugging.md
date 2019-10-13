@@ -291,3 +291,10 @@ Firebase crash reporting creates detailed reports of the errors in your app. Err
 
 You'll start receiving crash reports from any user by simply adding the Firebase dependencies to your `build.gradle` file. For more information, see [Firebase crash reporting](https://firebase.google.com/docs/crash/?hl=ko).
 
+## References
+
+- [Analyze a stack trace](https://developer.android.com/studio/debug/stacktraces)
+- [Pixel Perfect!](https://developer.android.com/studio/debug/pixel-perfect)
+- [Take a screenshot](https://developer.android.com/studio/debug/am-screenshot)
+- [Record a video](https://developer.android.com/studio/debug/am-video)
+- [Capture and read bug reports](https://developer.android.com/studio/debug/bug-report)
