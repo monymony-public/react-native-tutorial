@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 4. TodoInsert component
+title: 6. TodoInsert component
 parent: Make TodoList Apps
 grand_parent: React Native Basic Features
-nav_order: 4
+nav_order: 6
 ---
 
 ## TodoInsert
