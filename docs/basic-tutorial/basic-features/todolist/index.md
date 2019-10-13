@@ -11,7 +11,7 @@ nav_order: 1
 
 Build real native simple application with javascript
 
-![Hello](images/toggle.png "Hello React Native")
+![Hello](./images/toggle.png "Hello React Native")
 
 ## How to run
 
