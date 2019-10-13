@@ -1,3 +1,12 @@
+---
+layout: default
+title: 2. debugging
+parent: basic-functions
+grand_parent: basic-tutorial
+nav_order: 1
+---
+
+
 # Debugging
 
 ## Enabling keyboard shortcuts 
