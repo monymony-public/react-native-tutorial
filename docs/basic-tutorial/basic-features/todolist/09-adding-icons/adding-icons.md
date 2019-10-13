@@ -84,7 +84,7 @@ const TodoListItem = () => {
 
 ### Icon for remove button
 
-Let's add a remove button. Put the code just below </Text>
+Let's add a remove button. Put the code just below `</Text>`
 
 ```js
 <TouchableOpacity style={styles.buttonContainer}>
@@ -93,3 +93,5 @@ Let's add a remove button. Put the code just below </Text>
     </Text>
 </TouchableOpacity>
 ```
+
+![](../images/remove_button.png "remove_button.png")
