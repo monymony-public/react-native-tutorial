@@ -1,6 +1,6 @@
 ---
 title: react-navigation-stack
-parent: Routing
+parent: React Navigation(한글)
 nav_order: 1
 has_children: false
 ---
@@ -55,13 +55,13 @@ RN 프로젝트를 `init`할 때 필요한 `react-native-cli`도 설치를 진�
 
 iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들만 App Store에서 Xcode 를 다운 받아 주세요.
 
-자 이제 RN 시작을 위한 모든 준비는 마쳤습니다. 
+자 이제 RN 시작을 위한 모든 준비는 마쳤습니다.
 
 원하는 폴더로 이동하여아래 커맨드를 실행해 제대로 프로젝트가 생성하는지 확인 해 볼까요 ?
 
     react-native init rnTutorial
 
-![rnInitSuccess](./images/RNstack/rnInitSuccess.png)
+![rnInitSuccess](../images/RNstack/rnInitSuccess.png)
 
 위와 같이 폴더구조가 생성됐다면 성공입니다.
 
@@ -84,15 +84,15 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
     │  https://github.com/facebook/react-native                                    │
     │                                                                              │
     └──────────────────────────────────────────────────────────────────────────────┘
-    
+
     Looking for JS files in
        /Users/samslow/Desktop/GitProject/RNNavigationStack
-    
+
     Loading dependency graph, done.
 
-위 명령어가 나왔다면 loacalHost가 띄워진 것 입니다. 
+위 명령어가 나왔다면 loacalHost가 띄워진 것 입니다.
 
-하지만, 서버는 이제 요청(Request)에 대한 응답(Response)만을 보내주는 일만 전담하기 때문에 
+하지만, 서버는 이제 요청(Request)에 대한 응답(Response)만을 보내주는 일만 전담하기 때문에
 
 이제 이 서버가 보내주는 내용을 받아줄 Simulator 를 띄워 볼까요 ?
 
@@ -101,11 +101,11 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
     ...
     success Successfully launched the app on the simulator
 
-![](./images/RNstack/welcomeRN.png)
+![](../images/RNstack/welcomeRN.png)
 
 🎉  **축하합니다. 당신은 이제 리액트 네이티브 개발자 입니다.**
 
- 
+
 
 ### **4종 기본 개념 소개**
 
@@ -129,7 +129,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
 - navigationOptions
 
-    각 길들의 세부 설정을 할 수 있습니다. 
+    각 길들의 세부 설정을 할 수 있습니다.
 
     이 길은 콘크리트로 할 지, 흙길로 할 지같이 Header에 표시 될 정보, Tab으로 표현할지 여부, 각 버튼의 색상 들 같은 가장 세부적인 설정들 입니다.
 
@@ -145,13 +145,13 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
     import React, { Component } from 'react'
     import { Text, StyleSheet, View } from 'react-native'
-    
+
     export default () => (
       <View style={styles.HomeView}>
         <Text> 홈 화면 입니다.</Text>
       </View>
     );
-    
+
     const styles = StyleSheet.create({
       HomeView: {
         flex: 1,
@@ -160,13 +160,13 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
       }
     })
 
-![](./images/RNstack/stackHome.png)
+![](../images/RNstack/stackHome.png)
 
 이 앱은 3가지 화면이 필요하지만, 먼저 각 화면들을 모두 한 화면에 표시 해 보겠습니다.
 
     import React from 'react';
     import { StyleSheet, View, Text } from 'react-native'
-    
+
     class Home extends Component {
       render() {
         return (
@@ -176,7 +176,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
         )
       }
     }
-    
+
     class Chat extends Component {
       render() {
         return (
@@ -186,7 +186,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
         )
       }
     }
-    
+
     class Settings extends Component {
       render() {
         return (
@@ -196,7 +196,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
         )
       }
     }
-    
+
     export default () => (
       <View style={styles.centerView}>
     		<Home />
@@ -204,7 +204,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
         <Settings />
       </View>
     );
-    
+
     const styles = StyleSheet.create({
       centerView: {
         flex: 1,
@@ -218,7 +218,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
       }
     })
 
-![](./images/RNstack/mergedScreens.png)
+![](../images/RNstack/mergedScreens.png)
 
 세가지 화면에 따른 Style도 조정 해 주시고 위 화면이 나온다면 성공입니다.
 
@@ -232,7 +232,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
     > cd ios
     > pod install # 새로운 native library가 추가되었으니 연결 해 줍니다. (모든 Library들이 이 과정이 필요하진 않습니다.)
 
-여기서 `yarn add react-native-gesture-handler`  의 역할은 무엇일까요 ? 
+여기서 `yarn add react-native-gesture-handler`  의 역할은 무엇일까요 ?
 
 - 모바일은 모든 컨트롤이 터치로 이루어지기 때문에 RN 환경에서 터치 인터페이스를 로드 해 주어야 합니다.
 - 웹에서 왼쪽 클릭, 오른쪽 클릭처럼 예를 들어 클릭, 스크롤, 확대 · 축소 등이 있을 수 있겠죠.
@@ -241,15 +241,15 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
     import { createAppContainer } from 'react-navigation';
     import { createStackNavigator } from 'react-navigation-stack';
-    
+
     ...
 
 `createAppContainer` 는 Navigation으로 만들어낸 Stack 들을 하나의 상자에 담아 앱이 인식 할 수 있는 형태로 만들어주는 API 입니다.
 
-그럼 이제 두 API 를 사용 해 봅시다. 
+그럼 이제 두 API 를 사용 해 봅시다.
 
     ...
-    
+
     const App = createStackNavigator(
       {
         Chat: {
@@ -264,29 +264,29 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
         initialRouteName: 'Home' // 처음 보여 줄 화면을 설정합니다.
       },
     );
-    
+
     const AppContainer = createAppContainer(App);
-    
+
     export default () => (
       <AppContainer />
     );
-    
+
     ...
 
-![](./images/RNstack/routeHome.png)
+![](../images/RNstack/routeHome.png)
 
 이 화면이 나왔다면 잘 따라오신 겁니다.
 
 근데, 뭔가 이상하지 않나요? 저희는 분명 Chat과 Settings를 만들었는데 어디에도 Chat과 Settings 로 가는 버튼이 없습니다.
 
-그럼 이제 마무리를 지어볼까요 ? 
+그럼 이제 마무리를 지어볼까요 ?
 
 홈 화면에서 Chat과 Settings로 가는 버튼을 만들고 Home으로 다시 돌아 올 수 있도록 만들어 봅시다.
 
 우리는 이미 모든 기본 세팅을 해 두었기 때문에 활용 할 수 있는 `<Button />` 만 만들면 됩니다.
 
     ...
-    
+
     class Home extends Component {
       render() {
         return (
@@ -304,7 +304,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
         )
       }
     }
-    
+
     class Chat extends Component {
       render() {
         return (
@@ -318,7 +318,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
         )
       }
     }
-    
+
     class Settings extends Component {
       render() {
         return (
@@ -332,7 +332,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
         )
       }
     }
-    
+
     ...
 
 [작동되는 GIF 추가]
