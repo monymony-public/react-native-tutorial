@@ -30,7 +30,7 @@ nav_order: 1
 
   2. Import `textInput.js` from `app.js`
 
-          import TextInput from './TextInput';
+          import TextInput from './\TextInput';
 
       ![importInputText](../images/importTextInput.png)
 
@@ -58,7 +58,7 @@ nav_order: 1
       ![SourroundYourUI](../images/SurroundYourUI.png)
 
   3. Example Screen
-
+  
       ![keyboardview.gif](../images/keyboardview.gif)
 
 
