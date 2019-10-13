@@ -184,3 +184,12 @@ Xcode Behaviors 환경 설정에서 작업 과정에서 중요한 작업들을 �
 사용자 지정 동작에 키보드 동작을 할당하려면, Xcode > Preferences 를 선택하고 Key Bingings를 선택하면 됩니다. Key Bindings preferences 화면에서 원하는 사용자 지정 동작을 찾기 위해 Customized 탭을 선택하세요. 텍스트 필드에서 텍스트 필드와 연결하길 원하는 키를 누르고 동작을 마무리하기위해 텍스트 필드 바깥을 선택하세요.
 
 breakpoints와 breakpoint의 타입들에 대해 더 자세히 알려면 [Xcode Help](https://help.apple.com/xcode)를 참고하세요.
+
+## 출처
+
+1. [디버거 사용하기](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingtheDebugger.html#//apple_ref/doc/uid/TP40010215-CH57-SW1l)
+2. [뷰 계층 검사하기](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/ExaminingtheViewHierarchy.html#//apple_ref/doc/uid/TP40010215-CH58-SW1)
+3. [시스템 임팩트 검사하기](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/ExaminingSystemImpact.html#//apple_ref/doc/uid/TP40010215-CH59-SW1)
+4. [성능 측정하기](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/MeasuringPerformance.html#//apple_ref/doc/uid/TP40010215-CH60-SW1)
+5. [시뮬레이터에 관련된 문제들](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/SimulatingProblems.html#//apple_ref/doc/uid/TP40010215-CH61-SW1)
+6. [작업 과정 커스터마이징하기](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/CustomizingYourWorkflow.html#//apple_ref/doc/uid/TP40010215-CH62-SW1)
