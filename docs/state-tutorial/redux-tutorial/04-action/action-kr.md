@@ -1,3 +1,11 @@
+---
+layout: default
+title: 4. 액션
+parent: Redux Tutorial(한글)
+nav_order: 4
+has_children: false
+---
+
 ## 02. 액션 `action`
 
 > 어떤 변화가 일어나야할지 알려주는 store의 유일한 정보원

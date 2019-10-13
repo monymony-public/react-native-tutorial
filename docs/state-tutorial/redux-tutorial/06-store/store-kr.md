@@ -1,3 +1,11 @@
+---
+layout: default
+title: 6. 스토어
+parent: Redux Tutorial(한글)
+nav_order: 6
+has_children: false
+---
+
 ## 04. 스토어 `Store`
 
 > 데이터 `state` 를 관리하는 오직 한 곳
