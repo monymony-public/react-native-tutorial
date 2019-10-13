@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 7. Adding Icons
+title: 9. Adding Icons
 parent: Make TodoList Apps
 grand_parent: React Native Basic Features
-nav_order: 7
+nav_order: 9
 ---
 
 ## Adding Icons

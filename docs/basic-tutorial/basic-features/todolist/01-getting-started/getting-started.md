@@ -14,7 +14,7 @@ In this tutorial, we are going to build a Todo Application as our example using 
 
 Before we get started, make sure you have environment set up.
 
-Please refer to the following link for environment settings: 
+Please refer to the following link for environment settings:
 
 - [https://facebook.github.io/react-native/docs/0.60/getting-started](https://facebook.github.io/react-native/docs/0.60/getting-started)
 
@@ -38,27 +38,27 @@ react-native run-ios
 Let's make the code in **app.js** looks like this:
 
 ```javascript
-    import React from 'react';
-    import {SafeAreaView, StyleSheet, Text} from 'react-native';
-    
-    const App = () => {
-      return (
-        <SafeAreaView style={styles.container}>
-          <Text>Hello World</Text>
-        </SafeAreaView>
-      );
-    };
-    
-    const styles = StyleSheet.create({
-      container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
-    });
-    
-    export default App;
+import React from 'react';
+import {SafeAreaView, StyleSheet, Text} from 'react-native';
+
+const App = () => {
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text>Hello World</Text>
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default App;
 ```
 
 Run the following in terminal
