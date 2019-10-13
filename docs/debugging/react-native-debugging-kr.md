@@ -1,6 +1,7 @@
 ---
 title: React Native 디버깅
-parent: Debugging
-nav_order: 6
+parent: Debugging (한글)
+nav_order: 2
 has_children: false
 ---
+

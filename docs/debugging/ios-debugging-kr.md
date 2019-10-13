@@ -1,7 +1,7 @@
 ---
 title: iOS 디버깅
-parent: Debugging
-nav_order: 4
+parent: Debugging (한글)
+nav_order: 2
 has_children: false
 ---
 
