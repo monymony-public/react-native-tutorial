@@ -30,13 +30,39 @@ nav_order: 1
 
   2. Import `textInput.js` from `app.js`
 
-          import TextInput from './\TextInput';
+          import TextInput from './TextInput';
 
       ![importInputText](../images/importTextInput.png)
 
   3. Reload your Android emulator 
 
       ![reloadTextInput](../images/reloadTextInput.png)
+
+
+# Make Keyboard Avoiding View
+
+      import {KeyboardAvoidingView} from 'react-native';
+
+        <KeyboardAvoidingView style={styles.container behavior="padding" enabled>
+          ... your UI ...
+        </KeyboardAvoidingView>;
+
+  ## Example
+
+  1. Import *KeyboardAvoidingView* from *TextInput.js* file
+  
+      ![importKeyboardAvoidingView](../images/importKeyboardAvoidingView.png)
+
+  2. Surround your *TextInput UI* with *KeyboardAvoidingView*
+
+      ![SourroundYourUI](../images/SurroundYourUI.png)
+
+  3. Example Screen
+
+      ![keyboardview.gif](../images/keyboardview.gif)
+
+
+
 
   
 
