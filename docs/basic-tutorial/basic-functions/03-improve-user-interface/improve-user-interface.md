@@ -39,13 +39,20 @@ nav_order: 1
       ![reloadTextInput](../images/reloadTextInput.png)
 
 
-# Make Keyboard Avoiding View
+# Make *Keyboard Avoiding View*
 
-      import {KeyboardAvoidingView} from 'react-native';
+  < *Keyboard Avoiding View* >
 
-        <KeyboardAvoidingView style={styles.container behavior="padding" enabled>
-          ... your UI ...
-        </KeyboardAvoidingView>;
+  1. This component makes views to move out of the way of the virtual keyboard.
+
+  2. It adjusts its height, position, or bottom padding based on the position of the keyboard automatically.
+
+
+          import {KeyboardAvoidingView} from 'react-native';
+
+          <KeyboardAvoidingView style={styles.container behavior="padding" enabled>
+            ... your UI ...
+          </KeyboardAvoidingView>;
 
   ## Example
 
@@ -58,7 +65,7 @@ nav_order: 1
       ![SourroundYourUI](../images/SurroundYourUI.png)
 
   3. Example Screen
-  
+
       ![keyboardview.gif](../images/keyboardview.gif)
 
 
