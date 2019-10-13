@@ -2,6 +2,7 @@
 layout: default
 title: 6. 스토어
 parent: Redux Tutorial(한글)
+grand_parent: State Management Tutorial(한글)
 nav_order: 6
 has_children: false
 ---

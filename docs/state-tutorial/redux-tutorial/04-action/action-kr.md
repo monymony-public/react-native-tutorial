@@ -2,6 +2,7 @@
 layout: default
 title: 4. 액션
 parent: Redux Tutorial(한글)
+grand_parent: State Management Tutorial(한글)
 nav_order: 4
 has_children: false
 ---

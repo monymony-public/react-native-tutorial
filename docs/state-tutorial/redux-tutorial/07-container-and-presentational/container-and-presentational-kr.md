@@ -2,6 +2,7 @@
 layout: default
 title: 7. Container 컴포넌트와 Presentational 컴포넌트
 parent: Redux Tutorial(한글)
+grand_parent: State Management Tutorial(한글)
 nav_order: 7
 has_children: false
 ---

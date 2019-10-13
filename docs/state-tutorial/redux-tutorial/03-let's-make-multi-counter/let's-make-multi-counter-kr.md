@@ -2,6 +2,7 @@
 layout: default
 title: 3. Multi Counter를 만들어봅시다
 parent: Redux Tutorial(한글)
+grand_parent: State Management Tutorial(한글)
 nav_order: 3
 has_children: false
 ---

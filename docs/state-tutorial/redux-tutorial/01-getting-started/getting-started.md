@@ -2,6 +2,7 @@
 layout: default
 title: 1. Getting Started
 parent: Redux Tutorial
+grand_parent: State Management Tutorial
 nav_order: 1
 has_children: false
 ---

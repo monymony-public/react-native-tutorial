@@ -2,6 +2,7 @@
 layout: default
 title: 5. 리듀서
 parent: Redux Tutorial(한글)
+grand_parent: State Management Tutorial(한글)
 nav_order: 5
 has_children: false
 ---
