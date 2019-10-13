@@ -1,7 +1,8 @@
 ---
+layout: default
 title: Debugging
-parent: Home
-nav_order: 2
 has_children: true
+permalinke: /docs/debugging
+nav_order: 1
 ---
 
