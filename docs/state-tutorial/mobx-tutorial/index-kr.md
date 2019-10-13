@@ -2,7 +2,7 @@
 layout: default
 title: MobX 튜토리얼
 parent: State Management Tutorial(한글)
-nav_order: 1
+nav_order: 2
 has_children: true
 ---
 
