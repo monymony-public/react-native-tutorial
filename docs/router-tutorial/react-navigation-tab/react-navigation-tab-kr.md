@@ -1,10 +1,15 @@
-
+---
+title: react-navigation-tap
+parent: React Navigation(한글)
+nav_order: 2
+has_children: false
+---
 
 # React Native Tab Tutorial
 
 ### 1.React Navigation tab 소개
 
-모바일 앱은 기본적으로 탭을 기반으로 한 네비게이션 스타일을 흔히 볼 수 있습니다. 탭은 주로 하단이나 헤더를 대신하여 상단에 주로 위치해있고, 이 탭을 이용하여 우리는 탭을 누르거나 swipe하는 방식으로  다른 라우트로 쉽게 전환할 수 있게 됩니다.  이번 튜토리얼에서는 가장 많이 사용되는 React-Navigation을 사용하여 Tab Navigation을 만들어보겠습니다. 
+모바일 앱은 기본적으로 탭을 기반으로 한 네비게이션 스타일을 흔히 볼 수 있습니다. 탭은 주로 하단이나 헤더를 대신하여 상단에 주로 위치해있고, 이 탭을 이용하여 우리는 탭을 누르거나 swipe하는 방식으로  다른 라우트로 쉽게 전환할 수 있게 됩니다.  이번 튜토리얼에서는 가장 많이 사용되는 React-Navigation을 사용하여 Tab Navigation을 만들어보겠습니다.
 
 
 
@@ -28,7 +33,7 @@ npm install react-native-reanimated --save
 
 ### 3. React Navigation tab 기본 라이브러리 소개
 
-React Navigation에서는 기본적으로 3가지 탭 라이브러리를 제공합니다. 
+React Navigation에서는 기본적으로 3가지 탭 라이브러리를 제공합니다.
 
 | 라이브러리                       | 기능                                                         |
 | -------------------------------- | ------------------------------------------------------------ |
@@ -40,23 +45,23 @@ React Navigation에서는 기본적으로 3가지 탭 라이브러리를 제공�
 
 ### 4. React Navigation tab 기본 동작
 
-탭의 가장 기본적인 기능은 탭을 누를 시 해당 라우트로 전환되는 동작입니다. 
+탭의 가장 기본적인 기능은 탭을 누를 시 해당 라우트로 전환되는 동작입니다.
 
 createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings 총 3가지 화면으로 전환되는 탭 네비게이션 예제를 작성해보겠습니다.
 
 
 
-<img src="./images/Tab_base1.png" style="zoom:25%;" />
+<img src="../images/Tab_base1.png" style="zoom:25%;" />
 
-<img src="./images/Tab_base2.png" style="zoom:25%;" />
+<img src="../images/Tab_base2.png" style="zoom:25%;" />
 
-<img src="./images/Tab_base3.png" style="zoom:25%;" />
-
-
+<img src="../images/Tab_base3.png" style="zoom:25%;" />
 
 
 
-- Screen 
+
+
+- Screen
 
   우선 탭 네비게이션에서 필요한 각 페이지의 screen부터 구성합니다.
 
@@ -65,7 +70,7 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
   ```jsx
   import React from 'react';
   import {StyleSheet, Text, View} from 'react-native';
-  
+
   class HomeScreen extends React.Component {
     render() {
       return (
@@ -75,7 +80,7 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
       );
     }
   }
-  
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -83,9 +88,9 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
       alignItems: 'center',
     },
   });
-  
+
   export default HomeScreen;
-  
+
   ```
 
   *ChatScreen.js*
@@ -93,7 +98,7 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
   ```jsx
   import React from 'react';
   import {StyleSheet, Text, View} from 'react-native';
-  
+
   class ChatScreen extends React.Component {
     render() {
       return (
@@ -103,7 +108,7 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
       );
     }
   }
-  
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -111,9 +116,9 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
       alignItems: 'center',
     },
   });
-  
+
   export default ChatScreen;
-  
+
   ```
 
    *SettingsScreen.js*
@@ -121,7 +126,7 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
   ```jsx
   import React from 'react';
   import {StyleSheet, Text, View} from 'react-native';
-  
+
   class SettingsScreen extends React.Component {
     render() {
       return (
@@ -131,7 +136,7 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
       );
     }
   }
-  
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -139,9 +144,9 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
       alignItems: 'center',
     },
   });
-  
+
   export default SettingsScreen;
-  
+
   ```
 
   이제 탭 네비게이션을 구현하기 위한 준비를 모두 마쳤으니 createBottomTabNavigator를 사용하여 탭 네비게이션을 추가해보겠습니다.
@@ -154,7 +159,7 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
   import HomeScreen from './screens/HomeScreen';
   import ChatScreen from './screens/ChatScreen';
   import SettingsScreen from './screens/SettingsScreen';
-  
+
   const TabNavigator = createBottomTabNavigator({
     Home: {
       screen: HomeScreen,
@@ -167,16 +172,16 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
     },
   });
   export default createAppContainer(TabNavigator);
-  
+
   ```
 
-  
+
 
 ### 5. NavigationOptions
 
 - 아이콘 추가
 
-  <img src="./images/Tab_icon.png" style="zoom:25%;" />
+  <img src="../images/Tab_icon.png" style="zoom:25%;" />
 
 react navigation은 defaultNavigationOptions에서 Tab bar의 아이콘을 지정할 수 있습니다. react-native-vector-icons등을 사용하여 더 예쁘게 구현할 수 있습니다.
 
@@ -242,7 +247,7 @@ export default createAppContainer(TabNavigator);
 
 - **아이콘에 뱃지 추가**
 
-  <img src="./images/Tab_iconwithbadge.png" style="zoom:25%;" />
+  <img src="../images/Tab_iconwithbadge.png" style="zoom:25%;" />
 
 아이콘에 뱃지가 필요한 경우 뷰 컨테이너를 추가하여 아이콘 방식으로 추가시켜줍니다.
 
@@ -303,7 +308,7 @@ const styles = StyleSheet.create({
 
 이제 기본적인 기능 이외에도 config를 사용하여 부가적인 요소들을 설정해 Tab을 완성시켜보겠습니다.
 
-앞서 기본 라이브러리들을 설명하면서 bottomTabNavigator, MaterialBottomTabNavigator, MaterialTopTabNavigator 에서 스타일 부분에서 차이가 생긴다고 했는데 바로 이 config부분에서 각각 몇가지의 다른 기능을 제공하기 때문입니다! 
+앞서 기본 라이브러리들을 설명하면서 bottomTabNavigator, MaterialBottomTabNavigator, MaterialTopTabNavigator 에서 스타일 부분에서 차이가 생긴다고 했는데 바로 이 config부분에서 각각 몇가지의 다른 기능을 제공하기 때문입니다!
 
 이번 챕터에서는 각각의 라이브러리에서  config를 사용하여 예제를 만들고 몇가지 기능들을 소개해보겠습니다.
 
@@ -315,9 +320,9 @@ const styles = StyleSheet.create({
 
 ###### createBottomTabNavigator
 
-createBottomTabNavigator을 사용한 예제에서는 activeTintColor와 inactiveTintColor을 사용해 라벨과 아이콘의 활성화 여부에 따른 색깔을 설정해주었고 style에서 backGroundColor을 사용해 tab bar의 배경색을 지정해주었습니다. 
+createBottomTabNavigator을 사용한 예제에서는 activeTintColor와 inactiveTintColor을 사용해 라벨과 아이콘의 활성화 여부에 따른 색깔을 설정해주었고 style에서 backGroundColor을 사용해 tab bar의 배경색을 지정해주었습니다.
 
-<img src="./Tab_createBottomTabNavigator.gif" style="zoom:67%;" />
+<img src="../images/Tab_createBottomTabNavigator.gif" style="zoom:67%;" />
 
 *CreateBottomTabNavigator.js*
 
@@ -387,7 +392,7 @@ export default createAppContainer(TabNavigator);
 
 - `initialRouteName` - The routeName for the initial tab route when first loading.
 
-  첫 로딩시 초기 탭 라우터 이름 설정 
+  첫 로딩시 초기 탭 라우터 이름 설정
 
 - `defaultNavigationOptions` - Default navigation options to use for screens
 
@@ -403,20 +408,20 @@ export default createAppContainer(TabNavigator);
   - `inactiveBackgroundColor` - 비활성화된 탭의 배경 색깔 설정
   - `showLabel` - 라벨 show 여부 설정
   - `showIcon` - 아이콘 show 여부 설정
-  - `style` - tab bar 스타일 설정 
+  - `style` - tab bar 스타일 설정
   - `labelStyle` - label 스타일 설정
   - `labelPosition` - label 위치 설정
   - `tabStyle` - 탭 스타일 설정
   - `adaptive` - 스크린에 따른 아이콘 및 라벨 조정여부 설정
   - `keyboardHidesTabBar` - 키보드 사용시 탭바 숨김 여부 설정
 
-  
+
 
 ###### createMaterialBottomTabNavigator
 
 createMaterialBottomTabNavigator을 사용한 예제에서는 아래에서 볼 수 있듯이 shifting을 이용해 해당하는 탭의 라벨만 표시되고 activeTintColor, inactiveTintColor, barStyle을 이용해 배경색 역시 각각 활성화 여부에 따라 다르게 지정해주었습니다.
 
-<img src="./Tab_createMaterialBottomTabNavigator.gif" style="zoom:67%;" />
+<img src="../images/Tab_createMaterialBottomTabNavigator.gif" style="zoom:67%;" />
 
 *createMateiralBottomTabNavigator.js*
 
@@ -508,7 +513,7 @@ export default createAppContainer(TabNavigator);
 
 createMaterialTopTabNavigator을 사용한 예제에서는 다른 예제들과는 다르게 탭에 icon만 위치해있는것을 볼 수 있습니다. 이는 showIcon, showLabel 의 boolean값을 설정함으로써 show 여부를 결정할 수 있습니다.  또한, indicatorStyle을 통해 활성화된 탭을 가르키는 바의 스타일을 저장할 수 있고 탭을 누를 때 역시 pressColor을 통한 잠깐의 색깔 변경을 나타낼 수 있습니다.
 
-<img src="./Tab_createMaterialTopTabNavigator.gif" style="zoom:67%;" />
+<img src="../images/Tab_createMaterialTopTabNavigator.gif" style="zoom:67%;" />
 
 *createTabTobNavigator.js*
 
@@ -601,7 +606,7 @@ export default createAppContainer(TabNavigator);
 
 - `initialRouteName` - The routeName for the initial tab route when first loading.
 
-  첫 로딩시 초기 탭 라우터 이름 설정 
+  첫 로딩시 초기 탭 라우터 이름 설정
 
 - `defaultNavigationOptions` - 네비게이터에 있는 모든 routes에 디폴트 옵션으로 적용
 
@@ -609,7 +614,7 @@ export default createAppContainer(TabNavigator);
 
 - `swipeEnabled` - swipe기능 허가 설정
 
-  
+
 
 - ```
   tabBarOptions
@@ -639,7 +644,7 @@ export default createAppContainer(TabNavigator);
 
 이 코드를 사용하여 Settings화면에서 Home화면으로 이동하는 예제를 만들어봅시다.
 
-<img src="./images/Tab_TabsToTab.png" style="zoom:25%;" />
+<img src="../images/Tab_TabsToTab.png" style="zoom:25%;" />
 
 
 settingsScreen.js에서 버튼을 생성 후 위에서 언급한 코드를 사용해 작성하였습니다.
