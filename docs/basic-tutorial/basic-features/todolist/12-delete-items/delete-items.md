@@ -6,7 +6,7 @@ grand_parent: React Native Basic Features
 nav_order: 12
 ---
 
-### Delete items
+## Delete items
 
 We will create a function to delete items.
 
@@ -56,6 +56,6 @@ const TodoListItem = ({textValue, id, checked, onRemove}) => {
   );
 };
 ```
-Now you can remove items on list by pressing delete button.
+Now you can remove items on the list by pressing delete button.
 
 ![](../images/delete.png "delete.png")

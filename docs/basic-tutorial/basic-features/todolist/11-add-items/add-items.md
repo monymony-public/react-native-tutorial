@@ -6,7 +6,7 @@ grand_parent: React Native Basic Features
 nav_order: 11
 ---
 
-### Adding items
+## Adding items
 
 We are going to add feature to add todo items.
 
