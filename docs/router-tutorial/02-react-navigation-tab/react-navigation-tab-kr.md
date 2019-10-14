@@ -50,13 +50,11 @@ React Navigation에서는 기본적으로 3가지 탭 라이브러리를 제공�
 createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings 총 3가지 화면으로 전환되는 탭 네비게이션 예제를 작성해보겠습니다.
 
 
+![base](../images/RNtab/Tab_base1.png)
 
-<img src="../images/Tab_base1.png" style="zoom:25%;" />
+![base](../images/RNtab/Tab_base2.png)
 
-<img src="../images/Tab_base2.png" style="zoom:25%;" />
-
-<img src="../images/Tab_base3.png" style="zoom:25%;" />
-
+![base](../images/RNtab/Tab_base3.png)
 
 
 
@@ -181,7 +179,7 @@ createBottomTabNavigator을 이용하여 아래와 같이 Home, Chat, Settings �
 
 - 아이콘 추가
 
-  <img src="../images/Tab_icon.png" style="zoom:25%;" />
+![icon](../images/RNtab/Tab_icon.png)
 
 react navigation은 defaultNavigationOptions에서 Tab bar의 아이콘을 지정할 수 있습니다. react-native-vector-icons등을 사용하여 더 예쁘게 구현할 수 있습니다.
 
@@ -247,7 +245,7 @@ export default createAppContainer(TabNavigator);
 
 - **아이콘에 뱃지 추가**
 
-  <img src="../images/Tab_iconwithbadge.png" style="zoom:25%;" />
+![AddBadge](../images/RNtab/Tab_iconwithbadge.png)
 
 아이콘에 뱃지가 필요한 경우 뷰 컨테이너를 추가하여 아이콘 방식으로 추가시켜줍니다.
 
@@ -322,7 +320,7 @@ const styles = StyleSheet.create({
 
 createBottomTabNavigator을 사용한 예제에서는 activeTintColor와 inactiveTintColor을 사용해 라벨과 아이콘의 활성화 여부에 따른 색깔을 설정해주었고 style에서 backGroundColor을 사용해 tab bar의 배경색을 지정해주었습니다.
 
-<img src="../images/Tab_createBottomTabNavigator.gif" style="zoom:67%;" />
+![config](../images/RNtab/Tab_createBottomTabNavigator.gif)
 
 *CreateBottomTabNavigator.js*
 
@@ -421,7 +419,7 @@ export default createAppContainer(TabNavigator);
 
 createMaterialBottomTabNavigator을 사용한 예제에서는 아래에서 볼 수 있듯이 shifting을 이용해 해당하는 탭의 라벨만 표시되고 activeTintColor, inactiveTintColor, barStyle을 이용해 배경색 역시 각각 활성화 여부에 따라 다르게 지정해주었습니다.
 
-<img src="../images/Tab_createMaterialBottomTabNavigator.gif" style="zoom:67%;" />
+![config](../images/RNtab/Tab_createMaterialBottomTabNavigator.gif)
 
 *createMateiralBottomTabNavigator.js*
 
@@ -513,7 +511,7 @@ export default createAppContainer(TabNavigator);
 
 createMaterialTopTabNavigator을 사용한 예제에서는 다른 예제들과는 다르게 탭에 icon만 위치해있는것을 볼 수 있습니다. 이는 showIcon, showLabel 의 boolean값을 설정함으로써 show 여부를 결정할 수 있습니다.  또한, indicatorStyle을 통해 활성화된 탭을 가르키는 바의 스타일을 저장할 수 있고 탭을 누를 때 역시 pressColor을 통한 잠깐의 색깔 변경을 나타낼 수 있습니다.
 
-<img src="../images/Tab_createMaterialTopTabNavigator.gif" style="zoom:67%;" />
+![config](../images/RNtab/Tab_createMaterialTopTabNavigator.gif)
 
 *createTabTobNavigator.js*
 
@@ -644,7 +642,7 @@ export default createAppContainer(TabNavigator);
 
 이 코드를 사용하여 Settings화면에서 Home화면으로 이동하는 예제를 만들어봅시다.
 
-<img src="../images/Tab_TabsToTab.png" style="zoom:25%;" />
+![tabstotab](../images/RNtab/Tab_TabsToTab.png)
 
 
 settingsScreen.js에서 버튼을 생성 후 위에서 언급한 코드를 사용해 작성하였습니다.
