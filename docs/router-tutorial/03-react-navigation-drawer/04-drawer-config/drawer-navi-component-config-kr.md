@@ -170,4 +170,4 @@ const styles = StyleSheet.create({
 
 아래는 Home, Detail, About이 있는 Drawer의 화면 결과이다.
 
-![drawer intro image](./image/drawer_navi_component.mov)
+![](../../images/RNdrawer/drawer-component.gif)

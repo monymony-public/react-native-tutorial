@@ -119,6 +119,6 @@ export default About;
 
 ### 화면결과
 
-![drawer_actions](./image/drawer_actions.mov)
+![](../../images/RNdrawer/drawer-actions.gif)
 
 > 만약 **null is not an object ( evaluating 'RNGestureHandlerModule.Direction')**이 오류가 뜬다면 `cd ios && pod install`을 하길 바란다.

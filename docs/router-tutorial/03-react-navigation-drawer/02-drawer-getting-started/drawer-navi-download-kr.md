@@ -28,5 +28,3 @@ drawer navigation을 사용하기 위해서는 먼저 [react-navigation과 navig
 ```
 
 위의 명령어를 터미널에 입력하고 `package.json`을 보면 `react-navigation-drawer`가 설치된 것을 확인할 수 있습니다.
-
-*
