@@ -1,8 +1,9 @@
 ---
+layout: default
 title: Android Debugging
+has_children: false
 parent: Debugging
 nav_order: 1
-has_children: false
 ---
 
 # Analyze a stack trace

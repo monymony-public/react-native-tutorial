@@ -1,8 +1,9 @@
 ---
-title: iOS 디버깅
+layout: default
+title: iOS 디버깅 (한글)
+has_children: false
 parent: Debugging (한글)
 nav_order: 2
-has_children: false
 ---
 
 ## 1. 디버거 사용하기

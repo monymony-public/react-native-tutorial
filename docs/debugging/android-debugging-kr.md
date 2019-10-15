@@ -1,8 +1,9 @@
 ---
-title: Android 디버깅
+layout: default
+title: Android 디버깅 (한글)
+has_children: false
 parent: Debugging (한글)
 nav_order: 1
-has_children: false
 ---
 
 # 스택 추적 분석하기

@@ -1,8 +1,9 @@
 ---
+layout: default
 title: iOS Debugging
+has_children: false
 parent: Debugging
 nav_order: 2
-has_children: false
 ---
 
 ## 1. Using the Debugger
