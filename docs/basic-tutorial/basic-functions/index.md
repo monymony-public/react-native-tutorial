@@ -1,7 +1,7 @@
 ---
 layout: default
 title: basic-functions 
-parent: basic-tutorial
+parent: Basic
 nav_order: 1
 has_children: true
 ---
