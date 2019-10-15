@@ -29,3 +29,6 @@ compress_html:
   startings: []
   blank_lines: false
   profile: false
+
+# Exclude list
+exclude: ['_site', 'node_modules', 'Examples', 'Gemfile', 'Gemfile.lock', 'READMD.md']
