@@ -2,7 +2,7 @@
 layout: default
 title: Debugging (한글)
 has_children: true
-permalinke: /docs/debugging-kr
-nav_order: 2
+permalinke: /kr/docs/debugging
+nav_order: 5
 ---
 

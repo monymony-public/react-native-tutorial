@@ -1,9 +1,9 @@
 ---
 layout: default
-title: basic-tutorial
+title: Basic
 has_children: true
-permalink: /docs/basic-tutorial
-nav_order: 1
+permalink: /docs/basic
+nav_order: 2
 ---
 
 # basic-tutorial
