@@ -1,14 +1,14 @@
 ---
 layout: default
 title: 2. MobX란?
-parent: Mobx 튜토리얼
+parent: MobX 튜토리얼
 grand_parent: State Management Tutorial(한글)
-nav_order: 1
+nav_order: 2
 ---
 
 ## 2. MobX란?
 
-> *Anything that can be derived from the application state, should be derived. Automatically.*
+> _Anything that can be derived from the application state, should be derived. Automatically._
 
 - 전역 상태 라이브러리
   - 모든 상태변화로 일어나는 부분을 자동으로 추적하는 것
@@ -25,6 +25,7 @@ nav_order: 1
 - 또한 redux에서 해줘야했던 action 선언, connect, mapStateToProps, mapDispatchToProps등 번거로운 작업들은 데코레이터로 간단하게 대체
 - observable을 기본적으로 사용하고 있음
 - Mobx는 절대적으로 필요한 경우에만 state 변경
+- Typescript를 base로 만들어짐
 
 ### Concepts
 
@@ -69,7 +70,7 @@ nav_order: 1
   - flux 아키텍처를 따름
     - [flux](https://facebook.github.io/flux/) : 먼저 보낸 택배가 먼저 배송지에 도착해야 한다는 규제
       - 단일 스토어, 함수형 프로그래밍, 미들웨어
-      - dispatch 관리를 위해 redux-thunk, redux-saga 등의 미들웨어가 필수 
+      - dispatch 관리를 위해 redux-thunk, redux-saga 등의 미들웨어가 필수
   - 함수형 프로그래밍에 익숙하지 않으면 힘들 수 있음
   - action, reducer, dispatch...
 - MobX
@@ -79,8 +80,8 @@ nav_order: 1
   - 데코레이터 사용
   - Redux보다 사용이 쉬움
   - [몇가지 규칙](https://mobx.js.org/best/react-performance.html) 으로 최적화
-    - 컴포넌트 단위를  작게 만들기
-    -  리스트를 렌더링 할 땐 리스트 내용 외의 값이 props 로 들어가는것을 방지하기
+    - 컴포넌트 단위를 작게 만들기
+    - 리스트를 렌더링 할 땐 리스트 내용 외의 값이 props 로 들어가는것을 방지하기
 
 ### MobX 파헤쳐보기
 
@@ -95,14 +96,21 @@ nav_order: 1
     - 상태로부터 파생될 수 있는 것들을 확인하기 위해
   - reactions
     - when
-      - observes가  true를 반환할 때 까지 실행하고 폐기
+      - observes가 true를 반환할 때 까지 실행하고 폐기
     - autorun
       - reaction이나 computed의 observer 대신에 사용 가능
       - autorun 으로 전달해주는 함수에서 사용되는 값이 있으면 자동으로 그 값을 주시하여 그 값이 바뀔 때 마다 함수가 주시되도록 해줌
-        - 하나하나 observe 해주지 않아도 도ㅚㅁ
+        - 하나하나 observe 해주지 않아도 됨
       - 관찰 가능한 상태에 의존하는 함수들을 자동으로 실행할 때 사용
         - 로깅이나 네트워크 요청에 유용
       - 한 번 동작되는 리엑션을 만들고 함수 안에서 사용되는 관찰 가능한 모든 데이터들이 변경될 때마다 자동으로 다시 실행
+      - observers 자체를 가지지 않는 리액션 함수를 만들고자 할 경우에 사용
+        - 로깅, 지속성 또는 UI 업데이트 코드와 같이 반응적인 코드에서 명령형 코드로 연결해야 하는 경우
+      - computed와 비슷해보이지만 완전히 다르게 동작
+        - computed는 상황에 따라 트리거 됨
+        - autorun을 사용하면, 종속성 중 하나가 변경 될 때마다 무조건 다시 트리거
+      - 자동으로 실행되어야 하지만 새로운 값을 내놓지 않는 함수는 autorun을 사용
+        - 대부분 Log 출력에 이용됨
     - reaction
       - 특정 값이 바뀔 때 어떤 작업을 하고싶을 때 사용
       - autorun과 비슷, data-function과 side-effect-function을 accept함
@@ -114,20 +122,24 @@ nav_order: 1
       - 액션으 한꺼번에 일으키는 것
     - untracked
       - establishing observers없이 코드 실행이 가능하도록 함
-        - reaction과 같지만 computed's와는 다름
+        - reaction과 같지만 computed와는 다름
     - allowStateChanges
       - allow / disallow 상태를 변화함
       - By default allows `action` to make changes (and disallows for `computed` and `observer`)
-- Observers
+- observer
+
   - mobx-react 패키지 내부에 존재(mobx core의 일부가 아님)
   - 관찰 가능하게 만들어줌
 
 - decorator 문법
   - 자바스크립트 사투리라고 생각하면 됨(정규 문법이 아님 - babel 플러그인을 통해서 쓸 수 있음)
+  - @Autobind
+    - javascript this bind를 자동으로 해주는 데코레이터(arrow function 사용 없이)
   - @observable
     - MobX가 객체들을 관찰할 수 있도록 함
   - @observer
     - React 컴포넌트 render 함수를 autorun으로 감싸 자동으로 상태에 따라 컴포넌트가 동기되도록 만듬
+    - mobx observable state 를 rerendring 하기위에 선언해준다
     - mobx-react 패키지에 존재
     - 자동으로 효율적으로 업데이트함
   - @computed
@@ -135,7 +147,13 @@ nav_order: 1
   - @actionn
     - 디버깅 할 때 액션에 대한 정보를 확인 할 수 있게 해줌
     - transaction 과 함께 사용시 여러 액션을 한꺼번에 발생시켜서 여러개의 업데이트를 한번의 작업으로 합쳐줄 수 있음
-  - autorun
+  - @asyncAction
+    - 비동기인 경우
+  - @inject
+    - Redux에서 쓰던 Provider와 똑같이 사용
+      - Redux에서 Provider로 넘긴 props를 사용하기 위해서는 컴포넌트를 컨테이너로 감싼 뒤 mapSateToProps, mapDispatchToProps를 작성하여 사용 가능하게 만들어야 했음
+      - 하지만 MobX에서는 @inject 선언으로 심플하게 사용 가능
+    - MobX Store와 React Component 연결
 
 ### 개발자도구
 
