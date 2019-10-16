@@ -2,7 +2,7 @@
 layout: default
 title: 2. Change Background and App title
 parent: Make TodoList Apps
-grand_parent: React Native Basic Features
+grand_parent: Basic
 nav_order: 2
 ---
 

@@ -2,7 +2,7 @@
 layout: default
 title: 1. Getting Started
 parent: Make TodoList Apps
-grand_parent: React Native Basic Features
+grand_parent: Basic
 nav_order: 1
 ---
 

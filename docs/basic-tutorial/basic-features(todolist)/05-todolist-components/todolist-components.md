@@ -2,7 +2,7 @@
 layout: default
 title: 5. Create TodoList components
 parent: Make TodoList Apps
-grand_parent: React Native Basic Features
+grand_parent: Basic
 nav_order: 5
 ---
 

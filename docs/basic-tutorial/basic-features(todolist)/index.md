@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Make TodoList Apps
-parent: React Native Basic Features
-grand_parent: Basic
+parent: Basic
 has_children: true
-permalink: /docs/basic-tutorial/basic-features/todolist
+permalink: /docs/basic-tutorial/basic-features(todolist)
 nav_order: 1
 ---
 

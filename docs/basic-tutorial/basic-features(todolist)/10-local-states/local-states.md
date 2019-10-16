@@ -2,7 +2,7 @@
 layout: default
 title: 10. Adding Local States
 parent: Make TodoList Apps
-grand_parent: React Native Basic Features
+grand_parent: Basic
 nav_order: 10
 ---
 

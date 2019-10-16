@@ -2,7 +2,7 @@
 layout: default
 title: 4. Adding a Scroll View
 parent: Make TodoList Apps
-grand_parent: React Native Basic Features
+grand_parent: Basic
 nav_order: 4
 ---
 
