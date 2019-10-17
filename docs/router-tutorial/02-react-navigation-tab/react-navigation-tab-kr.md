@@ -306,7 +306,7 @@ const styles = StyleSheet.create({
 
 이제 기본적인 기능 이외에도 config를 사용하여 부가적인 요소들을 설정해 Tab을 완성시켜보겠습니다.
 
-앞서 기본 라이브러리들을 설명하면서 bottomTabNavigator, MaterialBottomTabNavigator, MaterialTopTabNavigator 에서 스타일 부분에서 차이가 생긴다고 했는데 바로 이 config부분에서 각각 몇가지의 다른 기능을 제공하기 때문입니다!
+앞서 기본 라이브러리들을 설명하면서 createBottomTabNavigator, createMaterialBottomTabNavigator, createMaterialTopTabNavigator 에서 스타일 부분에서 차이가 생긴다고 했는데 바로 이 config부분에서 각각 몇가지의 다른 기능을 제공하기 때문입니다!
 
 이번 챕터에서는 각각의 라이브러리에서  config를 사용하여 예제를 만들고 몇가지 기능들을 소개해보겠습니다.
 
@@ -678,3 +678,202 @@ export default SettingsScreen;
 
 ```
 
+
+### 8. Stack을 활용한 Tab Navigation
+
+이제 Tab의 모든 기능을 전체적으로 구현해보았으니 stack에 적용시켜보는 예제를 작성해 봅시다. 
+
+이번 예제는 튜토리얼 시작화면인 TutorialScreen에서 탭 네비게이터로 이동하는 예제입니다.
+
+현재 앞선 예제에서는  HomeScreen, ChatScreen, SettingScreen 세가지 화면으로 구성된 Tab Navigator을 만들어보았습니다. 이 Tab Navigator를 Stack Navigator에 감싸면 TutorialScreen에서 Tab Navigator로 네비게이션이 되어 탭 화면을 사용 할 수 있게 됩니다.
+
+또한, Stack Navigator에서는 header: null 옵션을 설정하여 header bar을 제거할 수 있습니다.  이 기능 역시 TutorialScreen에서 구현된 것을 확인할 수 있습니다.
+
+*TutorialScreen.js*
+
+```jsx
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+
+class ChatScreen extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
+
+  _goToTab() {
+    // do something
+    this.props.navigation.replace('TabNavigator');
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.titleArea}>
+          <Text style={styles.title}>React Native Tutorial</Text>
+        </View>
+        <View style={styles.formArea}>
+          <TextInput style={styles.textForm} placeholder={'ID'} />
+          <TextInput style={styles.textForm} placeholder={'Password'} />
+        </View>
+        <View style={styles.buttonArea}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={this._goToTab.bind(this)}>
+            <Text style={styles.buttonTitle}>Login</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    paddingLeft: '10%',
+    paddingRight: '10%',
+    justifyContent: 'center',
+  },
+  titleArea: {
+    width: '100%',
+    padding: '10%',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 20,
+  },
+  formArea: {
+    width: '100%',
+    paddingBottom: '10%',
+  },
+  textForm: {
+    borderWidth: 0.5,
+    borderColor: '#888',
+    width: '100%',
+    height: '5%',
+    paddingLeft: 5,
+    paddingRight: 5,
+    marginBottom: 5,
+  },
+  buttonArea: {
+    width: '100%',
+    height: '5%',
+  },
+  button: {
+    backgroundColor: '#633689',
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonTitle: {
+    color: 'white',
+  },
+});
+
+export default ChatScreen;
+
+```
+
+*tabNavigatorWithStack.js*
+
+```jsx
+import React from 'react';
+import {createAppContainer} from 'react-navigation';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {createStackNavigator} from 'react-navigation-stack';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import TutorialScreen from './screens/TutorialScreen';
+import HomeScreen from './screens/HomeScreen';
+import ChatScreen from './screens/ChatScreen';
+import SettingsScreen from './screens/SettingsScreen';
+import IconWithBadge from './IconWithBadge';
+
+const HomeIconWithBadge = props => {
+  return <IconWithBadge {...props} badgeCount={3} />;
+};
+
+const TabNavigator = createBottomTabNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+    },
+    Chat: {
+      screen: ChatScreen,
+    },
+    Settings: {
+      screen: SettingsScreen,
+      navigationOptions: {
+        header: null,
+      },
+    },
+  },
+  {
+    defaultNavigationOptions: ({navigation}) => ({
+      swipeEnabled: true,
+      adaptive: true,
+      tabBarIcon: ({horizontal, tintColor}) => {
+        const {routeName} = navigation.state;
+        let IconComponent = Ionicons;
+        let iconName;
+        if (routeName === 'Home') {
+          iconName = 'ios-home';
+        } else if (routeName === 'Chat') {
+          iconName = 'ios-chatboxes';
+          IconComponent = HomeIconWithBadge;
+        } else if (routeName === 'Settings') {
+          iconName = 'ios-settings';
+        }
+
+        return (
+          <IconComponent
+            name={iconName}
+            size={horizontal ? 20 : 25}
+            color={tintColor}
+          />
+        );
+      },
+    }),
+    tabBarOptions: {
+      activeTintColor: 'white',
+      inactiveTintColor: 'gray',
+      style: {
+        backgroundColor: 'black',
+      },
+    },
+  },
+);
+
+const App = createStackNavigator({
+  screen: TutorialScreen,
+  TabNavigator: {
+    screen: TabNavigator,
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#633689',
+      },
+      headerTintColor: '#FFFFFF',
+      title: 'React Native Tutorial',
+    },
+  },
+});
+export default createAppContainer(App);
+
+```
+
+ 위처럼 코드를 완성하면 아래 그림에서 보이는 것처럼 TutorialScreen은  HomeScreen, ChatScreen, SettingScreen으로 구성된 Tab Navigator와 다르게 header bar가 제거되어 보여지고, 코드에서 Tab Navigator가 Stack Navigator로 감싸져 이동이 되는 것을 알 수 있습니다.
+
+![stack](../images/RNtab/Tab_stack1.png)
+![stack](../images/RNtab/Tab_stack2.png)
+
+
+ 이 튜토리얼에서는 React-Navigation을 사용하여 네비게이션에 필수적이라 볼 수 있는 탭을 다양하게 구현해보았습니다. 탭의 기본 3종 라이브러리인 createBottomTabNavigator, createMaterialBottomTabNavigator, createMaterialTopTabNavigator 라이브러리에 따라 기본 탭 기능 뿐만이 아니라 여러가지 스타일의 탭을 만들어볼 수 있었습니다. 또한 탭에서 필수적인 아이콘 역시 이 튜토리얼에서 확인해 보실 수 있습니다. 
+
+ 이제 탭 이외에도 스택이나 드로우와 함께 Navigation 기능을 함께 사용하여 하나의 앱을 만들어보세요! 
