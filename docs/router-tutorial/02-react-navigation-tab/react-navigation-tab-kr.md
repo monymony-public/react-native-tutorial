@@ -1,5 +1,5 @@
 ---
-title: react-navigation-tap
+title: react-navigation-tab
 parent: React Navigation(한글)
 nav_order: 2
 has_children: false
