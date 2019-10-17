@@ -15,7 +15,7 @@ Build real native simple application with javascript
 
 ## How to run
 
-Project sources: [Examples/BasicTutorial/BasicFeatures/TodoList]()
+Project sources: [Examples/BasicTutorial/BasicFeatures/TodoList](https://github.com/JeffGuKang/react-native-tutorial/tree/master/Examples/BasicTutorial/BasicFeatures/TodoList)
 
 ```
 cd Examples/BasicTutorial/BasicFeatures/TodoList
