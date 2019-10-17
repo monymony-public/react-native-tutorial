@@ -2,7 +2,7 @@
 layout: default
 title: 4. Adding a Scroll View
 parent: 할 일 목록 앱 만들기
-grand_parent: Basic
+grand_parent: Basic(한글)
 nav_order: 4
 ---
 

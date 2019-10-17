@@ -1,14 +1,14 @@
 ---
 layout: default
-title: 2. Change Background and App title
-parent: Make TodoList Apps
-grand_parent: Basic
+title: 2. 배경색 및 타이틀 변경 
+parent: 할 일 목록 앱 만들기
+grand_parent: Basic(한글)
 nav_order: 2
 ---
 
-## Change Background and App Title
+## 배경색 및 타이들 변경
 
-Here is the full code for our **app.js**
+**app.js** 파일에서 다음과 같이 새로운 타이틀과 스타일을 추가합니다.
 
 ```js
 import React from 'react';
@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-You can see the app title and the background color applied.
+변경한 타이틀과 배경색이 적용된 것을 확인할 수 있습니다.
 
 ![](../images/background_title.png "background_title.png")
