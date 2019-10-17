@@ -22,7 +22,7 @@ React Native 애플리케이션을 만드는 방법으로는 Expo 또는 React N
 
 ### Create New Project
 
-환경 설정을 모두 마치셨으면, React Native CLI 명령어로 React Native 프로젝트를 만들어보겠습니다.
+환경 설정을 모두 완료했다면, React Native CLI 명령어로 React Native 프로젝트를 만들어보겠습니다.
 
 폴더명은 "ReactNativeTodos"로 하여 프로젝트를 생성합니다.
 
