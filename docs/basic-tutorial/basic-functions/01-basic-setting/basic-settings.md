@@ -1,3 +1,14 @@
+---
+layout: default
+title: 1. basic-settings
+parent: basic-functions
+grand_parent: basic-tutorial
+nav_order: 1
+---
+
+# Learn Additional Basic Functions Of React Native
+
+
 # React Native CLI Quickstart
 
 This is a basic setting for debugging chapter. if you already installed every dependency, you can go to debugging chapter.

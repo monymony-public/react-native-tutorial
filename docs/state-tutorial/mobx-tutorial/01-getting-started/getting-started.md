@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 1. Getting Started
-parent: State Basic Tutorial
+parent: MobX Tutorial
 grand_parent: State Management Tutorial
 nav_order: 1
 ---
