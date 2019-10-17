@@ -1,11 +1,11 @@
 import React from 'react';
 import CounterList from './CounterList';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View, ScrollView} from 'react-native';
 import PropTypes from 'prop-types';
 
 const App = ({counter, handleAddCounter, handleRemoveCounter, handleIncrement, handleDecrement}) => {
     return (
-        <View>
+        <ScrollView style={styles.container}>
             <View style={styles.counterAddRemoveContainer}>
                 <TouchableOpacity
                     style={styles.counterAddRemoveButton}
@@ -32,7 +32,7 @@ const App = ({counter, handleAddCounter, handleRemoveCounter, handleIncrement, h
                     handleDecrement={handleDecrement}
                 />
             </View>
-        </View>
+        </ScrollView>
     );
 };
 
@@ -56,6 +56,13 @@ App.defaultProps = {
 
 
 const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      width: '100%',
+      backgroundColor: '#F6F6F6',
+      paddingTop: '15%',
+      paddingBottom : '15%',
+    },
     counterAddRemoveContainer: {
         width: '100%',
         display: 'flex',
