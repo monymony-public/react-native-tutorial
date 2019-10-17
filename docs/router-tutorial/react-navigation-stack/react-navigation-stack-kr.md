@@ -29,7 +29,7 @@ RN은 모바일 앱의 형태이기 때문에 브라우저(크롬, 인터넷 익
 - [brew]([https://brew.sh/index_ko](https://brew.sh/index_ko))
 - react-native : 0.59.10 ( expo는 사용하지 않습니다. )
 - react-native-cli : 2.0.1
-- react-navigation:
+- react-navigation: 4.0.10
 
 ### RN 설치와 **RN Navigation stack 설치**
 
@@ -335,10 +335,4 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
     ...
 
-[작동되는 GIF 추가]
-
-### **RouteConfigs 기능 소개**
-
-### **StackNavigatorConfig 기능 소개**
-
-### **navigationOptions 기능 소개**
+![](../images/RNstack/stackExam.gif)
