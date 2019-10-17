@@ -14,7 +14,7 @@ nav_order: 5
 - TodoList.js
 - TodoListItem.js
 
-**TodoInsert** 컴포넌트는 텍스트 입력창과 추가 버튼이 들어갈 부분 입니다.
+**TodoInsert** 컴포넌트는 텍스트 입력창과 추가 버튼이 들어갈 부분입니다.
 
 **TodoList** 컴포넌트는 추가된 아이템을 스크롤 뷰를 통해 보여주는 부분입니다.
 
