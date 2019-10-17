@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 할 일 목록 앱 만들기
-parent: Basic
+parent: Basic(한글)
 has_children: true
 permalink: /kr/docs/basic-tutorial/basic-features(todolist)
 nav_order: 1
