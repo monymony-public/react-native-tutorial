@@ -57,7 +57,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
 자 이제 RN 시작을 위한 모든 준비는 마쳤습니다.
 
-원하는 폴더로 이동하여아래 커맨드를 실행해 제대로 프로젝트가 생성하는지 확인 해 볼까요 ?
+원하는 폴더로 이동하여 아래 커맨드를 실행해 제대로 프로젝트가 생성하는지 확인 해 볼까요 ?
 
     react-native init rnTutorial
 
@@ -68,7 +68,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 아래 순서대로 실행하여 시뮬레이터를 띄워 볼까요 ?
 
     # Root Path
-    > cd ios # iOS 폴더로 들어가 React-natie Library 들을 iOS 에 설치 해 줍니다.
+    > cd ios # iOS 폴더로 들어가 React-native Library 들을 iOS 에 설치 해 줍니다.
     > pod install
     > cd .. # 다시 루트 폴더로 온 후
     > yarn start # 서버 ON!
@@ -123,7 +123,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
 - StackNavigationConfig
 
-    RouteConfig가 각 길을 안내 해 줬다면 전체 길에 대한 안내를 담당합니다.
+    RouteConfig가 각 길을 안내 해 줬다면 StackNavigationConfig는 전체 길에 대한 안내를 담당합니다.
 
     길을 Modal로 띄울지 Screen으로 띄울지, 아무것도 모르고 온 사람에게 어딜 제일 처음 안내 할 지 같은 설정을 담당합니다.
 
@@ -137,7 +137,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
 위 내용을 참고하여 아래 예제를 직접 따라 쳐 보며 익혀 봅시다.
 
-이번 예제에서는 `Home` , `Chatting`, `Settings` 를 사용하여 대화할 수 있는 앱을 만들어 보겠습니다.
+이번 예제에서는 `Home` , `Chatting`, `Settings` 를 사용하여 스크린을 이동하는 앱을 만들어 보겠습니다.
 
 ### **CreateStackNavigator 로 기본 틀 잡기**
 
