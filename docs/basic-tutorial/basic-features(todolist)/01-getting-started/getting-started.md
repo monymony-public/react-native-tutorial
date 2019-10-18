@@ -29,9 +29,11 @@ react-native init ReactNativeTodos
 Run `react-native run-ios` inside your project folder:
 
 ```
-cd AwesomeProject
+cd ReactNativeTodos
 react-native run-ios
 ```
+
+![](../images/app.png "app.png")
 
 ### Creating a Todo Application
 
