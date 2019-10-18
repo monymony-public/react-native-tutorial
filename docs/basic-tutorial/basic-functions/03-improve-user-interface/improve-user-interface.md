@@ -30,7 +30,7 @@ nav_order: 3
 
   2. Import `textInput.js` from `app.js`
 
-          import TextInput from './\TextInput';
+          import TextInput from './TextInput';
 
       ![importInputText](../images/importTextInput.png)
 
@@ -106,7 +106,7 @@ It's very hard to be very precise when pressing buttons.
 
 
 
- # Go To
+ # Go To Other Chapters
 
 - [Basic Settings to start react-native Project](../01-basic-setting.md)
 - [Debigging](../02-debugging.md)
