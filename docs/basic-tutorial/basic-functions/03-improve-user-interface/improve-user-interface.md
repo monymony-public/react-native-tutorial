@@ -70,12 +70,50 @@ nav_order: 3
 
 
 
+# Make tappable areas larger
 
+It's very hard to be very precise when pressing buttons.
+
++ Make sure all interactive elements are 44x44 or larger
+
++ Leave enough space for the element, padding, minWidth and minHeight style values(It can be useful).
+
++ Instead, You can use `hitSlop prop ` to increase interactive area without affecting the layout.
+
+  [Code source](https://snack.expo.io/rJPwCt4HZ)
+
+  If you want to execute this without using expo, you can remove these codes.
+
+        import { Constants } from 'expo';
+        paddingTop: 20 + Constants.statusBarHeight,
   
+  from above source code.
+
+  ## Run your source code 
+
+        react-native run-android
+
+  or
+
+  ## Run Example Projects
+            
+        cd Examples/BasicTutorial/BasicFeatues/wide_your_tap
+        react-native run-android
+
+  ![hitslopdemo](../images/hitslopdemo.gif)
 
 
 
 
+
+ # Go To
+
+- [Basic Settings to start react-native Project](../01-basic-setting.md)
+- [Debigging](../02-debugging.md)
+ 
+ # source
+
+ [React Native Official Page](https://facebook.github.io/react-native/docs/improvingux)
 
 
     

@@ -186,8 +186,8 @@ You can skip this part if you are already familiar with android development envi
 
 # Let's proceed next part!
 
-- [Debugging](../debugging/debugging.md)
-- [Improve-user-interface](../improve-user-interface.md)
+- [Debugging](../02-debugging/debugging.md)
+- [Improve-user-interface](../03-improve-user-interface/improve-user-interface.md)
 
 ## Source
 
