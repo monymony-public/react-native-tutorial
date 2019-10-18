@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, StatusBar, TouchableOpacity, View, StyleSheet } from 'react-native';
-import { Constants } from 'expo';
+
 
 export default class App extends Component {
   render() {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ecf0f1',
   },
   header: {
-    paddingTop: 20 + Constants.statusBarHeight,
+    paddingTop: 20,
     padding: 20,
     backgroundColor: '#336699',
   },
