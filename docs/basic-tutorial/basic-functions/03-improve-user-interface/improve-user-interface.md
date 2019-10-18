@@ -108,8 +108,8 @@ It's very hard to be very precise when pressing buttons.
 
  # Go To Other Chapters
 
-- [Basic Settings to start react-native Project](../01-basic-setting.md)
-- [Debigging](../02-debugging.md)
+- [Basic Settings to start react-native Project](../01-basic-setting/basic-setting.md)
+- [Debigging](../02-debugging/debugging.md)
  
  # source
 
