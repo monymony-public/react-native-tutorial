@@ -18,16 +18,17 @@ import {ParallaxSwiper, ParallaxSwiperPage} from 'react-native-parallax-swiper';
 import PaintingInfo from './components/PaintingInfo';
 import PaintingImage from './components/PaintingImage';
 import API from './lib/api';
+import {connect} from 'react-redux';
+import {toggle_loading} from './actions/creators';
 
 const {width, height} = Dimensions.get('window');
 const paintingIds = [436535, 436528, 436532];
 
-export default class App extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       info: [],
-      isLoading: false,
     };
   }
   componentDidMount() {
@@ -40,40 +41,17 @@ export default class App extends React.Component {
       })
         .then(result => result.data)
         .then(result => {
+          console.log('API call completed');
           this.setState({info: [...this.state.info, result]});
-          this.setState({isLoading: !this.state.isLoading});
         });
     });
+    setTimeout(() => {
+      this.props.toggle_loading();
+    }, 3000);
   }
   myCustomAnimationValue = new Animated.Value(0);
-  getPageTransformStyle = index => ({
-    transform: [
-      {
-        scale: this.myCustomAnimationValue.interpolate({
-          inputRange: [
-            (index - 1) * (width + 8),
-            index * (width + 8),
-            (index + 1) * (width + 8),
-          ],
-          outputRange: [0, 1, 0],
-          extrapolate: 'clamp',
-        }),
-      },
-      {
-        rotate: this.myCustomAnimationValue.interpolate({
-          inputRange: [
-            (index - 1) * (width + 8),
-            index * (width + 8),
-            (index + 1) * (width + 8),
-          ],
-          outputRange: ['180deg', '0deg', '-180deg'],
-          extrapolate: 'clamp',
-        }),
-      },
-    ],
-  });
   render() {
-    return !this.state.isLoading ? (
+    return this.props.isLoading ? (
       <View style={[styles.spinnerContainer, styles.horizontal]}>
         <ActivityIndicator size="large" color="#00ffff" />
       </View>
@@ -145,3 +123,14 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
+
+const mapStateToProps = state => ({isLoading: state.isLoading});
+
+const mapDispatchToProps = dispatch => ({
+  toggle_loading: () => dispatch(toggle_loading()),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(App);
