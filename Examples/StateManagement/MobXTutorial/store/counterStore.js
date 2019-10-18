@@ -37,7 +37,7 @@ class CounterStore {
   };
 }
 
-decorate(CounterStore ,{
+decorate(CounterStore, {
   counter: observable,
   handleAddCounter: action,
   handleRemoveCounter: action,
