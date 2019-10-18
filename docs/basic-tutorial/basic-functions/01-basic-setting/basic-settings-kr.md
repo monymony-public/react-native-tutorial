@@ -143,7 +143,7 @@ __목적 OS:__ 안드로이드
 
          ![SelectPhone](../images/selectPhone.png)
 
-       + Select the `Pie API Level 28 image`
+       + `Pie API Level 28 image` 클릭하기 
 
             ![SelectPie](../images/selectPie.png)
 
@@ -186,7 +186,7 @@ __목적 OS:__ 안드로이드
     ![ChangeLines](../images/changeLines.png)
 
 
-다음 장으로 넘어가세요
+# 다음 장으로 넘어가세요
 
 - [디버깅 시작하기](../debugging/debugging-kr.md)
 - [사용자 환경 UI 개선하기](../improve-user-interface.md)

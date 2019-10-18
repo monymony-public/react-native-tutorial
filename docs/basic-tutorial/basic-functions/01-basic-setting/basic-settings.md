@@ -184,10 +184,11 @@ You can skip this part if you are already familiar with android development envi
     ![ChangeLines](../images/changeLines.png)
 
 
-Let's proceed next part!
+# Let's proceed next part!
 
 - [Debugging](../debugging/debugging.md)
 - [Improve-user-interface](../improve-user-interface.md)
 
 ## Source
+
 [React Native Official Page](https://facebook.github.io/react-native/docs/getting-started)
