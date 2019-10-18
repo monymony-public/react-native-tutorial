@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 2. What is MobX?
-parent: State Basic Tutorial
+parent: MobX Tutorial
 grand_parent: State Management Tutorial
-nav_order: 1
+nav_order: 2
 ---

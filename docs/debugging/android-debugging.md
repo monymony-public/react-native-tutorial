@@ -1,8 +1,9 @@
 ---
+layout: default
 title: Android Debugging
+has_children: false
 parent: Debugging
 nav_order: 1
-has_children: false
 ---
 
 # Analyze a stack trace
@@ -11,11 +12,11 @@ Debugging an app often requires working with stack traces. A stack trace is gene
 
 While your app is running in debug mode on a connected device, Android Studio prints and highlights stack traces in the **logcat** view, as shown in figure 1.
 
-![img](./Images/logcat-stacktrace_2x.png)
+![img](./images/logcat-stacktrace_2x.png)
 
 Figure 1. A stacktrace in logcat.
 
-A stack trace shows a list of method calls that lead to the exception being thrown, together with the filenames and line numbers where the calls happened. You can click on the highlighted filenames to open the files and examine the source of the method invocation. Click **Up the stack trace** ![img](./Images/logcat-arrow-up.png) and **Down the stack trace** ![img](./Images/logcat-arrow-down.png) to quickly move between stack trace lines displayed in the logcat window.
+A stack trace shows a list of method calls that lead to the exception being thrown, together with the filenames and line numbers where the calls happened. You can click on the highlighted filenames to open the files and examine the source of the method invocation. Click **Up the stack trace** ![img](./images/logcat-arrow-up.png) and **Down the stack trace** ![img](./images/logcat-arrow-down.png) to quickly move between stack trace lines displayed in the logcat window.
 
 ## Open Stack traces from external sources
 
@@ -29,13 +30,13 @@ To get the same highlighted and clickable view of an external stack trace from a
 
 2. **From the **Analyze** menu, click **Analyze Stack Trace**.
 
-   ![Analyze Stack Trace window](./Images/analyze-stacktrace_2-2_2x.png)
+   ![Analyze Stack Trace window](./images/analyze-stacktrace_2-2_2x.png)
 
 3. Paste the stack trace text into the **Analyze Stack Trace** window and click **OK**.
 
 4. Android Studio opens a new **<Stacktrace>** tab with the stack trace you pasted under the **Run** window.
 
-   ![Stacktrace window](./Images/stacktrace-window_2x.png)
+   ![Stacktrace window](./images/stacktrace-window_2x.png)
 
 ## Monitor the clipboard for new stack traces
 
@@ -74,7 +75,7 @@ Pixel Perfect is a tool built into [Android Device Monitor ](https://developer.a
 
 5. Double-click the device name in the **Windows** tab on the left. This populates the panes with the device display and switches to the **Pixel Perfect Tree** tab.
 
-   ![img](./Images/gettingstarted_image005.png)
+   ![img](./images/gettingstarted_image005.png)
 
    ​								   Figure1. Android Device Monitor
 
@@ -99,7 +100,7 @@ You should see the following three panes:
 
   You can save a screenshot by clicking **Save as PNG** at the top of the window.
 
-  ![img](./Images/hv_pixelperfect.png)
+  ![img](./images/hv_pixelperfect.png)
 
   Figure 2. The Pixel Perfect window
 
@@ -135,12 +136,12 @@ On many Android devices, you can capture a screenshot with a key-combination: Si
 
 3. Select the device and a process from the drop-down at the top of the window.
 
-4. Click **Screen Capture**![img](./Images/monitor-screenshot.png)The screenshot appears in a **Screenshot Editor** window.
+4. Click **Screen Capture**![img](./images/monitor-screenshot.png)The screenshot appears in a **Screenshot Editor** window.
 
   > ★ Tip: On Android 7.0 and higher, open Settings, select Developer options > Demo mode, and enable Show demo mode. This resets the status bar to temporarily remove notifications and sets the signal and battery levels to full. For more information, see Configure On-Device Developer Options.
 
 
-![img](./Images/screenshot-editor_2x.png)
+![img](./images/screenshot-editor_2x.png)
 
 Figure 1. Screenshot editor
 
@@ -175,7 +176,7 @@ To record a video of your app, do the following:
 
 4. Interact with the display on the hardware device to stage the start of the video.
 
-5. Click **Screen Record** ![img](./Images/am-ivideo.png) in the left side of the Logcat window.
+5. Click **Screen Record** ![img](./images/am-ivideo.png) in the left side of the Logcat window.
 
 6. In the **Screen Recorder Options** dialog, set the recording options:
 
@@ -191,7 +192,7 @@ To record a video of your app, do the following:
 
 11. In the **Screen Recorder** dialog, click one of the buttons to show the file location, open the recording in a player, or dismiss the dialog.
 
-    ![Device Video](./Images/am-video.jpg)
+    ![Device Video](./images/am-video.jpg)
 
     ​								Figure 1. Record a video of your app
 
@@ -204,7 +205,7 @@ A bug report contains device logs, stack traces, and other diagnostic informatio
 
 To take a bug report, you must have [Developer options](https://developer.android.com/studio/run/device.html?hl=ko#developer-device-options) enabled on your device so you can access the **Take bug report** option.
 
-![img](./Images/dev-options-pixel_2x_cropped.png)
+![img](./images/dev-options-pixel_2x_cropped.png)
 
 ​              							  Figure 1. Developer options
 
@@ -222,7 +223,7 @@ To get a bug report directly from your device, do the following:
 
 4. To share the bug report, tap the notification.
 
-   ![img](./Images/dev-options-take-bug-report_2x.png)
+   ![img](./images/dev-options-take-bug-report_2x.png)
 
    ​          						  Figure 2. The bug report is ready
 
@@ -269,7 +270,7 @@ The ZIP file contains a `version.txt` metadata file that contains the Android re
 
 The `dumpstate` tool copies files from the device’s filesystem into the ZIP file under the `FS` folder so you can reference them. For example, a `/dirA/dirB/fileC` file in the device would generate an `FS/dirA/dirB/fileC` entry in the ZIP file.
 
-![img](./Images/capture-and-read-bug-report_2x.png)
+![img](./images/capture-and-read-bug-report_2x.png)
 
 ​                                 	   Figure 3. Bug report file structure
 
