@@ -10,15 +10,15 @@ nav_order: 3
 
 이번 장에서는 MobX를 멀티카운터 예제에 적용해보도록 하겠습니다.
 
-환경설정은 [여기](https://jeffgukang.github.io/react-native-tutorial/docs/state-tutorial/mobx-tutorial/01-getting-started/getting-started-kr.html)
+- 환경설정은 [여기](https://jeffgukang.github.io/react-native-tutorial/docs/state-tutorial/mobx-tutorial/01-getting-started/getting-started-kr.html)
 
-MobX가 적용되지 않은 멀티카운터 예제는 [여기]()
+- MobX가 적용되지 않은 멀티카운터 예제코드는 [여기](https://github.com/JeffGuKang/react-native-tutorial/tree/master/Examples/StateManagement/MobXTutorial)
 
-MobX가 적용된 멀티카운터 예제는 [여기]()
+- MobX가 적용된 멀티카운터 예제코드는 [여기](https://github.com/JeffGuKang/react-native-tutorial/tree/master/Examples/StateManagement/MobXDecoratorTutorial)
 
 에서 확인할 수 있습니다.
 
-### 폴더구조
+### 1) 폴더구조
 
 기존 setState 예제의 폴더구조는 다음과 같습니다.
 
@@ -47,7 +47,7 @@ MobX를 적용하기위해서는 아래와 같이 store폴더와 하위항목인
 ```
 
 
-### setState를 사용한 멀티카운터
+### 2) setState를 사용한 멀티카운터
 
 React에서 상태관리 라이브러리를 사용하지 않고 setState를 사용해 작성한 멀티카운터 예제는 아래와 같이 구성되어 있습니다. 
 
@@ -275,7 +275,7 @@ export default Counter;
 
 지금부터 setState로 구성된 상태관리 코드를 MobX를 사용하는 코드로 리팩토링 해보도록 하겠습니다.
 
-### decorator를 쓰지 않고 MobX 적용해보기
+### 3) decorator를 쓰지 않고 MobX 적용해보기
 
 MobX의 개념에 대해서는 2장에 잘 설명되어 있습니다.
 
@@ -286,6 +286,7 @@ MobX는 데코레이터를 사용하지 않고 정의하는 방법과 `@`와 같
 먼저 MobX를 이용해 state 들을 저장할 store 파일을 아래와 같이 작성합니다.
 
 - store/counterStore.js
+
 ```jsx
 import {decorate, observable, action} from 'mobx';
 
@@ -346,11 +347,12 @@ Redux에서는 `리듀서`, `액션`, `스토어`를 모두 분리하여 구현�
 
 `action`은 상태에 변화를 어떻게 일으킬 것인지 정의하는 부분 입니다.
 
-현재 작성된 코드 외의 MobX 개념은 2장에서 확인하실 수 있습니다.
+이외의 MobX 개념은 [2장](https://jeffgukang.github.io/react-native-tutorial/docs/state-tutorial/mobx-tutorial/02-what-is-mobx/what-is-mobx-kr.html)에서 확인하실 수 있습니다.
 
 기존코드인 `CounterContainer.js`와 `Counter.js`는 아래와 같이 변경해야 합니다.
 
 - containers/CounterContainer.js
+
 ```jsx
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
@@ -415,6 +417,7 @@ export default CounterContainer;
 또한 위에서 MobX store를 정의해놓은 state와 함수들은 counterStore.js에 옮겼으므로 이를 import하여 사용할 수 있도록 하고 잘 동작할 수 있도록 위와같이 적절하게 수정합니다.
 
 - components/Counter.js
+
 ```jsx
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
@@ -451,14 +454,13 @@ const Counter = observer(
 ...
 
 export default Counter;
-
 ```
 
 Couter.js도 위와같이 `observer` 사용을 위해 mobx-react 모듈을 import하고 Counter 클래스를 `observer` 함수로 감싸줍니다. 또한 함수 사용 등을 위해 counterStore.js를 import하여 잘 동작할 수 있도록 적절하게 수정해줍니다.
 
 이와같은 리팩토링 과정을 통해 기존 setState예제와 마찬가지로 MobX를 사용해서 멀티카운터 예제를 동일하게 구현하실 수 있습니다.
 
-### decorator를 써서 MobX 적용 해보기
+### 4) decorator를 써서 MobX 적용 해보기
 
 위에서 데코레이터(`@`)를 쓰지 않고 MobX를 사용하는 방법에 대해서 알아보았는데 보통 MobX는 쉽고 직관적인 `@`데코레이터를 사용하여 정의하는것이 일반적입니다. 이를 사용하기 위해서는 아래와 같은 babel설정을 별도로 해야만 합니다.
 
@@ -480,6 +482,7 @@ npm install --save-dev @babel/plugin-proposal-decorators
 이제부터 `@` 데코레이터를 사용해서 MobX를 사용할 수 있습니다. 코드가 어떤식으로 간결해질 수 있는지 확인해 봅시다.
 
 - store/counterStore.js
+
 ```jsx
 import {observable} from 'mobx';
 class CounterStore {
@@ -569,7 +572,6 @@ class CounterContainer extends React.Component {
 ...
 
 export default CounterContainer;
-
 ```
 - components/Counter.js
 
@@ -608,7 +610,6 @@ class Counter extends React.Component {
 ...
 
 export default Counter;
-
 ```
 
 observer 개념을 적용하는것도 마찬가지 입니다. 기존에는 observer함수로 클래스를 감싸는 형태로 구현했는데 데코레이터를 사용하면 감쌀 필요없이 클래스 바로위에 `@observer`를 적으면 observer가 적용됩니다.
