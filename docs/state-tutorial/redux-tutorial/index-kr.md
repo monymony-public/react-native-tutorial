@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Redux tutorial(한글)
+title: Redux Tutorial(한글)
 parent: State Management Tutorial(한글)
 nav_order: 3
 has_children: true

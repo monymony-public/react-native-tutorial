@@ -3,7 +3,7 @@ layout: default
 title: 3. improve-user-interface
 parent: basic-functions
 grand_parent: basic-tutorial
-nav_order: 1
+nav_order: 3
 ---
 
 

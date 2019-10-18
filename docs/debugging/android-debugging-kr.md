@@ -1,8 +1,9 @@
 ---
-title: Android 디버깅
+layout: default
+title: Android 디버깅 (한글)
+has_children: false
 parent: Debugging (한글)
 nav_order: 1
-has_children: false
 ---
 
 # 스택 추적 분석하기
@@ -11,11 +12,11 @@ has_children: false
 
 연결된 장치에서 앱이 디버그 모드로 실행되는 동안 Android Studio는 그림1과 같이 **logcat** view에서 스택 추적을 나타내고 강조 표시합니다.
 
-![img](./Images/logcat-stacktrace_2x.png)
+![img](./images/logcat-stacktrace_2x.png)
 
 그림1. A stacktrace in logcat.
 
-스택 추적에는 호출이 발생한 파일 이름 및 줄 번호와 함께 예외가 발생하는 메소드 호출 목록이 표시됩니다. 강조 표시된 파일이름을 클릭하여 파일을 열고 메소드 호출 소스를 검사 할 수 있습니다. **Up the stack trace**![img](./Images/logcat-arrow-up.png)와 **Down the stack trace**![img](./Images/logcat-arrow-down.png)를 클릭하여 logcat 창에 표시된 스택 추적 line 사이들을 빠르게 이동합니다.
+스택 추적에는 호출이 발생한 파일 이름 및 줄 번호와 함께 예외가 발생하는 메소드 호출 목록이 표시됩니다. 강조 표시된 파일이름을 클릭하여 파일을 열고 메소드 호출 소스를 검사 할 수 있습니다. **Up the stack trace**![img](./images/logcat-arrow-up.png)와 **Down the stack trace**![img](./images/logcat-arrow-down.png)를 클릭하여 logcat 창에 표시된 스택 추적 line 사이들을 빠르게 이동합니다.
 
 ## 외부 소스의 오픈 스택 추적
 
@@ -31,13 +32,13 @@ has_children: false
 
 2. **Analyze** 메뉴에서 **Analyze Stack Trace**를 클릭합니다.
 
-   ![Analyze Stack Trace window](./Images/analyze-stacktrace_2-2_2x.png)
+   ![Analyze Stack Trace window](./images/analyze-stacktrace_2-2_2x.png)
 
 3. 스택 추적 텍스트를 **Analyze Stack Trace** 창에 붙여넣고 **OK**를 클릭합니다.
 
 4. Android Studio는 실행 창 아래에 붙여 넣은 스택 추적과 함께 새로운 <Stacktrace>탭을 엽니다.
 
-   ![Stacktrace window](./Images/stacktrace-window_2x.png)
+   ![Stacktrace window](./images/stacktrace-window_2x.png)
 
 ## 새로운 스택 추적을 위한 클립보드 모니터링
 
@@ -71,7 +72,7 @@ Pixel Perfect는 [`Android Device Monitor`](https://developer.android.com/studio
 
 10. 왼쪽의 **Windows** 탭에서 장치이름을 두 번 클릭합니다. 이것은 장치 디스플레이로 창을 채우고 **Pixel Perfect Tree** 탭으로 전환합니다.
 
-    ![img](./Images/gettingstarted_image005.png)
+    ![img](./images/gettingstarted_image005.png)
 
     ​								   그림1. Android Device Monitor
 
@@ -95,7 +96,7 @@ Pixel Perfect는 [`Android Device Monitor`](https://developer.android.com/studio
 
   창 상단에서 **PNG로 저장**을 클릭하여 스크린 샷을 저장 할 수 있습니다.
 
-  ![img](./Images/hv_pixelperfect.png)
+  ![img](./images/hv_pixelperfect.png)
 
   그림2. The Pixel Perfect window
 
@@ -134,12 +135,12 @@ Pixel Perfect 창은 Pixel Perfect 창에서 비트 맵을 오버레이로 로�
 
 3. 창의 맨 위에 있는 드롭-다운에서 장치 및 프로세스를 선택합니다.
 
-4. 창의 왼쪽에서 **Screen Capture**![img](./Images/monitor-screenshot.png)를 클릭합니다. **Screenshoe Editor**창에서 스크린 샷이 나타납니다.
+4. 창의 왼쪽에서 **Screen Capture**![img](./images/monitor-screenshot.png)를 클릭합니다. **Screenshoe Editor**창에서 스크린 샷이 나타납니다.
 
   
    >  ★ 팁: Android 7.0이상에서 설정을 열고, Developer options > Demo mode를 선택한 후, demo mode 표시를 사용합니다. 알림을 일시적으로 제거하도록 상태 표시 줄을 재설정하고 신호 및 배터리 잔량 가득으로 설정합니다. 자세한 내용은 장치내 개발자 옵션 구성을 참조합니다.
 
-   ![img](./Images/screenshot-editor_2x.png)
+   ![img](./images/screenshot-editor_2x.png)
 
    그림1. Screenshot editor
 
@@ -177,7 +178,7 @@ Wear OS를 실행하는 장치에는 비디오 녹화를 사용할 수 없습니
 
 15. 하드웨어 장치의 디스플레이와 상호 작용하여 비디오 시작을 준비합니다.
 
-16. Logcat 창의 왼쪽에서 **Screen Record**![img](./Images/am-ivideo.png)를 클릭합니다.
+16. Logcat 창의 왼쪽에서 **Screen Record**![img](./images/am-ivideo.png)를 클릭합니다.
 
 17. **Screen Recorder Options** 다이얼로그에서, 레코딩 옵션을 설정합니다:
 
@@ -193,7 +194,7 @@ Wear OS를 실행하는 장치에는 비디오 녹화를 사용할 수 없습니
 
 21. **Screen Recorder** 다이얼로그에서 버튼 중 하나를 클릭하여 파일 위치를 표시하거나 플레이어에서 녹음을 열거나 다이얼로그를 닫습니다.
 
-    ![Device Video](./Images/am-video.jpg)
+    ![Device Video](./images/am-video.jpg)
 
     ​					               그림1. Record a video of your app
 
@@ -205,7 +206,7 @@ Wear OS를 실행하는 장치에는 비디오 녹화를 사용할 수 없습니
 
 버그 보고서를 작성하려면, 장치에서 [`Developer options`](https://developer.android.com/studio/run/device.html?hl=ko#developer-device-options)을 사용하도록 설정해야 **버그 보고서 작성** 옵션에 접근 할 수 있습니다. 
 
-![img](./Images/dev-options-pixel_2x_cropped.png)
+![img](./images/dev-options-pixel_2x_cropped.png)
 
 ​							                  그림1. Developer options
 
@@ -223,7 +224,7 @@ Wear OS를 실행하는 장치에는 비디오 녹화를 사용할 수 없습니
 
 8. 버그 보고서를 공유하려면 알림을 누릅니다.
 
-   ![img](./Images/dev-options-take-bug-report_2x.png)
+   ![img](./images/dev-options-take-bug-report_2x.png)
 
    ​						               그림2. The bug report is ready
 
@@ -274,7 +275,7 @@ ZIP 파일에는 Android release 문자가 포함 된 `version.txt` 메타 데�
 
 `dumpstate` 도구는 장치의 파일 시스템에서 FS 폴더 아래의 ZIP 파일로 파일을 복사하여 참조 할 수 있도록 합니다. 예를 들어, 장치의 `/dirA/dirB/fileC` 파일은 ZIP 파일에서`FS/dirA/dirB/fileC` 항목을 생성합니다.
 
-![img](./Images/capture-and-read-bug-report_2x.png)
+![img](./images/capture-and-read-bug-report_2x.png)
 
 ​                                       	   그림3. Bug report file structure
 
