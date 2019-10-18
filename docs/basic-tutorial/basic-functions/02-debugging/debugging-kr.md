@@ -64,16 +64,16 @@ nav_order: 2
 
         react-devtools
 
-**리액트 버전**에 따라서 다음과 같이 업그레이드를 해준다.
++ **리액트 버전**에 따라서 다음과 같이 업그레이드를 해준다.
 
         
 ![upgrade-devtools](../images/upgrade-devtools.png)
 
-Package.json 파일에 *"devtools": react-devtools* 를 추가한다. 
++ Package.json 파일에 *"devtools": react-devtools* 를 추가한다. 
 
 ![addreactdevtoolstoscript](../images/addreactdevtoolstoscript.png)
 
-실행시키기 
++ 실행시키기 
 
             npm run devtools
 
@@ -84,22 +84,23 @@ Package.json 파일에 *"devtools": react-devtools* 를 추가한다.
 
 1. 개발 메뉴를 열고 "Toggle Inspector" 를 선택한다. 
 
-DevTools를 기본 UI로 사용한다.
+    DevTools를 기본 UI로 사용한다.
 
 2. 시뮬레이터에서 아무거나 선택을 해보자.
 Devtools에 관련 컴포넌트가 표시된다.
 
-텍스트 컴포넌트를 선택하면 다음과 같은 화면이 된다.
+    텍스트 컴포넌트를 선택하면 다음과 같은 화면이 된다.     
+    
+    ![integration1](../images/integration1.png)
 
-![integration1](../images/integration1.png)
+    *Welcome to React*를 선택할 경우 화면: 
 
-*Welcome to React*를 선택할 경우 화면: 
-![integration2](../images/integration2.png)
+    ![integration2](../images/integration2.png)
 
 
 # 컴포넌트 인스턴스 살펴보기
 
-브라우저 콘솔에서 리액트 컴포넌트의 props와 state를 살펴볼 수 있다.
++ 브라우저 콘솔에서 리액트 컴포넌트의 props와 state를 살펴볼 수 있다.
 
 
  + 크롬 콘솔에 있는 드롭다운에 debuggerworker.js가 있는지 확인한다(필수)
@@ -120,7 +121,7 @@ Devtools에 관련 컴포넌트가 표시된다.
     ![input$r](../images/input$r.png)
 
 
-![overallview](../images/overallview.png)
+    ![overallview](../images/overallview.png)
  
    
 
@@ -142,7 +143,7 @@ Devtools에 관련 컴포넌트가 표시된다.
 ![debuggerui](../images/debuggerui.png)
 
 
-+ 크롬 메뉴에서 `Tools → Developer Tools`를 클릭하고 `Developer Tools.`을 연다.
++ 크롬 메뉴에서 `Tools → Developer Tools`를 클릭하고 `Developer Tools`을 연다.
 
 + 키보드 단축키
  + `⌘⌥I` (macOs)
@@ -179,7 +180,7 @@ Devtools에 관련 컴포넌트가 표시된다.
 
 어플 내 에러표시는 어플 배경에 빨간 색 전체 화면으로 표시된다. (레드박스)
 
-`console.error()`를 사용해서 수동적으로 생기게 할 수 있다.
+    `console.error()`를 사용해서 수동적으로 생기게 할 수 있다.
 
 
 ## 경고 표시
@@ -189,7 +190,7 @@ Devtools에 관련 컴포넌트가 표시된다.
 
 + 정보 더보기 (alerts를 선택하거나 무시할 수 있다.)
 
-    `console.warn()`를 사용해서 수동적으로 만들 수 있다.
+        `console.warn()`를 사용해서 수동적으로 만들 수 있다.
 
 + 개발 도중에 엘로우 박스를 설정해제하는 방법
  
