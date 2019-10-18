@@ -1,19 +1,21 @@
 ---
 layout: default
-title: Make TodoList Apps
-parent: Basic
+title: 할 일 목록 앱 만들기
+parent: Basic(한글)
 has_children: true
-permalink: /docs/basic-tutorial/basic-features(todolist)
+permalink: /kr/docs/basic-tutorial/basic-features(todolist)
 nav_order: 1
 ---
 
 # React Native Tutorial: Hello Todolist - 2019
 
-Build real native simple application with javascript
+React Native로 간단한 애플리캐이션을 만들어봅시다.
 
-![Hello](./images/toggle.png "Hello React Native")
+![](./images/toggle.png "Hello React Native")
 
 ## How to run
+
+프로젝트의 모든 코드는 깃헙에 공개되어 있습니다.
 
 Project sources: [Examples/BasicTutorial/BasicFeatures/TodoList](https://github.com/JeffGuKang/react-native-tutorial/tree/master/Examples/BasicTutorial/BasicFeatures/TodoList)
 
