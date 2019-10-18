@@ -186,7 +186,8 @@ You can skip this part if you are already familiar with android development envi
 
 Let's proceed next part!
 
-- Go to [Live Reload](../live-reload/live-reload.md)
+- [Debugging](../debugging/debugging.md)
+- [Improve-user-interface](../improve-user-interface.md)
 
 ## Source
 [React Native Official Page](https://facebook.github.io/react-native/docs/getting-started)
