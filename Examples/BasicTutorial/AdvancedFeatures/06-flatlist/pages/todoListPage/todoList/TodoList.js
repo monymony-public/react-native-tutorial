@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, ScrollView, View } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 import Item from './Item';
 import TextField from "./TextField";
 import runToast from "../../../components/toast"
@@ -7,6 +7,7 @@ import shuffle from "../../../util/shuffle";
 
 const TodoList = ({ todos, setTodos }) => {
   const [text, setText] = useState("");
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const onInputChangeHandler = text => {
     setText(text);
@@ -51,19 +52,41 @@ const TodoList = ({ todos, setTodos }) => {
     setTodos(shuffle(todos));
   }
 
+  const onRefreshHandler = async () => {
+    setIsRefreshing(true);
+    // await for 1 sec.
+    await setTimeout(() => { }, 1000);
+    addTodo("refreshing");
+    setIsRefreshing(false);
+  }
+
+  const onEndReachedHandler = (info) => {
+    addTodo("endReached");
+  }
+
   return (
     <View>
       <TextField onSubmitEnd={addTodoHandler} value={text} onTextChange={onInputChangeHandler} onShuffleClick={onShuffleClickHandler} />
-      <ScrollView contentContainerStyle={styles.todoListContainer}>
-        {todos.map(todo => (
-          <Item
-            key={todos.id}
-            todo={todo}
-            onRemove={onRemoveButtonClickHandler}
-            onCheck={onCheckButtonClickHandler}
-          />
-        ))}
-      </ScrollView>
+      <FlatList
+        contentContainerStyle={styles.todoListContainer}
+        data={todos}
+        renderItem={({ item, index }) => (<Item
+          key={index}
+          todo={item}
+          onRemove={onRemoveButtonClickHandler}
+          onCheck={onCheckButtonClickHandler}
+        />)}
+        keyExtractor={todo => todo.id}
+        initialNumToRender={30}
+        inverted={false}
+        horizontal={false}
+
+        onRefresh={onRefreshHandler}
+        refreshing={isRefreshing}
+
+        onEndReachedThreshold={0.5}
+        onEndReached={onEndReachedHandler}
+      />
     </View>
   );
 };
