@@ -1,9 +1,10 @@
 ---
 layout: default
-title: 1. 기본 셋팅
-parent: 기본 기능들
-grand_parent: 기본 튜토리얼
+title: 1. basic-settings
+parent: basic-functions
+grand_parent: basic
 nav_order: 1
+
 ---
 
 # 리액트 네이티브의 추가적인 기본 기능 배우기 

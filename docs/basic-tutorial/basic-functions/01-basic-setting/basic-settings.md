@@ -2,7 +2,7 @@
 layout: default
 title: 1. basic-settings
 parent: basic-functions
-grand_parent: basic-tutorial
+grand_parent: basic
 nav_order: 1
 ---
 
