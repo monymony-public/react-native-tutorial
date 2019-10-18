@@ -1,6 +1,8 @@
-import {observable} from 'mobx';
+import {decorate, observable, action} from 'mobx';
+
 class CounterStore {
-  @observable counter = [{counterNum: 0}];
+
+  counter = [{counterNum: 0}];
 
   // Add counter
   handleAddCounter = () => {
@@ -34,5 +36,13 @@ class CounterStore {
     ];
   };
 }
+
+decorate(CounterStore ,{
+  counter: observable,
+  handleAddCounter: action,
+  handleRemoveCounter: action,
+  handleIncrement: action,
+  handleDecrement: action,
+});
 
 export default new CounterStore();
