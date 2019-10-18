@@ -1,10 +1,10 @@
----
+<!-- ---
 layout: default
 title: 상태관리 기본 튜토리얼
 parent: State Management Tutorial(한글)
 nav_order: 1
 has_children: true
----
+--- -->
 
 # 상태관리 기본 튜토리얼
 
