@@ -195,7 +195,7 @@ You can use `console.warn()` to trigger a YellowBox
 
  # Go To Other Chapters
 
-- [Basic Settings to start react-native Project](../01-basic-setting/baseic-settings.md)
+- [Basic Settings to start react-native Project](../01-basic-setting/basic-settings.md)
 - [Improve-user-interface](../03-improve-user-interface/improve-user-interface.md)
 
 # Source

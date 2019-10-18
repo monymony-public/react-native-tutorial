@@ -190,7 +190,7 @@ __목적 OS:__ 안드로이드
 # 다음 장으로 넘어가세요
 
 - [디버깅 시작하기](../02-debugging/debugging-kr.md)
-- [사용자 환경 UI 개선하기](../03-improve-user-interface/improve-user-interface.md)
+- [사용자 환경 UI 개선하기](../03-improve-user-interface/improve-user-interface-kr.md)
 
 # Source
 [React Native 공식 페이지](https://facebook.github.io/react-native/docs/getting-started)

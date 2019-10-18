@@ -212,7 +212,7 @@ Devtools에 관련 컴포넌트가 표시된다.
 
  # 다른 챕터 보기
 
-- [리액트 네이티브 프로젝트 시작 환경 세팅하기](../01-basic-setting/baseic-settings-kr.md)
+- [리액트 네이티브 프로젝트 시작 환경 세팅하기](../01-basic-setting/basic-settings-kr.md)
 - [사용자 인터페이스 향상시키기](../03-improve-user-interface/improve-user-interface-kr.md)
 
 # 출처
