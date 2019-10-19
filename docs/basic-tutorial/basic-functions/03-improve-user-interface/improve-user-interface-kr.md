@@ -107,7 +107,7 @@ nav_order: 3
 
 
 
- # 다른 챕터 살펴보기 
+ # 다른 챕터 공부하기
 
 - [Basic Settings to start react-native Project 리액트 네이티브 프로젝트 시작 환경 셋팅하기  ](../01-basic-setting/basic-setting-kr.md)
 - [Debugging 디버깅](../02-debugging/debugging-kr.md)
