@@ -210,7 +210,7 @@ Devtools에 관련 컴포넌트가 표시된다.
  레드박스와 옐로우 박스는 릴리즈 빌드 버전에서는 자동적으로 무시시킬 수 있다.
 
 
- # 다른 챕터 보기
+# 다른 챕터 
 
 - [리액트 네이티브 프로젝트 시작 환경 세팅하기](../01-basic-setting/basic-settings-kr.md)
 - [사용자 인터페이스 향상시키기](../03-improve-user-interface/improve-user-interface-kr.md)
