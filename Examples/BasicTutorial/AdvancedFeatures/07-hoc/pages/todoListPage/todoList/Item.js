@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
+import withRainbow from '../../../hoc/withRainbow';
 
 const Item = ({ todo, onRemove, onCheck, color }) => {
     const styles = StyleSheet.create({
