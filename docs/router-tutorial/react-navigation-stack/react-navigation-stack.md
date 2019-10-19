@@ -31,7 +31,7 @@ In this chapter, we'll try installing the react-navigation-stack, and we'll give
 - react-native-cli : 2.0.1
 - react-navigation: 4.0.10
 
-### React-native install & **React-native Navigation stack install**
+### React-native install & **React-Navigation-stack install**
 
 > Let's refer to the link below to proceed with the installation.
 
