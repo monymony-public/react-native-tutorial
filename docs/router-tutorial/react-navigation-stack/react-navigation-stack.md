@@ -11,7 +11,7 @@ React Navigation - related libraries that help you move between screens.
 
 ## **react-navigation-stack**
 
-It's a concept that can be easily understood by anyone who's ever tried the web. Routing on the web is Stack of React-native.
+It's a concept that can be easily understood by anyone who's ever tried the web. Routing on the web is Stack of React Native.
 
 Because React-native is in the form of a mobile app, the top tab doesn't exist like a browser (chrome, Internet Explorer, etc.).
 
@@ -31,7 +31,7 @@ In this chapter, we'll try installing the react-navigation-stack, and we'll give
 - react-native-cli : 2.0.1
 - react-navigation: 4.0.10
 
-### React-native install & **React-Navigation-stack install**
+### React Native install & **React Navigation Stack install**
 
 > Let's refer to the link below to proceed with the installation.
 
