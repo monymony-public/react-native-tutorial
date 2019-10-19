@@ -671,7 +671,7 @@ class SettingsScreen extends React.Component {
     return (
       <View style={styles.container}>
         <Button
-          title="Home으로 이동"
+          title="Go To Home"
           onPress={() => this.props.navigation.navigate('Home')}
         />
       </View>
