@@ -1,12 +1,12 @@
 ---
 layout: default
-title: 5. Create TodoList components
+title: 5. Split components
 parent: Make TodoList Apps
 grand_parent: Basic
 nav_order: 5
 ---
 
-## Create TodoList Components
+## Split Components
 
 We created the basic structure of the app and now let's move on to create UI for TodoList  component. We are going to divide the components into three parts
 

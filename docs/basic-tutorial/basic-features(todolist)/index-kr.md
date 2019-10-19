@@ -11,7 +11,7 @@ nav_order: 1
 
 React Native로 간단한 애플리캐이션을 만들어봅시다.
 
-![](./images/toggle.png "Hello React Native")
+![](https://user-images.githubusercontent.com/34808501/67137671-e8a81080-f273-11e9-84da-a8b9e08d5a76.png)
 
 ## How to run
 

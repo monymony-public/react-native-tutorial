@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3. Adding a Card View
+title: 3. Card View 추가하기
 parent: 할 일 목록 앱 만들기
 grand_parent: Basic(한글)
 nav_order: 3
