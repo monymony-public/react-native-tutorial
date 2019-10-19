@@ -7,7 +7,13 @@
  */
 
 import React from 'react';
-import {StyleSheet, View, Animated, Dimensions} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Animated,
+  Dimensions,
+  ActivityIndicator,
+} from 'react-native';
 import {ParallaxSwiper, ParallaxSwiperPage} from 'react-native-parallax-swiper';
 import PaintingInfo from './components/PaintingInfo';
 import PaintingImage from './components/PaintingImage';
@@ -21,6 +27,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       info: [],
+      isLoading: false,
     };
   }
   componentDidMount() {
@@ -34,6 +41,7 @@ export default class App extends React.Component {
         .then(result => result.data)
         .then(result => {
           this.setState({info: [...this.state.info, result]});
+          this.setState({isLoading: !this.state.isLoading});
         });
     });
   }
@@ -65,7 +73,11 @@ export default class App extends React.Component {
     ],
   });
   render() {
-    return (
+    return !this.state.isLoading ? (
+      <View style={[styles.spinnerContainer, styles.horizontal]}>
+        <ActivityIndicator size="large" color="#00ffff" />
+      </View>
+    ) : (
       <ParallaxSwiper
         speed={0.5}
         animatedValue={this.myCustomAnimationValue}
@@ -121,5 +133,15 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     letterSpacing: 0.41,
     color: 'white',
+  },
+  spinnerContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#000000',
+  },
+  horizontal: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 10,
   },
 });

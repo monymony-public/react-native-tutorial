@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 1. 시작하기
-parent: Mobx 튜토리얼
+parent: MobX 튜토리얼
 grand_parent: State Management Tutorial(한글)
 nav_order: 1
 ---
@@ -49,9 +49,18 @@ npm install --save mobx
 npm install --save mobx-react // MobX 데코레이터를 사용할 수 있도록 해줌
 ```
 
-### For decorator ///
+### For decorator
 
+```bash
+npm install --save-dev @babel/plugin-proposal-decorators
 ```
-https://medium.com/@michielsikma/adding-decorator-support-to-create-react-app-projects-using-react-app-rewired-df48e7ffd636
-```
+이후 폴더의 루트에 `.babelrc` 파일을 만들어 아래 내용 추가
 
+```json
+{
+    "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true}],
+        ["@babel/plugin-proposal-class-properties", { "loose": true}]
+    ]
+}
+```

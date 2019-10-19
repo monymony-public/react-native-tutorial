@@ -1,10 +1,10 @@
----
+<!-- ---
 layout: default
 title: 1. Getting Started
 parent: State Basic Tutorial
 grand_parent: State Management Tutorial
 nav_order: 1
----
+--- -->
 
 ## 1. Create a New Project in React Native
 

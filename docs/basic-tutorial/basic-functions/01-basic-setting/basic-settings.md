@@ -2,7 +2,7 @@
 layout: default
 title: 1. basic-settings
 parent: basic-functions
-grand_parent: basic-tutorial
+grand_parent: basic
 nav_order: 1
 ---
 
@@ -184,9 +184,11 @@ You can skip this part if you are already familiar with android development envi
     ![ChangeLines](../images/changeLines.png)
 
 
-Let's proceed next part!
+# Let's proceed next part!
 
-- Go to [Live Reload](../live-reload/live-reload.md)
+- [Debugging](../02-debugging/debugging.md)
+- [Improve-user-interface](../03-improve-user-interface/improve-user-interface.md)
 
-## Source
+# Source
+
 [React Native Official Page](https://facebook.github.io/react-native/docs/getting-started)

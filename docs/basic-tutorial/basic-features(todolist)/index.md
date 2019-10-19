@@ -11,11 +11,11 @@ nav_order: 1
 
 Build real native simple application with javascript
 
-![Hello](./images/toggle.png "Hello React Native")
+![Hello](https://user-images.githubusercontent.com/34808501/67137671-e8a81080-f273-11e9-84da-a8b9e08d5a76.png)
 
 ## How to run
 
-Project sources: [Examples/BasicTutorial/BasicFeatures/TodoList]()
+Project sources: [Examples/BasicTutorial/BasicFeatures/TodoList](https://github.com/JeffGuKang/react-native-tutorial/tree/master/Examples/BasicTutorial/BasicFeatures/TodoList)
 
 ```
 cd Examples/BasicTutorial/BasicFeatures/TodoList

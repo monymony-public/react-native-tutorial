@@ -2,8 +2,8 @@
 layout: default
 title: 2. debugging
 parent: basic-functions
-grand_parent: basic-tutorial
-nav_order: 1
+grand_parent: basic
+nav_order: 2
 ---
 
 
@@ -193,7 +193,10 @@ You can use `console.warn()` to trigger a YellowBox
 
  RedBoxes and YellowBoxes are automatically disabled in release (production) builds
 
+ # Go To Other Chapters
 
+- [Basic Settings to start react-native Project](../01-basic-setting/basic-settings.md)
+- [Improve-user-interface](../03-improve-user-interface/improve-user-interface.md)
 
 # Source
 
