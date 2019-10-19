@@ -7,19 +7,19 @@ has_children: false
 
 # **React Navigation**
 
-React Navigation (RN) - related libraries that help you move between screens.
+React Navigation - related libraries that help you move between screens.
 
 ## **react-navigation-stack**
 
-It's a concept that can be easily understood by anyone who's ever tried the web. Routing on the web is Stack of RN.
+It's a concept that can be easily understood by anyone who's ever tried the web. Routing on the web is Stack of React-native.
 
-Because RN is in the form of a mobile app, the top tab doesn't exist like a browser (chrome, Internet Explorer, etc.).
+Because React-native is in the form of a mobile app, the top tab doesn't exist like a browser (chrome, Internet Explorer, etc.).
 
 Because of this, it's not easy to navigate between pages, and it also provides a 'backward button' like a browser, so remember each routing pass.
 
 And you've seen, once you've gone back in your mobile app, you've seen animation like something's piled up and gone.
 
-RN's library supporting this is 'react-navigation-stack'. However, the more deep the page is configured, the more you should be aware of the slowing that you're going to have when you're going back
+React-native's library supporting this is 'react-navigation-stack'. However, the more deep the page is configured, the more you should be aware of the slowing that you're going to have when you're going back
 
 In this chapter, we'll try installing the react-navigation-stack, and we'll give you a quick tutorial that you can use right away.
 
@@ -31,7 +31,7 @@ In this chapter, we'll try installing the react-navigation-stack, and we'll give
 - react-native-cli : 2.0.1
 - react-navigation: 4.0.10
 
-### RN install & **RN Navigation stack install**
+### React-native install & **React-native Navigation stack install**
 
 > Let's refer to the link below to proceed with the installation.
 
@@ -43,7 +43,7 @@ In this chapter, we'll try installing the react-navigation-stack, and we'll give
     brew tap AdoptOpenJDK/openjdk
     brew cask install adoptopenjdk8
 
-Turn the RN server through Brew, known as Mac OS Package Manager, and install watchman to manage the yarn and node and RN code to manage the library.
+Turn the React-native server through Brew, known as Mac OS Package Manager, and install watchman to manage the yarn and node and React-native code to manage the library.
 
 Under 'AdoptOpenJDK/openjdk' and 'Adoptenjdk8' install the Java environment for Android build.
 
@@ -51,11 +51,11 @@ You don't have to install the brew at this time, but if you install it manually,
 
     npm install -g react-native-cli
 
-Install 'react-native-cli', which is required when 'init' RN project.
+Install 'react-native-cli', which is required when 'init' React-native project.
 
 Xcode is required for iOS build, so only MacOS users can download it from the App Store.
 
-Now we're all set to start RN.
+Now we're all set to start React-native.
 
 Let's go to the desired folder and run the command below to make sure the project is created properly.
 
@@ -234,7 +234,7 @@ Let's install the libraries you need using the instructions below.
 
 What is the role of 'yarn add reality-native-guesture-handler' here?
 
-- Mobile requires the touch interface to be loaded in an RN environment as all controls are touch-touch.
+- Mobile requires the touch interface to be loaded in an React-native environment as all controls are touch-touch.
 - Left click on the Web, right click, for example, click, scroll, zoom in and out.
 
 Let's install all the libraries and load them into our project via import.
