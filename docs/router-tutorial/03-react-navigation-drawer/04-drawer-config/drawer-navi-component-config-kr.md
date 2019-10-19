@@ -78,7 +78,7 @@ createDrawerNavigator안에 routeConfig를 보면 Screen이 총 3개로 Home, De
 2. **drawerWidth**: drawer width의 크기를 조절 할 수 있다.
     - 현재 코드에서는 [Dimensions](https://facebook.github.io/react-native/docs/dimensions)을 이용해 화면의 넓이를 구하여 drawer의 크기를 결정하고 있다.
 
-이외에도 더 많은 **DrawerNavigatorConfig** 가 있으니 [여기 사이트](https://reactnavigation.org/docs/en/drawer-navigator.html#drawernavigatorconfig)에 들어가서 참고하길 바란다.
+이외에도 더 많은 **DrawerNavigatorConfig** 가 있으니 [React Navigation 공식 사이트](https://reactnavigation.org/docs/en/drawer-navigator.html#drawernavigatorconfig)에 들어가서 참고하길 바란다.
 
 ---
 
