@@ -5,7 +5,7 @@ parent: Advanced TodoList App
 grand_parent: Basic
 nav_order: 3
 ---
-## 3. Lifecycle
+## 3. Lifecycle with hooks
 In this sample we will get dogs image when todo is added.
 
 ## Implement Lifecycle using useEffect()
@@ -28,13 +28,13 @@ Here's the samples of 3 types of Lifecycle by using useEffect()
 
 ## Steps to build it
 * Copy [master](https://github.com/JeffGuKang/react-native-tutorial)
-* Go to /Examples/BasicTutorial/AdvancedFeatures/02-networking.
+* Go to /Examples/BasicTutorial/AdvancedFeatures/02-networking
 * Install npm packages:
 ```
 npm install 
 ```
 
-[./pages/todoListPage/TodoListPage.js]()
+[./pages/todoListPage/TodoListPage.js](https://github.com/JeffGuKang/react-native-tutorial/tree/master/Examples/BasicTutorial/AdvancedFeatures/03-lifecycle/pages/todoListPage/TodoListPage.js)
 * Move todos of state ./todoListPage/todoList/TodoList.js to ./todoListPage/TodoListPage.js
 ```diff
 const TodoListPage = props => {
@@ -75,7 +75,7 @@ const TodoListPage = props => {
     )
 }
 ```
-[./pages/todoListPage/todoList/TodoList.js]()
+[./pages/todoListPage/todoList/TodoList.js](https://github.com/JeffGuKang/react-native-tutorial/tree/master/Examples/BasicTutorial/AdvancedFeatures/03-lifecycle/pages/todoListPage/todoList/TodoList.js)
 ```diff
 - import React, { useState, useEffect } from 'react';
 + import React, { useState } from 'react';
@@ -144,6 +144,9 @@ const TodoListPage = props => {
    );
  };
 ```
-* Now you can get dogs photo when todos of state updates.
+* Now you can get dogs photo when todos of state updates. try:
+```
+npm start
+```
 
 ![](../images/updatePomeranianWhenTodosUpdates.gif "updatePomeranianWhenTodosUpdates")

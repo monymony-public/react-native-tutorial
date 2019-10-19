@@ -1,25 +1,25 @@
 ---
 layout: default
-title: 2. Networking with Axios 
+title: 2. Networking with axios 
 parent: Advanced TodoList App
 grand_parent: Basic
 nav_order: 2
 ---
-## 2. Networking with Axios
+## 2. Networking with axios
 In this sample we will get dogs image from remote server and show it at the header thorugh ```<Image/>``` component.
 
 ## Steps to build it
 * Copy [master](https://github.com/JeffGuKang/react-native-tutorial)
-* Go to /Examples/BasicTutorial/AdvancedFeatures/01refactor.
+* Go to /Examples/BasicTutorial/AdvancedFeatures/01refactor
 * Install npm packages:
 ```
 npm install 
 ```
 
-* Install Axios from npm
+* Install axios from npm if you need it.
 [Axios](https://github.com/axios/axios) is promise based HTTP client. You can easily make HTTP requests by using it.
 ```
-npm install Axios
+npm install axios
 ```
 * Create config foler in the root folder.
 * Create axios.js in the config folder.
@@ -28,7 +28,7 @@ npm install Axios
 ```javascript
 import axios from "axios";
 
-// You can configure Axios by using create function
+// You can configure axios by using create function
 const instance = axios.create({
     // You can visit https://dog.ceo/ if you wonder what it is.
     baseURL: 'https://dog.ceo/api/breed/',
@@ -151,7 +151,7 @@ const TodoListPage = props => {
 -         });
 
 -        return () => {}
-+       // Cancle request when this page shut down.
++       // Cancle request when this page shuts down.
 +        return () => {
 +            axios.cancel();
 +        }
@@ -176,4 +176,4 @@ const TodoListPage = props => {
     )
 }
 ```
-* Now ```requestAdorablePomeranianImage()``` request is cancled when TodoListPage shut down.
+* Now ```requestAdorablePomeranianImage()``` request is cancled when TodoListPage shuts down.
