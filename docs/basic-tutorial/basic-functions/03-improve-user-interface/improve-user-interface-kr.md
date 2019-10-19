@@ -1,8 +1,8 @@
 ---
 layout: default
-title: 3. improve-user-interface
-parent: basic-functions
-grand_parent: basic
+title: 3. 사용자 인터페이스 향상시키기
+parent: 기본 기능 배우기
+grand_parent: basic(한글)
 nav_order: 3
 ---
 
