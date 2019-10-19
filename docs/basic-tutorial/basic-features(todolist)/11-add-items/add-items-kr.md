@@ -121,9 +121,7 @@ const TodoList = ({todos}) => {
 
 `map()` 함수를 이용해서 `todos`에 담긴 아이템을 하나씩 TodoListItem 컴포넌트로 전달합니다. 자바스크립트의 디스트럭처링(destructuring) 문법을 이용하면 TodoListItem 컴포넌트에서 아이템 객체에 담긴 값들을 바로 받을 수 있습니다.
 
-각각의 아이템에는 `textValue`, `id`, `checked`라는 **key**와 그에 해당하는 **value**가 담겨 있습니다.
-
-In TodoListItem component, we can get the values from props. Now let's put the textValue on Text area.
+각의 아이템에는 `textValue`, `id`, `checked`라는 **key**와 그에 해당하는 **value**가 담겨 있습니다.
 
 아래와 같이 TodoListItem 컴포넌트에서 TodoList 컴포넌트에서 전달한 값들을 받을 수 있습니다.
 
