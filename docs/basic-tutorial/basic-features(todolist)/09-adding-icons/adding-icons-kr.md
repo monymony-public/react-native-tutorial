@@ -40,7 +40,7 @@ TodoListItem 컴포넌트에서 `react-native-vector-icons`를 임포트 하겠�
 import Icon from 'react-native-vector-icons/AntDesign';
 ```
 
-`StyleSheet`을 속성 안에 완료한 목록을 표시해주는 스타일을 추가해주겠습니다.
+`StyleSheet` 속성 안에 완료한 목록을 표시해주는 스타일을 추가하겠습니다.
 
 ```js
 const styles = StyleSheet.create({
