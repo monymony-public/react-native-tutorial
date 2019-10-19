@@ -49,7 +49,7 @@ npm install --save mobx
 npm install --save mobx-react // MobX 데코레이터를 사용할 수 있도록 해줌
 ```
 
-### For decorator ///
+### For decorator
 
 ```bash
 npm install --save-dev @babel/plugin-proposal-decorators
