@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 1. 시작하기
+title: 1. MobX를 사용가능한 새로운 React Native프로젝트 생성 
 parent: MobX 튜토리얼
 grand_parent: State Management Tutorial(한글)
 nav_order: 1

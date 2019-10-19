@@ -277,7 +277,7 @@ export default Counter;
 
 ### 3) decorator를 쓰지 않고 MobX 적용해보기
 
-MobX의 개념에 대해서는 2장에 잘 설명되어 있습니다.
+MobX의 개념에 대해서는 [2장](https://jeffgukang.github.io/react-native-tutorial/docs/state-tutorial/mobx-tutorial/02-what-is-mobx/what-is-mobx-kr.html)에 잘 설명되어 있습니다.
 
 MobX는 데코레이터를 사용하지 않고 정의하는 방법과 `@`와 같은 데코레이터를 사용하여 정의하는 방법이 있습니다.
 
@@ -337,7 +337,7 @@ decorate(CounterStore, {
 export default new CounterStore();
 ```
 
-기존 setState 예제에서의 CounterContainer.js에서 state로 관리되는 counter와 함수를 counterStore.js로 옮기고 함수의 경우 setState로 상태를 관리하는 형태가 아니라 자연스러운 형태로 수정했씁니다. CounterStore라는 클래스를 새로 만들었습니다.
+기존 setState 예제에서의 CounterContainer.js에서 state로 관리되는 counter와 함수를 counterStore.js로 옮기고 함수의 경우 setState로 상태를 관리하는 형태가 아니라 자연스러운 형태로 수정했습니다. CounterStore라는 클래스를 새로 만들었습니다.
 
 MobX는 CounterStore 클래스 외부에 decorate 함수를 이용하여 적용하게 됩니다. 첫번째 파라미터는 적용한 컴포넌트를 넣어주고 두번째 파라미터는 Object 방식으로 Key에는 MobX를 적용할 변수명 혹은 함수명을 적고 Value에는 사용할 MobX 개념을 적습니다.
 
