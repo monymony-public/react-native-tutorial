@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 1. basic-settings
+title: 1. 기본 
 parent: 기본 기능 배우기
 grand_parent: basic(한글)
 nav_order: 1
