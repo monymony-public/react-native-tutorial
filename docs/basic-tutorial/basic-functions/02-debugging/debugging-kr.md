@@ -1,6 +1,6 @@
 ---
 layout: default
-title:2. 
+title: 2. 
 parent: 기본 기능 배우기
 grand_parent: basic(한글)
 nav_order: 2
