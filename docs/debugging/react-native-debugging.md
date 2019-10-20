@@ -2,6 +2,6 @@
 layout: default
 title: React Native Debugging
 has_children: false
-parent: Debugging
+parent: Official documents
 nav_order: 3
 ---
