@@ -30,8 +30,12 @@ In addition, it is supporting the most handy features:
 9. ScrollToIndex support.
 10. Multiple column support.
 
+
 [./pages/todoListPage/TodoListPage.js](https://github.com/JeffGuKang/react-native-tutorial/blob/c9b24deacfccb812259fc26ec1eda23a97e1dec1/Examples/BasicTutorial/AdvancedFeatures/06-flatlist/pages/todoListPage/TodoListPage.js)
+
+
 * Disable image loading when todos of state updates.
+
 ```diff
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View, Text, Image } from 'react-native';
@@ -74,10 +78,15 @@ const TodoListPage = props => {
         </View>
     )
 }
+
 ```
 
+
 [./pages/todoListPage/todoList/TodoList.js](https://github.com/JeffGuKang/react-native-tutorial/blob/master/Examples/BasicTutorial/AdvancedFeatures/06-flatlist/pages/todoListPage/todoList/TodoList.js)
+
 * Let's change ScrollView to FlatList.
+
+
 ```diff
   import React, { useState } from 'react';
 - import { StyleSheet, ScrollView, View } from 'react-native';
@@ -190,6 +199,11 @@ const styles = StyleSheet.create({
 });
 
 export default TodoList;
+```
+
+* Now try: 
+```
+npm start
 ```
 
 ![](../images/flatlist.gif "flatlist")
