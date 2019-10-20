@@ -7,21 +7,22 @@ nav_order: 7
 has_children: false
 ---
 
-## 05. Container 컴포넌트와 Presentational 컴포넌트
-Container 컴포넌트
+## Container 컴포넌트와 Presentational 컴포넌트
 
-> redux 상태 구독, redux 액션을 보내기 등 데이터, 상태와 관련된 것을 나타내는 컴포넌트로
-> redux와 연관되어 있습니다.
+### Presentational and Container Pattern
+> 동작(Container)을 다루는 부분과 표현(Presentational)을 다루는 부분을 분리하여 작성하는 컴포넌트 패턴
+	
+| Presentational 컴포넌트| Container 컴포넌트 |
+|--|--|
+| DOM 마크업과 스타일 담당 | 동작(behavior) 로직 |
+|  데이터 처리 능력 없음 | 데이터 처리능력 있음 |
+| 부모 컴포넌트로부터 받은 `props`인 데이터와 콜백(callback)을 사용한다. | `rendering` 되어야 할 데이터를 `props` 로써 데이터 처리 능력이 없는 컴포넌트로 전달한다.|
+|Redux와 관련 없음|Redux와 관련 있음|
 
-Presentational 컴포넌트
-
- > 어떻게 보여질 지(마크업, 스타일) 집중하는 컴포넌트로 props에 의해서만 데이터를 읽거나, 콜백을 호출합니다.
-
-[더 자세한 설명은 이곳을 참고해주세요.](https://deminoth.github.io/redux/basics/UsageWithReact.html)
 
 ### 예제
-### container 컴포넌트
-- containers/CounterContainer.js
+#### container 컴포넌트
+- app/containers/CounterContainer.js
     ```
     import * as actions from '../actions';
     import { connect } from 'react-redux';
@@ -38,72 +39,74 @@ Presentational 컴포넌트
       handleRemoveCounter : () => dispatch(actions.remove()),
     });
     
-    const CounterContainer = connect(
+    
+    const CounterListContainer = connect(
         mapStateToProps,
         mapDispatchToProps
     )(App);
     
-    export default CounterContainer;
-    
-    ```
-    ##### 1. `mapStateToProps` 함수
-    > store 안의 state 값을 props 로 연결해주는 함수
-    
-    여기서 state는 상태 객체 전부를 의미합니다. 
-    
-    만약 counter 값을 얻고자 한다면 `state.counter`를 통해 접근하면 됩니다. 
-    ```
-    const mapStateToProps = (state) => ({
-        counter : state.counter,
-    });
+    export default CounterListContainer;
     ```
     
-    ##### 2. `mapDispatchToProps` 함수
-    > 해당 액션을 dispatch 하는 함수를 만든 후, 이를 props 로 연결해주는 함수.
+    ##### `connect()()`
     
-     presentational 컴포넌트에 props로 전달되는 handleIncrement라는 함수로 예를 들어보겠습니다. 
+     - `react-native 컴포넌트`와 `redux` 연결
+     - `redux`의 `subscribe` 와 같은 역할을 하지만, `store`를 필요한 곳에서만 사용할 수 있게 해주고 코드를 더 깔끔하게 만들어줍니다.
+     - `mapStateToProps`과 `mapDispatchToProps` 인자를 통해서 컴포넌트에 `state`, `callback`을 넘겨줍니다.
+             
+        1. `mapStateToProps`
+         - 전역에서 관리되는 `store` 안의 데이터 `state`를 `props` 객체로 component에게 전달해줍니다.
+         - 예를 들어, `state.counter.counterNum`는 `props.counterNum`와 같은 방식으로 전달됩니다.
+         - `store`에 `subscribe`하고 그 `state`를 `props`에 매핑합니다.
+         - 여기서 state는 상태 객체 전부를 의미합니다. 
+            
+            만약 counter 값을 얻고자 한다면 `state.counter`를 통해 접근하면 됩니다. 
+            ```
+            const mapStateToProps = (state) => ({
+                counter : state.counter,
+            });
+            ```
+             
+        2. `mapDispatchToProps`
+        - `store` 의 callback 함수를 인수로 받아서 `props` 객체로 반환되는데,
+        - 위의 방식과 같이, `handleIncrement` 라는 함수를 `props.handleIncrement`와 같은 형태로 컴포넌트에 전달됩니다.
+        - `action`을 `dispatch` 합니다.
+        -  presentational 컴포넌트에 props로 전달되는 handleIncrement라는 함수로 예를 들어보겠습니다. 
+                  
+              ```
+              const mapDispatchToProps = (dispatch) => ({
+                    handleIncrement : (index) => dispatch(actions.increment(index)),
+                    ...
+              });
+              ```
         
-    ```
-    const mapDispatchToProps = (dispatch) => ({
-          handleIncrement : (index) => dispatch(actions.increment(index)),
-          ...
-    });
-    ```
-    인자값으로 index를 받으며 increment를 나타내는 action을 dispatch() 안에 넣어 store에게 action 값에 따른 상태 변화를 요청합니다.
-    ##### 3. `connect` 함수
-    
-    > React 컴포넌트를 Redux 스토어에 연결 `connect`시켜주는 함수
-    
-    > 데이터(state)를 props로 연결시켜주는 `mapStateToProps`와 콜백함수를 props로 연결시켜주는 `mapDispatchToProps`를 `presentational 컴포넌트`(App)와 연결시켜주는 함수
-    
-    ```
-    const CounterContainer = connect(
-        mapStateToProps,
-        mapDispatchToProps
-    )(App);
-    ```
-    
-    [connect 객체에 대한 자세한 설명](https://react-redux.js.org/api/connect)
-
-    
+     - 왜 connect()() 이런 형태일까?
+             
+          `connect()()` 는 connect() 함수가 또다른 형태의 함수를 반환하는 형태입니다.
+          
+          ```
+          function connect (mapStateToProps, mapDispatchToProps) {
+              return function(component){
+                  //implementaion
+              }
+          }
+          ```
 
 #### presentational 컴포넌트
 
 > presentational 컴포넌트의 데이터 및 콜백은 props로 전달받아 사용하며,
-
-> redux의 영향을 받지 않으며 오직 style만 집중할 수 있는 컴포넌트 입니다.
+> redux의 영향을 받지 않고 오직 style만 집중할 수 있는 컴포넌트 입니다.
 
 - components/App.js
-    
-	```
+    ```
     import React from 'react';
     import CounterList from './CounterList';
-    import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+    import {StyleSheet, Text, TouchableOpacity, View, ScrollView} from 'react-native';
     import PropTypes from 'prop-types';
     
     const App = ({counter, handleAddCounter, handleRemoveCounter, handleIncrement, handleDecrement}) => {
         return (
-            <View>
+            <ScrollView style={styles.container}>
                 <View style={styles.counterAddRemoveContainer}>
                     <TouchableOpacity
                         style={styles.counterAddRemoveButton}
@@ -130,7 +133,7 @@ Presentational 컴포넌트
                         handleDecrement={handleDecrement}
                     />
                 </View>
-            </View>
+            </ScrollView>
         );
     };
     
@@ -154,6 +157,13 @@ Presentational 컴포넌트
     
     
     const styles = StyleSheet.create({
+        container: {
+          flex: 1,
+          width: '100%',
+          backgroundColor: '#F6F6F6',
+          paddingTop: '15%',
+          paddingBottom : '15%',
+        },
         counterAddRemoveContainer: {
             width: '100%',
             display: 'flex',
@@ -169,10 +179,57 @@ Presentational 컴포넌트
     
     export default App;
     ```
+- app/components/CounterList.js
+    ```
+    import React from 'react';
+    import Counter from './Counter';
+    import {StyleSheet, View} from 'react-native';
+    import PropTypes from 'prop-types';
+    
+    const CounterList = ({counter, handleAddCounter, handleRemoveCounter, handleIncrement, handleDecrement}) => {
+        const counterModule = counter.map((item, index) => (
+                <Counter
+                    key={index}
+                    index={index}
+                    value={item}
+                    handleIncrement={handleIncrement}
+                    handleDecrement={handleDecrement}
+                />
+          ));
+    
+        return (
+            <View style={styles.counterFrame}>
+                {counterModule}
+            </View>
+        );
+    };
+    
+    CounterList.propTypes = {
+        counter: PropTypes.array,
+        handleIncrement : PropTypes.func,
+        handleDecrement : PropTypes.func,
+        handleAddCounter : PropTypes.func,
+        handleRemoveCounter : PropTypes.func,
+    };
+    
+    CounterList.defaultProps = {
+        counter : [],
+        handleIncrement : () => console.warn('handleIncrement not defined'),
+        handleDecrement : () => console.warn('handleDecrement not defined'),
+        handleAddCounter : () => console.warn('handleAddCounter not defiend'),
+        handleRemoveCounter : () => console.warn('handleRemoveCounter not defiend'),
+    };
+    
+    const styles = StyleSheet.create({
+        counterFrame: {
+            padding: 10,
+        },
+    });
+    
+    export default CounterList;
+    ```
 	
-	
-- components/Counter.js
-
+- app/components/Counter.js
     ```
     import React from 'react';
     import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
@@ -254,57 +311,4 @@ Presentational 컴포넌트
     });
     
     export default Counter;
-
-    ```
-	
-	
-- components/CounterList.js
-
-    ```
-    import React from 'react';
-    import Counter from './Counter';
-    import {StyleSheet, View} from 'react-native';
-    import PropTypes from 'prop-types';
-    
-    const CounterList = ({counter, handleAddCounter, handleRemoveCounter, handleIncrement, handleDecrement}) => {
-        const counterModule = counter.map((item, index) => (
-                <Counter
-                    key={index}
-                    index={index}
-                    value={item}
-                    handleIncrement={handleIncrement}
-                    handleDecrement={handleDecrement}
-                />
-          ));
-    
-        return (
-            <View style={styles.counterFrame}>
-                {counterModule}
-            </View>
-        );
-    };
-    
-    CounterList.propTypes = {
-        counter: PropTypes.array,
-        handleIncrement : PropTypes.func,
-        handleDecrement : PropTypes.func,
-        handleAddCounter : PropTypes.func,
-        handleRemoveCounter : PropTypes.func,
-    };
-    
-    CounterList.defaultProps = {
-        counter : [],
-        handleIncrement : () => console.warn('handleIncrement not defined'),
-        handleDecrement : () => console.warn('handleDecrement not defined'),
-        handleAddCounter : () => console.warn('handleAddCounter not defiend'),
-        handleRemoveCounter : () => console.warn('handleRemoveCounter not defiend'),
-    };
-    
-    const styles = StyleSheet.create({
-        counterFrame: {
-            padding: 10,
-        },
-    });
-    
-    export default CounterList;
     ```

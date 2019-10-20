@@ -81,7 +81,8 @@ const TodoListPage = props => {
 
 ```
 
-[./pages/todoListPage/todoList/TodoList.js]()
+
+[./pages/todoListPage/todoList/TodoList.js](https://github.com/JeffGuKang/react-native-tutorial/blob/master/Examples/BasicTutorial/AdvancedFeatures/06-flatlist/pages/todoListPage/todoList/TodoList.js)
 
 * Let's change ScrollView to FlatList.
 
