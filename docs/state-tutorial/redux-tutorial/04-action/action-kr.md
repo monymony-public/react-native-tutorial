@@ -26,15 +26,30 @@ has_children: false
 
 행동 지침인 `Action` 객체는 상황 정리를 하여 `state`  변화를 정의하는 순수함수 `reducer`에서 사용되는데, `action.type`, `action.index` 와 같은 형태로 전달되어 쓰여집니다.
 
+### Action의 사용
+ - 행동 지침인 `Action`은 다음과 같이 `dispatch()` 라는 함수를 이용하여 `store` 에게 상태 변화를 해야한다고 알려줍니다. 
+ - `state` 를 변형하기 위해 요구되는 최소한의 정보를 나타내기 때문에 작게 유지해야합니다.
+ - Action에 따라 실행되는 `dispatch()` 함수는 어디서든 실행될 수 있습니다.
+ - action 생성자 사용
+    ```
+    store.dispatch({ type : "INCREMENT", index });
+    ```
+    보통은 이렇게 직접적으로 사용하지 않고 `action`을 반환하는 함수인 Action 생성자를 사용합니다.
+    ```
+    store.dispatch(() => increment(index));
+    ```
+    
+    해당 튜토리얼에서는 container Component에서 `mapDispatchToProps`이라는 함수 안에서 사용되어지며, [container and presentational 컴포넌트]() 에서 더 자세히 다룰 예정입니다.
 
-### 해당 프로젝트의 root 위치에서 다음과 같이 파일 생성 후, 수정
+### 예제
+
+####  해당 프로젝트의 root 위치에서 다음과 같이 파일 생성
 ```
 mkdir app
 cd app
 mkdir actions
 touch ActionTypes.js index.js
 ```
-
 
 #### 액션 타입 정의
 
@@ -74,12 +89,3 @@ export const decrement = (index) => ({
 });
 ```
 
-#### Action의 사용
-행동 지침인 `Action`은 다음과 같이 `dispatch()` 라는 함수를 이용하여 `store` 에게 상태 변화를 해야한다고 알려줍니다. 
-
-```
-store.dispatch(() => add());
-store.dispatch(() => remove());
-```
-
-이때, `dispatch()` 의 인자는 action 생성자 객체이며, 어디서든 실행될 수 있습니다.

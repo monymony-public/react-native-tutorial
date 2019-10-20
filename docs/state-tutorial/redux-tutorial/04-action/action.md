@@ -29,7 +29,24 @@ The action guide 'Action' object is used in the pure function 'reducer' that cle
 
 Used in the same form as `action.type`, `action.index`.
 
-### Create and modify the file at the root location of the project as follows
+### Use of Action
+ - Action guide `Action` tells `Store` to change state by using the function `dispatch()` 
+ - It should be kept small because it represents the minimum information required to transform `state`.
+ - The function `dispatch()` that is executed according to `Action` can be executed anywhere.
+ - Using Action creator
+    ```
+    store.dispatch({ type : "INCREMENT", index });
+    ```
+    The Action generator, a function that returns 'action' instead of using it directly, is used.
+    ```
+    store.dispatch(() => increment(index));
+    ```
+    
+    In this tutorial, it is used within a function called `mapDispatchToProps` and will be covered in more detail in [contender and presentative components]().
+
+### Example
+
+####  Create a file and directory from the root location of the project as follows:
 ```
 mkdir app
 cd app
@@ -37,12 +54,12 @@ mkdir actions
 touch ActionTypes.js index.js
 ```
 
-
-#### 액션 타입 정의
+#### Defining an action type
 
 Since `type` is made with the same constant as text, it is easier to manage by creating and saving files separately.
 		
 app/actions/ActionTypes.js
+
 ```
 export const INCREMENT = 'INCREMENT';  
 export const DECREMENT = 'DECREMENT';  
@@ -51,7 +68,7 @@ export const ADD = 'ADD';
 export const REMOVE = 'REMOVE';
 ```
 	
-#### 액션 생성자 정의
+#### Defining Action Creator
 app/actions/index.js
 ```
 import * as types from './ActionTypes';
@@ -75,12 +92,3 @@ export const decrement = (index) => ({
 });
 ```
 
-#### Use of `Action`
-Action guide `Action` tells `store` to change state by using the function `dispatch()` as follows
-
-```
-store.dispatch(() => add());
-store.dispatch(() => remove());
-```
-
-`dispatch()` can be executed anywhere.
