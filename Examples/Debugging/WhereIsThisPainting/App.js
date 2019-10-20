@@ -27,22 +27,28 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       info: [],
-      isLoading: false,
+      isLoading: true,
     };
   }
   componentDidMount() {
-    paintingIds.map(id => {
-      API.get(`/objects/${id}`, {
-        params: {
-          results: 1,
-          inc: 'primaryImage,title,artistDisplayName,objectEndDate,repository',
-        },
-      })
-        .then(result => result.data)
-        .then(result => {
-          this.setState({info: [...this.state.info, result]});
-          this.setState({isLoading: !this.state.isLoading});
-        });
+    Promise.all(
+      paintingIds.map(id => {
+        API.get(`/objects/${id}`, {
+            params: {
+              results: 1,
+              inc:
+                'primaryImage,title,artistDisplayName,objectEndDate,repository',
+            },
+          })
+          .then(result => result.data)
+          .then(result => {
+            this.setState({info: [...this.state.info, result]});
+          });
+      }),
+    ).then(() => {
+      setTimeout(() => {
+        this.setState({...this.state, isLoading: !this.state.isLoading});
+      }, 3000);
     });
   }
   myCustomAnimationValue = new Animated.Value(0);
@@ -73,7 +79,7 @@ export default class App extends React.Component {
     ],
   });
   render() {
-    return !this.state.isLoading ? (
+    return this.state.isLoading ? (
       <View style={[styles.spinnerContainer, styles.horizontal]}>
         <ActivityIndicator size="large" color="#00ffff" />
       </View>
