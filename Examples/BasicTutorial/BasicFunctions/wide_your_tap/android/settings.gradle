@@ -1,0 +1,3 @@
+rootProject.name = 'wide_your_tap'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
