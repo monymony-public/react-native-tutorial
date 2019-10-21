@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {TouchableHighlight, View, Text, StyleSheet} from 'react-native';
-import API from '../lib/api';
 
 class PaintingInfo extends Component {
   constructor(props) {
