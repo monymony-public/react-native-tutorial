@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2. 
+title: 2. 디버깅
 parent: 기본 기능 배우기
 grand_parent: basic(한글)
 nav_order: 2
@@ -167,7 +167,7 @@ Devtools에 관련 컴포넌트가 표시된다.
 
  1. 디버깅 시에 소스맵이 없다.
  2. 어플이 로드될 때마다(라이브 리로드이든, 수동적인 리로드던지 간에) 새로운 JS Context가 만들어진다.
- 3. `Automatically Show Web Inspectors for JSContext`를 선택하면 최신의 JSContext를 수동적으로 선택하지 않아도 된다.
+ 3. `Automatically Show Web Inspectors for JSContext`를 선택하면 최신의 JSContext를 수동으로 선택하지 않아도 된다.
  
 
 
@@ -180,7 +180,7 @@ Devtools에 관련 컴포넌트가 표시된다.
 
 어플 내 에러표시는 어플 배경에 빨간 색 전체 화면으로 표시된다. (레드박스)
 
-    `console.error()`를 사용해서 수동적으로 생기게 할 수 있다.
+    `console.error()`를 사용해서 수동적으로 만들 수 있다.
 
 
 ## 경고 표시
@@ -196,7 +196,7 @@ Devtools에 관련 컴포넌트가 표시된다.
  
     `console.disableYellowBox=true;` 
 
-+ 특정 경고표시들은 다음과 같이 프로그램적으로 무시시킬 수 있다.
++ 특정 경고표시들은 다음과 같이 프로그램적으로 무시할 수 있다.
 
     ``` 
     import {YellowBox} from `react-native`;
@@ -205,9 +205,9 @@ Devtools에 관련 컴포넌트가 표시된다.
 
 + CI/Xcode
 
-    옐로우 박스는 `IS_TESTING` 환경 변수를 설정해서 설정해제 시킬 수 있다.
+    옐로우 박스는 `IS_TESTING` 환경 변수를 설정해서 설정해제 할 수 있다.
 
- 레드박스와 옐로우 박스는 릴리즈 빌드 버전에서는 자동적으로 무시시킬 수 있다.
+ 레드박스와 옐로우 박스는 릴리즈 빌드 버전에서는 자동적으로 무시할 수 있다.
 
 
 # 다른 챕터 
