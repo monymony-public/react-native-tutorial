@@ -13,13 +13,13 @@ React Navigation - related libraries that help you move between screens.
 
 It's a concept that can be easily understood by anyone who's ever tried the web. Routing on the web is Stack of React Native.
 
-Because React-native is in the form of a mobile app, the top tab doesn't exist like a browser (chrome, Internet Explorer, etc.).
+Because React Native is in the form of a mobile app, the top tab doesn't exist like a browser (chrome, Internet Explorer, etc.).
 
 Because of this, it's not easy to navigate between pages, and it also provides a 'backward button' like a browser, so remember each routing pass.
 
 And you've seen, once you've gone back in your mobile app, you've seen animation like something's piled up and gone.
 
-React-native's library supporting this is 'react-navigation-stack'. However, the more deep the page is configured, the more you should be aware of the slowing that you're going to have when you're going back
+React Native's library supporting this is 'react-navigation-stack'. However, the more deep the page is configured, the more you should be aware of the slowing that you're going to have when you're going back
 
 In this chapter, we'll try installing the react-navigation-stack, and we'll give you a quick tutorial that you can use right away.
 
@@ -43,7 +43,7 @@ In this chapter, we'll try installing the react-navigation-stack, and we'll give
     brew tap AdoptOpenJDK/openjdk
     brew cask install adoptopenjdk8
 
-Turn the React-native server through Brew, known as Mac OS Package Manager, and install watchman to manage the yarn and node and React-native code to manage the library.
+Turn the React Native server through Brew, known as Mac OS Package Manager, and install watchman to manage the yarn and node and React Native code to manage the library.
 
 Under 'AdoptOpenJDK/openjdk' and 'Adoptenjdk8' install the Java environment for Android build.
 
@@ -51,11 +51,11 @@ You don't have to install the brew at this time, but if you install it manually,
 
     npm install -g react-native-cli
 
-Install 'react-native-cli', which is required when 'init' React-native project.
+Install 'react-native-cli', which is required when 'init' React Native project.
 
 Xcode is required for iOS build, so only MacOS users can download it from the App Store.
 
-Now we're all set to start React-native.
+Now we're all set to start React Native.
 
 Let's go to the desired folder and run the command below to make sure the project is created properly.
 
@@ -68,7 +68,7 @@ If the folder structure was created as above, it would be successful.
 Shall we run the simulator in the order below?
 
     # Root Path
-    > cd ios # Enter the iOS folder and install the React-native library on iOS.
+    > cd ios # Enter the iOS folder and install the React Native library on iOS.
     > pod install
     > cd .. # After you come back to the root folder,
     > yarn start # Server ON!
@@ -234,7 +234,7 @@ Let's install the libraries you need using the instructions below.
 
 What is the role of 'yarn add reality-native-guesture-handler' here?
 
-- Mobile requires the touch interface to be loaded in an React-native environment as all controls are touch-touch.
+- Mobile requires the touch interface to be loaded in an React Native environment as all controls are touch-touch.
 - Left click on the Web, right click, for example, click, scroll, zoom in and out.
 
 Let's install all the libraries and load them into our project via import.
