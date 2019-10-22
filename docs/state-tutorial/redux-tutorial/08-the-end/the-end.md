@@ -8,7 +8,7 @@ has_children: false
 ---
 
 # The end
-We've finally completed my example!
+We've finally completed Multiple Counter example!
 
 Personally, when I first learn Redux, I thought ' It's hard and so complicate thing and why i have to use Redux?'.
 

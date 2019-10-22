@@ -1,15 +1,15 @@
 ---
 layout: default
-title: 3. Let's Make Multi Counter
+title: 3. Let's Make Multiple Counter
 parent: Redux Tutorial
 grand_parent: State Management Tutorial
 nav_order: 3
 has_children: false
 ---
 
-# Let's Make Multi Counter
+# Let's Make Multiple Counter
 
- Let's look at `Redux` through the Multi Counter example, which has the function of `Add` and `Remove` which allows numbering to `increase` and `decrease` at each counter.
+ Let's look at `Redux` through the Multiple Counter example, which has the function of `Add` and `Remove` which allows numbering to `increase` and `decrease` at each counter.
  
  ![ex_screenshot](../images/lets_make_01.gif)
 
