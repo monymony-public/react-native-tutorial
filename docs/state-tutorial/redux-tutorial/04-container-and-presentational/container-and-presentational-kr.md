@@ -60,7 +60,7 @@ Presentational 컴포넌트에 props가 아닌 state가 있을 수 있고 Contai
 
 다음과 같은 계층적 구조로 설계해봅시다.
 
-![lets_make_02](../images/lets_make_02.png){:height="300px" width="280px"}
+![lets_make_02](../images/lets_make_02.png)
 
 app/components/App.js  
 ```
