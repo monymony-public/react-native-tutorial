@@ -8,23 +8,24 @@ nav_order: 1
 
 # Index
 
-* [1. React Native CLI Quickstart](#React-Native-CLI-Quickstart)
+ [1. React Native CLI Quickstart](#React-Native-CLI-Quickstart)
 
-* [2. Installing Dependencies](#Installing-dependencies)
+ [2. Installing Dependencies](#Installing-dependencies)
 
-* [3. Let's proceed next part!](#Let's-proceed-next-part!)
+ [3. Android development environment](#Android-development-environment)
 
-* [4. Source](#Source)
+ [4. Let's proceed next part!](#Let's-proceed-next-part!)
+
+ [5. Source](#Source)      
 
 
-
-
-
+<br>
+<Br>
 
 
 
 # Learn Additional Basic Functions Of React Native
-
+<Br>
 
 # React Native CLI Quickstart
 
@@ -34,11 +35,15 @@ __Development OS:__ Windows
 
 __Target OS:__ Android
 
+<br>
+
 ## Installing dependencies
 
 What you will need: __Node, Python2, JDK__
 
 (Make sure node 8.3 or newer, JDK is verson 8 or newer)
+
+<br>
 
 1. Installing Node and Python2 via [Chocolatatey](https://chocolatey.org/courses/installation/installing?method=installing-chocolatey) is recommended
 
@@ -53,6 +58,8 @@ What you will need: __Node, Python2, JDK__
             npm install -g react-native-cli
 
     ![install reactNativeCli](../images/reactNativeCliInstall.png)
+
+<br>
 
 ## Android development environment
 
@@ -200,6 +207,7 @@ You can skip this part if you are already familiar with android development envi
         
     ![ChangeLines](../images/changeLines.png)
 
+<br>
 
 # Let's proceed next part!
 
