@@ -31,7 +31,7 @@ RN은 모바일 앱의 형태이기 때문에 브라우저(크롬, 인터넷 익
 - react-native-cli : 2.0.1
 - react-navigation: 4.0.10
 
-### React-native 설치와 **React-native Navigation stack 설치**
+### React Native 설치와 **React Native Navigation stack 설치**
 
 > 아래 링크를 참조하여 함께 설치를 진행 해 봅시다.
 
@@ -43,7 +43,7 @@ RN은 모바일 앱의 형태이기 때문에 브라우저(크롬, 인터넷 익
     brew tap AdoptOpenJDK/openjdk
     brew cask install adoptopenjdk8
 
-Mac OS Package Manager로 알려 져 있는 Brew를 통해 React-native 서버를 돌리고 Library를 관리할 yarn과 node 그리고 React-native 코드를 관리 해 줄 watchman을 설치합니다.
+Mac OS Package Manager로 알려 져 있는 Brew를 통해 React Native 서버를 돌리고 Library를 관리할 yarn과 node 그리고 React Native 코드를 관리 해 줄 watchman을 설치합니다.
 
 아래 `AdoptOpenJDK/openjdk` 와 `adoptopenjdk8`는 Android 빌드를 위해 Java 환경이 필요하니 설치 해 줍니다.
 
@@ -51,11 +51,11 @@ Mac OS Package Manager로 알려 져 있는 Brew를 통해 React-native 서버�
 
     npm install -g react-native-cli
 
-React-native 프로젝트를 `init`할 때 필요한 `react-native-cli`도 설치를 진행합니다.
+React Native 프로젝트를 `init`할 때 필요한 `react-native-cli`도 설치를 진행합니다.
 
 iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들만 App Store에서 Xcode 를 다운 받아 주세요.
 
-자 이제 React-native 시작을 위한 모든 준비는 마쳤습니다.
+자 이제 React Native 시작을 위한 모든 준비는 마쳤습니다.
 
 원하는 폴더로 이동하여 아래 커맨드를 실행해 제대로 프로젝트가 생성하는지 확인 해 볼까요 ?
 
@@ -68,7 +68,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 아래 순서대로 실행하여 시뮬레이터를 띄워 볼까요 ?
 
     # Root Path
-    > cd ios # iOS 폴더로 들어가 React-native Library 들을 iOS 에 설치 해 줍니다.
+    > cd ios # iOS 폴더로 들어가 React Native Library 들을 iOS 에 설치 해 줍니다.
     > pod install
     > cd .. # 다시 루트 폴더로 온 후
     > yarn start # 서버 ON!
@@ -234,7 +234,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
 여기서 `yarn add react-native-gesture-handler`  의 역할은 무엇일까요 ?
 
-- 모바일은 모든 컨트롤이 터치로 이루어지기 때문에 React-native 환경에서 터치 인터페이스를 로드 해 주어야 합니다.
+- 모바일은 모든 컨트롤이 터치로 이루어지기 때문에 React Native 환경에서 터치 인터페이스를 로드 해 주어야 합니다.
 - 웹에서 왼쪽 클릭, 오른쪽 클릭처럼 예를 들어 클릭, 스크롤, 확대 · 축소 등이 있을 수 있겠죠.
 
 라이브러리를 모두 설치 한 뒤 import 를 통해 저희 프로젝트에 로드 해 봅시다.

@@ -81,7 +81,7 @@ Shall we run the simulator in the order below?
     │  Keep Metro running while developing on any JS projects. Feel free to        │
     │  close this tab and run your own Metro instance if you prefer.               │
     │                                                                              │
-    │  https://github.com/facebook/react-native                                    │
+    │  https://github.com/facebook/react-native
     │                                                                              │
     └──────────────────────────────────────────────────────────────────────────────┘
 
