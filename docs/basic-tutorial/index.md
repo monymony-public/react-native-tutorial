@@ -6,4 +6,4 @@ permalink: /docs/basic
 nav_order: 2
 ---
 
-# basic-tutorial
+# React Native Basic

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 1. 시작하기
+title: 1. MobX를 사용가능한 새로운 React Native프로젝트 생성 
 parent: MobX 튜토리얼
 grand_parent: State Management Tutorial(한글)
 nav_order: 1
@@ -49,7 +49,7 @@ npm install --save mobx
 npm install --save mobx-react // MobX 데코레이터를 사용할 수 있도록 해줌
 ```
 
-### For decorator ///
+### For decorator
 
 ```bash
 npm install --save-dev @babel/plugin-proposal-decorators

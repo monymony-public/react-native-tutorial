@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {StyleSheet, Image, Dimensions} from 'react-native';
-import API from '../lib/api';
 
 const {width, height} = Dimensions.get('window');
 

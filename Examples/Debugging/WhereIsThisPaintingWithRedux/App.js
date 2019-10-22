@@ -32,22 +32,25 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    paintingIds.map(id => {
-      API.get(`/objects/${id}`, {
-        params: {
-          results: 1,
-          inc: 'primaryImage,title,artistDisplayName,objectEndDate,repository',
-        },
-      })
-        .then(result => result.data)
-        .then(result => {
-          console.log('API call completed');
-          this.setState({info: [...this.state.info, result]});
-        });
+    Promise.all(
+      paintingIds.map(id => {
+        API.get(`/objects/${id}`, {
+          params: {
+            results: 1,
+            inc:
+              'primaryImage,title,artistDisplayName,objectEndDate,repository',
+          },
+        })
+          .then(result => result.data)
+          .then(result => {
+            this.setState({info: [...this.state.info, result]});
+          });
+      }),
+    ).then(() => {
+      setTimeout(() => {
+        this.props.toggle_loading();
+      }, 3000);
     });
-    setTimeout(() => {
-      this.props.toggle_loading();
-    }, 3000);
   }
   myCustomAnimationValue = new Animated.Value(0);
   render() {
