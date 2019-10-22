@@ -58,4 +58,4 @@ npm install --save redux react-redux
     - `Provider` 컴포넌트와 `connect`메서드를 제공하여 React + Redux 개발을 더욱 쉽게 해줍니다.
 
 
-지금부터 redux, react-redux 모듈을 사용해서 여러개의 카운터(Multi Counter)를 만드는 예제를 해보겠습니다.
+지금부터 redux, react-redux 모듈을 사용해서 여러개의 카운터(Multiple Counter)를 만드는 예제를 해보겠습니다.

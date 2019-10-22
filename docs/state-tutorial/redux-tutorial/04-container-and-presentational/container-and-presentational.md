@@ -321,7 +321,7 @@ export default CounterListContainer;
     ```
 
 
-1. **mapStateToProps**
+1. mapStateToProps
 
 	The data `state` inside the `store` managed all over the place is passed to the component as a `props` object.
 	 
@@ -334,7 +334,7 @@ export default CounterListContainer;
 	The state value to pass on to the presentational component has been placed in mapStateToProps.
 	We will now assign callback to `mapDispatchToProps`.
 	
-2. **mapDispatchToProps**
+2. mapDispatchToProps
 
 	Connect callback function and corresponding action to be dispatched and put in `mapDispatchToProps`.
 	```
@@ -350,7 +350,7 @@ export default CounterListContainer;
 	> A method that gives action values to stores that manage data globally and tells them how to change the state.  
 	> In other words, the method that receives the action value as a factor and is used to modify the state value.
 	
-3. **connect**
+3. connect
 
     Use `connect( )` to connect the state, callback to a presentational component and export the module as a `CounterListContainer`.
 	```

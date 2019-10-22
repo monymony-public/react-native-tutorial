@@ -323,7 +323,7 @@ export default CounterListContainer;
     ```
 
 
-1. **mapStateToProps**
+1. mapStateToProps
 
 	전역에서 관리되는 `store` 안의 데이터 `state` 를 `props` 객체로 component에게 전달해줍니다. 
 	여기서는 counter를 넘겨주는데, 전체 state 값을 가진 `state` 에서 counter를 가져오기 위해 `state.counter` 을 담아줍니다. 
@@ -336,7 +336,7 @@ export default CounterListContainer;
 	이제 presentational 컴포넌트에 넘겨줄 state 값을 mapStateToProps에 담았습니다.
 	다음은 `mapDispatchToProps` 에 callback을 담아주겠습니다.
 	
-2. **mapDispatchToProps**
+2. mapDispatchToProps
 
 	callback 함수와 그에 따른 action을 dispatch 하는 것을 연결하여 `mapDispatchToProps`에 담습니다.
 	```
@@ -352,7 +352,7 @@ export default CounterListContainer;
 	> 전역적으로 데이터를 관리하고 있는 store 에게 action 값을 넘겨주며 어떻게 state를 변화시켜야 할지 알려주는 메서드입니다.  
 	> 즉, action 값을 인자로 받으며 state 값을 수정할 때 사용되는 메서드입니다.
 	
-3. **connect**
+3. connect
 
     connect()() 를 사용하여 state, callback을 presentational 컴포넌트로 연결해주고 CounterListContainer로써 모듈을 export 합니다.
 	```
