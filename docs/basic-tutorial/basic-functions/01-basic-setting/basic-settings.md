@@ -6,6 +6,23 @@ grand_parent: basic
 nav_order: 1
 ---
 
+# Index
+
+* [1. React Native CLI Quickstart](#React-Native-CLI-Quickstart)
+
+* [2. Installing Dependencies](#Installing-dependencies)
+
+* [3. Let's proceed next part!](#Let's-proceed-next-part!)
+
+* [4. Source](#Source)
+
+
+
+
+
+
+
+
 # Learn Additional Basic Functions Of React Native
 
 
@@ -56,7 +73,7 @@ You can skip this part if you are already familiar with android development envi
    
     1. Click on `Configure`
    
-   2. Select `SDK Manager`
+    2. Select `SDK Manager`
 
     Or you can find the SDK Manager withing the "Preferences" dialog,
     under Apprearance & Behavior → System Settings → Android SDK
@@ -126,9 +143,9 @@ You can skip this part if you are already familiar with android development envi
 
         ![OpenFirstFolder](../images/openFirstFolder.png)
 
-       +You can see the list of available Android Virtual Devices(AVDs) by opening the "AVD Manager"
+       + You can see the list of available Android Virtual Devices(AVDs) by opening the "AVD Manager"
 
-        ![CreateAVD](../images/createAVD.png)
+            ![CreateAVD](../images/createAVD.png)
 
      
 
