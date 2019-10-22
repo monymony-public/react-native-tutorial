@@ -6,6 +6,21 @@ grand_parent: basic(한글)
 nav_order: 3
 ---
 
+# 목차
+
+ [1. 텍스트 입력창 만들기](#텍스트-입력창-만들기)
+
+ [2. Keyboard Avoiding View 만들기](#Keyboard-Avoiding-View-만들기)
+
+ [3. 터치 영역 확장시키기 ](#터치-영역-확장시키기)
+
+ [4. 다른 챕터 공부하기](#다른-챕터-공부하기)
+
+ [5. 출처](#출처)
+
+
+<br>
+
 
 # 텍스트 입력창 만들기
 
@@ -69,6 +84,7 @@ nav_order: 3
       ![keyboardview.gif](../images/keyboardview.gif)
 
 
+<br>
 
 # 터치 영역 확장시키기 
 
@@ -89,12 +105,14 @@ nav_order: 3
         paddingTop: 20 + Constants.statusBarHeight,
   
   
+  <br>
 
   ## 소스코드 실행시키는 법(직접 작성해보는 경우)
 
         react-native run-android
 
   혹은
+
 
   ## 예제 프로젝트 실행시키는 법
             
@@ -104,14 +122,15 @@ nav_order: 3
   ![hitslopdemo](../images/hitslopdemo.gif)
 
 
-
-
+<br>
 
  # 다른 챕터 공부하기
 
 - [Basic Settings to start react-native Project 리액트 네이티브 프로젝트 시작 환경 셋팅하기  ](../01-basic-setting/basic-setting-kr.md)
 - [Debugging 디버깅](../02-debugging/debugging-kr.md)
  
+ <br>
+
  # 출처
 
  [리액트 네이티브 공식 페이지](https://facebook.github.io/react-native/docs/improvingux)
