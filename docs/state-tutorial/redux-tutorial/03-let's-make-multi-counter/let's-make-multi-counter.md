@@ -7,14 +7,14 @@ nav_order: 3
 has_children: false
 ---
 
-## Let's Make Multi Counter
+# Let's Make Multi Counter
 
  Let's look at `Redux` through the Multi Counter example, which has the function of `Add` and `Remove` which allows numbering to `increase` and `decrease` at each counter.
  
  ![ex_screenshot](../images/lets_make_01.gif)
 
 
-### Directory structure
+## Directory structure
 ```
 ㄴ /app
   ㄴ /actions
@@ -32,29 +32,10 @@ has_children: false
 index.js
 ```
 
-### `state` and `callback function`
-
- - State 
-    ```
-    const initialState = {
-        counter : [
-            {
-                counterNum : 0,
-            },
-        ],
-    };
-    ```
- - Callback
-    - `handleIncrement`
-    - `handleDecrement`
-    - `handleAddCounter`
-    - `handleRemoveCounter`    
-
-
-### Design  
+## Design  
 - `App.js`  
-     > - Define the `Store`
-     > - By connecting the top-level(root) component `App` with the data store `Store`.
+    - Define the `Store`
+    - By connecting the top-level(root) component `App` with the data store `Store`.
          You can share the global data managed by `Store`.
       
 - `/actions`  
@@ -68,13 +49,25 @@ index.js
   
 - `/components`  
      > Responsible for DOM markup and style 
-     
-     It has the following pedantic structures:  
-     ![ex_screenshot](../images/lets_make_02.png)  
-  
+      
 - `/containers`  
      > Components that link `Redux` to the `presentational component`
     
 - `/reducers`  
      > Define the change of data according to `Action` type as a pure function
 
+## State and Callback function
+
+ - State 
+    ```
+    counter : [
+        {
+            counterNum : 0
+        },
+    ]
+    ```
+ - Callback
+    - `handleIncrement`
+    - `handleDecrement`
+    - `handleAddCounter`
+    - `handleRemoveCounter` 
