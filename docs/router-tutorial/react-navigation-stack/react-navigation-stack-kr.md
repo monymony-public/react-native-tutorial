@@ -7,7 +7,7 @@ has_children: false
 
 # **React Navigation**
 
-React Native(이하 'RN') 관련 라이브러리 중 스크린간 이동을 도와주는 라이브러리인 React Navigation 을 소개합니다.
+React Native 관련 라이브러리 중 스크린간 이동을 도와주는 라이브러리인 React Navigation 을 소개합니다.
 
 ## **react-navigation-stack**
 
@@ -31,7 +31,7 @@ RN은 모바일 앱의 형태이기 때문에 브라우저(크롬, 인터넷 익
 - react-native-cli : 2.0.1
 - react-navigation: 4.0.10
 
-### RN 설치와 **RN Navigation stack 설치**
+### React Native 설치와 **React Native Navigation stack 설치**
 
 > 아래 링크를 참조하여 함께 설치를 진행 해 봅시다.
 
@@ -43,7 +43,7 @@ RN은 모바일 앱의 형태이기 때문에 브라우저(크롬, 인터넷 익
     brew tap AdoptOpenJDK/openjdk
     brew cask install adoptopenjdk8
 
-Mac OS Package Manager로 알려 져 있는 Brew를 통해 RN 서버를 돌리고 Library를 관리할 yarn과 node 그리고 RN 코드를 관리 해 줄 watchman을 설치합니다.
+Mac OS Package Manager로 알려 져 있는 Brew를 통해 React Native 서버를 돌리고 Library를 관리할 yarn과 node 그리고 React Native 코드를 관리 해 줄 watchman을 설치합니다.
 
 아래 `AdoptOpenJDK/openjdk` 와 `adoptopenjdk8`는 Android 빌드를 위해 Java 환경이 필요하니 설치 해 줍니다.
 
@@ -51,13 +51,13 @@ Mac OS Package Manager로 알려 져 있는 Brew를 통해 RN 서버를 돌리�
 
     npm install -g react-native-cli
 
-RN 프로젝트를 `init`할 때 필요한 `react-native-cli`도 설치를 진행합니다.
+React Native 프로젝트를 `init`할 때 필요한 `react-native-cli`도 설치를 진행합니다.
 
 iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들만 App Store에서 Xcode 를 다운 받아 주세요.
 
-자 이제 RN 시작을 위한 모든 준비는 마쳤습니다.
+자 이제 React Native 시작을 위한 모든 준비는 마쳤습니다.
 
-원하는 폴더로 이동하여아래 커맨드를 실행해 제대로 프로젝트가 생성하는지 확인 해 볼까요 ?
+원하는 폴더로 이동하여 아래 커맨드를 실행해 제대로 프로젝트가 생성하는지 확인 해 볼까요 ?
 
     react-native init rnTutorial
 
@@ -68,7 +68,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 아래 순서대로 실행하여 시뮬레이터를 띄워 볼까요 ?
 
     # Root Path
-    > cd ios # iOS 폴더로 들어가 React-natie Library 들을 iOS 에 설치 해 줍니다.
+    > cd ios # iOS 폴더로 들어가 React Native Library 들을 iOS 에 설치 해 줍니다.
     > pod install
     > cd .. # 다시 루트 폴더로 온 후
     > yarn start # 서버 ON!
@@ -123,7 +123,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
 - StackNavigationConfig
 
-    RouteConfig가 각 길을 안내 해 줬다면 전체 길에 대한 안내를 담당합니다.
+    RouteConfig가 각 길을 안내 해 줬다면 StackNavigationConfig는 전체 길에 대한 안내를 담당합니다.
 
     길을 Modal로 띄울지 Screen으로 띄울지, 아무것도 모르고 온 사람에게 어딜 제일 처음 안내 할 지 같은 설정을 담당합니다.
 
@@ -137,7 +137,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
 위 내용을 참고하여 아래 예제를 직접 따라 쳐 보며 익혀 봅시다.
 
-이번 예제에서는 `Home` , `Chatting`, `Settings` 를 사용하여 대화할 수 있는 앱을 만들어 보겠습니다.
+이번 예제에서는 `Home` , `Chatting`, `Settings` 를 사용하여 스크린을 이동하는 앱을 만들어 보겠습니다.
 
 ### **CreateStackNavigator 로 기본 틀 잡기**
 
@@ -234,7 +234,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
 여기서 `yarn add react-native-gesture-handler`  의 역할은 무엇일까요 ?
 
-- 모바일은 모든 컨트롤이 터치로 이루어지기 때문에 RN 환경에서 터치 인터페이스를 로드 해 주어야 합니다.
+- 모바일은 모든 컨트롤이 터치로 이루어지기 때문에 React Native 환경에서 터치 인터페이스를 로드 해 주어야 합니다.
 - 웹에서 왼쪽 클릭, 오른쪽 클릭처럼 예를 들어 클릭, 스크롤, 확대 · 축소 등이 있을 수 있겠죠.
 
 라이브러리를 모두 설치 한 뒤 import 를 통해 저희 프로젝트에 로드 해 봅시다.
