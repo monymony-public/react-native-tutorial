@@ -1,10 +1,33 @@
 ---
 layout: default
-title: 2. debugging
-parent: basic-functions
-grand_parent: basic
+title: 2. 디버깅
+parent: 기본 기능 배우기
+grand_parent: basic(한글)
 nav_order: 2
 ---
+
+# 목차
+
+ [1. 키보드 단축키 사용 설정](#키보드-단축키-사용-설정)
+
+ [2. 어플 개발 메뉴(In-App) 접근법](#어플-개발-메뉴(In-App)-접근법)
+
+ [3. 리액트 개발 툴 React Developer Tools](#리액트-개발-툴-React-Developer-Tools)
+
+ [4. React Native Inspector와 통합 사용법](#React-Native-Inspector와-통합-사용법)
+
+ [5. 컴포넌트 인스턴스 살펴보기](#컴포넌트-인스턴스-살펴보기)
+
+ [6. 크롬 개발 툴](#크롬-개발-툴)
+
+ [7. 사파리 개발 툴](#사파리-개발-툴)
+
+ [8. 어플 내 (In-app) 에러와 경고](#어플-내-(In-app)-에러와-경고)
+
+ [9. 다른 챕터](#다른-챕터)
+
+ [10. 출처](#출처)
+
 
 
 # 디버깅
@@ -167,7 +190,7 @@ Devtools에 관련 컴포넌트가 표시된다.
 
  1. 디버깅 시에 소스맵이 없다.
  2. 어플이 로드될 때마다(라이브 리로드이든, 수동적인 리로드던지 간에) 새로운 JS Context가 만들어진다.
- 3. `Automatically Show Web Inspectors for JSContext`를 선택하면 최신의 JSContext를 수동적으로 선택하지 않아도 된다.
+ 3. `Automatically Show Web Inspectors for JSContext`를 선택하면 최신의 JSContext를 수동으로 선택하지 않아도 된다.
  
 
 
@@ -180,7 +203,7 @@ Devtools에 관련 컴포넌트가 표시된다.
 
 어플 내 에러표시는 어플 배경에 빨간 색 전체 화면으로 표시된다. (레드박스)
 
-    `console.error()`를 사용해서 수동적으로 생기게 할 수 있다.
+    `console.error()`를 사용해서 수동적으로 만들 수 있다.
 
 
 ## 경고 표시
@@ -196,7 +219,7 @@ Devtools에 관련 컴포넌트가 표시된다.
  
     `console.disableYellowBox=true;` 
 
-+ 특정 경고표시들은 다음과 같이 프로그램적으로 무시시킬 수 있다.
++ 특정 경고표시들은 다음과 같이 프로그램적으로 무시할 수 있다.
 
     ``` 
     import {YellowBox} from `react-native`;
@@ -205,12 +228,12 @@ Devtools에 관련 컴포넌트가 표시된다.
 
 + CI/Xcode
 
-    옐로우 박스는 `IS_TESTING` 환경 변수를 설정해서 설정해제 시킬 수 있다.
+    옐로우 박스는 `IS_TESTING` 환경 변수를 설정해서 설정해제 할 수 있다.
 
- 레드박스와 옐로우 박스는 릴리즈 빌드 버전에서는 자동적으로 무시시킬 수 있다.
+ 레드박스와 옐로우 박스는 릴리즈 빌드 버전에서는 자동적으로 무시할 수 있다.
 
 
- # 다른 챕터 보기
+# 다른 챕터 
 
 - [리액트 네이티브 프로젝트 시작 환경 세팅하기](../01-basic-setting/basic-settings-kr.md)
 - [사용자 인터페이스 향상시키기](../03-improve-user-interface/improve-user-interface-kr.md)

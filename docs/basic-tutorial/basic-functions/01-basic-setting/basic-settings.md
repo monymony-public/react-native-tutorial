@@ -6,8 +6,26 @@ grand_parent: basic
 nav_order: 1
 ---
 
-# Learn Additional Basic Functions Of React Native
+# Index
 
+ [1. React Native CLI Quickstart](#React-Native-CLI-Quickstart)
+
+ [2. Installing Dependencies](#Installing-dependencies)
+
+ [3. Android development environment](#Android-development-environment)
+
+ [4. Let's proceed next part!](#Let's-proceed-next-part!)
+
+ [5. Source](#Source)      
+
+
+<br>
+<Br>
+
+
+
+# Learn Additional Basic Functions Of React Native
+<Br>
 
 # React Native CLI Quickstart
 
@@ -17,11 +35,15 @@ __Development OS:__ Windows
 
 __Target OS:__ Android
 
+<br>
+
 ## Installing dependencies
 
 What you will need: __Node, Python2, JDK__
 
 (Make sure node 8.3 or newer, JDK is verson 8 or newer)
+
+<br>
 
 1. Installing Node and Python2 via [Chocolatatey](https://chocolatey.org/courses/installation/installing?method=installing-chocolatey) is recommended
 
@@ -36,6 +58,8 @@ What you will need: __Node, Python2, JDK__
             npm install -g react-native-cli
 
     ![install reactNativeCli](../images/reactNativeCliInstall.png)
+
+<br>
 
 ## Android development environment
 
@@ -56,7 +80,7 @@ You can skip this part if you are already familiar with android development envi
    
     1. Click on `Configure`
    
-   2. Select `SDK Manager`
+    2. Select `SDK Manager`
 
     Or you can find the SDK Manager withing the "Preferences" dialog,
     under Apprearance & Behavior → System Settings → Android SDK
@@ -126,9 +150,9 @@ You can skip this part if you are already familiar with android development envi
 
         ![OpenFirstFolder](../images/openFirstFolder.png)
 
-       +You can see the list of available Android Virtual Devices(AVDs) by opening the "AVD Manager"
+       + You can see the list of available Android Virtual Devices(AVDs) by opening the "AVD Manager"
 
-        ![CreateAVD](../images/createAVD.png)
+            ![CreateAVD](../images/createAVD.png)
 
      
 
@@ -183,6 +207,7 @@ You can skip this part if you are already familiar with android development envi
         
     ![ChangeLines](../images/changeLines.png)
 
+<br>
 
 # Let's proceed next part!
 

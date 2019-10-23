@@ -10,14 +10,14 @@ has_children: false
 
 # Getting Started
 
-### react-native install
+## react-native install
 ```
 $ npm install -g react-native-cli
 ```
 [See detailed installation of counter-native and Xcode and Android Studio](https://yuddomack.tistory.com/entry/1React-Native-%EC%84%A4%EC%B9%98%EC%99%80-%EC%8B%A4%ED%96%89hello-world)
 
 
-### 1. Get started new project
+## 1. Get started new project
 
 ### Create new project
 ```
@@ -44,7 +44,7 @@ $ cd Examples/StateManagement/redux_tutorial
 $ npm install
 $ react-native run-ios
 ```
-##### If the following build error occurs when running-ios:
+### If the following build error occurs when running-ios:
 
 
 ```

@@ -16,6 +16,7 @@ Redux는 프레임워크에 상관없이 사용할 수 있는 라이브러리이
 
 
 
+
 ## Redux, Redux-react 패키지 설치
 
 터미널에서 프로젝트 경로로 이동하여 redux, redux-react 패키지를 실행합니다.

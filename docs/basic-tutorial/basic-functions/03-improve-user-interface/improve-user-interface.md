@@ -6,6 +6,19 @@ grand_parent: basic
 nav_order: 3
 ---
 
+# Index
+
+ [1. Make Your Text Input](#Make-Your-Text-Input)
+
+ [2. Make *Keyboard Avoiding View*](#Make-*Keyboard-Avoiding-View*)
+
+ [3. Make tappable areas larger](#Make-tappable-areas-larger)
+
+ [4. Go To Other Chapters](#Go-To-Other-Chapters)
+
+ [5. source](#source)
+
+<br>
 
 # Make Your Text Input 
 
@@ -38,6 +51,7 @@ nav_order: 3
 
       ![reloadTextInput](../images/reloadTextInput.png)
 
+<br>
 
 # Make *Keyboard Avoiding View*
 
@@ -69,6 +83,7 @@ nav_order: 3
       ![keyboardview.gif](../images/keyboardview.gif)
 
 
+<br>
 
 # Make tappable areas larger
 
@@ -104,12 +119,14 @@ It's very hard to be very precise when pressing buttons.
 
 
 
-
+<br>
 
  # Go To Other Chapters
 
 - [Basic Settings to start react-native Project](../01-basic-setting/basic-setting.md)
 - [Debigging](../02-debugging/debugging.md)
+ 
+ <br>
  
  # source
 
