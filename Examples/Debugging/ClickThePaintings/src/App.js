@@ -1,30 +1,17 @@
-import React, {useState} from 'react';
-import {NativeRouter, Route} from 'react-router-native';
+import React from 'react';
 import TopBar from '@/components/TopBar';
 import DetailView from '@/components/DetailView';
 import ListView from '@/components/ListView';
 import {StyleSheet, ScrollView} from 'react-native';
+import {NativeRouter, Route} from 'react-router-native';
 
 const App = () => {
-  const [isDetail, setIsDetail] = useState(false);
-  const detailRoute = bool => {
-    setIsDetail(bool);
-  };
   return (
     <NativeRouter>
       <ScrollView style={styles.container}>
-        {isDetail ? <TopBar topStr="Painting Detail" /> : <TopBar />}
-        <Route
-          path="/"
-          exact
-          render={() => <ListView detailRoute={detailRoute} />}
-        />
-        <Route
-          path="/detail/:id"
-          component={({nativeHistory}) => (
-            <DetailView detailRoute={detailRoute} history={nativeHistory} />
-          )}
-        />
+        <TopBar />
+        <Route path="/" exact component={ListView} />
+        <Route path="/detail/:id" component={DetailView} />
       </ScrollView>
     </NativeRouter>
   );

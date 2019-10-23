@@ -4,9 +4,8 @@ import {withRouter} from 'react-router-native';
 import {data} from '../data';
 
 const deviceWidth = Dimensions.get('window').width;
-const DetailView = ({match, history, detailRoute}) => {
+const DetailView = ({match, history}) => {
   const handleBack = () => {
-    detailRoute(false);
     history.goBack();
   };
   const id = match.params.id;
