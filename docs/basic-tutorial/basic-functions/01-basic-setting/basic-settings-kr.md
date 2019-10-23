@@ -7,7 +7,26 @@ nav_order: 1
 
 ---
 
+# 목차
+
+ [1. Dependencies 설치하기](#필요-Dependencies-설치하기)
+
+ [2. 안드로이드 개발 환경](#안드로이드-개발-환경)
+
+ [3. 다른 챕터 공부하기](#다른-챕터-공부하기)
+
+ [4. 출처](#출처)
+    
+
+
+<br>
+<br>
+
+
+
 # 리액트 네이티브의 추가적인 기본 기능 배우기 
+
+<Br>
 
 # React Native CLI 빠르게 시작하기 
 
@@ -18,6 +37,8 @@ nav_order: 1
 __개발 OS:__ 윈도우
 
 __목적 OS:__ 안드로이드
+
+<br>
 
 ## 필요 Dependencies 설치하기 
 
@@ -39,6 +60,8 @@ __목적 OS:__ 안드로이드
             npm install -g react-native-cli
 
     ![install reactNativeCli](../images/reactNativeCliInstall.png)
+
+<br>
 
 ## 안드로이드 개발 환경 
 
@@ -131,7 +154,8 @@ __목적 OS:__ 안드로이드
         ![OpenFirstFolder](../images/openFirstFolder.png)
 
        + "AVD Manager"을 열어서 사용가능한 안드로이드 가상 디바이스(AVD)의 목록을 확인할 수 있습니다.
-        ![CreateAVD](../images/createAVD.png)
+
+            ![CreateAVD](../images/createAVD.png)
 
      
        안드로이드 스튜디오를 막 설치했다면, 새로운 AVD를 만들어야 할수도 있습니다.
@@ -186,11 +210,12 @@ __목적 OS:__ 안드로이드
         
     ![ChangeLines](../images/changeLines.png)
 
+<br>
 
-# 다음 장으로 넘어가세요
+# 다른 챕터 공부하기
 
 - [디버깅 시작하기](../02-debugging/debugging-kr.md)
 - [사용자 환경 UI 개선하기](../03-improve-user-interface/improve-user-interface-kr.md)
 
-# Source
+# 출처
 [React Native 공식 페이지](https://facebook.github.io/react-native/docs/getting-started)
