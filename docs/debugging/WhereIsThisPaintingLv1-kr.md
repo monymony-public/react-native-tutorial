@@ -648,7 +648,7 @@ export default PaintingInfo;
 
 그런데 그 사실 알고 계시나요? 박물관 중에는 명화에 관한 정보를 알려주는 API를 제공하는 곳들이 있습니다. 이번에는 저희가 직접 입력한 정보가 아니라, 실제 API를 이용해서 명화들의 정보를 받아오고, 그 정보를 보여주겠습니다. 사용할 API는 메트로폴리탄 박물관의 API입니다. 주소는 아래와 같습니다.
 
-https://metmuseum.github.io/
+[https://metmuseum.github.io/](https://metmuseum.github.io/)
 
 위의 문서를 보시는게 익숙하지 않은 분도 계시겠죠? 저희가 사용할 API는
 
@@ -660,11 +660,11 @@ https://metmuseum.github.io/
 
 문자열로 돌아오는 결과를 좀 더 알아보기 쉽게 하기 위해 `JSONView`라는 크롬 확장프로그램을 설치해주세요.
 
-https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en
+[https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en)
 
 이제 아래 주소를 주소창에 입력해보세요
 
-https://collectionapi.metmuseum.org/public/collection/v1/objects/436535
+[https://collectionapi.metmuseum.org/public/collection/v1/objects/436535](https://collectionapi.metmuseum.org/public/collection/v1/objects/436535)
 
 아래 이미지와 같은 결과가 나오나요?
 
