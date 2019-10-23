@@ -15,7 +15,7 @@ On the Formulas page, define Redux as follows:
  
 ## React vs React + Redux
 
-#### React
+### React
  > A structure that manages everything and lowers data from the parent component App.
 
  ![ex_screenshot](../images/what_is_redux_01.png)
@@ -25,20 +25,38 @@ On the Formulas page, define Redux as follows:
         
       As shown above, if you think about passing it from the highest top component to the lowest Child Component as `props`, you can think of complexity.
    
-#### React + Redux
+### React + Redux
   >- `Redux` makes global `Store` that is located at the top of application and supplies `State` to all other components.
   >- `Store` is the place where data is managed all over the country and `Reducer`, which is a pure function that changes data values according to `Action`, is defined. 
    
   ![ex_screenshot](../images/What_is_redux_02.png)
  
 
-   
- 
-
 ## Three Principles
-#### 1. 진실은 하나의 소스로부터
-   redux는 한 곳에서 데이터를 전역적으로 관리하며, 이를 관리하는 곳을 `Store` 라고 부른다.
-	
-#### 2. State는 읽기 전용이다. 
+1. **Single source of truth**
 
-#### 3. 변화는 순수 함수로 작성되어야 한다
+   > Redux manages data globally from one location, and it is called `Store` where it is managed.
+	
+2. **State is read-only**
+
+   > If you want to change the status, you need to create a new state and update the status you want to change without reallocating value of origin state. In other words, you must maintain the immutability of state .
+
+3. **Changes are made with pure functions**
+
+   > If you have the same input value, it should be written as a pure function that must have the same output value.
+   
+
+## Install redux, react-redux
+Enter the following in the project terminal to install the module package.
+```
+npm install --save redux react-redux
+```
+ - **redux**
+  
+    > Status container for Javascript apps
+    
+ - **react-redux**
+    
+    > It provides `Provider` component and `connect` method to make it easier to develop `React + Redux`.
+
+From now on, let's use the redux, react-redux modules to create Multiple Counters.

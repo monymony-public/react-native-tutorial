@@ -7,12 +7,41 @@ nav_order: 2
 ---
 
 
+# Index
+
+ [1. Enabling keyboard shortcuts](#Enabling-keyboard-shortcuts)
+
+ [2. Accessing the In-App Developer Menu](#Accessing-the-In-App-Developer-Menu)
+
+ [3. React Developer Tools](#React-Developer-Tools)
+
+ [4. Integration with React Native Inspector](#Integration-with-React-Native-Inspector)
+
+ [5. Inspecting Component Instances](#Inspecting-Component-Instances)
+
+ [6. Chrome Developer Tools (To Debug)](#Chrome-Developer-Tools)
+
+ [7. Safari Developer Tools](#Safari-Developer-Tools)
+
+ [8. In-app Errors and Warnings](#In-app-Errors-and-Warnings)
+
+ [9. Go To Other Chapters](#Go-To-Other-Chapters)
+
+ [10. Source](#Source)
+
+<br>
+<br>
+
 # Debugging
+
+<Br>
 
 ## Enabling keyboard shortcuts 
 
 + ios (Requirement)
     + Open Hardware menu, select Keyboard, and make sure that "Connect Hardware Keyboard" is checked
+
+<Br>
 
 ## Accessing the In-App Developer Menu
 
@@ -44,7 +73,7 @@ nav_order: 2
     ![debuggerui](../images/debuggerui.png)
 
 
-
+<br>
 
 # React Developer Tools
 
@@ -73,6 +102,8 @@ Added *"devtools": react-devtools* to package.json file
 
 ![rundevtools](../images/rundevtools.png)
 
+<br>
+
 # Integration with React Native Inspector
 
 1. Open the in-app developer menu and choose "Toggle Inspector" again
@@ -88,6 +119,7 @@ When I choose Text contents, it shows:
 When I choose *Welcome to React*, it shows: 
 ![integration2](../images/integration2.png)
 
+<Br>
 
 # Inspecting Component Instances
 
@@ -117,6 +149,7 @@ You can inspect the props and state of the React components in the browser conso
 
 
 
+<br>
 
 
 # Chrome Developer Tools (To Debug)
@@ -141,7 +174,7 @@ You can inspect the props and state of the React components in the browser conso
 
 + Step further [Pause On Caught Exceptions](https://stackoverflow.com/questions/2233339/javascript-is-there-a-way-to-get-chrome-to-break-on-all-errors/17324511#17324511)
 
-
+<br>
 
 # Safari Developer Tools
 
@@ -151,6 +184,8 @@ You can inspect the props and state of the React components in the browser conso
  + Select JS Context: `Develop → Simulator → JSContext` 
  + Safari's Web Inspector should be opened which has a Console and a Debugger 
 
+<br>
+
  ### Disadvantages
 
  1. No sourcemaps when debugging
@@ -158,16 +193,21 @@ You can inspect the props and state of the React components in the browser conso
  3. Choosing `Automatically Show Web Inspectors for JSContext` saves you from having to select the latest JSContext manually.
 
 
+<br>
 
 # In-app Errors and Warnings
 
 Errors and warning are displayed inside your app in development builds
+
+<br>
 
 ## Errors
 
 In-app erros are displayed in a full screen alert with a red back inside your app (known as a Red Box)
 
 You can use `console.error()` to manually trigger one.
+
+<br>
 
 ## Warnings
 
@@ -193,10 +233,14 @@ You can use `console.warn()` to trigger a YellowBox
 
  RedBoxes and YellowBoxes are automatically disabled in release (production) builds
 
+<br>
+
  # Go To Other Chapters
 
 - [Basic Settings to start react-native Project](../01-basic-setting/basic-settings.md)
 - [Improve-user-interface](../03-improve-user-interface/improve-user-interface.md)
+
+<br>
 
 # Source
 
