@@ -1,9 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {withRouter} from 'react-router-native';
 
-const TopBar = ({topStr = 'Click the paintings!'}) => (
+const TopBar = ({location}) => (
   <View style={styles.container}>
-    <Text style={styles.text}>{topStr}</Text>
+    <Text style={styles.text}>
+      {location.pathname === '/' ? 'Click the Paintings!' : 'Painting Detail'}
+    </Text>
   </View>
 );
 
@@ -24,4 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TopBar;
+export default withRouter(TopBar);

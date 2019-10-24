@@ -11,13 +11,10 @@ import {data} from '@/data';
 
 const deviceWidth = Dimensions.get('window').width;
 
-const ListView = ({detailRoute}) => {
-  const handleImgClick = () => {
-    detailRoute(true);
-  };
+const ListView = () => {
   const imgList = data.map(item => (
     <TouchableOpacity style={styles.row} key={item.id} activeOpacity={0.75}>
-      <Link to={`/detail/${item.id}`} onPress={handleImgClick}>
+      <Link to={`/detail/${item.id}`}>
         <Image
           key={item.id}
           source={item.imgSrc}
