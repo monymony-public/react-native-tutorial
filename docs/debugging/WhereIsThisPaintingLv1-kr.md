@@ -3,6 +3,7 @@ layout: default
 title: Level 1. State + Props
 has_children: false
 parent: WhereIsThisPainting 디버깅 튜토리얼
+grand_parent: Debugging (한글)
 nav_order: 1
 ---
 
