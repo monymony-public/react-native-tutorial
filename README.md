@@ -20,13 +20,12 @@ Facebook에서 공개한 React Native는 React의 방식을 이용하여 모바�
 
 ---------
 
-React Native, unveiled on Facebook, is a great framework for creating mobile applications iOS and Android at the same time using React.
+React Native created by Facebook is a great framework for building mobile applications for iOS and Android using React.
 
-This tutorial covers the essential concepts of React Native, 'Basic', 'Debugging', 'React Navigation' and 'State Management', and each chapter is organized with an example so that beginners can easily follow easily.
+This tutorial covers the essential concepts of React Native, `Basic`, `Debugging`, `React Navigation`, `State Management`, and each chapter consists of easy-to-follow examples for beginners.
 
-You can say, "I know the real thing, but I'm not sure." Or, "I don't know the real thing at all."
-Through this tutorial that we focus on the basics of real native, solve some vague questions like "What is Real Native?" and "How can you develop it with iOS and Android apps with Javascript?"
+If you are new to React Native, that's fine. This is a beginner-friendly tutorial so you can understand how React Native works and how it can build iOS and Android apps using Javascript.
 
-This document is all published as an open source to respond to the fast-changing React Native framework. If you find issues such as bugs, misspellings, and changes, please leave [Issue](https://github.com/JeffGuKang/react-native-tutorial/issues) and [Contribution](./Contribution.html).
+This document is all published as an open source to respond to the fast evolving React Native framework. We are grateful to the community for contributing bugfixes and improvements. You can take part in improving React Native Tutorial. Please read our [Contributing Guide](./contribution.html) and leave [Issue](https://github.com/JeffGuKang/react-native-tutorial/issues) for this project.
 
 
