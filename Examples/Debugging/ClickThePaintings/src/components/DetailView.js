@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, Button, Image, Dimensions} from 'react-native';
-import {data} from '../data';
+import {data} from '@/data';
 
 const deviceWidth = Dimensions.get('window').width;
 const DetailView = ({match, history}) => {

@@ -3,6 +3,7 @@ layout: default
 title: iOS Debugging
 has_children: false
 parent: Official documents
+grand_parent: Debugging
 nav_order: 2
 ---
 

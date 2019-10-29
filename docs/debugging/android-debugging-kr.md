@@ -3,6 +3,7 @@ layout: default
 title: Android 디버깅 (한글)
 has_children: false
 parent: Official documents (한글)
+grand_parent: Debugging (한글)
 nav_order: 1
 ---
 
