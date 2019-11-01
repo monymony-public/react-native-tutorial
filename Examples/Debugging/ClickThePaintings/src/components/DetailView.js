@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, Button, Image, Dimensions} from 'react-native';
-import {withRouter} from 'react-router-native';
-import {data} from '../data';
+import {data} from '@/data';
 
 const deviceWidth = Dimensions.get('window').width;
 const DetailView = ({match, history}) => {
@@ -56,4 +55,4 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
 });
-export default withRouter(DetailView);
+export default DetailView;
