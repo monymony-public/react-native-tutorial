@@ -7,6 +7,8 @@ permalink: /
 
 # React Native Tutorial
 
+Docs: https://jeffgukang.github.io/react-native-tutorial/
+
 ---------
 
 Facebook에서 공개한 React Native는 React의 방식을 이용하여 모바일 어플리케이션인 iOS와 Android를 동시에 만들 수 있는 멋진 프레임워크입니다.
