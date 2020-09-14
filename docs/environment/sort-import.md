@@ -8,7 +8,7 @@ has_children: false
 
 # Sort import
 
-![sort-import1](../images/sort-import1.gif)
+![sort-import1](./images/sort-import1.gif)
 
 Easiest way to use automatic sort import is using VSCode extension called `sort-imports`. [dooboolab blog](https://medium.com/dooboolab/using-eslint-prettier-and-sort-imports-vscode-extensions-for-formatting-open-source-project-16edf317129d)
 But we need to use sort import with ESlint customizable and fit to co-working with git. 
