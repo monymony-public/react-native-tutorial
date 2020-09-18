@@ -10,15 +10,15 @@ has_children: false
 
 Related issue: https://github.com/facebook/react-native/issues/29279
 
-It fixed and merged to react native latest version. If you are using under 0.63 versions, it can be help to fix the issue. 
+This issue is fixed and merged to react native latest version. But if you want to fix your project now or you are using under 0.63 versions, here is the solution. 
 
 ## Make Patch
 
-We will use the [patch-package](https://github.com/ds300/patch-package). 
+We will use the [patch-package](https://github.com/ds300/patch-package) to make and apply patch. 
 
 > patch-package lets app authors instantly make and keep fixes to npm dependencies. It's a vital band-aid for those of us living on the bleeding edge.
 
-### Patch React Native
+### Patch React Native Code
 
 #### 1. Open the file from `node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m`
 #### 2. Edit source
