@@ -1,6 +1,6 @@
 title: "React Native Tutorial"
-# remote_theme: pmarsceill/just-the-docs
-theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
+# theme: just-the-docs
 # Enable or disable the site search
 # Support true (default) or false
 search_enabled: true
