@@ -54,11 +54,20 @@ To
 
 ```
 
-#### 3. Make patch with `npx patch-package react-native`
+#### 3. Make patch
 
-#### 4. Track patch files like `patches/react-native+0.61.5.patch` to the git 
+`npx patch-package react-native`
+
+#### 4. Make patch files tracked for git
+
+`git add patches/*`
+
+Example patch files: `patches/react-native+0.61.5.patch` 
+
 
 #### 5. Add package script for auto applying patches
+
+package.json
 
 ```json
 "scripts": {
