@@ -20,8 +20,8 @@ We will use the [patch-package](https://github.com/ds300/patch-package).
 
 ### Patch React Native
 
-1. Open the file from `node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m`
-2. Edit source
+#### 1. Open the file from `node_modules/react-native/Libraries/Image/RCTUIImageViewAnimated.m`
+#### 2. Edit source
 
 From
 
@@ -54,9 +54,11 @@ To
 
 ```
 
-3. Make patch with `npx patch-package react-native`
-4. Track patch files like `patches/react-native+0.61.5.patch` to the git 
-5. Add package script for auto applying patches
+#### 3. Make patch with `npx patch-package react-native`
+
+#### 4. Track patch files like `patches/react-native+0.61.5.patch` to the git 
+
+#### 5. Add package script for auto applying patches
 
 ```json
 "scripts": {
