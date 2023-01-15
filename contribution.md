@@ -29,19 +29,10 @@ Clone or copy the repository from [React Native Tutorial](https://github.com/jef
 
 ### Jekyll Webpage
 
-We recommend using Bundler to install and run Jekyll. Bundler manages Ruby gem dependencies, reduces Jekyll build errors, and prevents environment-related bugs. To install Bundler, you must install Ruby.
-[Github Official](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll)
+We recommend using Docker. You can run it inside Docker while developing.
+[just-the-docs](https://github.com/just-the-docs/just-the-docs)
 
-1. Install bundler
-  - `gem install bundler`
-1. Install dependencies
-  - `bundle install`
-1. Change theme for local
-  - Change `remote_theme: pmarsceill/just-the-docs` to `theme: just-the-docs` in `_config.yml`.
-1. Run local Jekyll
-  - `bundle exec jekyll serve`
-1. Preview your local Jekyll site in your web browser 
-  - `http://localhost:4000`
+1. `docker-compose up`
 
 
 ### Run Example Projects

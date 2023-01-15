@@ -1,26 +1,41 @@
 title: "React Native Tutorial"
-remote_theme: pmarsceill/just-the-docs
-# theme: just-the-docs
+# remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs
 # Enable or disable the site search
 # Support true (default) or false
 search_enabled: true
 # Aux links for the upper right navigation
 aux_links:
     "React Native Tutorial on Github":
-      - "//github.com/JeffGuKang/react-native-tutorial"
+      - "//github.com/monymony-public/react-native-tutorial"
 # Heading anchor links appear on hover over h1-h6 tags
 # in page content allowing users to deep link to a particular
 # heading on a page.
 #
 # Supprts true (default) or false/nil
 heading_anchors: true
-footer_content: "<a href=\"https://github.com/JeffGuKang/react-native-tutorial\">Github</a>"
+footer_content: "<a href=\"https://github.com/monymony-public/react-native-tutorial\">Github</a>"
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
 ga_tracking: UA-147391080-1
 
 plugins:
   - jekyll-seo-tag
+
+# To disable support for mermaid diagrams (https://mermaid.js.org),
+# comment out the `mermaid` and `version` keys below
+# By default, consuming the theme as a gem leaves mermaid disabled; it is opt-in
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.6"
+  # Put any additional configuration, such as setting the theme, in _includes/mermaid_config.js
+  # See also docs/ui-components/code
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
 
 compress_html:
   clippings: all
@@ -31,4 +46,4 @@ compress_html:
   profile: false
 
 # Exclude list
-exclude: ['_site', 'node_modules', 'Examples', 'Gemfile', 'Gemfile.lock', 'READMD.md']
+exclude: ['_site', 'node_modules', 'Examples', 'Gemfile', 'Gemfile.lock', 'README.md']
