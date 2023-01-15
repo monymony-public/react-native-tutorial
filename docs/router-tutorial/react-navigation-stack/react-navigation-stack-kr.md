@@ -164,7 +164,7 @@ iOS 빌드를 위해서는 Xcode가 필요하니 MacOS를 사용하시는 분들
 
 이 앱은 3가지 화면이 필요하지만, 먼저 각 화면들을 모두 한 화면에 표시 해 보겠습니다.
 
-    import React from 'react';
+    import React, { Component } from 'react';
     import { StyleSheet, View, Text } from 'react-native'
 
     class Home extends Component {
