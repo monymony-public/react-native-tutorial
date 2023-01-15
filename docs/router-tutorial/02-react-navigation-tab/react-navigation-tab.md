@@ -326,7 +326,7 @@ In this chapter, we will use config in each library to create an example and int
 
 ##### createBottomTabNavigator
 
-In the example using createBottomTabNavigator, activeTintColor and activeTintColor were used to set the color of the label and icon depending on whether the label was activated or not, and backGroundColor was used in the style to specify the background color of the tab.
+In the example using createBottomTabNavigator, activeTintColor and inactiveTintColor were used to set the color of the label and icon depending on whether the label was activated or not, and backGroundColor was used in the style to specify the background color of the tab.
 
 
 ![config](../images/RNtab/Tab_createBottomTabNavigator.gif)
