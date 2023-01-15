@@ -49,7 +49,7 @@ const TodoList = ({todos, onRemove, onToggle}) => {
 };
 ```
 
-TodoListItem 컴포넌트에서, TouchableOpacity에 `onPressOut` 이벤트 속성을 만드러 `onToggle()` 함수를 할당합니다.
+TodoListItem 컴포넌트에서, TouchableOpacity에 `onPressOut` 이벤트 속성을 만들어 `onToggle()` 함수를 할당합니다.
 
 ```js
 const TodoListItem = ({textValue, id, checked, onRemove, onToggle}) => {
